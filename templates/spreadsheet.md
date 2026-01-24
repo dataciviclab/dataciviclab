@@ -1,7 +1,7 @@
-# 📊 Spreadsheet — Scheda progetto accessibile
+# 📊 Spreadsheet — Scheda progetto
 
 ## Fogli
-1. Intro
+1. Progetto
 2. Dataset
 3. Metriche MVP
 4. Ruoli & Persone
