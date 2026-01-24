@@ -186,3 +186,5 @@ Il metodo:
 > 
 > Chi contribuisce se ne prende cura.
 >
+
+👉 Vuoi contribuire? Leggi `CONTRIBUTING.md`
