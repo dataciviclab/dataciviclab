@@ -14,5 +14,5 @@
 - una riga = una decisione
 - leggibile da chi entra dopo
 
-##Template
+## Template
 https://docs.google.com/spreadsheets/d/17EmTUVLzimppd70kckX2r2UxPQIwGDMU_Fzsqec4idg/edit?usp=sharing
