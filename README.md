@@ -94,7 +94,7 @@ Ogni problema segue **lo stesso ciclo**:
 
 Ogni progetto ha:
 
-- una pagina progetto
+- una Repo progetto
 - una board task
 - uno spreadsheet di supporto
 - un output pubblico
@@ -139,7 +139,7 @@ Non esistono gerarchie fisse, ma **ruoli funzionali**:
 - **LinkedIn Group** → coordinamento iniziale
 - **Drive** → Archivio pubblico
 - **Colab** → laboratorio d'analisi
-- **Spreadsheet di supporto** → metodo, dataset, memoria
+- **Spreadsheet** → metodo, dataset, memoria di supporto
 - **GitHub** → compiti, output e documentazione
 
 Nessun tool è definitivo.
