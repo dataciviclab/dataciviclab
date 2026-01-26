@@ -94,7 +94,7 @@ Ogni problema segue **lo stesso ciclo**:
 
 Ogni progetto ha:
 
-- una pagina progetto
+- una Repo progetto
 - una board task
 - uno spreadsheet di supporto
 - un output pubblico
@@ -137,10 +137,9 @@ Non esistono gerarchie fisse, ma **ruoli funzionali**:
 ## 9. Strumenti (minimi)
 
 - **LinkedIn Group** → coordinamento iniziale
-- **Trello** → gestione task
-- **Colab** → laboratorio d'analisi
-- **Spreadsheet condiviso** → metodo, dataset, memoria
-- **GitHub** → output e documentazione
+- **GitHub** → discussioni, compiti, output e documentazione
+- **Drive** → archivio documenti
+- **Spreadsheet** → metodo, dataset, memoria di supporto
 
 Nessun tool è definitivo.
 
@@ -187,4 +186,4 @@ Il metodo:
 > Chi contribuisce se ne prende cura.
 >
 
-👉 Vuoi contribuire? Leggi `CONTRIBUTING.md`
+👉 Prima di iniziare, leggi [Come contribuire](CONTRIBUTING.md) e il [Workflow di lavoro](WORKFLOW.md) 
