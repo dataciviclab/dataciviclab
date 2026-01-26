@@ -137,10 +137,10 @@ Non esistono gerarchie fisse, ma **ruoli funzionali**:
 ## 9. Strumenti (minimi)
 
 - **LinkedIn Group** → coordinamento iniziale
-- **Trello** → gestione task
+- **Drive** → Archivio pubblico
 - **Colab** → laboratorio d'analisi
-- **Spreadsheet condiviso** → metodo, dataset, memoria
-- **GitHub** → output e documentazione
+- **Spreadsheet di supporto** → metodo, dataset, memoria
+- **GitHub** → compiti, output e documentazione
 
 Nessun tool è definitivo.
 
