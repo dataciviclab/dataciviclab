@@ -187,4 +187,4 @@ Il metodo:
 > Chi contribuisce se ne prende cura.
 >
 
-👉 Vuoi contribuire? Leggi `CONTRIBUTING.md`
+👉 Prima di iniziare, leggi [Come contribuire](CONTRIBUTING.md) e il [Workflow di lavoro](WORKFLOW.md) 
