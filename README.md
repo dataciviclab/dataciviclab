@@ -186,4 +186,7 @@ Il metodo:
 > Chi contribuisce se ne prende cura.
 >
 
-👉 Prima di iniziare, leggi [Come contribuire](CONTRIBUTING.md) e il [Workflow di lavoro](WORKFLOW.md) 
+👉 Prima di iniziare, leggi
+[Come contribuire](https://github.com/dataciviclab/.github/blob/main/CONTRIBUTING.md)
+e il
+[Workflow di lavoro](https://github.com/dataciviclab/.github/blob/main/WORKFLOW.md)
