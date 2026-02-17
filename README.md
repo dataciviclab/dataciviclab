@@ -1,192 +1,114 @@
-## 1. Scopo del progetto
+# 🌍 DataCivicLab
 
-Il **DataCivicLab** nasce per costruire **un sistema civico di analisi, controllo e monitoraggio** basato su:
+> Trasformiamo dati pubblici in comprensione civica strutturata.
 
-- dati ufficiali
-- metodo trasparente
-- output pubblici
-- contributo collettivo
+DataCivicLab è un laboratorio open che costruisce infrastrutture analitiche replicabili a partire da dataset pubblici ufficiali.
 
-L’obiettivo non è esprimere opinioni né fare advocacy, ma **rendere leggibile e verificabile il funzionamento della macchina pubblica**, partendo dai dati.
+Non produciamo opinioni.  
+Produciamo metodo.
 
-## 2. Principi guida
+## 🧭 Indice
 
-1. **Nessun capo, nessuna verità definitiva**
-    
-    Il metodo evolve attraverso il lavoro e gli output.
-    
-2. **Responsabilità distribuita**
-    
-    Chi contribuisce se ne prende cura.
-    
-3. **Output > discussione**
-    
-    Un progetto vale solo se lascia qualcosa di pubblico.
-    
-4. **Metodo prima della velocità**
-    
-    Meglio un output difendibile che uno rapido ma fragile.
-    
-5. **Trasparenza radicale**
-    
-    Fonti, limiti, assunzioni ed errori sono dichiarati.
-    
+- [Perché esiste](#-perché-esiste)
+- [Come funziona il Lab](#-come-funziona-il-lab)
+- [Struttura delle repository](#-struttura-delle-repository)
+- [Come partecipare](#-come-partecipare)
+- [Roadmap 2026](#-roadmap-2026)
+- [Community](#-community)
 
+## 🎯 Perché esiste
 
-## 3. Ambito di lavoro
+I dati pubblici esistono, ma raramente diventano strumenti comprensibili.
 
-Il DataCivicLab lavora su tre macro-aree:
+Sono dispersi.  
+Sono tecnici.  
+Sono difficili da confrontare.
 
-### 🔍 Analisi
+DataCivicLab nasce per:
 
-- lettura strutturata dei dati pubblici
-- individuazione di pattern, differenze, anomalie
-- costruzione di metriche semplici e confrontabili
+- Rendere i dati pubblici leggibili
+- Standardizzare pipeline replicabili
+- Documentare ogni trasformazione
+- Costruire dashboard verificabili
+- Creare metodo prima della narrativa
 
-### 🧾 Controllo civico
+👉 Approfondisci nel [Manifesto](docs/manifesto.md)
 
-- verifica della coerenza tra risorse, popolazione e servizi
-- confronto tra territori simili
-- controllo di trend nel tempo
+## ⚙️ Come funziona il Lab
 
-### 📡 Monitoraggio
+Ogni progetto segue lo stesso schema:
 
-- aggiornamento periodico degli stessi indicatori
-- osservazione di cambiamenti strutturali
-- costruzione di basi storiche replicabili
+> Domanda → Dataset → Metodo → Pipeline → Analisi → Dashboard
 
+### 1️⃣ Domanda civica
+Definizione chiara del problema.
 
-## 4. Tipologia di problemi trattati
+### 2️⃣ Dataset ufficiale
+Fonte pubblica tracciata.
 
-Il DataCivicLab lavora **solo** su problemi che rispettano tutti questi criteri:
+### 3️⃣ Pipeline dati
+RAW → CLEAN → MART documentato.
 
-- domanda formulabile in **una frase**
-- dataset ufficiale disponibile
-- output producibile in **≤30 giorni**
-- problema misurabile, non ideologico
+### 4️⃣ Analisi e visualizzazione
+Dashboard coerente con la domanda iniziale.
 
-Esempi:
+### 5️⃣ Documentazione completa
+Metodo, limiti, scelte esplicitate.
 
-- spesa pubblica
-- servizi essenziali
-- rifiuti
-- redditi
-- investimenti
-- welfare locale
+## 🏗 Struttura delle repository
 
+### 🧠 dataciviclab
+Hub strategico, governance, roadmap.
 
-## 5. Metodo operativo standard
+### 🧪 project-template
+Struttura replicabile per ogni nuovo progetto.
 
-Ogni problema segue **lo stesso ciclo**:
+### 🧰 toolkit (WIP)
+Funzioni condivise per pipeline dati.
 
-1. Dataset → Domande civiche
-2. Domanda → Progetto
-3. Progetto → Output pubblico
-4. Output → Metodo documentato
-5. Metodo → Miglioramento collettivo
+### 📊 Repo progetto
+Ogni progetto vive in una repo dedicata.
 
-👉 Un **progetto alla volta.** 
+## 👥 Come partecipare
 
+Puoi contribuire come:
 
-## 6. Struttura dei progetti
+- 📊 Data Contributor  
+- 📈 Visualization Contributor  
+- 🧠 Method Reviewer  
+- 🧪 QA  
+- 📚 Documentation  
 
-### 1 progetto = 1 domanda civica = 1 output
+👉 Leggi [Come contribuire](https://github.com/dataciviclab/.github/blob/main/CONTRIBUTING.md)  
+👉 Consulta la [Governance](GOVERNANCE.md)  
+👉 Scopri i [Ruoli operativi](docs/roles.md)
 
-Ogni progetto ha:
+## 🗺 Roadmap 2026
 
-- una Repo progetto
-- una board task
-- uno spreadsheet di supporto
-- un output pubblico
-- una pagina metodo
+**Fase 1 — Fondazione**  
+Struttura, ruoli, governance, toolkit base.
 
+**Fase 2 — Primo progetto completo**  
+Pipeline documentata + dashboard pubblica.
 
-## 7. Ruoli (leggeri ma reali)
+**Fase 3 — Standardizzazione**  
+Bootstrap rapido per nuovi progetti.
 
-Non esistono gerarchie fisse, ma **ruoli funzionali**:
+**Fase 4 — Apertura community**  
+Scalabilità multi-progetto.
 
-| Ruolo | Funzione |
-| --- | --- |
-| Project Lead | facilita, coordina, decide quando chiudere |
-| Data | pulizia, query, metriche |
-| Metodo | assunzioni, limiti, coerenza |
-| Viz | dashboard / visual |
-| QA | controllo qualità |
-| Doc | spiegazioni pubbliche |
-- una persona può coprire più ruoli
-- i ruoli possono ruotare
-- le decisioni seguono il metodo, non le persone
+👉 Roadmap completa: [Roadmap 2026](docs/roadmap-2026.md)
 
+## 🌐 Community
 
-## 8. Output attesi (fase iniziale)
+- 💬 [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) (proposte, dataset, metodo)
+- 🎙 [Discord](https://discord.gg/rAHpuTrYK3) (collaborazione operativa)
+- 🚀 Contributi open
 
-### Entro i primi 30–60 giorni:
+Il Lab cresce con metodo, non con rumore.
 
-- almeno **1 dashboard civica MVP**
-- almeno **1 pagina metodo pubblica**
-- un set di **domande civiche validate**
-- un processo replicabile
+## 🔎 Principio guida
 
-### Nel medio periodo:
-
-- monitoraggi periodici
-- confronto storico
-- crescita del backlog di problemi
-
-
-## 9. Strumenti (minimi)
-
-- **LinkedIn Group** → coordinamento iniziale
-- **GitHub** → discussioni, compiti, output e documentazione
-- **Drive** → archivio documenti
-- **Spreadsheet** → metodo, dataset, memoria di supporto
-
-Nessun tool è definitivo.
-
-Gli strumenti evolvono insieme al metodo.
-
-
-## 10. Criteri di successo
-
-Un progetto è riuscito se:
-
-- l’output è pubblico e leggibile
-- il metodo è spiegato
-- i limiti sono dichiarati
-- una persona esterna può replicare il lavoro
-
-Il successo **non** si misura in:
-
-- like
-- follower
-- visibilità
-
-
-## 11. Evoluzione del progetto
-
-Il DataCivicLab non è una struttura chiusa, ma **un processo in costruzione**.
-
-Il metodo:
-
-- può essere migliorato
-- può essere criticato
-- può essere modificato
-- ma sempre attraverso **output e lavoro concreto**
-
-
-## 12. Frase di chiusura
-
-> Questo è un progetto civico e uno spazio comune:
-> 
-> 
-> non c’è un capo e nulla è definitivo.
-> 
-> Stiamo costruendo insieme un sistema e un metodo collettivo, migliorabile nel tempo.
-> 
-> Chi contribuisce se ne prende cura.
->
-
-👉 Prima di iniziare, leggi
-[Come contribuire](https://github.com/dataciviclab/.github/blob/main/CONTRIBUTING.md)
-e il
-[Workflow di lavoro](https://github.com/dataciviclab/.github/blob/main/WORKFLOW.md)
+Il metodo viene prima dell’opinione.  
+La qualità viene prima della velocità.  
+La struttura viene prima dell’espansione.
