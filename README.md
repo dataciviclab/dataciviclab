@@ -53,7 +53,7 @@ Il DataCivicLab lavora su tre macro-aree:
 
 - aggiornamento periodico degli stessi indicatori
 - osservazione di cambiamenti strutturali
-- costruzione di basi storiche replicabili
+- costruzione di serie storiche replicabili
 
 
 ## 4. Tipologia di problemi trattati
@@ -79,7 +79,7 @@ Esempi:
 
 Ogni problema segue **lo stesso ciclo**:
 
-1. Dataset → Domande civiche
+1. Problema → Domanda civica
 2. Domanda → Progetto
 3. Progetto → Output pubblico
 4. Output → Metodo documentato
@@ -106,13 +106,13 @@ Ogni progetto ha:
 Non esistono gerarchie fisse, ma **ruoli funzionali**:
 
 | Ruolo | Funzione |
-| --- | --- |
+|---|---|
 | Project Lead | facilita, coordina, decide quando chiudere |
 | Data | pulizia, query, metriche |
 | Metodo | assunzioni, limiti, coerenza |
 | Viz | dashboard / visual |
 | QA | controllo qualità |
-| Doc | spiegazioni pubbliche |
+| Docs | spiegazioni pubbliche |
 - una persona può coprire più ruoli
 - i ruoli possono ruotare
 - le decisioni seguono il metodo, non le persone
@@ -174,7 +174,7 @@ Il metodo:
 - ma sempre attraverso **output e lavoro concreto**
 
 
-## 12. Frase di chiusura
+## 12. Note finali
 
 > Questo è un progetto civico e uno spazio comune:
 > 
