@@ -1,4 +1,6 @@
-# 📜 Manifesto DataCivicLab (v0.1)
+# 📜 Manifesto DataCivicLab
+
+Versione: v0.1 Ultimo aggiornamento: Febbraio 2026
 
 ## Perché esiste DataCivicLab
 
@@ -71,5 +73,3 @@ DataCivicLab vuole essere un’infrastruttura civica.
 Domanda → Dato → Metodo → Trasformazione → Comprensione
 
 Sempre in questo ordine.
-
-Ultimo aggiornamento: Febbraio 2026
