@@ -79,7 +79,7 @@ Puoi contribuire come:
 - 🧪 QA  
 - 📚 Documentation  
 
-👉 Leggi [Come contribuire](https://github.com/dataciviclab/.github/blob/main/CONTRIBUTING.md)  
+👉 Leggi [Come contribuire](./.github/CONTRIBUTING.md)  
 👉 Consulta la [Governance](GOVERNANCE.md)  
 👉 Scopri i [Ruoli operativi](docs/roles.md)
 
@@ -97,7 +97,7 @@ Bootstrap rapido per nuovi progetti.
 **Fase 4 — Apertura community**  
 Scalabilità multi-progetto.
 
-👉 Roadmap completa: [Roadmap 2026](docs/roadmap-2026.md)
+👉 [Roadmap completa](./ROADMAP.md)
 
 ## 🌐 Community
 
