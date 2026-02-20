@@ -1,165 +1,69 @@
-# 🧭 DataCivicLab — Roadmap
+# 🗺 Roadmap 2026
 
-Questa roadmap descrive **l’evoluzione del metodo e del sistema DataCivicLab**,  
-non l’elenco dei singoli progetti.
+Versione: v0.2
+Orizzonte: 6–12 mesi
 
-Non è un piano rigido:  
-è una **mappa di apprendimento progressivo**, aggiornata in base agli output prodotti.
+## 🎯 Fase 1 — Fondazione
 
+Obiettivo: stabilizzare struttura e metodo.
 
-## Principio guida
+* Manifesto, Vision, Governance definiti
+* Ruoli operativi documentati
+* Template progetto funzionante
 
-> Il metodo evolve solo dopo aver prodotto output pubblici.  
-> Nessuna fase viene anticipata senza aver chiuso la precedente.
+Risultato atteso:
+✔ Primo progetto pilota avviato
 
----
+## 📊 Fase 2 — Primo Progetto Completo
 
-## FASE 0 — Fondazione (stato attuale)
+Obiettivo: chiudere un progetto end-to-end.
 
-**Obiettivo:** costruire un metodo minimo funzionante.
+* Domanda civica chiara
+* Dataset ufficiale
+* Pipeline RAW → CLEAN → MART
+* Dashboard pubblica
+* Metodo documentato
 
-### Focus
-- 1 progetto alla volta
-- pochi contributor (5–10)
-- dati ufficiali
-- output MVP
+Risultato atteso:
+✔ Release v1.0 DataCivicLab
 
-### Cosa stiamo costruendo
-- Metodo Minimo Ufficiale
-- Template replicabili
-- Flusso chiaro:
-  - dataset → domande → progetto → output
+## 🧰 Fase 3 — Standardizzazione
 
-### Output attesi
-- 1 dashboard civica MVP
-- 1 pagina metodo pubblica
-- 1 repo progetto completo
-- 1 backlog di domande validate
+Obiettivo: rendere il sistema replicabile.
 
-### Cosa NON facciamo
-- crescita della community
-- branding
-- automazioni
-- monitoraggi continui
+* Toolkit RAW + CLEAN + MART stabile
+* Naming convention consolidata
+* QA checklist ufficiale
+* Template bootstrap per nuovi progetti
 
-**Criterio di uscita dalla fase 0**
-✔ almeno 1 progetto chiuso  
-✔ metodo scritto e usato davvero
+Risultato atteso:
+✔ Nuovo progetto avviabile in < 1 ora
 
----
+## 🌍 Fase 4 — Apertura Community
 
-## FASE 1 — Consolidamento
+Obiettivo: scalare contributi esterni.
 
-**Obiettivo:** rendere il metodo ripetibile senza attrito.
+* Board unica organizzativa
+* Onboarding contributor
+* 2/3 progetti attivi contemporaneamente
+* Dashboard coordinate
 
-### Focus
-- standardizzare
-- ridurre ambiguità
-- migliorare qualità
+Risultato atteso:
+✔ Community attiva multi-progetto
 
-### Cosa introduciamo
-- Definition of Done standard
-- checklist QA
-- ruoli più chiari (ma non gerarchici)
-- miglioramento template
+# 📈 Metriche di maturità
 
-### Output attesi
-- 2–3 progetti chiusi
-- stessi template usati da team diversi
-- meno discussioni, più output
+Non solo output, ma qualità:
 
-### Cosa NON facciamo
-- scalare a molti progetti
-- aprire a tutti
-- inseguire visibilità
+* 100% progetti con metodo documentato
+* 100% dataset tracciati
+* 100% PR con review
+* Nessuna dashboard senza pipeline replicabile
 
-**Criterio di uscita dalla fase 1**
-✔ i progetti si chiudono più velocemente  
-✔ chi entra capisce come lavorare senza spiegazioni a voce
+# 🔭 Visione a lungo termine
 
----
+Costruire un’infrastruttura civica replicabile basata su:
 
-## FASE 2 — Monitoraggio
-
-**Obiettivo:** passare da analisi singole a osservazione nel tempo.
-
-### Focus
-- continuità
-- confronto storico
-- aggiornamenti periodici
-
-### Cosa introduciamo
-- progetti di monitoraggio
-- versionamento degli output
-- changelog leggibili
-- aggiornamenti programmati (anche manuali)
-
-### Output attesi
-- dashboard con serie storiche
-- confronto “prima / dopo”
-- primi segnali di sistema
-
-### Cosa NON facciamo
-- automazione totale
-- KPI di impatto pubblico
-- scale-up mediatico
-
-**Criterio di uscita dalla fase 2**
-✔ almeno 1 monitoraggio aggiornato più volte  
-✔ metodo stabile ma ancora adattabile
-
----
-
-## FASE 3 — Apertura controllata
-
-**Obiettivo:** permettere ad altri di usare il metodo senza perdere qualità.
-
-### Focus
-- riusabilità
-- documentazione
-- responsabilità diffusa
-
-### Cosa introduciamo
-- guida “come avviare un DataCivicLab locale”
-- fork del metodo
-- casi studio
-
-### Output attesi
-- altri gruppi che replicano il metodo
-- contributi migliorativi al repo `dataciviclab`
-
-### Cosa NON facciamo
-- centralizzare il controllo
-- diventare una piattaforma
-- imporre una visione unica
-
----
-
-## FASE 4 — Evoluzione (non pianificata)
-
-Questa fase **non è definita ora**.
-
-Il DataCivicLab:
-- non ha una forma finale
-- non ha una struttura definitiva
-- non ha una roadmap chiusa
-
-Le evoluzioni future nasceranno da:
-- problemi incontrati
-- output prodotti
-- esigenze reali
-
----
-
-## Regola finale
-
-> Se una nuova idea non aiuta a migliorare un output o il metodo,  
-> probabilmente non è prioritaria ora.
-
-
-## Stato della roadmap
-
-- [x] Fase 0 — in corso
-- [ ] Fase 1
-- [ ] Fase 2
-- [ ] Fase 3
+* Standard aperti
+* Metodo trasparente
+* Collaborazione strutturata
