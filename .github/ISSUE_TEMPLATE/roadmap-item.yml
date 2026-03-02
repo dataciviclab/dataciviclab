@@ -1,8 +1,6 @@
 name: Roadmap item
 description: Proponi un'iniziativa di roadmap per il Lab o una milestone di medio livello.
 title: "roadmap: "
-labels:
-  - roadmap
 body:
   - type: textarea
     id: objective

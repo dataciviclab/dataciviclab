@@ -1,8 +1,6 @@
 name: Decisione organizzativa
 description: Apri una proposta di decisione che riguarda struttura, processo o regole del Lab.
 title: "decisione: "
-labels:
-  - decision
 body:
   - type: textarea
     id: proposal

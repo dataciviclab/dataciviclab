@@ -1,8 +1,6 @@
 name: Cross-repo task
 description: Apri un lavoro che coinvolge piu repo e richiede coordinamento.
 title: "cross-repo: "
-labels:
-  - coordination
 body:
   - type: textarea
     id: summary
