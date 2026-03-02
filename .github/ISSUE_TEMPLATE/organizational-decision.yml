@@ -1,0 +1,36 @@
+name: Decisione organizzativa
+description: Apri una proposta di decisione che riguarda struttura, processo o regole del Lab.
+title: "decisione: "
+labels:
+  - decision
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Decisione proposta
+      description: Spiega la scelta che proponi.
+      placeholder: Descrivi in modo semplice la decisione.
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Perche serve
+      description: Quale problema risolve o quale chiarezza porta?
+      placeholder: Spiega il motivo della proposta.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impatto atteso
+      description: Cosa cambierebbe nel Lab se questa decisione venisse adottata?
+      placeholder: Repo coinvolte, persone coinvolte, effetti pratici.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative considerate
+      description: Hai valutato altre strade?
+      placeholder: Se ci sono alternative, annotale qui.

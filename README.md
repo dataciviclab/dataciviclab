@@ -24,6 +24,14 @@ Se vuoi contribuire:
 - leggi i [canali della community](docs/community-channels.md)
 - se lavori su un dataset, parti dal `project-template`
 
+Se devi aprire una issue qui in `dataciviclab`, usala per:
+- roadmap del Lab
+- lavori che toccano piu repo
+- proposta di un nuovo progetto
+- decisioni organizzative
+
+Bug, fix e task tecnici vanno invece aperti nella repo giusta.
+
 Se fai parte dei maintainer:
 - usa il [modello di governance](docs/governance-model.md)
 - segui il [playbook maintainer](docs/maintainer-playbook.md)
