@@ -1,4 +1,4 @@
-# Modello Di Governance
+# 🏛️ Modello Di Governance
 
 DataCivicLab cresce in modo semplice:
 - pochi ruoli chiari
@@ -14,7 +14,7 @@ Qui descriviamo la governance del Lab come ecosistema:
 
 Le regole pratiche di collaborazione su GitHub stanno nella repo `.github`.
 
-## Ruoli essenziali
+## 👥 Ruoli essenziali
 
 ### Maintainer
 
@@ -29,7 +29,13 @@ Aiuta a costruire un progetto, una documentazione o uno strumento utile.
 
 Verifica chiarezza, metodo e tenuta del lavoro prima che diventi parte del sistema.
 
-## Come nasce un nuovo progetto
+## 🧭 In pratica, chi decide cosa?
+
+- Le idee e le domande nascono in pubblico, di solito su GitHub Discussions.
+- I maintainer tengono coerenza, priorita e direzione generale.
+- I progetti crescono repo per repo, con lavoro visibile e verificabile.
+
+## 🌱 Come nasce un nuovo progetto
 
 1. Una domanda civica viene proposta in modo chiaro.
 2. Si verifica che esistano dati pubblici adatti.
@@ -37,7 +43,7 @@ Verifica chiarezza, metodo e tenuta del lavoro prima che diventi parte del siste
 4. Se la proposta regge, nasce una nuova repo dal `project-template`.
 5. Il progetto entra nel catalogo pubblico e nel flusso operativo.
 
-## Principio guida
+## ✨ Principio guida
 
 Il Lab non cresce aggiungendo rumore.
 Cresce quando ogni nuovo progetto rende il sistema piu chiaro, piu utile e piu verificabile.

@@ -1,12 +1,20 @@
-# DataCivicLab
+# 🌍 DataCivicLab
 
-DataCivicLab e un laboratorio civico che trasforma dati pubblici in strumenti piu chiari, verificabili e utili.
+DataCivicLab e uno spazio civico dove proviamo a rendere i dati pubblici piu leggibili, utili e condivisibili.
+
+Nasce per chi vuole capire meglio il proprio territorio senza perdersi nel rumore, nei tecnicismi o nelle opinioni gridate.
+
+Qui costruiamo progetti pubblici con metodo, calma e collaborazione.
 
 Questa repo e l'hub dell'organizzazione: spiega come e fatto il Lab, raccoglie i progetti attivi e indirizza verso le repo giuste.
 
-## Da dove iniziare
+## 👋 Se stai arrivando adesso
+
+Non serve conoscere tutto subito.
+Ti basta capire dove guardare a seconda di quello che vuoi fare.
 
 Se vuoi capire cos'e DataCivicLab:
+- fai un passaggio veloce da [come iniziare](docs/how-to-start.md)
 - leggi la [mappa delle repo](docs/repository-map.md)
 - consulta i [progetti e dataset attivi](docs/dataset-catalog.md)
 - guarda la [roadmap](ROADMAP.md)
@@ -20,7 +28,7 @@ Se fai parte dei maintainer:
 - usa il [modello di governance](docs/governance-model.md)
 - segui il [playbook maintainer](docs/maintainer-playbook.md)
 
-## Le repo principali
+## 🧭 Le repo principali
 
 ### `dataciviclab`
 Hub pubblico dell'organizzazione.
@@ -42,7 +50,14 @@ Definisce la struttura minima, i workflow di base e l'integrazione con il toolki
 Ogni progetto concreto vive in una repo dedicata.
 Li trovi nel [catalogo dataset](docs/dataset-catalog.md).
 
-## Come lavora il Lab
+## 🤝 Che tipo di spazio e
+
+Cerchiamo di costruire un luogo pubblico ordinato, leggibile e aperto anche a chi non arriva dal mondo tecnico.
+
+Non serve essere esperti per orientarsi.
+Serve solo voglia di capire, fare domande giuste e lavorare in modo chiaro.
+
+## 🛠️ Come lavora il Lab
 
 Il flusso del Lab e semplice:
 
@@ -54,12 +69,17 @@ Il principio resta lo stesso in ogni progetto:
 - lasciare tracce verificabili
 - pubblicare risultati leggibili anche da chi non e tecnico
 
-## Community
+## 💬 Community
 
 - [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) per proposte, domande e confronto pubblico
 - [Discord](https://discord.gg/rAHpuTrYK3) per coordinamento veloce ed eventi
 - LinkedIn per aggiornamenti pubblici e diffusione esterna
 
-I canali hanno ruoli diversi. La regola e semplice: le decisioni e lo stato del lavoro devono lasciare traccia su GitHub.
+I canali hanno ruoli diversi, ma l'idea e semplice:
+- Discussions per parlare con calma e lasciare traccia
+- Discord per scambio veloce e momenti piu informali
+- LinkedIn per raccontare all'esterno quello che il Lab pubblica
+
+Le decisioni e lo stato del lavoro devono comunque lasciare traccia su GitHub.
 
 Per i dettagli, vedi [docs/community-channels.md](docs/community-channels.md).

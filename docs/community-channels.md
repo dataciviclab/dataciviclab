@@ -1,8 +1,8 @@
-# Canali Della Community
+# 💬 Canali Della Community
 
 DataCivicLab usa pochi canali, con ruoli diversi.
 
-## GitHub Discussions
+## 🗣️ GitHub Discussions
 
 Serve per:
 - proporre nuovi progetti
@@ -12,7 +12,7 @@ Serve per:
 
 Se un tema puo aiutare anche altre persone, qui e il posto giusto.
 
-## GitHub Projects
+## 📌 GitHub Projects
 
 Serve per:
 - seguire lo stato del lavoro
@@ -21,7 +21,7 @@ Serve per:
 
 Projects e il piano operativo condiviso.
 
-## Discord
+## 🎙️ Discord
 
 Serve per:
 - coordinamento veloce
@@ -31,7 +31,7 @@ Serve per:
 Discord non e la sede delle decisioni finali.
 Se da una conversazione nasce una scelta importante, va riportata su GitHub.
 
-## LinkedIn
+## 🌐 LinkedIn
 
 Serve per:
 - raccontare il progetto all'esterno
@@ -40,7 +40,7 @@ Serve per:
 
 LinkedIn non sostituisce mai la documentazione.
 
-## Regola comune
+## 🧷 Regola comune
 
 La conversazione puo partire ovunque.
 La traccia utile deve restare su GitHub.

@@ -1,6 +1,9 @@
-# Playbook Maintainer
+# 🧰 Playbook Maintainer
 
 Questa guida serve a chi apre e accompagna un nuovo progetto nel Lab.
+
+Il maintainer non e la persona che controlla tutto.
+E la persona che tiene il percorso leggibile, aiuta il progetto a partire bene e fa in modo che il lavoro resti chiaro nel tempo.
 
 ## 1. Far emergere la proposta
 

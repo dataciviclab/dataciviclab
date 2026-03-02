@@ -1,8 +1,10 @@
-# Mappa Delle Repo
+# 🧭 Mappa Delle Repo
 
-Questa pagina spiega a cosa serve ogni repo principale dell'organizzazione.
+Non serve conoscere tutte le repo per orientarsi nel Lab.
 
-## `dataciviclab`
+Questa pagina serve solo a capire dove andare quando ti serve qualcosa.
+
+## 🌍 `dataciviclab`
 
 E l'hub pubblico del Lab.
 
@@ -19,7 +21,7 @@ Qui non stanno:
 - documentazione tecnica del toolkit
 - struttura operativa dei repo dataset
 
-## `.github`
+## 🧩 `.github`
 
 E la repo delle regole comuni su GitHub.
 
@@ -36,7 +38,7 @@ Qui non stanno:
 - il metodo tecnico dei dati
 - il bootstrap dei repo progetto
 
-## `toolkit`
+## 🛠️ `toolkit`
 
 E il motore operativo del Lab.
 
@@ -51,7 +53,7 @@ Qui non stanno:
 - onboarding generale della community
 - catalogo progetti
 
-## `project-template`
+## 🧱 `project-template`
 
 E il modello standard dei repo dataset.
 
@@ -66,7 +68,7 @@ Qui non stanno:
 - il racconto generale di DataCivicLab
 - la documentazione tecnica del toolkit
 
-## Repo dataset
+## 📦 Repo dataset
 
 Sono i progetti concreti.
 
@@ -82,3 +84,13 @@ Qui non stanno:
 - la governance generale dell'org
 - le policy comuni duplicate
 - spiegazioni globali del Lab
+
+## ✨ In pratica
+
+Se vuoi capire il Lab, parti da `dataciviclab`.
+
+Se vuoi collaborare su GitHub, guarda `.github`.
+
+Se vuoi capire come gira il motore, vai su `toolkit`.
+
+Se vuoi aprire o leggere un progetto concreto, entra in un repo dataset.
