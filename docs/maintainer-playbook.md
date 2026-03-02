@@ -40,7 +40,7 @@ All'inizio servono poche cose:
 
 Quando il progetto inizia a produrre materiali pubblici:
 - collega il repo al suo archivio pubblico
-- aggiorna il catalogo dei dataset
+- collega il progetto al GitHub Project giusto
 - rendi visibile dove trovare i risultati
 
 ## 6. Tenere il progetto leggibile

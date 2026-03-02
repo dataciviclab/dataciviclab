@@ -16,7 +16,7 @@ Ti basta capire dove guardare a seconda di quello che vuoi fare.
 Se vuoi capire cos'e DataCivicLab:
 - fai un passaggio veloce da [come iniziare](docs/how-to-start.md)
 - leggi la [mappa delle repo](docs/repository-map.md)
-- consulta i [progetti e dataset attivi](docs/dataset-catalog.md)
+- guarda i progetti attivi nei GitHub Projects dell'organizzazione
 - guarda la [roadmap](ROADMAP.md)
 
 Se vuoi contribuire:
@@ -48,7 +48,7 @@ Definisce la struttura minima, i workflow di base e l'integrazione con il toolki
 
 ### Repo dataset
 Ogni progetto concreto vive in una repo dedicata.
-Li trovi nel [catalogo dataset](docs/dataset-catalog.md).
+Li segui nei GitHub Projects dell'organizzazione e nelle repo dedicate.
 
 ## 🤝 Che tipo di spazio e
 

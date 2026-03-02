@@ -14,7 +14,7 @@ Parti da qui:
 ## 📚 Se vuoi seguire i lavori
 
 Guarda:
-- [Catalogo dataset e progetti](dataset-catalog.md)
+- GitHub Projects dell'organizzazione
 - [Canali della community](community-channels.md)
 
 ## 🙌 Se vuoi dare una mano
@@ -22,7 +22,7 @@ Guarda:
 Il punto di ingresso per contribuire e la repo `.github`, dove trovi le regole comuni e le indicazioni pratiche.
 
 Se invece vuoi lavorare su un progetto specifico:
-- cerca il repo nel [catalogo](dataset-catalog.md)
+- parti dal GitHub Project del momento o dalla repo dedicata
 - guarda le issue e lo stato del progetto
 - entra in Discussions o nel canale giusto se hai bisogno di contesto
 
@@ -34,7 +34,7 @@ Comincia da una domanda semplice:
 Vai al [README](../README.md).
 
 "Voglio vedere cosa state costruendo?"  
-Vai al [catalogo progetti](dataset-catalog.md).
+Vai ai GitHub Projects dell'organizzazione.
 
 "Voglio partecipare?"  
 Vai alla repo `.github` e poi al progetto che ti interessa.

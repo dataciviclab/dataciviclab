@@ -20,6 +20,7 @@ Serve per:
 - vedere a colpo d'occhio cosa e aperto, bloccato o in revisione
 
 Projects e il piano operativo condiviso.
+Se vuoi capire su cosa stiamo lavorando in questo momento, questo e il posto giusto.
 
 ## 🎙️ Discord
 
