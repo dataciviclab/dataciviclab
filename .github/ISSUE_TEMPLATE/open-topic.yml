@@ -1,0 +1,26 @@
+name: Altro / proposta aperta
+description: Usa questo template se non sai ancora in quale categoria rientra la tua proposta.
+title: "nota: "
+labels:
+  - triage
+body:
+  - type: textarea
+    id: topic
+    attributes:
+      label: Di cosa vuoi parlare
+      description: Spiega liberamente il punto, la proposta o il dubbio.
+      placeholder: Scrivi qui il contesto in modo semplice.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Perche lo stai aprendo qui
+      description: Se puoi, spiega perche pensi che questa issue debba stare in `dataciviclab`.
+      placeholder: Roadmap, coordinamento, proposta, dubbio sul posto giusto...
+  - type: textarea
+    id: next_step
+    attributes:
+      label: Cosa ti aspetti come passo successivo
+      description: Se hai gia un'idea, scrivila qui.
+      placeholder: Discussione, triage, decisione, spostamento in un'altra repo...
