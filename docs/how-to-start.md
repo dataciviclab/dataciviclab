@@ -9,12 +9,13 @@ Questa pagina serve solo a orientarti in pochi minuti.
 Parti da qui:
 - [README.md](../README.md)
 - [Mappa delle repo](repository-map.md)
-- [Roadmap](../ROADMAP.md)
+- [Roadmap](https://github.com/orgs/dataciviclab/projects/2)
 
 ## 📚 Se vuoi seguire i lavori
 
 Guarda:
-- GitHub Projects dell'organizzazione
+- [Open Board](https://github.com/orgs/dataciviclab/projects/5)
+- [Roadmap](https://github.com/orgs/dataciviclab/projects/2)
 - [Canali della community](community-channels.md)
 
 ## 🙌 Se vuoi dare una mano
@@ -34,7 +35,7 @@ Comincia da una domanda semplice:
 Vai al [README](../README.md).
 
 "Voglio vedere cosa state costruendo?"  
-Vai ai GitHub Projects dell'organizzazione.
+Vai alla [Open Board](https://github.com/orgs/dataciviclab/projects/5).
 
 "Voglio partecipare?"  
 Vai alla repo `.github` e poi al progetto che ti interessa.

@@ -26,7 +26,8 @@ Prima di aprire un nuovo repo, controlla che:
 Se la proposta regge:
 - crea il repo dal `project-template`
 - configura i file minimi del progetto
-- collega il repo al board operativo giusto
+- collega il repo alla [Open Board](https://github.com/orgs/dataciviclab/projects/5)
+- collegalo anche alla [Roadmap](https://github.com/orgs/dataciviclab/projects/2) se ha rilevanza di milestone o direzione
 
 ## 4. Avviare il lavoro
 
@@ -40,7 +41,7 @@ All'inizio servono poche cose:
 
 Quando il progetto inizia a produrre materiali pubblici:
 - collega il repo al suo archivio pubblico
-- collega il progetto al GitHub Project giusto
+- tieni aggiornato il progetto nella Open Board
 - rendi visibile dove trovare i risultati
 
 ## 6. Tenere il progetto leggibile

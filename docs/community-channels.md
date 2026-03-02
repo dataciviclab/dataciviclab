@@ -22,6 +22,24 @@ Serve per:
 Projects e il piano operativo condiviso.
 Se vuoi capire su cosa stiamo lavorando in questo momento, questo e il posto giusto.
 
+### Open Board
+
+La board pubblica di riferimento oggi e la [Open Board](https://github.com/orgs/dataciviclab/projects/5).
+
+E il posto giusto per:
+- seguire il lavoro in corso
+- vedere priorita e blocchi
+- orientarsi tra task, repo e progetti attivi
+
+### Roadmap
+
+La board pubblica di direzione e la [Roadmap](https://github.com/orgs/dataciviclab/projects/2).
+
+E il posto giusto per:
+- capire quali progetti e milestone contano di piu
+- vedere la direzione generale del Lab
+- seguire le prossime tappe senza entrare nel dettaglio di ogni task
+
 ## 🎙️ Discord
 
 Serve per:

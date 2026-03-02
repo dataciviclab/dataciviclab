@@ -16,8 +16,8 @@ Ti basta capire dove guardare a seconda di quello che vuoi fare.
 Se vuoi capire cos'e DataCivicLab:
 - fai un passaggio veloce da [come iniziare](docs/how-to-start.md)
 - leggi la [mappa delle repo](docs/repository-map.md)
-- guarda i progetti attivi nei GitHub Projects dell'organizzazione
-- guarda la [roadmap](ROADMAP.md)
+- guarda la [Open Board](https://github.com/orgs/dataciviclab/projects/5)
+- guarda la [Roadmap](https://github.com/orgs/dataciviclab/projects/2)
 
 Se vuoi contribuire:
 - usa le policy condivise nella repo `.github`
@@ -48,7 +48,7 @@ Definisce la struttura minima, i workflow di base e l'integrazione con il toolki
 
 ### Repo dataset
 Ogni progetto concreto vive in una repo dedicata.
-Li segui nei GitHub Projects dell'organizzazione e nelle repo dedicate.
+Li segui nella [Open Board](https://github.com/orgs/dataciviclab/projects/5) e nelle repo dedicate.
 
 ## 🤝 Che tipo di spazio e
 
@@ -72,11 +72,15 @@ Il principio resta lo stesso in ogni progetto:
 ## 💬 Community
 
 - [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) per proposte, domande e confronto pubblico
+- [Open Board](https://github.com/orgs/dataciviclab/projects/5) per seguire il lavoro in corso
+- [Roadmap](https://github.com/orgs/dataciviclab/projects/2) per vedere direzione, progetti e prossime tappe
 - [Discord](https://discord.gg/rAHpuTrYK3) per coordinamento veloce ed eventi
 - LinkedIn per aggiornamenti pubblici e diffusione esterna
 
 I canali hanno ruoli diversi, ma l'idea e semplice:
 - Discussions per parlare con calma e lasciare traccia
+- Open Board per vedere cosa stiamo facendo adesso
+- Roadmap per capire dove sta andando il Lab
 - Discord per scambio veloce e momenti piu informali
 - LinkedIn per raccontare all'esterno quello che il Lab pubblica
 
