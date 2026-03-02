@@ -1,114 +1,65 @@
-# 🌍 DataCivicLab
+# DataCivicLab
 
-> Trasformiamo dati pubblici in comprensione civica strutturata.
+DataCivicLab e un laboratorio civico che trasforma dati pubblici in strumenti piu chiari, verificabili e utili.
 
-DataCivicLab è un laboratorio open che costruisce infrastrutture analitiche replicabili a partire da dataset pubblici ufficiali.
+Questa repo e l'hub dell'organizzazione: spiega come e fatto il Lab, raccoglie i progetti attivi e indirizza verso le repo giuste.
 
-Non produciamo opinioni.  
-Produciamo metodo.
+## Da dove iniziare
 
-## 🧭 Indice
+Se vuoi capire cos'e DataCivicLab:
+- leggi la [mappa delle repo](docs/repository-map.md)
+- consulta i [progetti e dataset attivi](docs/dataset-catalog.md)
+- guarda la [roadmap](ROADMAP.md)
 
-- [Perché esiste](#-perché-esiste)
-- [Come funziona il Lab](#-come-funziona-il-lab)
-- [Struttura delle repository](#-struttura-delle-repository)
-- [Come partecipare](#-come-partecipare)
-- [Roadmap 2026](#-roadmap-2026)
-- [Community](#-community)
+Se vuoi contribuire:
+- usa le policy condivise nella repo `.github`
+- leggi i [canali della community](docs/community-channels.md)
+- se lavori su un dataset, parti dal `project-template`
 
-## 🎯 Perché esiste
+Se fai parte dei maintainer:
+- usa il [modello di governance](docs/governance-model.md)
+- segui il [playbook maintainer](docs/maintainer-playbook.md)
 
-I dati pubblici esistono, ma raramente diventano strumenti comprensibili.
+## Le repo principali
 
-Sono dispersi.  
-Sono tecnici.  
-Sono difficili da confrontare.
+### `dataciviclab`
+Hub pubblico dell'organizzazione.
+Spiega il progetto, orienta tra le repo, tiene l'indice dei dataset e dei risultati pubblici.
 
-DataCivicLab nasce per:
+### `.github`
+Regole condivise di collaborazione su GitHub.
+Qui stanno `CONTRIBUTING`, template issue e PR, codice di condotta e linee guida comuni.
 
-- Rendere i dati pubblici leggibili
-- Standardizzare pipeline replicabili
-- Documentare ogni trasformazione
-- Costruire dashboard verificabili
-- Creare metodo prima della narrativa
+### `toolkit`
+Motore operativo del Lab.
+Qui vivono i comandi, la logica di pipeline e la documentazione tecnica del workflow dati.
 
-👉 Approfondisci nel [Manifesto](docs/manifesto.md)
+### `project-template`
+Modello standard per creare un nuovo repo dataset o progetto.
+Definisce la struttura minima, i workflow di base e l'integrazione con il toolkit.
 
-## ⚙️ Come funziona il Lab
+### Repo dataset
+Ogni progetto concreto vive in una repo dedicata.
+Li trovi nel [catalogo dataset](docs/dataset-catalog.md).
 
-Ogni progetto segue lo stesso schema:
+## Come lavora il Lab
 
-> Domanda → Dataset → Metodo → Pipeline → Analisi → Dashboard
+Il flusso del Lab e semplice:
 
-### 1️⃣ Domanda civica
-Definizione chiara del problema.
+`domanda civica -> dati pubblici -> metodo chiaro -> output pubblico`
 
-### 2️⃣ Dataset ufficiale
-Fonte pubblica tracciata.
+Il principio resta lo stesso in ogni progetto:
+- partire da una domanda comprensibile
+- usare fonti difendibili
+- lasciare tracce verificabili
+- pubblicare risultati leggibili anche da chi non e tecnico
 
-### 3️⃣ Pipeline dati
-RAW → CLEAN → MART documentato.
+## Community
 
-### 4️⃣ Analisi e visualizzazione
-Dashboard coerente con la domanda iniziale.
+- [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) per proposte, domande e confronto pubblico
+- [Discord](https://discord.gg/rAHpuTrYK3) per coordinamento veloce ed eventi
+- LinkedIn per aggiornamenti pubblici e diffusione esterna
 
-### 5️⃣ Documentazione completa
-Metodo, limiti, scelte esplicitate.
+I canali hanno ruoli diversi. La regola e semplice: le decisioni e lo stato del lavoro devono lasciare traccia su GitHub.
 
-## 🏗 Struttura delle repository
-
-### 🧠 dataciviclab
-Hub strategico, governance, roadmap.
-
-### 🧪 project-template
-Struttura replicabile per ogni nuovo progetto.
-
-### 🧰 toolkit (WIP)
-Funzioni condivise per pipeline dati.
-
-### 📊 Repo progetto
-Ogni progetto vive in una repo dedicata.
-
-## 👥 Come partecipare
-
-Puoi contribuire come:
-
-- 📊 Data Contributor  
-- 📈 Visualization Contributor  
-- 🧠 Method Reviewer  
-- 🧪 QA  
-- 📚 Documentation  
-
-👉 Leggi [Come contribuire](./.github/CONTRIBUTING.md)  
-👉 Consulta la [Governance](GOVERNANCE.md)  
-👉 Scopri i [Ruoli operativi](docs/roles.md)
-
-## 🗺 Roadmap 2026
-
-**Fase 1 — Fondazione**  
-Struttura, ruoli, governance, toolkit base.
-
-**Fase 2 — Primo progetto completo**  
-Pipeline documentata + dashboard pubblica.
-
-**Fase 3 — Standardizzazione**  
-Bootstrap rapido per nuovi progetti.
-
-**Fase 4 — Apertura community**  
-Scalabilità multi-progetto.
-
-👉 [Roadmap completa](./ROADMAP.md)
-
-## 🌐 Community
-
-- 💬 [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) (proposte, dataset, metodo)
-- 🎙 [Discord](https://discord.gg/rAHpuTrYK3) (collaborazione operativa)
-- 🚀 Contributi open
-
-Il Lab cresce con metodo, non con rumore.
-
-## 🔎 Principio guida
-
-Il metodo viene prima dell’opinione.  
-La qualità viene prima della velocità.  
-La struttura viene prima dell’espansione.
+Per i dettagli, vedi [docs/community-channels.md](docs/community-channels.md).

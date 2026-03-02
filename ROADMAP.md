@@ -1,69 +1,34 @@
-# 🗺 Roadmap 2026
+# Roadmap
 
-Versione: v0.2
-Orizzonte: 6–12 mesi
+Questa roadmap riguarda il Lab come organizzazione, non il dettaglio tecnico delle singole repo.
 
-## 🎯 Fase 1 — Fondazione
+## Fase 1
 
-Obiettivo: stabilizzare struttura e metodo.
+Rendere chiaro il sistema.
 
-* Manifesto, Vision, Governance definiti
-* Ruoli operativi documentati
-* Template progetto funzionante
+- hub pubblico leggibile
+- confini netti tra le repo
+- canali della community espliciti
+- onboarding piu semplice
 
-Risultato atteso:
-✔ Primo progetto pilota avviato
+## Fase 2
 
-## 📊 Fase 2 — Primo Progetto Completo
+Far vivere bene i primi progetti.
 
-Obiettivo: chiudere un progetto end-to-end.
+- catalogo dataset aggiornato
+- output pubblici facili da trovare
+- workflow maintainer piu lineare
+- archivio pubblico coerente
 
-* Domanda civica chiara
-* Dataset ufficiale
-* Pipeline RAW → CLEAN → MART
-* Dashboard pubblica
-* Metodo documentato
+## Fase 3
 
-Risultato atteso:
-✔ Release v1.0 DataCivicLab
+Far crescere il Lab senza complicarlo.
 
-## 🧰 Fase 3 — Standardizzazione
+- piu progetti attivi insieme
+- collaborazione piu ordinata
+- piu continuita tra metodo, dati e pubblicazione
 
-Obiettivo: rendere il sistema replicabile.
+## Direzione
 
-* Toolkit RAW + CLEAN + MART stabile
-* Naming convention consolidata
-* QA checklist ufficiale
-* Template bootstrap per nuovi progetti
-
-Risultato atteso:
-✔ Nuovo progetto avviabile in < 1 ora
-
-## 🌍 Fase 4 — Apertura Community
-
-Obiettivo: scalare contributi esterni.
-
-* Board unica organizzativa
-* Onboarding contributor
-* 2/3 progetti attivi contemporaneamente
-* Dashboard coordinate
-
-Risultato atteso:
-✔ Community attiva multi-progetto
-
-# 📈 Metriche di maturità
-
-Non solo output, ma qualità:
-
-* 100% progetti con metodo documentato
-* 100% dataset tracciati
-* 100% PR con review
-* Nessuna dashboard senza pipeline replicabile
-
-# 🔭 Visione a lungo termine
-
-Costruire un’infrastruttura civica replicabile basata su:
-
-* Standard aperti
-* Metodo trasparente
-* Collaborazione strutturata
+La priorita non e fare tante cose.
+La priorita e rendere il Lab comprensibile, affidabile e utile nel tempo.
