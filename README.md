@@ -83,7 +83,7 @@ Il principio resta lo stesso in ogni progetto:
 - [Open Board](https://github.com/orgs/dataciviclab/projects/5) per seguire il lavoro in corso
 - [Roadmap](https://github.com/orgs/dataciviclab/projects/2) per vedere direzione, progetti e prossime tappe
 - [Discord](https://discord.gg/rAHpuTrYK3) per coordinamento veloce ed eventi
-- LinkedIn per aggiornamenti pubblici e diffusione esterna
+- [LinkedIn](https://www.linkedin.com/company/dataciviclab/) per aggiornamenti pubblici e diffusione esterna
 
 I canali hanno ruoli diversi, ma l'idea e semplice:
 - Discussions per parlare con calma e lasciare traccia
