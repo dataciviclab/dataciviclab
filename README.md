@@ -121,3 +121,25 @@ I canali hanno ruoli diversi, ma l'idea e semplice:
 Le decisioni e lo stato del lavoro devono comunque lasciare traccia su GitHub.
 
 Per i dettagli, vedi [docs/community-channels.md](docs/community-channels.md).
+
+## Ritmo operativo del Lab
+
+Il Lab funziona meglio quando mantiene un ciclo continuo ma leggero:
+
+- far emergere nuove domande civiche tramite Discussions
+- promuovere a Issue solo le domande che meritano lavoro concreto
+- pubblicare con continuita output leggibili, anche piccoli
+
+La cadenza giusta non e aprire ticket a tutti i costi.
+La cadenza giusta e tenere vivo un flusso credibile:
+
+`nuova domanda sensata -> analisi -> risposta condivisibile`
+
+Una risposta puo essere anche minima:
+
+- una tabella commentata
+- un grafico con due righe di interpretazione
+- una nota intermedia su cosa si capisce gia e cosa manca
+- un notebook che chiude una domanda precisa
+
+Conta piu la regolarita del valore prodotto che il volume di attivita aperte.
