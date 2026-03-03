@@ -6,7 +6,7 @@ Nasce per chi vuole capire meglio il proprio territorio senza perdersi nel rumor
 
 Qui costruiamo progetti pubblici con metodo, calma e collaborazione.
 
-Questa repo e l'hub dell'organizzazione: spiega come e fatto il Lab, raccoglie i progetti attivi e indirizza verso le repo giuste.
+Questa repo e l'hub dell'organizzazione: spiega come e fatto il Lab e indirizza verso le repo, le board e i canali giusti.
 
 ## 👋 Se stai arrivando adesso
 
@@ -40,7 +40,7 @@ Se fai parte dei maintainer:
 
 ### `dataciviclab`
 Hub pubblico dell'organizzazione.
-Spiega il progetto, orienta tra le repo, tiene l'indice dei dataset e dei risultati pubblici.
+Spiega il progetto, orienta tra le repo e indirizza verso board, progetti e risultati pubblici.
 
 ### `.github`
 Regole condivise di collaborazione su GitHub.

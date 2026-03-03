@@ -41,7 +41,7 @@ Verifica chiarezza, metodo e tenuta del lavoro prima che diventi parte del siste
 2. Si verifica che esistano dati pubblici adatti.
 3. I maintainer valutano se il progetto ha senso per il Lab.
 4. Se la proposta regge, nasce una nuova repo dal `project-template`.
-5. Il progetto entra nel catalogo pubblico e nel flusso operativo.
+5. Il progetto entra nelle board pubbliche e nel flusso operativo del Lab.
 
 ## ✨ Principio guida
 

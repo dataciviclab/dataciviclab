@@ -11,7 +11,7 @@ E l'hub pubblico del Lab.
 Qui stanno:
 - la spiegazione del progetto
 - la mappa dell'ecosistema
-- il catalogo dei dataset e dei progetti
+- i link ai progetti, alle board e ai risultati pubblici
 - la roadmap
 - le guide brevi per orientarsi
 
@@ -33,7 +33,7 @@ Qui stanno:
 - altri file condivisi di community health
 
 Qui non stanno:
-- il catalogo dei dataset
+- i progetti e i risultati pubblici del Lab
 - la roadmap del Lab
 - il metodo tecnico dei dati
 - il bootstrap dei repo progetto
