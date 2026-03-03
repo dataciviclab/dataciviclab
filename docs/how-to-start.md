@@ -27,6 +27,20 @@ Se invece vuoi lavorare su un progetto specifico:
 - guarda le issue e lo stato del progetto
 - entra in Discussions o nel canale giusto se hai bisogno di contesto
 
+## ❓ Se parti da una domanda civica
+
+Questo e spesso il punto di ingresso piu naturale nel Lab.
+
+Il flusso consigliato e:
+
+1. apri o cerca una **Discussion** per formulare bene la domanda
+2. chiarisci perche quella domanda conta, per chi e con quali dati si puo affrontare
+3. quando la domanda diventa lavoro concreto, apri una **Issue** nella repo giusta
+4. se serve un progetto dedicato, si lavora dentro una repo dataset con una domanda principale chiara
+
+Una repo dataset puo rispondere a piu domande.
+Pero non dovrebbe perdere il suo centro: ogni progetto deve avere una domanda civica principale che renda leggibile il perimetro del lavoro.
+
 ## 🧭 Se non sai ancora dove andare
 
 Comincia da una domanda semplice:

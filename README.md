@@ -77,6 +77,32 @@ Il principio resta lo stesso in ogni progetto:
 - lasciare tracce verificabili
 - pubblicare risultati leggibili anche da chi non e tecnico
 
+## ❓ Domande, repo e output
+
+Un repository dataset non coincide necessariamente con una sola domanda.
+
+Il modello che seguiamo e questo:
+
+- una repo dataset nasce attorno a un dataset o a un progetto dati
+- ogni repo dovrebbe avere una **domanda civica principale** che le dia un asse chiaro
+- dallo stesso dataset possono nascere anche **domande secondarie o complementari**
+- le domande emergono e si affinano in **GitHub Discussions**
+- quando una discussione diventa lavoro concreto, si apre una **Issue** nella repo giusta
+- da li possono nascere notebook, analisi, risposte pubbliche o dashboard
+
+In breve:
+
+`Discussion -> Issue -> Repo dataset -> output pubblico`
+
+Questo ci aiuta a non confondere i livelli:
+
+- la **Discussion** serve a formulare e chiarire la domanda
+- la **Issue** serve a trasformarla in lavoro operativo
+- la **repo dataset** serve a produrre una risposta verificabile
+
+L'obiettivo non e accumulare dati o tooling.
+L'obiettivo e riuscire a rispondere meglio a domande civiche concrete.
+
 ## 💬 Community
 
 - [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) per proposte, domande e confronto pubblico
