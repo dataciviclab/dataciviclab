@@ -58,6 +58,12 @@ Definisce la struttura minima, i workflow di base e l'integrazione con il toolki
 Ogni progetto concreto vive in una repo dedicata.
 Li segui nella [Open Board](https://github.com/orgs/dataciviclab/projects/5) e nelle repo dedicate.
 
+### `preanalysis/` in `dataciviclab`
+Sezione pubblica di validazione leggera per candidati progetto.
+Serve per rendere visibile il passaggio:
+`Discussion -> issue -> RAW/CLEAN -> prima analisi -> decisione`
+Link diretto: [preanalysis/README.md](preanalysis/README.md)
+
 ## 🤝 Che tipo di spazio e
 
 Cerchiamo di costruire un luogo pubblico ordinato, leggibile e aperto anche a chi non arriva dal mondo tecnico.
