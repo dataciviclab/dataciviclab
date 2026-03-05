@@ -1,0 +1,32 @@
+dataset:
+  name: preanalysis_example
+  years: [2024]
+
+raw:
+  sources:
+    - name: source_main
+      type: local_file
+      args:
+        path: TODO.csv
+      primary: true
+  combine:
+    strategy: union_by_name
+  extract:
+    include: [source_main]
+    mode: append
+
+clean:
+  read:
+    header: TODO_HEADER_TRUE_FALSE
+    delim: "TODO_DELIMITER"
+    encoding: "TODO_ENCODING"
+  sql:
+    path: sql/clean.sql
+
+mart:
+  sql:
+    path: sql/mart.sql
+
+validate:
+  clean:
+    min_rows: 1
