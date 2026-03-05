@@ -1,0 +1,46 @@
+name: Docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  markdown-local-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate local markdown links
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          root = Path(".").resolve()
+          files = [root / "README.md", *sorted((root / "docs").glob("*.md"))]
+          pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+          bad = []
+
+          for file in files:
+              text = file.read_text(encoding="utf-8")
+              for target in pattern.findall(text):
+                  if target.startswith(("http://", "https://", "mailto:", "#")):
+                      continue
+                  target_path = target.split("#", 1)[0]
+                  if not target_path:
+                      continue
+                  resolved = (file.parent / target_path).resolve()
+                  if not resolved.exists():
+                      bad.append(f"{file.relative_to(root)} -> {target}")
+
+          if bad:
+              raise SystemExit("Broken local markdown links:\n" + "\n".join(bad))
+          PY

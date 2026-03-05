@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Domande e confronto pubblico
+    url: https://github.com/orgs/dataciviclab/discussions
+    about: Usa Discussions per domande aperte, confronto e proposte che non sono ancora issue operative.
+  - name: Open Board
+    url: https://github.com/orgs/dataciviclab/projects/5
+    about: Guarda qui il lavoro operativo in corso.
+  - name: Roadmap
+    url: https://github.com/orgs/dataciviclab/projects/2
+    about: Guarda qui direzione, progetti e milestone del Lab.

@@ -1,114 +1,145 @@
 # 🌍 DataCivicLab
 
-> Trasformiamo dati pubblici in comprensione civica strutturata.
+DataCivicLab e uno spazio civico dove proviamo a rendere i dati pubblici piu leggibili, utili e condivisibili.
 
-DataCivicLab è un laboratorio open che costruisce infrastrutture analitiche replicabili a partire da dataset pubblici ufficiali.
+Nasce per chi vuole capire meglio il proprio territorio senza perdersi nel rumore, nei tecnicismi o nelle opinioni gridate.
 
-Non produciamo opinioni.  
-Produciamo metodo.
+Qui costruiamo progetti pubblici con metodo, calma e collaborazione.
 
-## 🧭 Indice
+Questa repo e l'hub dell'organizzazione: spiega come e fatto il Lab e indirizza verso le repo, le board e i canali giusti.
 
-- [Perché esiste](#-perché-esiste)
-- [Come funziona il Lab](#-come-funziona-il-lab)
-- [Struttura delle repository](#-struttura-delle-repository)
-- [Come partecipare](#-come-partecipare)
-- [Roadmap 2026](#-roadmap-2026)
-- [Community](#-community)
+## 👋 Se stai arrivando adesso
 
-## 🎯 Perché esiste
+Non serve conoscere tutto subito.
+Ti basta capire dove guardare a seconda di quello che vuoi fare.
 
-I dati pubblici esistono, ma raramente diventano strumenti comprensibili.
+Se vuoi capire cos'e DataCivicLab:
+- fai un passaggio veloce da [come iniziare](docs/how-to-start.md)
+- leggi la [mappa delle repo](docs/repository-map.md)
+- guarda la [Open Board](https://github.com/orgs/dataciviclab/projects/5)
+- guarda la [Roadmap](https://github.com/orgs/dataciviclab/projects/2)
 
-Sono dispersi.  
-Sono tecnici.  
-Sono difficili da confrontare.
+Se vuoi contribuire:
+- usa le policy condivise nella repo `.github`
+- leggi i [canali della community](docs/community-channels.md)
+- se lavori su un dataset, parti dal `project-template`
 
-DataCivicLab nasce per:
+Se devi aprire una issue qui in `dataciviclab`, usala per:
+- roadmap del Lab
+- lavori che toccano piu repo
+- proposta di un nuovo progetto
+- decisioni organizzative
 
-- Rendere i dati pubblici leggibili
-- Standardizzare pipeline replicabili
-- Documentare ogni trasformazione
-- Costruire dashboard verificabili
-- Creare metodo prima della narrativa
+Bug, fix e task tecnici vanno invece aperti nella repo giusta.
 
-👉 Approfondisci nel [Manifesto](docs/manifesto.md)
+Se fai parte dei maintainer:
+- usa il [modello di governance](docs/governance-model.md)
+- segui il [playbook maintainer](docs/maintainer-playbook.md)
 
-## ⚙️ Come funziona il Lab
+## 🧭 Le repo principali
 
-Ogni progetto segue lo stesso schema:
+### `dataciviclab`
+Hub pubblico dell'organizzazione.
+Spiega il progetto, orienta tra le repo e indirizza verso board, progetti e risultati pubblici.
 
-> Domanda → Dataset → Metodo → Pipeline → Analisi → Dashboard
+### `.github`
+Regole condivise di collaborazione su GitHub.
+Qui stanno `CONTRIBUTING`, template issue e PR, codice di condotta e linee guida comuni.
 
-### 1️⃣ Domanda civica
-Definizione chiara del problema.
+### `toolkit`
+Motore operativo del Lab.
+Qui vivono i comandi, la logica di pipeline e la documentazione tecnica del workflow dati.
 
-### 2️⃣ Dataset ufficiale
-Fonte pubblica tracciata.
+### `project-template`
+Modello standard per creare un nuovo repo dataset o progetto.
+Definisce la struttura minima, i workflow di base e l'integrazione con il toolkit.
 
-### 3️⃣ Pipeline dati
-RAW → CLEAN → MART documentato.
+### Repo dataset
+Ogni progetto concreto vive in una repo dedicata.
+Li segui nella [Open Board](https://github.com/orgs/dataciviclab/projects/5) e nelle repo dedicate.
 
-### 4️⃣ Analisi e visualizzazione
-Dashboard coerente con la domanda iniziale.
+## 🤝 Che tipo di spazio e
 
-### 5️⃣ Documentazione completa
-Metodo, limiti, scelte esplicitate.
+Cerchiamo di costruire un luogo pubblico ordinato, leggibile e aperto anche a chi non arriva dal mondo tecnico.
 
-## 🏗 Struttura delle repository
+Non serve essere esperti per orientarsi.
+Serve solo voglia di capire, fare domande giuste e lavorare in modo chiaro.
 
-### 🧠 dataciviclab
-Hub strategico, governance, roadmap.
+## 🛠️ Come lavora il Lab
 
-### 🧪 project-template
-Struttura replicabile per ogni nuovo progetto.
+Il flusso del Lab e semplice:
 
-### 🧰 toolkit (WIP)
-Funzioni condivise per pipeline dati.
+`domanda civica -> dati pubblici -> metodo chiaro -> output pubblico`
 
-### 📊 Repo progetto
-Ogni progetto vive in una repo dedicata.
+Il principio resta lo stesso in ogni progetto:
+- partire da una domanda comprensibile
+- usare fonti difendibili
+- lasciare tracce verificabili
+- pubblicare risultati leggibili anche da chi non e tecnico
 
-## 👥 Come partecipare
+## ❓ Domande, repo e output
 
-Puoi contribuire come:
+Un repository dataset non coincide necessariamente con una sola domanda.
 
-- 📊 Data Contributor  
-- 📈 Visualization Contributor  
-- 🧠 Method Reviewer  
-- 🧪 QA  
-- 📚 Documentation  
+Il modello che seguiamo e questo:
 
-👉 Leggi [Come contribuire](./.github/CONTRIBUTING.md)  
-👉 Consulta la [Governance](GOVERNANCE.md)  
-👉 Scopri i [Ruoli operativi](docs/roles.md)
+- una repo dataset nasce attorno a un dataset o a un progetto dati
+- ogni repo dovrebbe avere una **domanda civica principale** che le dia un asse chiaro
+- dallo stesso dataset possono nascere anche **domande secondarie o complementari**
+- le domande emergono e si affinano in **GitHub Discussions**
+- quando una discussione diventa lavoro concreto, si apre una **Issue** nella repo giusta
+- da li possono nascere notebook, analisi, risposte pubbliche o dashboard
 
-## 🗺 Roadmap 2026
+In breve:
 
-**Fase 1 — Fondazione**  
-Struttura, ruoli, governance, toolkit base.
+`Discussion -> Issue -> Repo dataset -> output pubblico`
 
-**Fase 2 — Primo progetto completo**  
-Pipeline documentata + dashboard pubblica.
+Questo ci aiuta a non confondere i livelli:
 
-**Fase 3 — Standardizzazione**  
-Bootstrap rapido per nuovi progetti.
+- la **Discussion** serve a formulare e chiarire la domanda
+- la **Issue** serve a trasformarla in lavoro operativo
+- la **repo dataset** serve a produrre una risposta verificabile
 
-**Fase 4 — Apertura community**  
-Scalabilità multi-progetto.
+L'obiettivo non e accumulare dati o tooling.
+L'obiettivo e riuscire a rispondere meglio a domande civiche concrete.
 
-👉 [Roadmap completa](./ROADMAP.md)
+## 💬 Community
 
-## 🌐 Community
+- [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) per proposte, domande e confronto pubblico
+- [Open Board](https://github.com/orgs/dataciviclab/projects/5) per seguire il lavoro in corso
+- [Roadmap](https://github.com/orgs/dataciviclab/projects/2) per vedere direzione, progetti e prossime tappe
+- [Discord](https://discord.gg/rAHpuTrYK3) per coordinamento veloce ed eventi
+- [LinkedIn](https://www.linkedin.com/company/dataciviclab/) per aggiornamenti pubblici e diffusione esterna
 
-- 💬 [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) (proposte, dataset, metodo)
-- 🎙 [Discord](https://discord.gg/rAHpuTrYK3) (collaborazione operativa)
-- 🚀 Contributi open
+I canali hanno ruoli diversi, ma l'idea e semplice:
+- Discussions per parlare con calma e lasciare traccia
+- Open Board per vedere cosa stiamo facendo adesso
+- Roadmap per capire dove sta andando il Lab
+- Discord per scambio veloce e momenti piu informali
+- LinkedIn per raccontare all'esterno quello che il Lab pubblica
 
-Il Lab cresce con metodo, non con rumore.
+Le decisioni e lo stato del lavoro devono comunque lasciare traccia su GitHub.
 
-## 🔎 Principio guida
+Per i dettagli, vedi [docs/community-channels.md](docs/community-channels.md).
 
-Il metodo viene prima dell’opinione.  
-La qualità viene prima della velocità.  
-La struttura viene prima dell’espansione.
+## Ritmo operativo del Lab
+
+Il Lab funziona meglio quando mantiene un ciclo continuo ma leggero:
+
+- far emergere nuove domande civiche tramite Discussions
+- promuovere a Issue solo le domande che meritano lavoro concreto
+- pubblicare con continuita output leggibili, anche piccoli
+
+La cadenza giusta non e aprire ticket a tutti i costi.
+La cadenza giusta e tenere vivo un flusso credibile:
+
+`nuova domanda sensata -> analisi -> risposta condivisibile`
+
+Una risposta puo essere anche minima:
+
+- una tabella commentata
+- un grafico con due righe di interpretazione
+- una nota intermedia su cosa si capisce gia e cosa manca
+- un notebook che chiude una domanda precisa
+
+Conta piu la regolarita del valore prodotto che il volume di attivita aperte.

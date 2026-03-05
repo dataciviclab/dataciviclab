@@ -1,0 +1,36 @@
+name: Roadmap item
+description: Proponi un'iniziativa di roadmap per il Lab o una milestone di medio livello.
+title: "roadmap: "
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Obiettivo
+      description: Quale risultato vuoi raggiungere?
+      placeholder: Descrivi in poche righe il risultato atteso.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Perche conta
+      description: Spiega perche questo passaggio e importante adesso.
+      placeholder: Perche e utile per il Lab, per la community o per i progetti?
+    validations:
+      required: true
+  - type: textarea
+    id: repos
+    attributes:
+      label: Repo coinvolte
+      description: Indica le repo toccate da questo lavoro.
+      placeholder: dataciviclab, .github, toolkit, project-template, repo progetto...
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Come capiamo che e chiuso
+      description: Definisci il minimo necessario per considerarlo completato.
+      placeholder: Elenca 2-4 criteri chiari.
+    validations:
+      required: true

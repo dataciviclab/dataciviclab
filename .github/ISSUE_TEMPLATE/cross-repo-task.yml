@@ -1,0 +1,34 @@
+name: Cross-repo task
+description: Apri un lavoro che coinvolge piu repo e richiede coordinamento.
+title: "cross-repo: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Che lavoro e
+      description: Descrivi in modo semplice il lavoro da coordinare.
+      placeholder: Spiega il lavoro in poche righe.
+    validations:
+      required: true
+  - type: textarea
+    id: repos
+    attributes:
+      label: Repo coinvolte
+      description: Quali repo vanno toccate?
+      placeholder: Elenca le repo coinvolte.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dipendenze o ordine di lavoro
+      description: Ci sono passaggi da fare prima di altri?
+      placeholder: Se serve, spiega ordine e dipendenze.
+  - type: textarea
+    id: output
+    attributes:
+      label: Output atteso
+      description: Cosa dovrebbe esistere alla fine?
+      placeholder: PR aperte, docs allineate, workflow aggiornati, board aggiornate...
+    validations:
+      required: true
