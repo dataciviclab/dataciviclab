@@ -2,7 +2,7 @@
 
 `preanalysis/` e lo spazio pubblico di validazione dei candidati progetto.
 
-Non e una sandbox tecnica (quella resta `datasets-testing`).
+Non e una sandbox tecnica.
 Non e una repo progetto gia matura.
 
 Qui rendiamo visibile il processo minimo:
