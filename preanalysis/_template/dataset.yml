@@ -4,10 +4,11 @@ dataset:
 
 raw:
   sources:
-    - kind: local_file
-      id: source_main
+    - name: source_main
+      type: local_file
       args:
         path: TODO.csv
+      primary: true
   combine:
     strategy: union_by_name
   extract:
@@ -16,9 +17,9 @@ raw:
 
 clean:
   read:
-    header: true
-    delim: ","
-    encoding: "utf-8"
+    header: TODO_HEADER_TRUE_FALSE
+    delim: "TODO_DELIMITER"
+    encoding: "TODO_ENCODING"
   sql:
     path: sql/clean.sql
 

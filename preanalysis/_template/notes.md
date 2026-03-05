@@ -11,3 +11,15 @@
 ## Limiti e rischi
 
 - TODO
+
+## Stato corrente
+
+- TODO
+
+## Insight chiave
+
+- TODO
+
+## Decisioni aperte
+
+- TODO
