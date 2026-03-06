@@ -2,7 +2,7 @@
 
 | slug | stato | domanda principale | issue | output minimo | ultimo checkpoint |
 |---|---|---|---|---|---|
-| example-candidate | intake | esempio: il dataset X spiega Y? | #000 | tabella sintetica + 3 insight | n/a |
+| irpef-comunale-2019-2023 | active | come varia la capacita fiscale tra comuni e regioni nel dataset IRPEF comunale? | pending - Discussion #88 | mart multi-anno + 3 insight territoriali | 2026-03-06 |
 
 ## Regole
 
