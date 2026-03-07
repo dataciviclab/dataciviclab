@@ -11,6 +11,7 @@
 ## Limiti e rischi
 
 - TODO
+- se serve un output cross-year, dichiarare esplicitamente se vive come step `post-mart`
 
 ## Stato corrente
 
@@ -23,3 +24,4 @@
 ## Decisioni aperte
 
 - TODO
+- serve solo pipeline annuale o anche un artefatto multi-anno?

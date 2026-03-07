@@ -76,7 +76,11 @@ preanalysis/
     README.md
     dataset.yml
     notes.md
+    scripts/
     sql/
       clean.sql
       mart.sql
 ```
+
+`scripts/` non e obbligatoria.
+Si usa solo quando un candidato richiede uno step esplicito fuori dal contract per-year del `toolkit`, per esempio un output multi-anno costruito a partire dai `clean` o dai `mart` annuali.
