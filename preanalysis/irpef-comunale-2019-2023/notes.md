@@ -3,8 +3,8 @@
 ## TODO iniziali
 
 - [x] confermare domanda principale
-- [x] verificare disponibilita dati reali
-- [x] collegare la preanalysis alla Discussion IRPEF gia aperta
+- [x] verificare disponibilità dati reali
+- [x] collegare la preanalysis alla Discussion IRPEF già aperta
 - [x] eseguire RAW/CLEAN/MART annuale
 - [x] definire un output minimo cross-year coerente con la Discussion
 
@@ -12,8 +12,8 @@
 
 - il `toolkit` non produce nativamente un singolo `mart` cross-year fuori dal perimetro `anno`
 - per questo il mart multi-anno vive come step `post-mart` esplicito del progetto
-- il numero di comuni non e perfettamente stabile tra `2019` e `2023`
-- senza popolazione, la lettura resta su capacita fiscale e contribuenti, non su valori pro capite
+- il numero di comuni non è perfettamente stabile tra `2019` e `2023`
+- senza popolazione, la lettura resta su capacità fiscale e contribuenti, non su valori pro capite
 
 ## Stato corrente
 

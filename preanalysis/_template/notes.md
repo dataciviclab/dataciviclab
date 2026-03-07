@@ -3,7 +3,7 @@
 ## TODO iniziali
 
 - [ ] confermare domanda principale
-- [ ] verificare disponibilita dati reali
+- [ ] verificare disponibilità dati reali
 - [ ] collegare issue e discussion
 - [ ] eseguire almeno RAW/CLEAN
 - [ ] definire output minimo

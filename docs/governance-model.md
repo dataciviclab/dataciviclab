@@ -3,12 +3,12 @@
 DataCivicLab cresce in modo semplice:
 - pochi ruoli chiari
 - decisioni leggibili
-- responsabilita esplicite
+- responsabilità esplicite
 
 ## Cosa governa questa repo
 
 Qui descriviamo la governance del Lab come ecosistema:
-- come sono divise le responsabilita tra le repo
+- come sono divise le responsabilità tra le repo
 - come nasce un nuovo progetto
 - come si tiene coerente il sistema nel tempo
 
@@ -19,7 +19,7 @@ Le regole pratiche di collaborazione su GitHub stanno nella repo `.github`.
 ### Maintainer
 
 Custodisce la coerenza del Lab.
-Tiene insieme visione, struttura e qualita complessiva.
+Tiene insieme visione, struttura e qualità complessiva.
 
 ### Contributor
 
@@ -32,7 +32,7 @@ Verifica chiarezza, metodo e tenuta del lavoro prima che diventi parte del siste
 ## 🧭 In pratica, chi decide cosa?
 
 - Le idee e le domande nascono in pubblico, di solito su GitHub Discussions.
-- I maintainer tengono coerenza, priorita e direzione generale.
+- I maintainer tengono coerenza, priorità e direzione generale.
 - I progetti crescono repo per repo, con lavoro visibile e verificabile.
 
 ## 🌱 Come nasce un nuovo progetto
@@ -46,4 +46,4 @@ Verifica chiarezza, metodo e tenuta del lavoro prima che diventi parte del siste
 ## ✨ Principio guida
 
 Il Lab non cresce aggiungendo rumore.
-Cresce quando ogni nuovo progetto rende il sistema piu chiaro, piu utile e piu verificabile.
+Cresce quando ogni nuovo progetto rende il sistema più chiaro, più utile e più verificabile.
