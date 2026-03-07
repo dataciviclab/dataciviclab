@@ -2,8 +2,8 @@
 
 Questa guida serve a chi apre e accompagna un nuovo progetto nel Lab.
 
-Il maintainer non e la persona che controlla tutto.
-E la persona che tiene il percorso leggibile, aiuta il progetto a partire bene e fa in modo che il lavoro resti chiaro nel tempo.
+Il maintainer non è la persona che controlla tutto.
+È la persona che tiene il percorso leggibile, aiuta il progetto a partire bene e fa in modo che il lavoro resti chiaro nel tempo.
 
 ## 1. Far emergere la proposta
 
@@ -18,7 +18,7 @@ La domanda iniziale deve essere:
 
 Prima di aprire un nuovo repo, controlla che:
 - esistano dati pubblici difendibili
-- il progetto abbia un'utilita civica chiara
+- il progetto abbia un'utilità civica chiara
 - il perimetro sia abbastanza piccolo da poter partire bene
 
 ## 3. Creare il repo progetto
@@ -46,8 +46,8 @@ Quando il progetto inizia a produrre materiali pubblici:
 
 ## 6. Tenere il progetto leggibile
 
-Il compito del maintainer non e fare tutto.
-E fare in modo che chi arriva capisca:
+Il compito del maintainer non è fare tutto.
+È fare in modo che chi arriva capisca:
 - a che punto siamo
 - cosa stiamo costruendo
 - dove serve aiuto

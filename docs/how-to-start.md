@@ -20,7 +20,7 @@ Guarda:
 
 ## 🙌 Se vuoi dare una mano
 
-Il punto di ingresso per contribuire e la repo `.github`, dove trovi le regole comuni e le indicazioni pratiche.
+Il punto di ingresso per contribuire è la repo `.github`, dove trovi le regole comuni e le indicazioni pratiche.
 
 Se invece vuoi lavorare su un progetto specifico:
 - parti dal GitHub Project del momento o dalla repo dedicata
@@ -29,27 +29,27 @@ Se invece vuoi lavorare su un progetto specifico:
 
 ## ❓ Se parti da una domanda civica
 
-Questo e spesso il punto di ingresso piu naturale nel Lab.
+Questo è spesso il punto di ingresso più naturale nel Lab.
 
-Il flusso consigliato e:
+Il flusso consigliato è:
 
 1. apri o cerca una **Discussion** per formulare bene la domanda
-2. chiarisci perche quella domanda conta, per chi e con quali dati si puo affrontare
+2. chiarisci perché quella domanda conta, per chi è con quali dati si può affrontare
 3. quando la domanda diventa lavoro concreto, apri una **Issue** nella repo giusta
 4. se serve un progetto dedicato, si lavora dentro una repo dataset con una domanda principale chiara
 
-Una repo dataset puo rispondere a piu domande.
-Pero non dovrebbe perdere il suo centro: ogni progetto deve avere una domanda civica principale che renda leggibile il perimetro del lavoro.
+Una repo dataset può rispondere a più domande.
+Però non dovrebbe perdere il suo centro: ogni progetto deve avere una domanda civica principale che renda leggibile il perimetro del lavoro.
 
 ## 🧭 Se non sai ancora dove andare
 
 Comincia da una domanda semplice:
 
-"Voglio capire meglio il Lab?"  
+"Voglio capire meglio il Lab?"
 Vai al [README](../README.md).
 
-"Voglio vedere cosa state costruendo?"  
+"Voglio vedere cosa state costruendo?"
 Vai alla [Open Board](https://github.com/orgs/dataciviclab/projects/5).
 
-"Voglio partecipare?"  
+"Voglio partecipare?"
 Vai alla repo `.github` e poi al progetto che ti interessa.
