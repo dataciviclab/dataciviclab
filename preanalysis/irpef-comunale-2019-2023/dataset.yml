@@ -95,5 +95,11 @@ mart:
   required_tables: ["irpef_by_regione", "irpef_by_comune"]
   validate: {}
 
+cross_year:
+  tables:
+    - name: "irpef_capacita_fiscale_multi_anno"
+      sql: "sql/mart_multi_anno.sql"
+      source_layer: "clean"
+
 validation:
   fail_on_error: true
