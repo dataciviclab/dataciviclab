@@ -1,8 +1,8 @@
 # Preanalysis Attive
 
-| slug | stato | domanda principale | issue | output minimo | ultimo checkpoint |
-|---|---|---|---|---|---|
-| irpef-comunale-2019-2023 | active | come varia la capacita fiscale tra comuni e regioni nel dataset IRPEF comunale? | pending - Discussion #88 | mart multi-anno + 3 insight territoriali | 2026-03-06 |
+| slug                     | stato  | domanda principale                                                              | issue                                                               | output minimo                            | ultimo checkpoint |
+| ------------------------ | ------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------- | ----------------- |
+| irpef-comunale-2019-2023 | active | come varia la capacita fiscale tra comuni e regioni nel dataset IRPEF comunale? | Issue [#92](https://github.com/dataciviclab/dataciviclab/issues/92) | mart multi-anno + 3 insight territoriali | 2026-03-06        |
 
 ## Regole
 

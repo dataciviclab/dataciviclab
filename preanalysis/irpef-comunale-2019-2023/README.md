@@ -8,7 +8,7 @@ Come varia la capacita fiscale tra comuni e regioni nel dataset IRPEF comunale?
 
 - rende leggibili differenze territoriali su contribuenti, base imponibile e imposta netta
 - permette un primo confronto multi-anno tra regioni e comuni senza partire da indicatori troppo derivati
-- e un buon candidato pubblico per il flusso `Discussion -> issue -> preanalysis -> decisione`
+- è un buon candidato pubblico per il flusso `Discussion -> issue -> preanalysis -> decisione`
 
 Discussion collegata:
 
@@ -16,11 +16,11 @@ Discussion collegata:
 
 ## Dataset
 
-- fonte: ZIP annuali ufficiali MEF / Finanze
-- copertura temporale: `2019-2023`
+- [ fonte: ZIP annuali ufficiali MEF / Finanze](https://www1.finanze.gov.it/finanze/analisi_stat/public/index.php?search_class%5B0%5D=cCOMUNE&opendata=yes)
+- copertura temporale in analisi: `2019-2023`
 - copertura territoriale: comuni italiani + aggregazione regionale derivata
 - limiti noti:
-  - schema non perfettamente stabile tra annualita
+  - schema non perfettamente stabile tra annualità
   - lieve calo del numero di righe comunali tra `2019` e `2023`
   - niente arricchimento popolazione nel perimetro minimo
 
