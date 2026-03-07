@@ -2,9 +2,9 @@
 
 ## Domanda principale
 
-Come varia la capacita fiscale tra comuni e regioni nel dataset IRPEF comunale?
+Come varia la capacità fiscale tra comuni e regioni nel dataset IRPEF comunale?
 
-## Perche conta
+## Perché conta
 
 - rende leggibili differenze territoriali su contribuenti, base imponibile e imposta netta
 - permette un primo confronto multi-anno tra regioni e comuni senza partire da indicatori troppo derivati
@@ -16,7 +16,7 @@ Discussion collegata:
 
 ## Dataset
 
-- [ fonte: ZIP annuali ufficiali MEF / Finanze](https://www1.finanze.gov.it/finanze/analisi_stat/public/index.php?search_class%5B0%5D=cCOMUNE&opendata=yes)
+- fonte: [ZIP annuali ufficiali MEF / Finanze](https://www1.finanze.gov.it/finanze/analisi_stat/public/index.php?search_class%5B0%5D=cCOMUNE&opendata=yes)
 - copertura temporale in analisi: `2019-2023`
 - copertura territoriale: comuni italiani + aggregazione regionale derivata
 - limiti noti:
