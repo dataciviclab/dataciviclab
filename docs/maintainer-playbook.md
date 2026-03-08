@@ -39,6 +39,7 @@ All'inizio servono poche cose:
 
 Se serve mantenere un piccolo buffer di issue di ingresso o di coordinamento:
 - usa il catalogo locale in `.github/seed_issues/`
+- il workflow `seed-issues.yml` mantiene automaticamente gli slot mancanti
 - mantieni pochi slot aperti
 - non usare le seed issue per simulare lavoro di progetto che ancora non esiste
 

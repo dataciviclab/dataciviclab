@@ -31,6 +31,10 @@ jobs:
               { dir: "core_team", label: "core-team", maxOpen: 5 },
             ];
 
+            function stripInlineMarkdown(value) {
+              return value.replace(/`/g, "").trim();
+            }
+
             function parseSeed(filePath) {
               const raw = fs.readFileSync(filePath, "utf8");
               const lines = raw.split(/\r?\n/);
@@ -42,11 +46,11 @@ jobs:
                 throw new Error(`Invalid seed issue format: ${filePath}`);
               }
 
-              const title = titleLine.replace(/^Title:\s*/, "").trim();
+              const title = stripInlineMarkdown(titleLine.replace(/^Title:\s*/, ""));
               const labels = labelsLine
                 .replace(/^Labels:\s*/, "")
                 .split(",")
-                .map((value) => value.trim())
+                .map((value) => stripInlineMarkdown(value))
                 .filter(Boolean);
 
               const bodyRaw = lines.slice(bodyIndex + 1).join("\n").trim();
