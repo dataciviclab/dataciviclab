@@ -20,6 +20,7 @@
 
 - finestra `2019-2023` verificata
 - schema `clean` coerente tra anni su 57 colonne
+- il raw legge 52 colonne (`column00`-`column51`); le 57 colonne del `clean` derivano da sdoppiamenti e riusi di campi tra annualità diverse
 - `irpef_by_regione` e `irpef_by_comune` disponibili per ogni anno
 - `irpef_capacita_fiscale_multi_anno` disponibile come output unico in `data/cross`
 - notebook di lavoro pronto per la Discussion

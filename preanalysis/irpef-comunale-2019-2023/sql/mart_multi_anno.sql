@@ -65,24 +65,35 @@ territori_con_quote as (
     on t.anno_imposta = r.anno_imposta
    and t.regione = r.regione
 ),
+comuni_rank_regione as (
+  select
+    anno_imposta,
+    codice_territorio,
+    row_number() over (
+      partition by anno_imposta, regione
+      order by reddito_imponibile_totale_eur desc, territorio asc
+    ) as rank_regionale_reddito_imponibile
+  from territori_con_quote
+  where livello_territoriale = 'comune'
+),
 territori_metriche as (
   select
-    *,
-    reddito_imponibile_totale_eur / nullif(numero_contribuenti, 0) as reddito_imponibile_medio_per_contribuente_eur,
-    imposta_netta_totale_eur / nullif(numero_contribuenti, 0) as imposta_netta_media_per_contribuente_eur,
-    addizionale_comunale_totale_eur / nullif(numero_contribuenti, 0) as addizionale_comunale_media_per_contribuente_eur,
+    t.*,
+    t.reddito_imponibile_totale_eur / nullif(t.numero_contribuenti, 0) as reddito_imponibile_medio_per_contribuente_eur,
+    t.imposta_netta_totale_eur / nullif(t.numero_contribuenti, 0) as imposta_netta_media_per_contribuente_eur,
+    t.addizionale_comunale_totale_eur / nullif(t.numero_contribuenti, 0) as addizionale_comunale_media_per_contribuente_eur,
     row_number() over (
-      partition by anno_imposta, livello_territoriale
-      order by reddito_imponibile_totale_eur desc, territorio asc
+      partition by t.anno_imposta, t.livello_territoriale
+      order by t.reddito_imponibile_totale_eur desc, t.territorio asc
     ) as rank_nazionale_reddito_imponibile,
     case
-      when livello_territoriale = 'comune' then row_number() over (
-        partition by anno_imposta, regione
-        order by reddito_imponibile_totale_eur desc, territorio asc
-      )
-      else 1
+      when t.livello_territoriale = 'comune' then crr.rank_regionale_reddito_imponibile
+      else null
     end as rank_regionale_reddito_imponibile
-  from territori_con_quote
+  from territori_con_quote t
+  left join comuni_rank_regione crr
+    on t.anno_imposta = crr.anno_imposta
+   and t.codice_territorio = crr.codice_territorio
 ),
 territori_delta as (
   select
