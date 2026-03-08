@@ -64,6 +64,11 @@ Serve per rendere visibile il passaggio:
 `Discussion -> issue -> RAW/CLEAN -> prima analisi -> decisione`
 Link diretto: [preanalysis/README.md](preanalysis/README.md)
 
+### `projects/` in `dataciviclab`
+Indice leggero dei progetti gia promossi a repo dedicate.
+Serve per rendere visibile quali filoni sono gia usciti da `preanalysis/` senza duplicare il lavoro tecnico che vive nelle repo progetto.
+Link diretto: [projects/README.md](projects/README.md)
+
 ## 🤝 Che tipo di spazio è
 
 Cerchiamo di costruire un luogo pubblico ordinato, leggibile e aperto anche a chi non arriva dal mondo tecnico.
