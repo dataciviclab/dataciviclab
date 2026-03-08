@@ -92,5 +92,5 @@ Si usa solo quando un candidato richiede uno step esplicito fuori dal contract p
 Quando un filone esce da `preanalysis/` e passa a repo dedicata:
 
 - il lavoro tecnico esce da `dataciviclab`
-- in `dataciviclab/projects/active/` resta una scheda leggera del progetto
+- in `dataciviclab/projects/` resta una scheda leggera del progetto
 - la Discussion pubblica continua a vivere nel repo `dataciviclab`

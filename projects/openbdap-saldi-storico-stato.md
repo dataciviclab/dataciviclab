@@ -5,5 +5,5 @@
 - Repo: `openbdap-saldi-storico-stato`
 - Dominio: rendiconto dello Stato / fonte OpenBDAP
 - Metodo: pipeline legacy fino al CLEAN, analisi tramite notebook
-- Discussion pubbliche: nel repo `dataciviclab`
+- Discussion pubbliche: da aggiungere
 - Prossimo passo: continuare a rispondere alle Discussion aperte senza migrare a `toolkit` per default
