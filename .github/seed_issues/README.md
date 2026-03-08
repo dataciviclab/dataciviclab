@@ -34,5 +34,10 @@ La cartella e divisa in:
 
 ## Uso manuale
 
-Per ora questi file servono come catalogo da copiare/incollare quando serve.
-Se in futuro verrà introdotta una Action, questa cartella può diventare anche la base dati del runner.
+Questi file possono essere usati in due modi:
+
+- manualmente, come catalogo da copiare/incollare quando serve
+- tramite la Action `seed-issues.yml`, che mantiene un piccolo buffer di issue aperte
+
+La Action non crea issue illimitate.
+Controlla quante issue aperte esistono già per ciascun bucket e apre solo gli slot mancanti, fino al massimo dichiarato.

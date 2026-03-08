@@ -1,0 +1,102 @@
+name: Seed Issues
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * 1"
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  maintain-seed-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Maintain seed issue buffers
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const path = require("path");
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const baseDir = path.join(process.env.GITHUB_WORKSPACE, ".github", "seed_issues");
+            const buckets = [
+              { dir: "good_first", label: "good first issue", maxOpen: 5 },
+              { dir: "core_team", label: "core-team", maxOpen: 5 },
+            ];
+
+            function parseSeed(filePath) {
+              const raw = fs.readFileSync(filePath, "utf8");
+              const lines = raw.split(/\r?\n/);
+              const titleLine = lines.find((line) => line.startsWith("Title:"));
+              const labelsLine = lines.find((line) => line.startsWith("Labels:"));
+              const bodyIndex = lines.findIndex((line) => line.startsWith("Body:"));
+
+              if (!titleLine || !labelsLine || bodyIndex === -1) {
+                throw new Error(`Invalid seed issue format: ${filePath}`);
+              }
+
+              const title = titleLine.replace(/^Title:\s*/, "").trim();
+              const labels = labelsLine
+                .replace(/^Labels:\s*/, "")
+                .split(",")
+                .map((value) => value.trim())
+                .filter(Boolean);
+
+              const bodyRaw = lines.slice(bodyIndex + 1).join("\n").trim();
+              const fenced = bodyRaw.match(/^```md\s*([\s\S]*?)```$/);
+              const body = fenced ? fenced[1].trim() : bodyRaw;
+
+              return { title, labels, body };
+            }
+
+            async function listOpenIssuesByLabel(label) {
+              const issues = await github.paginate(github.rest.issues.listForRepo, {
+                owner,
+                repo,
+                state: "open",
+                labels: label,
+                per_page: 100,
+              });
+
+              return issues.filter((issue) => !issue.pull_request);
+            }
+
+            for (const bucket of buckets) {
+              const dir = path.join(baseDir, bucket.dir);
+              const files = fs
+                .readdirSync(dir)
+                .filter((name) => name.endsWith(".md"))
+                .sort()
+                .map((name) => path.join(dir, name));
+
+              const seeds = files.map(parseSeed);
+              const openIssues = await listOpenIssuesByLabel(bucket.label);
+              core.info(`Bucket ${bucket.dir}: ${openIssues.length} open issue(s) with label '${bucket.label}'`);
+
+              const openTitles = new Set(openIssues.map((issue) => issue.title));
+              let slots = Math.max(bucket.maxOpen - openIssues.length, 0);
+
+              for (const seed of seeds) {
+                if (slots <= 0) break;
+                if (openTitles.has(seed.title)) continue;
+
+                await github.rest.issues.create({
+                  owner,
+                  repo,
+                  title: seed.title,
+                  body: seed.body,
+                  labels: seed.labels,
+                });
+
+                core.info(`Created seed issue: ${seed.title}`);
+                openTitles.add(seed.title);
+                slots -= 1;
+              }
+            }
