@@ -25,6 +25,14 @@ Tiene insieme visione, struttura e qualità complessiva.
 
 Aiuta a costruire un progetto, una documentazione o uno strumento utile.
 
+### Core contributor
+
+Tiene in mano un pezzo di lavoro più stabile:
+- accompagna un filone
+- chiude follow-up
+- regge il passaggio da Discussion a issue o output
+- non lavora solo su task isolati
+
 ### Reviewer
 
 Verifica chiarezza, metodo e tenuta del lavoro prima che diventi parte del sistema.
@@ -34,6 +42,8 @@ Verifica chiarezza, metodo e tenuta del lavoro prima che diventi parte del siste
 - Le idee e le domande nascono in pubblico, di solito su GitHub Discussions.
 - I maintainer tengono coerenza, priorità e direzione generale.
 - I progetti crescono repo per repo, con lavoro visibile e verificabile.
+- I contributor possono entrare da task piccoli e mirati.
+- I core contributor emergono quando iniziano a reggere un filone nel tempo.
 
 ## 🌱 Come nasce un nuovo progetto
 
