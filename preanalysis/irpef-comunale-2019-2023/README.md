@@ -12,7 +12,7 @@ Come varia la capacità fiscale tra comuni e regioni nel dataset IRPEF comunale?
 
 Discussion collegata:
 
-- `dataciviclab` Discussion `#88` su IRPEF/capacita fiscale
+- `dataciviclab` Discussion `#88` su IRPEF/capacità fiscale
 
 ## Dataset
 
@@ -38,7 +38,8 @@ Discussion collegata:
 
 - `active`
 - `raw`, `clean`, `mart` annuali: pronti
-- step `post-mart` multi-anno: pronto
+- `cross_year` nativo del toolkit: pronto
+- notebook di lavoro: `notebooks/d1_capacita_fiscale_2019_2023.ipynb`
 
 ## Esecuzione
 
@@ -48,15 +49,15 @@ Run annuale con `toolkit`:
 py -m toolkit.cli.app run all --config preanalysis/irpef-comunale-2019-2023/dataset.yml
 ```
 
-Costruzione del mart multi-anno:
+Costruzione dell'output multi-anno:
 
 ```powershell
-py preanalysis/irpef-comunale-2019-2023/scripts/build_multi_year_mart.py
+py -m toolkit.cli.app run cross_year --config preanalysis/irpef-comunale-2019-2023/dataset.yml
 ```
 
 Output finale:
 
-- `_out/data/mart/irpef_comunale_2019_2023/irpef_capacita_fiscale_multi_anno.parquet`
+- `_out/data/cross/irpef_comunale_2019_2023/irpef_capacita_fiscale_multi_anno.parquet`
 
 ## Decisione attesa al checkpoint
 
