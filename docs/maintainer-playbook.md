@@ -37,6 +37,11 @@ All'inizio servono poche cose:
 - issue principali aperte
 - stato del progetto leggibile
 
+Se serve mantenere un piccolo buffer di issue di ingresso o di coordinamento:
+- usa il catalogo locale in `.github/seed_issues/`
+- mantieni pochi slot aperti
+- non usare le seed issue per simulare lavoro di progetto che ancora non esiste
+
 ## 5. Collegare l'output pubblico
 
 Quando il progetto inizia a produrre materiali pubblici:
