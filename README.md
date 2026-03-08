@@ -1,19 +1,19 @@
 # 🌍 DataCivicLab
 
-DataCivicLab e uno spazio civico dove proviamo a rendere i dati pubblici piu leggibili, utili e condivisibili.
+DataCivicLab è uno spazio civico dove proviamo a rendere i dati pubblici più leggibili, utili e condivisibili.
 
 Nasce per chi vuole capire meglio il proprio territorio senza perdersi nel rumore, nei tecnicismi o nelle opinioni gridate.
 
 Qui costruiamo progetti pubblici con metodo, calma e collaborazione.
 
-Questa repo e l'hub dell'organizzazione: spiega come e fatto il Lab e indirizza verso le repo, le board e i canali giusti.
+Questa repo è l'hub dell'organizzazione: spiega come è fatto il Lab e indirizza verso le repo, le board e i canali giusti.
 
 ## 👋 Se stai arrivando adesso
 
 Non serve conoscere tutto subito.
 Ti basta capire dove guardare a seconda di quello che vuoi fare.
 
-Se vuoi capire cos'e DataCivicLab:
+Se vuoi capire cos'è DataCivicLab:
 - fai un passaggio veloce da [come iniziare](docs/how-to-start.md)
 - leggi la [mappa delle repo](docs/repository-map.md)
 - guarda la [Open Board](https://github.com/orgs/dataciviclab/projects/5)
@@ -26,7 +26,7 @@ Se vuoi contribuire:
 
 Se devi aprire una issue qui in `dataciviclab`, usala per:
 - roadmap del Lab
-- lavori che toccano piu repo
+- lavori che toccano più repo
 - proposta di un nuovo progetto
 - decisioni organizzative
 
@@ -64,7 +64,7 @@ Serve per rendere visibile il passaggio:
 `Discussion -> issue -> RAW/CLEAN -> prima analisi -> decisione`
 Link diretto: [preanalysis/README.md](preanalysis/README.md)
 
-## 🤝 Che tipo di spazio e
+## 🤝 Che tipo di spazio è
 
 Cerchiamo di costruire un luogo pubblico ordinato, leggibile e aperto anche a chi non arriva dal mondo tecnico.
 
@@ -73,7 +73,7 @@ Serve solo voglia di capire, fare domande giuste e lavorare in modo chiaro.
 
 ## 🛠️ Come lavora il Lab
 
-Il flusso del Lab e semplice:
+Il flusso del Lab è semplice:
 
 `domanda civica -> dati pubblici -> metodo chiaro -> output pubblico`
 
@@ -81,20 +81,20 @@ Il principio resta lo stesso in ogni progetto:
 - partire da una domanda comprensibile
 - usare fonti difendibili
 - lasciare tracce verificabili
-- pubblicare risultati leggibili anche da chi non e tecnico
+- pubblicare risultati leggibili anche da chi non è tecnico
 
 ## ❓ Domande, repo e output
 
 Un repository dataset non coincide necessariamente con una sola domanda.
 
-Il modello che seguiamo e questo:
+Il modello che seguiamo è questo:
 
 - una repo dataset nasce attorno a un dataset o a un progetto dati
 - ogni repo dovrebbe avere una **domanda civica principale** che le dia un asse chiaro
 - dallo stesso dataset possono nascere anche **domande secondarie o complementari**
 - le domande emergono e si affinano in **GitHub Discussions**
 - quando una discussione diventa lavoro concreto, si apre una **Issue** nella repo giusta
-- da li possono nascere notebook, analisi, risposte pubbliche o dashboard
+- da lì possono nascere notebook, analisi, risposte pubbliche o dashboard
 
 In breve:
 
@@ -106,8 +106,8 @@ Questo ci aiuta a non confondere i livelli:
 - la **Issue** serve a trasformarla in lavoro operativo
 - la **repo dataset** serve a produrre una risposta verificabile
 
-L'obiettivo non e accumulare dati o tooling.
-L'obiettivo e riuscire a rispondere meglio a domande civiche concrete.
+L'obiettivo non è accumulare dati o tooling.
+L'obiettivo è riuscire a rispondere meglio a domande civiche concrete.
 
 ## 💬 Community
 
@@ -117,11 +117,11 @@ L'obiettivo e riuscire a rispondere meglio a domande civiche concrete.
 - [Discord](https://discord.gg/rAHpuTrYK3) per coordinamento veloce ed eventi
 - [LinkedIn](https://www.linkedin.com/company/dataciviclab/) per aggiornamenti pubblici e diffusione esterna
 
-I canali hanno ruoli diversi, ma l'idea e semplice:
+I canali hanno ruoli diversi, ma l'idea è semplice:
 - Discussions per parlare con calma e lasciare traccia
 - Open Board per vedere cosa stiamo facendo adesso
 - Roadmap per capire dove sta andando il Lab
-- Discord per scambio veloce e momenti piu informali
+- Discord per scambio veloce e momenti più informali
 - LinkedIn per raccontare all'esterno quello che il Lab pubblica
 
 Le decisioni e lo stato del lavoro devono comunque lasciare traccia su GitHub.
@@ -134,18 +134,18 @@ Il Lab funziona meglio quando mantiene un ciclo continuo ma leggero:
 
 - far emergere nuove domande civiche tramite Discussions
 - promuovere a Issue solo le domande che meritano lavoro concreto
-- pubblicare con continuita output leggibili, anche piccoli
+- pubblicare con continuità output leggibili, anche piccoli
 
-La cadenza giusta non e aprire ticket a tutti i costi.
-La cadenza giusta e tenere vivo un flusso credibile:
+La cadenza giusta non è aprire ticket a tutti i costi.
+La cadenza giusta è tenere vivo un flusso credibile:
 
 `nuova domanda sensata -> analisi -> risposta condivisibile`
 
-Una risposta puo essere anche minima:
+Una risposta può essere anche minima:
 
 - una tabella commentata
 - un grafico con due righe di interpretazione
-- una nota intermedia su cosa si capisce gia e cosa manca
+- una nota intermedia su cosa si capisce già e cosa manca
 - un notebook che chiude una domanda precisa
 
-Conta piu la regolarita del valore prodotto che il volume di attivita aperte.
+Conta più la regolarità del valore prodotto che il volume di attività aperte.

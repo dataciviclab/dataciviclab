@@ -1,9 +1,9 @@
 # Preanalysis
 
-`preanalysis/` e lo spazio pubblico di validazione dei candidati progetto.
+`preanalysis/` è lo spazio pubblico di validazione dei candidati progetto.
 
-Non e una sandbox tecnica.
-Non e una repo progetto gia matura.
+Non è una sandbox tecnica.
+Non è una repo progetto già matura.
 
 Qui rendiamo visibile il processo minimo:
 
@@ -30,7 +30,7 @@ Un candidato entra in `preanalysis/` se ha:
 
 - test tecnici del toolkit
 - esplorazioni vaghe senza domanda
-- progetti gia maturi
+- progetti già maturi
 - backlog indefinito
 
 ## Stati
@@ -76,7 +76,11 @@ preanalysis/
     README.md
     dataset.yml
     notes.md
+    scripts/
     sql/
       clean.sql
       mart.sql
 ```
+
+`scripts/` non è obbligatoria.
+Si usa solo quando un candidato richiede uno step esplicito fuori dal contract per-year del `toolkit`, per esempio un output multi-anno costruito a partire dai `clean` o dai `mart` annuali.
