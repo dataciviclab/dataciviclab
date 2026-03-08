@@ -1,6 +1,6 @@
 # siope-comuni
 
-- Stato: `active`
+- Stato: `private`
 - Classificazione operativa: `toolkit-native active`
 - Repo: `siope-comuni`
 - Dominio: entrate dei comuni / fonte SIOPE
