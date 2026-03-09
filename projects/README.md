@@ -1,6 +1,6 @@
 # Projects
 
-`projects/` e il registro leggero dei filoni gia promossi a repo dedicate.
+`projects/` è il registro leggero dei filoni già promossi a repo dedicate.
 
 Qui non vivono dataset, SQL o notebook di lavoro.
 Quel materiale deve stare nelle repo progetto.
@@ -18,7 +18,7 @@ projects/
 ## Regola pratica
 
 - `preanalysis/` = candidato ancora dentro `dataciviclab`
-- `projects/<slug>.md` = filone gia promosso a repo dedicata
+- `projects/<slug>.md` = filone già promosso a repo dedicata
 
 Lo stato del progetto vive nella scheda stessa, non nella gerarchia delle cartelle.
 
