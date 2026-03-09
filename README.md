@@ -21,6 +21,7 @@ Se vuoi capire cos'è DataCivicLab:
 
 Se vuoi contribuire:
 - usa le policy condivise nella repo `.github`
+- guarda il catalogo seed in [`.github/seed_issues/`](.github/seed_issues/README.md)
 - leggi i [canali della community](docs/community-channels.md)
 - se lavori su un dataset, parti dal `project-template`
 
@@ -35,6 +36,35 @@ Bug, fix e task tecnici vanno invece aperti nella repo giusta.
 Se fai parte dei maintainer:
 - usa il [modello di governance](docs/governance-model.md)
 - segui il [playbook maintainer](docs/maintainer-playbook.md)
+
+## Come entrare nel Lab
+
+Oggi il Lab usa due ingressi semplici:
+
+- `good first issue`
+- `core-team`
+
+Le `good first issue` servono soprattutto per:
+- docs
+- verifiche fonti
+- sintesi
+- piccole note metodologiche
+
+Le issue `core-team` servono per:
+- review di filone
+- passaggi `Discussion -> issue`
+- promozione di candidati da `preanalysis`
+- scelta del prossimo output
+
+Il catalogo seed sta qui:
+- [`.github/seed_issues/`](.github/seed_issues/README.md)
+
+Le issue reali di progetto non nascono da questo catalogo.
+Continuano a nascere da:
+- Discussion
+- preanalysis
+- output
+- lavoro tecnico concreto
 
 ## 🧭 Le repo principali
 

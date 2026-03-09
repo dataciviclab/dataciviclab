@@ -37,6 +37,43 @@ All'inizio servono poche cose:
 - issue principali aperte
 - stato del progetto leggibile
 
+Se serve mantenere un piccolo buffer di issue di ingresso o di coordinamento:
+- usa il catalogo locale in `.github/seed_issues/`
+- il workflow `seed-issues.yml` mantiene automaticamente gli slot mancanti
+- mantieni pochi slot aperti
+- non usare le seed issue per simulare lavoro di progetto che ancora non esiste
+
+## 4a. Tenere leggibili gli ingressi nel Lab
+
+Il catalogo seed issue serve a tenere due corsie di ingresso semplici:
+
+- `good first issue`
+- `core-team`
+
+Regola pratica:
+
+- massimo `5` issue aperte con label `good first issue`
+- massimo `5` issue aperte con label `core-team`
+
+Il maintainer deve usare queste issue come buffer controllato, non come backlog generico.
+
+Le seed issue `good first issue` servono soprattutto a contributor leggeri:
+
+- docs
+- verifiche fonti
+- sintesi
+- note metodologiche piccole
+
+Le seed issue `core-team` servono a contributor con piu responsabilita:
+
+- review di filone
+- passaggio Discussion -> issue
+- promozione preanalysis -> progetto
+- definizione del prossimo output
+- debiti espliciti da tenere sotto controllo
+
+Quando apre una seed issue, il maintainer deve ancorarla a un target reale del momento, non lasciarla generica se il contesto del Lab richiede una scelta esplicita.
+
 ## 5. Collegare l'output pubblico
 
 Quando il progetto inizia a produrre materiali pubblici:

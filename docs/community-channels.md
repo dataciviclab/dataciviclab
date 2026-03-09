@@ -22,6 +22,9 @@ Serve per:
 Projects è il piano operativo condiviso.
 Se vuoi capire su cosa stiamo lavorando in questo momento, questo è il posto giusto.
 
+Le issue di ingresso e coordinamento leggero vengono invece mantenute nel repo `dataciviclab`, tramite il catalogo seed in:
+- [`.github/seed_issues/`](../.github/seed_issues/README.md)
+
 ### Open Board
 
 La board pubblica di riferimento oggi è la [Open Board](https://github.com/orgs/dataciviclab/projects/5).

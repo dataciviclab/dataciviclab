@@ -20,12 +20,23 @@ Guarda:
 
 ## 🙌 Se vuoi dare una mano
 
-Il punto di ingresso per contribuire è la repo `.github`, dove trovi le regole comuni e le indicazioni pratiche.
+Il punto di ingresso per contribuire è questa repo hub.
+
+Per iniziare in modo semplice:
+- guarda il catalogo seed in [`.github/seed_issues/`](../.github/seed_issues/README.md)
+- cerca una `good first issue` se vuoi un task leggero
+- guarda una issue `core-team` se vuoi un task più vicino al flusso vero del Lab
 
 Se invece vuoi lavorare su un progetto specifico:
 - parti dal GitHub Project del momento o dalla repo dedicata
 - guarda le issue e lo stato del progetto
 - entra in Discussions o nel canale giusto se hai bisogno di contesto
+
+Le issue reali di progetto continuano però a nascere da:
+- Discussion
+- preanalysis
+- output
+- lavoro tecnico concreto
 
 ## ❓ Se parti da una domanda civica
 
@@ -52,4 +63,4 @@ Vai al [README](../README.md).
 Vai alla [Open Board](https://github.com/orgs/dataciviclab/projects/5).
 
 "Voglio partecipare?"
-Vai alla repo `.github` e poi al progetto che ti interessa.
+Guarda il catalogo seed in `dataciviclab/.github/seed_issues/` e poi vai al progetto che ti interessa.
