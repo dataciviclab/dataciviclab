@@ -14,7 +14,7 @@ Qui rendiamo visibile il processo minimo:
 Usare un perimetro piccolo e leggibile per decidere in tempi rapidi se un filone:
 
 - va promosso a repo progetto dedicata
-- va tenuto ancora in pre-analisi
+- va tenuto ancora in preanalisi
 - va archiviato
 
 ## Cosa entra
@@ -24,7 +24,7 @@ Un candidato entra in `preanalysis/` se ha:
 1. una domanda civica formulata chiaramente
 2. una sorgente dati reale e accessibile
 3. una issue in `dataciviclab` collegata a una Discussion
-4. un output minimo atteso in 1 settimana
+4. un output minimo atteso in una settimana circa
 
 ## Cosa non entra
 
@@ -84,3 +84,13 @@ preanalysis/
 
 `scripts/` non è obbligatoria.
 Si usa solo quando un candidato richiede uno step esplicito fuori dal contract per-year del `toolkit`, per esempio un output multi-anno costruito a partire dai `clean` o dai `mart` annuali.
+
+## Relazione con `projects/`
+
+`preanalysis/` resta il luogo di lavoro per i candidati non ancora promossi.
+
+Quando un filone esce da `preanalysis/` e passa a repo dedicata:
+
+- il lavoro tecnico esce da `dataciviclab`
+- in `dataciviclab/projects/` resta una scheda leggera del progetto
+- la Discussion pubblica continua a vivere nel repo `dataciviclab`
