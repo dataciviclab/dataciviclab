@@ -60,12 +60,12 @@ jobs:
               return { title, labels, body };
             }
 
-            async function listOpenIssuesByLabel(label) {
+            async function listOpenIssuesByLabels(labels) {
               const issues = await github.paginate(github.rest.issues.listForRepo, {
                 owner,
                 repo,
                 state: "open",
-                labels: label,
+                labels: labels.join(","),
                 per_page: 100,
               });
 
@@ -81,8 +81,8 @@ jobs:
                 .map((name) => path.join(dir, name));
 
               const seeds = files.map(parseSeed);
-              const openIssues = await listOpenIssuesByLabel(bucket.label);
-              core.info(`Bucket ${bucket.dir}: ${openIssues.length} open issue(s) with label '${bucket.label}'`);
+              const openIssues = await listOpenIssuesByLabels([bucket.label, "seed-issue"]);
+              core.info(`Bucket ${bucket.dir}: ${openIssues.length} open seed issue(s) with labels '${bucket.label}' + 'seed-issue'`);
 
               const openTitles = new Set(openIssues.map((issue) => issue.title));
               let slots = Math.max(bucket.maxOpen - openIssues.length, 0);

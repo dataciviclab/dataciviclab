@@ -40,7 +40,7 @@ Questi file possono essere usati in due modi:
 - tramite la Action `seed-issues.yml`, che mantiene un piccolo buffer di issue aperte
 
 La Action non crea issue illimitate.
-Controlla quante issue aperte esistono già per ciascun bucket e apre solo gli slot mancanti, fino al massimo dichiarato.
+Controlla quante seed issue aperte esistono già per ciascun bucket, contando solo le issue che hanno sia la label del bucket sia `seed-issue`, e apre solo gli slot mancanti fino al massimo dichiarato.
 
 ## Ritiro di una seed
 
