@@ -1,0 +1,35 @@
+root: "../../_out"
+schema_version: 1
+
+dataset:
+  name: "civile_flussi_2014_2024"
+  # Chiave di snapshot per il run: il file contiene gia l'intera serie 2014-2024.
+  years: [2024]
+
+raw:
+  sources:
+    - name: "ministero_giustizia_xlsx"
+      type: "http_file"
+      args:
+        url: "https://datiestatistiche.giustizia.it/cmsresources/cms/documents/CivileFlussi20142024.xlsx"
+        filename: "CivileFlussi20142024.xlsx"
+      primary: true
+
+clean:
+  sql: "sql/clean.sql"
+  read:
+    source: auto
+    mode: latest
+    header: true
+    sheet_name: "data"
+  validate:
+    min_rows: 100000
+
+mart:
+  tables:
+    - name: "mart_summary"
+      sql: "sql/mart.sql"
+  validate: {}
+
+validation:
+  fail_on_error: true
