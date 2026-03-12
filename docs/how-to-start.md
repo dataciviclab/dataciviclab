@@ -49,6 +49,8 @@ Il flusso consigliato è:
 3. quando la domanda diventa lavoro concreto, apri una **Issue** nella repo giusta
 4. se serve un progetto dedicato, si lavora dentro una repo dataset con una domanda principale chiara
 
+Per vedere il percorso completo del Lab, incluso quando passare da `dataset-incubator` o da `preanalysis`, vedi [dataset-project-flow.md](dataset-project-flow.md).
+
 Una repo dataset può rispondere a più domande.
 Però non dovrebbe perdere il suo centro: ogni progetto deve avere una domanda civica principale che renda leggibile il perimetro del lavoro.
 

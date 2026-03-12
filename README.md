@@ -15,6 +15,7 @@ Ti basta capire dove guardare a seconda di quello che vuoi fare.
 
 Se vuoi capire cos'è DataCivicLab:
 - fai un passaggio veloce da [come iniziare](docs/how-to-start.md)
+- leggi il [flusso dataset / progetto](docs/dataset-project-flow.md)
 - leggi la [mappa delle repo](docs/repository-map.md)
 - guarda la [Open Board](https://github.com/orgs/dataciviclab/projects/5)
 - guarda la [Roadmap](https://github.com/orgs/dataciviclab/projects/2)
@@ -111,6 +112,8 @@ Serve solo voglia di capire, fare domande giuste e lavorare in modo chiaro.
 Il flusso del Lab è semplice:
 
 `domanda civica -> dati pubblici -> metodo chiaro -> output pubblico`
+
+Per il percorso operativo completo tra `Discussion`, `dataset-incubator`, `preanalysis` e repo dedicate, vedi [docs/dataset-project-flow.md](docs/dataset-project-flow.md).
 
 Il principio resta lo stesso in ogni progetto:
 - partire da una domanda comprensibile

@@ -2,6 +2,13 @@ name: Nuovo progetto
 description: Proponi un nuovo progetto o dataset per il Lab.
 title: "progetto: "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Usa questa issue quando una proposta è abbastanza concreta da diventare lavoro operativo.
+
+        A seconda del caso, il percorso successivo può passare da `dataset-incubator`, entrare in `dataciviclab/preanalysis` oppure arrivare più avanti a una repo dedicata.
+        Per il flusso completo del Lab, vedi `docs/dataset-project-flow.md`.
   - type: textarea
     id: question
     attributes:
