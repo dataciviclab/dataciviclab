@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Usa questa issue quando un filone e pronto a entrare nel flusso pubblico del Lab con un primo output leggibile.
+        Usa questa issue quando un filone è pronto a entrare nel flusso pubblico del Lab con un primo output leggibile.
 
         Non usare questo template per intake tecnico iniziale o validazione v0: quei casi stanno in `dataset-incubator` con `new-candidate.yml`.
         Per il flusso completo, vedi `docs/dataset-project-flow.md`.
@@ -15,10 +15,10 @@ body:
       label: Tema
       description: In quale area cade principalmente questo filone?
       options:
-        - Ambiente
+        - Territorio e ambiente
         - Finanza pubblica
-        - Sanita
-        - Lavoro e pubblica amministrazione
+        - Sanità
+        - Welfare e lavoro
         - Giustizia
     validations:
       required: true
@@ -26,7 +26,7 @@ body:
     id: question
     attributes:
       label: Domanda civica
-      description: Qual e la domanda pubblica che questo output prova a rendere leggibile?
+      description: Qual è la domanda pubblica che questo output prova a rendere leggibile?
       placeholder: Formula la domanda in una frase chiara.
     validations:
       required: true
@@ -34,7 +34,7 @@ body:
     id: output
     attributes:
       label: Output v1 atteso
-      description: Qual e il primo output pubblico serio che vogliamo pubblicare?
+      description: Qual è il primo output pubblico serio che vogliamo pubblicare?
       placeholder: Preanalysis, notebook leggibile, pagina pubblica, report breve, dataset documentato...
     validations:
       required: true
@@ -42,22 +42,22 @@ body:
     id: technical_state
     attributes:
       label: Stato del nucleo tecnico
-      description: Cosa esiste gia e cosa regge abbastanza per passare al pubblico?
-      placeholder: Mart o notebook v0 gia funzionante, fonte verificata, perimetro stretto, primi risultati leggibili...
+      description: Cosa esiste già e cosa regge abbastanza per passare al pubblico?
+      placeholder: Mart o notebook v0 già funzionante, fonte verificata, perimetro stretto, primi risultati leggibili...
     validations:
       required: true
   - type: checkboxes
     id: v1_checklist
     attributes:
       label: Soglia v1
-      description: Spunta solo cio che e gia vero oggi.
+      description: Spunta solo ciò che è già vero oggi.
       options:
         - label: dataset.yml presente
         - label: run verificato
         - label: mart minimo disponibile
-        - label: notebook v0 o equivalente gia esistente
+        - label: notebook v0 o equivalente già esistente
         - label: domanda civica esplicita
-        - label: perimetro pubblico iniziale gia stretto
+        - label: perimetro pubblico iniziale già stretto
   - type: textarea
     id: public_scope
     attributes:
@@ -70,23 +70,23 @@ body:
     id: links
     attributes:
       label: Issue o passaggi collegati
-      description: Collega Discussion, intake in dataset-incubator o altre issue gia aperte.
-      placeholder: Inserisci link o riferimenti utili al percorso gia fatto.
+      description: Collega Discussion, intake in dataset-incubator o altre issue già aperte.
+      placeholder: Inserisci link o riferimenti utili al percorso già fatto.
     validations:
       required: true
   - type: textarea
     id: why_now
     attributes:
-      label: Perche renderlo pubblico adesso
-      description: Quale soglia e stata superata rispetto a un semplice v0?
-      placeholder: Spiega perche questo filone merita visibilita pubblica ora.
+      label: Perché renderlo pubblico adesso
+      description: Quale soglia è stata superata rispetto a un semplice v0?
+      placeholder: Spiega perché questo filone merita visibilità pubblica ora.
     validations:
       required: true
   - type: textarea
     id: next_step
     attributes:
       label: Prossimo passo operativo
-      description: Qual e il prossimo passo concreto dopo l'apertura di questa issue?
+      description: Qual è il prossimo passo concreto dopo l'apertura di questa issue?
       placeholder: Aprire preanalysis, rifinire notebook, scrivere README, allineare docs, ecc.
     validations:
       required: true
