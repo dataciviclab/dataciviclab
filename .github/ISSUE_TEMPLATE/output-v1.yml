@@ -1,0 +1,92 @@
+name: Output v1
+description: Apri un filone pronto per un primo output pubblico serio del Lab.
+title: "output-v1: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Usa questa issue quando un filone è pronto a entrare nel flusso pubblico del Lab con un primo output leggibile.
+
+        Non usare questo template per intake tecnico iniziale o validazione v0: quei casi stanno in `dataset-incubator` con `new-candidate.yml`.
+        Per il flusso completo, vedi `docs/dataset-project-flow.md`.
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Tema
+      description: In quale area cade principalmente questo filone?
+      options:
+        - Territorio e ambiente
+        - Finanza pubblica
+        - Sanità
+        - Welfare e lavoro
+        - Giustizia
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Domanda civica
+      description: Qual è la domanda pubblica che questo output prova a rendere leggibile?
+      placeholder: Formula la domanda in una frase chiara.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output v1 atteso
+      description: Qual è il primo output pubblico serio che vogliamo pubblicare?
+      placeholder: Preanalysis, notebook leggibile, pagina pubblica, report breve, dataset documentato...
+    validations:
+      required: true
+  - type: textarea
+    id: technical_state
+    attributes:
+      label: Stato del nucleo tecnico
+      description: Cosa esiste già e cosa regge abbastanza per passare al pubblico?
+      placeholder: Mart o notebook v0 già funzionante, fonte verificata, perimetro stretto, primi risultati leggibili...
+    validations:
+      required: true
+  - type: checkboxes
+    id: v1_checklist
+    attributes:
+      label: Soglia v1
+      description: Spunta solo ciò che è già vero oggi.
+      options:
+        - label: dataset.yml presente
+        - label: run verificato
+        - label: mart minimo disponibile
+        - label: notebook v0 o equivalente già esistente
+        - label: domanda civica esplicita
+        - label: perimetro pubblico iniziale già stretto
+  - type: textarea
+    id: public_scope
+    attributes:
+      label: Perimetro pubblico iniziale
+      description: Stringi bene il primo rilascio pubblico.
+      placeholder: Solo un territorio, solo alcuni anni, una domanda sola, un primo taglio esplicito.
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Issue o passaggi collegati
+      description: Collega Discussion, intake in dataset-incubator o altre issue già aperte.
+      placeholder: Inserisci link o riferimenti utili al percorso già fatto.
+    validations:
+      required: true
+  - type: textarea
+    id: why_now
+    attributes:
+      label: Perché renderlo pubblico adesso
+      description: Quale soglia è stata superata rispetto a un semplice v0?
+      placeholder: Spiega perché questo filone merita visibilità pubblica ora.
+    validations:
+      required: true
+  - type: textarea
+    id: next_step
+    attributes:
+      label: Prossimo passo operativo
+      description: Qual è il prossimo passo concreto dopo l'apertura di questa issue?
+      placeholder: Aprire preanalysis, rifinire notebook, scrivere README, allineare docs, ecc.
+    validations:
+      required: true

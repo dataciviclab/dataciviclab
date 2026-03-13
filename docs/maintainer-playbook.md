@@ -21,6 +21,13 @@ Prima di aprire un nuovo repo, controlla che:
 - il progetto abbia un'utilità civica chiara
 - il perimetro sia abbastanza piccolo da poter partire bene
 
+Prima di decidere se aprire subito una repo dedicata, passa dal flusso canonico del Lab:
+- [dataset-project-flow.md](dataset-project-flow.md)
+
+In molti casi il percorso giusto non è ancora `Discussion -> repo`, ma:
+- `Discussion -> issue -> dataset-incubator`
+- oppure `Discussion -> issue -> preanalysis`
+
 ## 3. Creare il repo progetto
 
 Se la proposta regge:

@@ -15,6 +15,7 @@ Ti basta capire dove guardare a seconda di quello che vuoi fare.
 
 Se vuoi capire cos'è DataCivicLab:
 - fai un passaggio veloce da [come iniziare](docs/how-to-start.md)
+- leggi il [flusso dataset / progetto](docs/dataset-project-flow.md)
 - leggi la [mappa delle repo](docs/repository-map.md)
 - guarda la [Open Board](https://github.com/orgs/dataciviclab/projects/5)
 - guarda la [Roadmap](https://github.com/orgs/dataciviclab/projects/2)
@@ -26,10 +27,11 @@ Se vuoi contribuire:
 - se lavori su un dataset, parti dal `project-template`
 
 Se devi aprire una issue qui in `dataciviclab`, usala per:
-- roadmap del Lab
+- `output-v1` e primi ingressi pubblici già maturi
 - lavori che toccano più repo
-- proposta di un nuovo progetto
 - decisioni organizzative
+
+Per nuove domande, nuovi dataset o proposte di progetto, il punto di ingresso pubblico del Lab sono prima di tutto le Discussions dell'organizzazione.
 
 Bug, fix e task tecnici vanno invece aperti nella repo giusta.
 
@@ -112,6 +114,8 @@ Il flusso del Lab è semplice:
 
 `domanda civica -> dati pubblici -> metodo chiaro -> output pubblico`
 
+Per il percorso operativo completo tra `Discussion`, `dataset-incubator`, `preanalysis` e repo dedicate, vedi [docs/dataset-project-flow.md](docs/dataset-project-flow.md).
+
 Il principio resta lo stesso in ogni progetto:
 - partire da una domanda comprensibile
 - usare fonti difendibili
@@ -138,7 +142,7 @@ In breve:
 Questo ci aiuta a non confondere i livelli:
 
 - la **Discussion** serve a formulare e chiarire la domanda
-- la **Issue** serve a trasformarla in lavoro operativo
+- la **Issue** serve a trasformarla in lavoro operativo o in un passaggio già più maturo
 - la **repo dataset** serve a produrre una risposta verificabile
 
 L'obiettivo non è accumulare dati o tooling.

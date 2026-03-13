@@ -9,6 +9,8 @@ Questa cartella contiene seed issue standardizzate da usare per:
 Le seed issue non sostituiscono le issue reali di progetto.
 Servono solo come ingressi standardizzati e task ricorrenti leggeri.
 
+Il contesto operativo di queste seed segue il flusso canonico del Lab descritto in [docs/dataset-project-flow.md](../../docs/dataset-project-flow.md).
+
 ## Regole
 
 - massimo `5` seed issue aperte con label `good first issue`
