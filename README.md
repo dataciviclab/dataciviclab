@@ -27,10 +27,11 @@ Se vuoi contribuire:
 - se lavori su un dataset, parti dal `project-template`
 
 Se devi aprire una issue qui in `dataciviclab`, usala per:
-- roadmap del Lab
+- `output-v1` e primi ingressi pubblici già maturi
 - lavori che toccano più repo
-- proposta di un nuovo progetto
 - decisioni organizzative
+
+Per nuove domande, nuovi dataset o proposte di progetto, il punto di ingresso pubblico del Lab sono prima di tutto le Discussions dell'organizzazione.
 
 Bug, fix e task tecnici vanno invece aperti nella repo giusta.
 
@@ -141,7 +142,7 @@ In breve:
 Questo ci aiuta a non confondere i livelli:
 
 - la **Discussion** serve a formulare e chiarire la domanda
-- la **Issue** serve a trasformarla in lavoro operativo
+- la **Issue** serve a trasformarla in lavoro operativo o in un passaggio già più maturo
 - la **repo dataset** serve a produrre una risposta verificabile
 
 L'obiettivo non è accumulare dati o tooling.
