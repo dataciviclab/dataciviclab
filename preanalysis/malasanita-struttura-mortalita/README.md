@@ -63,9 +63,9 @@ Questa preanalysis è pubblica nel contenuto analitico, ma dipende da artifact g
 
 ## Stato
 
-- `active`
+- `active` in `dataciviclab/preanalysis`
 - artifact v3 validato (`dataciviclab/dataset-incubator`, issue #24)
-- issue promozione: `dataciviclab/dataciviclab#117`
+- promozione completata: `dataciviclab/dataciviclab#117` (chiusa)
 
 ## Prossimo checkpoint
 
