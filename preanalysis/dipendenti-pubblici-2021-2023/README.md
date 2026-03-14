@@ -33,7 +33,7 @@ Issue collegata: [#131](https://github.com/dataciviclab/dataciviclab/issues/131)
   - tasso di turnover lordo
   - quota donne
 - notebook pubblico `notebooks/dipendenti_pubblici_preanalysis_v1.ipynb`
-- primo output pubblico centrato sui comparti che trainano la crescita del triennio
+- primo output pubblico centrato sui comparti in cui si concentra la dinamica del triennio
 
 ## Stato
 
