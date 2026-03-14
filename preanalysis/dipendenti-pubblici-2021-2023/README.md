@@ -31,7 +31,7 @@ Issue collegata: [#131](https://github.com/dataciviclab/dataciviclab/issues/131)
   - saldo netto
   - tasso di assunzione e uscita
   - quota donne
-- notebook di lavoro `notebooks/dipendenti_pubblici_preanalysis_v0.ipynb`
+- notebook pubblico `notebooks/dipendenti_pubblici_preanalysis_v1.ipynb`
 - primo output pubblico centrato sui comparti che trainano la crescita del triennio
 
 ## Stato
@@ -39,7 +39,7 @@ Issue collegata: [#131](https://github.com/dataciviclab/dataciviclab/issues/131)
 - `active`
 - `run all` verificato su `2021`, `2022`, `2023`
 - mart minimo disponibile
-- notebook `v0` pronto
+- notebook `v1` pronto
 
 ## Esecuzione
 
