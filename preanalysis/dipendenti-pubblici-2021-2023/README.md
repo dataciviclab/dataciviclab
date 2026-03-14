@@ -2,9 +2,9 @@
 
 ## Domanda principale
 
-Il pubblico impiego sta tornando a crescere davvero, e in quali comparti si concentra la dinamica tra il 2021 e il 2023?
+Come sta cambiando il pubblico impiego tra il 2021 e il 2023, e in quali comparti si concentra la dinamica?
 
-## Perche conta
+## Perché conta
 
 - rende leggibile una dinamica spesso raccontata in modo troppo generico
 - permette di distinguere tra crescita diffusa e crescita trainata da pochi comparti
@@ -16,9 +16,9 @@ Issue collegata: [#131](https://github.com/dataciviclab/dataciviclab/issues/131)
 
 - fonte principale: export CSV pubblico BDAP / RGS sui dipendenti pubblici per ente
 - copertura temporale in analisi: `2021-2023`
-- granularita di base: ente / comparto / categoria
+- granularità di base: ente / comparto / categoria
 - limiti noti:
-  - il perimetro attuale e volutamente corto e non consente ancora una lettura storica piu lunga
+  - il perimetro attuale è volutamente corto e non consente ancora una lettura storica più lunga
   - il primo output esclude ranking ente per ente, per evitare una lettura troppo dispersiva
   - i CSV non sono UTF-8 puliti; il run usa `cp1252`
 
@@ -30,6 +30,7 @@ Issue collegata: [#131](https://github.com/dataciviclab/dataciviclab/issues/131)
   - cessati
   - saldo netto
   - tasso di assunzione e uscita
+  - tasso di turnover lordo
   - quota donne
 - notebook pubblico `notebooks/dipendenti_pubblici_preanalysis_v1.ipynb`
 - primo output pubblico centrato sui comparti che trainano la crescita del triennio
@@ -51,10 +52,10 @@ py -m toolkit.cli.app run all --config preanalysis/dipendenti-pubblici-2021-2023
 
 ## Provenienza
 
-Il filone e nato come candidato in `dataset-incubator` e viene promosso qui come preanalysis autosufficiente, portando in `dataciviclab` anche il contratto tecnico minimo (`dataset.yml`, `sql/`, notebook).
+Il filone è nato come candidato in `dataset-incubator` e viene promosso qui come preanalysis autosufficiente, portando in `dataciviclab` anche il contratto tecnico minimo (`dataset.yml`, `sql/`, notebook).
 
 ## Decisione attesa al checkpoint
 
 - confermare che il primo output pubblico debba restare sul confronto tra comparti
-- valutare se includere gia una lettura minima sulla composizione di genere
-- decidere se il triennio `2021-2023` basta da solo o se serva uno storico piu ampio in un secondo momento
+- valutare se includere già una lettura minima sulla composizione di genere
+- decidere se il triennio `2021-2023` basta da solo o se serva uno storico più ampio in un secondo momento
