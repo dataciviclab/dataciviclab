@@ -30,7 +30,10 @@ mart:
       sql: "sql/mart.sql"
   required_tables:
     - "mart_mix_regioni"
-  validate: {}
+  validate:
+    table_rules:
+      mart_mix_regioni:
+        min_rows: 80
 
 validation:
   fail_on_error: true
