@@ -1,0 +1,44 @@
+root: "../../../out"
+schema_version: 1
+
+dataset:
+  name: "dipendenti_pubblici_2021_2023"
+  years: [2021, 2022, 2023]
+
+raw:
+  output_policy: overwrite
+  sources:
+    - name: "bdap_csv"
+      type: "http_file"
+      args:
+        url: "https://bdap-opendata.rgs.mef.gov.it/export/csv/{year}---Dipendenti-Pubblici---Occupazione-e-Turnover---Dati-analitici-per-Ente.csv"
+        filename: "dipendenti_pubblici_{year}.csv"
+      primary: true
+
+clean:
+  sql: "sql/clean.sql"
+  read:
+    source: auto
+    mode: latest
+    header: true
+    delim: ";"
+    encoding: "cp1252"
+  validate:
+    min_rows: 1000
+
+mart:
+  tables:
+    - name: "mart_comparti_anno"
+      sql: "sql/mart.sql"
+  required_tables:
+    - "mart_comparti_anno"
+  validate:
+    table_rules:
+      mart_comparti_anno:
+        min_rows: 6
+
+validation:
+  fail_on_error: true
+
+output:
+  artifacts: "minimal"
