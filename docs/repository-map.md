@@ -74,6 +74,20 @@ Qui non stanno:
 - il racconto generale di DataCivicLab
 - la documentazione tecnica del toolkit
 
+## `dataset-incubator`
+
+È il luogo di intake e incubazione tecnica dei candidati.
+
+Qui stanno:
+- i candidati con domanda civica e potenziale di promozione
+- il contratto tecnico di ogni filone (dataset.yml, sql/, note)
+- i support dataset riusabili per join o controlli
+- la storia dei filoni usciti (registry/archived.md)
+
+Qui non stanno:
+- output pubblici o notebook definitivi
+- filoni già promossi a preanalysis o repo dedicata
+
 ## Repo dataset
 
 Sono i progetti concreti.
