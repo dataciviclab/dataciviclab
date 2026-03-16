@@ -43,6 +43,8 @@ Discussion collegata: [#115](https://github.com/orgs/dataciviclab/discussions/11
 
 ## Esecuzione
 
+Nota: questo README riflette ancora il vecchio modello `preanalysis` autosufficiente. Nel modello attuale il contratto tecnico di riferimento vive in `dataset-incubator`; i comandi sotto restano documentazione storica del run.
+
 Run annuale con `toolkit`:
 
 ```powershell
@@ -51,7 +53,7 @@ py -m toolkit.cli.app run all --config preanalysis/terna-electricity-by-source/d
 
 ## Provenienza
 
-Il filone è nato come candidato in `dataset-incubator` e viene promosso qui come preanalysis autosufficiente, portando in `dataciviclab` il contratto tecnico minimo (`dataset.yml`, `sql/`, notebook) e una prima risposta pubblica alla Discussion `#115`.
+Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come preanalysis nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.
 
 ## Decisione attesa al checkpoint
 

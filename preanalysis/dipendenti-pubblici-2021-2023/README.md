@@ -44,6 +44,8 @@ Issue collegata: [#131](https://github.com/dataciviclab/dataciviclab/issues/131)
 
 ## Esecuzione
 
+Nota: questo README riflette ancora il vecchio modello `preanalysis` autosufficiente. Nel modello attuale il contratto tecnico di riferimento vive in `dataset-incubator`; i comandi sotto restano documentazione storica del run.
+
 Run annuale con `toolkit`:
 
 ```powershell
@@ -52,7 +54,7 @@ py -m toolkit.cli.app run all --config preanalysis/dipendenti-pubblici-2021-2023
 
 ## Provenienza
 
-Il filone è nato come candidato in `dataset-incubator` e viene promosso qui come preanalysis autosufficiente, portando in `dataciviclab` anche il contratto tecnico minimo (`dataset.yml`, `sql/`, notebook).
+Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come preanalysis nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.
 
 ## Decisione attesa al checkpoint
 

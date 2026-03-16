@@ -43,6 +43,8 @@ Discussion collegata:
 
 ## Esecuzione
 
+Nota: questo README conserva ancora un setup tecnico del vecchio modello `preanalysis` autosufficiente. Nel modello attuale il contratto tecnico di riferimento vive in `dataset-incubator`; i comandi sotto restano documentazione storica del run.
+
 Run annuale con `toolkit`:
 
 ```powershell
