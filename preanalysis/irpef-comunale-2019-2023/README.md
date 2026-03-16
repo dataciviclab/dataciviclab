@@ -59,7 +59,7 @@ py -m toolkit.cli.app run cross_year --config preanalysis/irpef-comunale-2019-20
 
 Output finale:
 
-- `_out/data/cross/irpef_comunale_2019_2023/irpef_capacita_fiscale_multi_anno.parquet`
+- `out/data/cross/irpef_comunale_2019_2023/irpef_capacita_fiscale_multi_anno.parquet`
 
 ## Decisione attesa al checkpoint
 

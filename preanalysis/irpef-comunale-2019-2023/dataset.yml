@@ -1,4 +1,4 @@
-root: "../../_out"
+root: "../../out"
 schema_version: 1
 
 dataset:
