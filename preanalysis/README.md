@@ -7,7 +7,7 @@ Non è una repo progetto già matura.
 
 Qui rendiamo visibile il processo minimo:
 
-`dataset -> RAW/CLEAN -> prima analisi -> decisione`
+`dataset -> contratto tecnico verificato -> prima analisi pubblica -> decisione`
 
 ## Scopo
 
@@ -17,14 +17,21 @@ Usare un perimetro piccolo e leggibile per decidere in tempi rapidi se un filone
 - va tenuto ancora in preanalisi
 - va archiviato
 
+## Modello
+
+Il contratto tecnico (dataset.yml, sql/, note interne) vive in `dataset-incubator`.
+Qui arriva solo il layer pubblico: README, notebook, eventuali asset leggeri.
+
+I filoni in `preanalysis/` promossi prima di questo modello possono contenere ancora file tecnici — sono storico del vecchio approccio.
+
 ## Cosa entra
 
 Un candidato entra in `preanalysis/` se ha:
 
 1. una domanda civica formulata chiaramente
-2. una sorgente dati reale e accessibile
-3. una issue in `dataciviclab` collegata a una Discussion
-4. un output minimo atteso in una settimana circa
+2. una issue in `dataciviclab` collegata a una Discussion
+3. un notebook leggibile con almeno una lettura v0 completata
+4. contratto tecnico verificato in `dataset-incubator`
 
 ## Cosa non entra
 
@@ -33,13 +40,10 @@ Un candidato entra in `preanalysis/` se ha:
 - progetti già maturi
 - backlog indefinito
 
-## Stati
+## Tracking
 
-- `intake`
-- `active`
-- `promising`
-- `ready-to-promote`
-- `archived`
+I filoni attivi sono tracciati via issue in `dataciviclab` con label `preanalysis`.
+L'archivio dei filoni usciti sta in `registry/archived.md`.
 
 ## Limite WIP
 
@@ -49,8 +53,8 @@ Massimo 2-3 candidati attivi insieme.
 
 ### Promozione
 
-- run stabile almeno su RAW/CLEAN
-- output minimo condivisibile
+- notebook con lettura leggibile e finding dichiarato
+- contratto tecnico stabile in `dataset-incubator`
 - valore sufficiente per sviluppo continuo
 
 ### Archiviazione
@@ -70,20 +74,14 @@ Massimo 2-3 candidati attivi insieme.
 preanalysis/
   README.md
   registry/
-    active.md
     archived.md
   _template/
     README.md
-    dataset.yml
-    notes.md
-    scripts/
-    sql/
-      clean.sql
-      mart.sql
+    notebooks/
+  <slug>/
+    README.md
+    notebooks/
 ```
-
-`scripts/` non è obbligatoria.
-Si usa solo quando un candidato richiede uno step esplicito fuori dal contract per-year del `toolkit`, per esempio un output multi-anno costruito a partire dai `clean` o dai `mart` annuali.
 
 ## Relazione con `projects/`
 

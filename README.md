@@ -86,6 +86,10 @@ Qui vivono i comandi, la logica di pipeline e la documentazione tecnica del work
 Modello standard per creare un nuovo repo dataset o progetto.
 Definisce la struttura minima, i workflow di base e l'integrazione con il toolkit.
 
+### `dataset-incubator`
+Repo pubblica di intake e incubazione tecnica leggera.
+Qui vive il contratto tecnico dei candidati (dataset, SQL, note) prima della promozione verso `preanalysis/` o una repo progetto dedicata.
+
 ### Repo dataset
 Ogni progetto concreto vive in una repo dedicata.
 Li segui nella [Open Board](https://github.com/orgs/dataciviclab/projects/5) e nelle repo dedicate.
@@ -93,7 +97,7 @@ Li segui nella [Open Board](https://github.com/orgs/dataciviclab/projects/5) e n
 ### `preanalysis/` in `dataciviclab`
 Sezione pubblica di validazione leggera per candidati progetto.
 Serve per rendere visibile il passaggio:
-`Discussion -> issue -> RAW/CLEAN -> prima analisi -> decisione`
+`Discussion -> issue -> dataset-incubator -> preanalysis -> decisione`
 Link diretto: [preanalysis/README.md](preanalysis/README.md)
 
 ### `projects/` in `dataciviclab`

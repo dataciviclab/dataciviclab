@@ -16,20 +16,15 @@ Scrivi una domanda civica chiara in una frase.
 - copertura territoriale
 - limiti noti
 
-## Output minimo atteso (1 settimana)
+## Output minimo atteso
 
 Definisci un output piccolo ma pubblicabile:
 
-- tabella sintetica
-- grafico con nota breve
-- mini notebook conclusivo
+- notebook con lettura v1 e finding principale
+- tabella sintetica commentata
 
-Se il caso e storico o multi-anno, puoi aggiungere anche:
-
-- uno step `post-mart` esplicito
-- uno script piccolo in `scripts/` per costruire un artefatto cross-year
-
-Questo va usato solo quando il contract year-scoped del `toolkit` non basta per l'output minimo richiesto.
+Il contratto tecnico (dataset.yml, sql/, note interne) vive in `dataset-incubator`.
+Qui arriva solo il layer pubblico.
 
 ## Decisione attesa al checkpoint
 

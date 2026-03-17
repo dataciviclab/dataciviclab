@@ -8,7 +8,7 @@ Questa pagina descrive il flusso canonico del Lab per trasformare una domanda ci
 Domanda civica
   -> Discussion
   -> issue operativa
-  -> dataset-incubator (se serve validazione tecnica privata)
+  -> dataset-incubator (se serve validazione tecnica)
   -> dataciviclab/preanalysis
   -> repo dedicata dal project-template
   -> scheda leggera in dataciviclab/projects
@@ -68,7 +68,7 @@ Qui si lavora soprattutto su:
 - `sql/mart.sql`
 - notebook `v0`
 - note di metodo
-- registry dei filoni attivi
+- issue con label di stato
 
 Output minimo atteso:
 - run funzionante almeno sul perimetro iniziale
@@ -88,25 +88,13 @@ Un filone entra in `preanalysis/` se ha:
 
 La forma può essere di due tipi:
 
-### Preanalysis autosufficiente
-
-La cartella `preanalysis/` contiene direttamente il contratto principale del filone:
-- `dataset.yml`
-- `sql/`
-- notebook
-- note
-- output minimo leggibile
-
-Questo è un percorso previsto dal modello del Lab, anche se oggi i casi reali possono passare più spesso da handoff via `dataset-incubator`.
-
-### Preanalysis handoff da incubator
-
-Il nucleo tecnico vive ancora soprattutto in `dataset-incubator`, ma `dataciviclab` riceve il layer analitico pubblico già pronto:
+Il nucleo tecnico (dataset.yml, sql/, note) vive in `dataset-incubator`.
+In `dataciviclab/preanalysis/` arriva solo il layer pubblico:
 - `README`
-- notebook
-- indicazione esplicita degli artifact o dipendenze necessari
+- notebook con lettura leggibile
+- eventuali asset leggeri
 
-Questa forma va dichiarata chiaramente, per evitare ambiguità sul grado di autosufficienza della preanalysis.
+I filoni promossi prima di questo modello possono contenere ancora file tecnici — sono storico.
 
 ## Step 5: quando nasce una repo dedicata
 
@@ -145,7 +133,7 @@ Discussion
   -> repo dedicata
 ```
 
-È il percorso più semplice quando il filone è già abbastanza leggibile e non richiede molta incubazione tecnica privata.
+È il percorso più semplice quando il filone è già abbastanza leggibile e non richiede incubazione tecnica in `dataset-incubator`.
 
 ### Percorso con incubator
 

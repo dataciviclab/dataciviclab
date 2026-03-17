@@ -61,10 +61,11 @@ Se non sai da dove partire, leggi [`docs/how-to-start.md`](how-to-start.md).
 
 1. Una domanda civica viene proposta in modo chiaro, di solito in una Discussion.
 2. Si verifica che esistano dati pubblici adatti.
-3. Se la domanda regge, il candidato entra in `preanalysis/` nel repo `dataciviclab`.
-4. I maintainer valutano se la preanalisi e' pronta per una repo dedicata.
-5. Se la proposta regge, nasce una nuova repo dal `project-template`.
-6. Il progetto entra nelle board pubbliche e nel flusso operativo del Lab.
+3. Se serve validazione tecnica, il candidato entra in `dataset-incubator`.
+4. Quando il filone ha una prima storia leggibile, entra in `preanalysis/` nel repo `dataciviclab`.
+5. I maintainer valutano se la preanalisi e' pronta per una repo dedicata.
+6. Se la proposta regge, nasce una nuova repo dal `project-template`.
+7. Il progetto entra nelle board pubbliche e nel flusso operativo del Lab.
 
 ## Principio guida
 
