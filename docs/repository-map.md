@@ -6,16 +6,18 @@ Questa pagina serve solo a capire dove andare quando ti serve qualcosa.
 
 ## `dataciviclab`
 
-È l'hub pubblico del Lab.
+E l'hub pubblico del Lab.
 
 Qui stanno:
 - la spiegazione del progetto
 - la mappa dell'ecosistema
 - i link ai progetti, alle board e ai risultati pubblici
 - lo stato di `preanalysis/`
-- le schede in `projects/` dei filoni già promossi
+- le schede in `projects/` dei filoni gia promossi
 - la roadmap
 - le guide brevi per orientarsi
+- il `CONTRIBUTING.md` specifico della repo hub
+- la guida breve di setup locale del Lab
 
 Qui non stanno:
 - policy GitHub condivise
@@ -25,11 +27,11 @@ Qui non stanno:
 
 Dentro `dataciviclab` ci sono due livelli utili:
 - `preanalysis/` per i candidati ancora in validazione
-- `projects/` per le schede leggere dei progetti già promossi a repo dedicate
+- `projects/` per le schede leggere dei progetti gia promossi a repo dedicate
 
 ## `.github`
 
-È la repo delle regole comuni su GitHub.
+E la repo delle regole comuni su GitHub.
 
 Qui stanno:
 - `CONTRIBUTING`
@@ -46,7 +48,7 @@ Qui non stanno:
 
 ## `toolkit`
 
-È il motore operativo del Lab.
+E il motore operativo del Lab.
 
 Qui stanno:
 - il codice del toolkit
@@ -61,7 +63,7 @@ Qui non stanno:
 
 ## `project-template`
 
-È il modello standard dei repo dataset.
+E il modello standard dei repo dataset.
 
 Qui stanno:
 - la struttura base di un progetto
@@ -76,17 +78,17 @@ Qui non stanno:
 
 ## `dataset-incubator`
 
-È il luogo di intake e incubazione tecnica dei candidati.
+E il luogo di intake e incubazione tecnica dei candidati.
 
 Qui stanno:
 - i candidati con domanda civica e potenziale di promozione
-- il contratto tecnico di ogni filone (dataset.yml, sql/, note)
+- il contratto tecnico di ogni filone (`dataset.yml`, `sql/`, note)
 - i support dataset riusabili per join o controlli
-- la storia dei filoni usciti (registry/archived.md)
+- la storia dei filoni usciti (`registry/archived.md`)
 
 Qui non stanno:
-- output pubblici o notebook definitivi
-- filoni già promossi a preanalysis o repo dedicata
+- output pubblici o notebook definitivi come standard
+- filoni gia promossi a preanalysis o repo dedicata
 
 ## Repo dataset
 

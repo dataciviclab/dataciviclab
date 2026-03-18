@@ -24,6 +24,8 @@ Il punto di ingresso per contribuire è questa repo hub.
 
 Per iniziare in modo semplice:
 - guarda il catalogo seed in [`.github/seed_issues/`](../.github/seed_issues/README.md)
+- leggi [CONTRIBUTING.md](../CONTRIBUTING.md) per capire cosa entra in questa repo
+- usa [local-setup.md](local-setup.md) se devi configurare il workspace minimo del Lab
 - cerca una `good first issue` se vuoi un task leggero
 - guarda una issue `core-team` se vuoi un task più vicino al flusso vero del Lab
 
