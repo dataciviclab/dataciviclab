@@ -6,14 +6,14 @@ Questa pagina serve solo a capire dove andare quando ti serve qualcosa.
 
 ## `dataciviclab`
 
-E l'hub pubblico del Lab.
+È l'hub pubblico del Lab.
 
 Qui stanno:
 - la spiegazione del progetto
 - la mappa dell'ecosistema
 - i link ai progetti, alle board e ai risultati pubblici
 - lo stato di `preanalysis/`
-- le schede in `projects/` dei filoni gia promossi
+- le schede in `projects/` dei filoni già promossi
 - la roadmap
 - le guide brevi per orientarsi
 - il `CONTRIBUTING.md` specifico della repo hub
@@ -27,11 +27,11 @@ Qui non stanno:
 
 Dentro `dataciviclab` ci sono due livelli utili:
 - `preanalysis/` per i candidati ancora in validazione
-- `projects/` per le schede leggere dei progetti gia promossi a repo dedicate
+- `projects/` per le schede leggere dei progetti già promossi a repo dedicate
 
 ## `.github`
 
-E la repo delle regole comuni su GitHub.
+È la repo delle regole comuni su GitHub.
 
 Qui stanno:
 - `CONTRIBUTING`
@@ -48,7 +48,7 @@ Qui non stanno:
 
 ## `toolkit`
 
-E il motore operativo del Lab.
+È il motore operativo del Lab.
 
 Qui stanno:
 - il codice del toolkit
@@ -63,7 +63,7 @@ Qui non stanno:
 
 ## `project-template`
 
-E il modello standard dei repo dataset.
+È il modello standard dei repo dataset.
 
 Qui stanno:
 - la struttura base di un progetto
@@ -78,7 +78,7 @@ Qui non stanno:
 
 ## `dataset-incubator`
 
-E il luogo di intake e incubazione tecnica dei candidati.
+È il luogo di intake e incubazione tecnica dei candidati.
 
 Qui stanno:
 - i candidati con domanda civica e potenziale di promozione
@@ -88,7 +88,7 @@ Qui stanno:
 
 Qui non stanno:
 - output pubblici o notebook definitivi come standard
-- filoni gia promossi a preanalysis o repo dedicata
+- filoni già promossi a preanalysis o repo dedicata
 
 ## Repo dataset
 

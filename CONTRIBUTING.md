@@ -7,14 +7,14 @@ Per le regole GitHub condivise dell'organizzazione, parti prima da
 
 ## A cosa serve questa repo
 
-`dataciviclab` e l'hub pubblico del Lab.
+`dataciviclab` è l'hub pubblico del Lab.
 
 Qui stanno soprattutto:
 
 - Discussions
 - docs brevi di orientamento
 - `preanalysis/` come layer pubblico leggero
-- `projects/` come indice dei filoni gia promossi
+- `projects/` come indice dei filoni già promossi
 - task cross-repo e decisioni organizzative
 
 Qui non stanno:
@@ -31,7 +31,7 @@ Apri una issue in `dataciviclab` se il lavoro riguarda:
 - docs o orientamento del Lab
 - task cross-repo
 - decisioni organizzative
-- output pubblici leggeri gia abbastanza maturi
+- output pubblici leggeri già abbastanza maturi
 
 Non aprirla qui se il lavoro riguarda soprattutto:
 
@@ -64,13 +64,13 @@ Per il setup locale minimo del Lab, vedi:
 
 - [docs/local-setup.md](docs/local-setup.md)
 
-Questa guida e separata dal ruolo di maintainer o core contributor.
+Questa guida è separata dal ruolo di maintainer o core contributor.
 
 ## Prima di aprire una PR
 
-- verifica se esiste gia una issue o discussion collegata
+- verifica se esiste già una issue o discussion collegata
 - tieni il cambiamento piccolo e leggibile
-- spiega il perche, non solo il cosa
+- spiega il perché, non solo il cosa
 - se tocchi il flusso tra repo, controlla anche [docs/dataset-project-flow.md](docs/dataset-project-flow.md)
 
 ## Se non sai da dove partire
