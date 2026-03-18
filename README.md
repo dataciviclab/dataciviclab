@@ -22,6 +22,8 @@ Se vuoi capire cos'è DataCivicLab:
 
 Se vuoi contribuire:
 - usa le policy condivise nella repo `.github`
+- leggi [CONTRIBUTING.md](CONTRIBUTING.md) per il ruolo specifico di questa repo
+- se ti serve il setup minimo, parti da [docs/local-setup.md](docs/local-setup.md)
 - guarda il catalogo seed in [`.github/seed_issues/`](.github/seed_issues/README.md)
 - leggi i [canali della community](docs/community-channels.md)
 - se lavori su un dataset, parti dal `project-template`

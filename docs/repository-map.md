@@ -16,6 +16,8 @@ Qui stanno:
 - le schede in `projects/` dei filoni già promossi
 - la roadmap
 - le guide brevi per orientarsi
+- il `CONTRIBUTING.md` specifico della repo hub
+- la guida breve di setup locale del Lab
 
 Qui non stanno:
 - policy GitHub condivise
@@ -80,12 +82,12 @@ Qui non stanno:
 
 Qui stanno:
 - i candidati con domanda civica e potenziale di promozione
-- il contratto tecnico di ogni filone (dataset.yml, sql/, note)
+- il contratto tecnico di ogni filone (`dataset.yml`, `sql/`, note)
 - i support dataset riusabili per join o controlli
-- la storia dei filoni usciti (registry/archived.md)
+- la storia dei filoni usciti (`registry/archived.md`)
 
 Qui non stanno:
-- output pubblici o notebook definitivi
+- output pubblici o notebook definitivi come standard
 - filoni già promossi a preanalysis o repo dedicata
 
 ## Repo dataset
