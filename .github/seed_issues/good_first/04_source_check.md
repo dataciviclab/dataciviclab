@@ -1,4 +1,4 @@
-Title: `[Seed] Verificare una fonte pubblica e documentarne i limiti`
+Title: `[Seed] Verificare una fonte pubblica e lasciare una nota breve riusabile`
 Labels: `seed-issue`, `good first issue`, `source-check`
 
 Body:
@@ -6,17 +6,28 @@ Body:
 ```md
 ## Obiettivo
 
-Controllare una fonte pubblica già usata o candidata e documentarne in modo semplice struttura e limiti.
+Controllare una fonte pubblica gia usata o candidata e lasciare una nota breve riusabile.
 
-## Cosa fare
+## Anchor
 
-- verificare URL, copertura temporale e formato della fonte
-- annotare eventuali caveat metodologici evidenti
-- non costruire ancora una pipeline: il lavoro è solo di verifica leggera
+- scegli una fonte precisa, con URL e contesto gia identificati
+- il task si ferma alla verifica, non entra ancora in pipeline o clean
 
-## Criteri di completamento
+## Task minimo
 
-- la fonte è verificata
+- verifica URL, formato e copertura temporale
+- annota almeno un caveat metodologico evidente
+- scrivi una nota breve che un altro collaboratore possa riusare
+
+## Done quando
+
+- la fonte e verificata
 - i limiti principali sono documentati
-- il risultato è riusabile nel Lab
+- il risultato e leggibile in 10-15 righe
+
+## Non in scope
+
+- costruire pipeline o notebook
+- fare gia analisi dei dati
+- allargare il task a piu fonti insieme
 ```

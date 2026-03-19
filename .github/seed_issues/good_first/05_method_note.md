@@ -1,4 +1,4 @@
-Title: `[Seed] Aggiungere una nota metodologica minima a un output`
+Title: `[Seed] Aggiungere una nota metodologica minima a un output preciso`
 Labels: `seed-issue`, `good first issue`, `documentation`, `method`
 
 Body:
@@ -6,17 +6,27 @@ Body:
 ```md
 ## Obiettivo
 
-Rendere più leggibile un output già esistente aggiungendo una nota metodologica minima.
+Rendere piu leggibile un output gia esistente aggiungendo una nota metodologica minima e concreta.
 
-## Cosa fare
+## Anchor
 
-- scegliere un output o notebook già presente
-- aggiungere 2-4 righe su fonte, limiti o cautele di lettura
-- non estendere lo scope analitico
+- scegli un notebook, una note o un output preciso
+- punta a un limite reale che oggi non e esplicitato abbastanza
 
-## Criteri di completamento
+## Task minimo
+
+- aggiungi 2-4 righe su fonte, limite, discontinuita o cautela di lettura
+- mantieni il focus sul materiale gia esistente
+
+## Done quando
 
 - la nota chiarisce almeno un limite reale
 - non duplica inutilmente altra documentazione
-- il risultato aiuta un lettore nuovo
+- aiuta un lettore nuovo a non sovra-interpretare l'output
+
+## Non in scope
+
+- rifare l'analisi
+- aggiungere nuovi grafici o nuove query
+- trasformare la nota in metodologia completa
 ```

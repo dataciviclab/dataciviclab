@@ -29,6 +29,13 @@ Ogni file contiene:
 - `Labels`
 - `Body`
 
+Nel body ogni seed dovrebbe rendere subito leggibili:
+
+- `Anchor`: dove agganciarsi davvero nel Lab
+- `Task minimo`: una cosa sola da fare
+- `Done quando`: criterio di chiusura chiaro
+- `Non in scope`: cosa non allargare
+
 La cartella e divisa in:
 
 - `good_first/`
@@ -42,11 +49,22 @@ Questi file possono essere usati in due modi:
 - tramite la Action `seed-issues.yml`, che mantiene un piccolo buffer di issue aperte
 
 La Action non crea issue illimitate.
-Controlla quante seed issue aperte esistono già per ciascun bucket, contando solo le issue che hanno sia la label del bucket sia `seed-issue`, e apre solo gli slot mancanti fino al massimo dichiarato.
+Controlla quante seed issue aperte esistono gia per ciascun bucket, contando solo le issue che hanno sia la label del bucket sia `seed-issue`, e apre solo gli slot mancanti fino al massimo dichiarato.
+
+## Criterio operativo
+
+Le seed migliori non sono quelle piu generiche.
+Sono quelle che:
+
+- si agganciano a una repo, Discussion, notebook o area documentale gia viva
+- hanno uno scope chiudibile in poco tempo
+- possono essere prese senza dover progettare il filone da zero
+
+Se una seed richiede prima di decidere il target, il repo o il formato del lavoro, probabilmente e ancora troppo larga.
 
 ## Ritiro di una seed
 
-Se una seed non deve più essere proposta automaticamente, non basta chiudere l'issue aperta.
+Se una seed non deve piu essere proposta automaticamente, non basta chiudere l'issue aperta.
 
 Bisogna:
 
