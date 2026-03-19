@@ -6,7 +6,7 @@ Body:
 ```md
 ## Obiettivo
 
-Produrre una sintesi breve e operativa di una Discussion gia abbastanza matura.
+Produrre una sintesi breve e operativa di una Discussion già abbastanza matura.
 
 ## Anchor
 
@@ -26,11 +26,11 @@ Produrre una sintesi breve e operativa di una Discussion gia abbastanza matura.
 
 - la sintesi e breve e fedele
 - non introduce interpretazioni nuove
-- puo essere incollata come commento di orientamento o base per una issue
+- può essere incollata come commento di orientamento o base per una issue
 
 ## Non in scope
 
 - rispondere all'intera Discussion
-- aprire gia un nuovo filone
+- aprire già un nuovo filone
 - trasformare la sintesi in analisi lunga
 ```

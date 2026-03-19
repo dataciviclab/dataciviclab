@@ -28,5 +28,5 @@ Controllare un file o una sezione documentale precisa per trovare link rotti o r
 
 - audit completo di tutti i link del Lab
 - ristrutturare la documentazione
-- cambiare contenuto oltre il necessario per correggere i riferimenti
+- cambiare contenuto oltrè il necessario per correggere i riferimenti
 ```

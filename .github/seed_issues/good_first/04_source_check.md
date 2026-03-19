@@ -6,7 +6,7 @@ Body:
 ```md
 ## Obiettivo
 
-Controllare una fonte pubblica gia usata o candidata e lasciare una nota breve riusabile.
+Controllare una fonte pubblica già usata o candidata e lasciare una nota breve riusabile.
 
 ## Anchor
 
@@ -29,5 +29,5 @@ Controllare una fonte pubblica gia usata o candidata e lasciare una nota breve r
 
 - costruire pipeline o notebook
 - fare gia analisi dei dati
-- allargare il task a piu fonti insieme
+- allargare il task a più fonti insieme
 ```

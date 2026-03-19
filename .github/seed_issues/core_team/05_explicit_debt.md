@@ -1,4 +1,4 @@
-Title: `[Seed] Rendere esplicito un debito gia emerso senza aprire un refactor largo`
+Title: `[Seed] Rendere esplicito un debito già emerso senza aprire un refactor largo`
 Labels: `seed-issue`, `core-team`, `debt`
 
 Body:
@@ -6,7 +6,7 @@ Body:
 ```md
 ## Obiettivo
 
-Prendere un debito gia emerso e renderlo esplicito in modo utile, senza gonfiarlo in refactor largo.
+Prendere un debito già emerso e renderlo esplicito in modo utile, senza gonfiarlo in refactor largo.
 
 ## Anchor
 
@@ -16,18 +16,18 @@ Prendere un debito gia emerso e renderlo esplicito in modo utile, senza gonfiarl
 ## Task minimo
 
 - chiarisci dove sta il debito
-- spiega perche non blocca subito il lavoro
+- spiega perché non blocca subito il lavoro
 - definisci quando o a quale trigger andrebbe ripreso
 
 ## Done quando
 
 - il debito e formulato in modo concreto
 - non viene gonfiato in lavoro inutile
-- c'e un criterio chiaro per riprenderlo piu avanti
+- c’è un criterio chiaro per riprenderlo piu avanti
 
 ## Non in scope
 
-- aprire gia il refactor
+- aprire già il refactor
 - trasformare il debito in paura vaga
 - usarlo per riaprire tutto il filone
 ```

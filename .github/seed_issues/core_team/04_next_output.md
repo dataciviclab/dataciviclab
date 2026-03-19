@@ -1,4 +1,4 @@
-Title: `[Seed] Scegliere il prossimo output pubblico minimo da un filone gia attivo`
+Title: `[Seed] Scegliere il prossimo output pubblico minimo da un filone già attivo`
 Labels: `seed-issue`, `core-team`, `output`
 
 Body:
@@ -6,7 +6,7 @@ Body:
 ```md
 ## Obiettivo
 
-Scegliere il prossimo output pubblico minimo per un filone gia attivo.
+Scegliere il prossimo output pubblico minimo per un filone già attivo.
 
 ## Anchor
 
@@ -15,7 +15,7 @@ Scegliere il prossimo output pubblico minimo per un filone gia attivo.
 
 ## Task minimo
 
-- scegli il piu piccolo output che aggiunge valore
+- scegli il più piccolo output che aggiunge valore
 - dichiara il perimetro
 - chiarisci se deve essere commento, notebook, nota o follow-up Discussion
 
@@ -28,6 +28,6 @@ Scegliere il prossimo output pubblico minimo per un filone gia attivo.
 ## Non in scope
 
 - definire la roadmap completa del filone
-- aprire piu output insieme
+- aprire più output insieme
 - scegliere un output troppo grande per il momento attuale
 ```

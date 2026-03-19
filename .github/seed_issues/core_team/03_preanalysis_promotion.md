@@ -8,18 +8,18 @@ Body:
 
 Valutare se un candidato in `preanalysis/` deve:
 
-- restare dov'e
+- restare dov’è
 - essere promosso a repo dedicata
 - essere congelato
 
 ## Anchor
 
 - scegli un candidato preciso in `preanalysis/`
-- verifica solo cio che serve per decidere il prossimo contenitore
+- verifica solo ciò che serve per decidere il prossimo contenitore
 
 ## Task minimo
 
-- controlla se esistono gia una pipeline minima, una Discussion leggibile o un output reale
+- controlla se esistono già una pipeline minima, una Discussion leggibile o un output reale
 - valuta se il filone ha davvero bisogno di una repo propria ora
 
 ## Done quando

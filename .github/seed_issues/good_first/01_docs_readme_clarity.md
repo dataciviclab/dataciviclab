@@ -1,4 +1,4 @@
-Title: `[Seed] Rendere piu chiara una sezione specifica di README o guida breve`
+Title: `[Seed] Rendere più chiara una sezione specifica di README o guida breve`
 Labels: `seed-issue`, `good first issue`, `documentation`
 
 Body:
@@ -6,7 +6,7 @@ Body:
 ```md
 ## Obiettivo
 
-Rendere piu chiara una sezione specifica di un README o di una guida breve gia esistente.
+Rendere più chiara una sezione specifica di un README o di una guida breve già esistente.
 
 ## Anchor
 
@@ -15,14 +15,14 @@ Rendere piu chiara una sezione specifica di un README o di una guida breve gia e
 
 ## Task minimo
 
-- riscrivi una sezione per renderla piu lineare e leggibile
+- riscrivi una sezione per renderla più lineare e leggibile
 - non cambiare decisioni, policy o perimetro del progetto
 
 ## Done quando
 
 - la sezione scelta si capisce meglio senza contesto pregresso
 - link e riferimenti restano corretti
-- il fix e abbastanza piccolo da stare in una PR docs mirata
+- il fix è abbastanza piccolo da stare in una PR docs mirata
 
 ## Non in scope
 

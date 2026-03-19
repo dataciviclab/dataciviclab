@@ -6,17 +6,17 @@ Body:
 ```md
 ## Obiettivo
 
-Rendere piu leggibile un output gia esistente aggiungendo una nota metodologica minima e concreta.
+Rendere più leggibile un output già esistente aggiungendo una nota metodologica minima e concreta.
 
 ## Anchor
 
 - scegli un notebook, una note o un output preciso
-- punta a un limite reale che oggi non e esplicitato abbastanza
+- punta a un limite reale che oggi non è esplicitato abbastanza
 
 ## Task minimo
 
 - aggiungi 2-4 righe su fonte, limite, discontinuita o cautela di lettura
-- mantieni il focus sul materiale gia esistente
+- mantieni il focus sul materiale già esistente
 
 ## Done quando
 

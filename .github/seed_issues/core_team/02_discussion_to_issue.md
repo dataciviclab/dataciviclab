@@ -6,7 +6,7 @@ Body:
 ```md
 ## Obiettivo
 
-Prendere una Discussion gia abbastanza matura e tradurla in 1-2 issue operative davvero prendibili.
+Prendere una Discussion già abbastanza matura e tradurla in 1-2 issue operative davvero prendibili.
 
 ## Anchor
 
@@ -16,12 +16,12 @@ Prendere una Discussion gia abbastanza matura e tradurla in 1-2 issue operative 
 ## Task minimo
 
 - rileggi il thread
-- separa cio che e domanda da cio che e lavoro concreto
+- separa ciò che è domanda da ciò che è lavoro concreto
 - definisci al massimo 1-2 issue piccole e con criterio di chiusura
 
 ## Done quando
 
-- non ci sono piu di 2 issue
+- non ci sono più di 2 issue
 - scope stretto
 - repo corretta esplicitata
 

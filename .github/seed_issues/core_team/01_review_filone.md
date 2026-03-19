@@ -1,4 +1,4 @@
-Title: `[Seed] Fare una review rapida di un filone gia vivo e scegliere un solo prossimo passo`
+Title: `[Seed] Fare una review rapida di un filone già vivo e scegliere un solo prossimo passo`
 Labels: `seed-issue`, `core-team`, `workflow`
 
 Body:
@@ -6,11 +6,11 @@ Body:
 ```md
 ## Obiettivo
 
-Fare una review rapida di un filone gia vivo del Lab e indicare un solo prossimo passo minimo sensato.
+Fare una review rapida di un filone già vivo del Lab e indicare un solo prossimo passo minimo sensato.
 
 ## Anchor
 
-- scegli un filone gia vivo: repo, Discussion o preanalysis con materiali leggibili
+- scegli un filone già vivo: repo, Discussion o preanalysis con materiali leggibili
 - evita filoni ancora troppo embrionali o non verificabili
 
 ## Task minimo
