@@ -24,9 +24,9 @@ Valutare se un candidato in `preanalysis/` deve:
 
 ## Done quando
 
-- decisione esplicita
-- motivazione breve ma chiara
-- nessuna promozione prematura
+- [ ] decisione esplicita
+- [ ] motivazione breve ma chiara
+- [ ] nessuna promozione prematura
 
 ## Non in scope
 

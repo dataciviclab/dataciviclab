@@ -21,9 +21,9 @@ Scegliere il prossimo output pubblico minimo per un filone già attivo.
 
 ## Done quando
 
-- output scelto
-- repo e file di lavoro chiari
-- niente scope creep
+- [ ] output scelto
+- [ ] repo e file di lavoro chiari
+- [ ] niente scope creep
 
 ## Non in scope
 

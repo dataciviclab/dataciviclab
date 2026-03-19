@@ -20,9 +20,9 @@ Rendere più chiara una sezione specifica di un README o di una guida breve già
 
 ## Done quando
 
-- la sezione scelta si capisce meglio senza contesto pregresso
-- link e riferimenti restano corretti
-- il fix è abbastanza piccolo da stare in una PR docs mirata
+- [ ] la sezione scelta si capisce meglio senza contesto pregresso
+- [ ] link e riferimenti restano corretti
+- [ ] il fix è abbastanza piccolo da stare in una PR docs mirata
 
 ## Non in scope
 

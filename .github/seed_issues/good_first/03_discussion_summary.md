@@ -24,9 +24,9 @@ Produrre una sintesi breve e operativa di una Discussion già abbastanza matura.
 
 ## Done quando
 
-- la sintesi e breve e fedele
-- non introduce interpretazioni nuove
-- può essere incollata come commento di orientamento o base per una issue
+- [ ] la sintesi e breve e fedele
+- [ ] non introduce interpretazioni nuove
+- [ ] può essere incollata come commento di orientamento o base per una issue
 
 ## Non in scope
 

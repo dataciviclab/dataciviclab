@@ -21,9 +21,9 @@ Prendere una Discussion già abbastanza matura e tradurla in 1-2 issue operative
 
 ## Done quando
 
-- non ci sono più di 2 issue
-- scope stretto
-- repo corretta esplicitata
+- [ ] non ci sono più di 2 issue
+- [ ] scope stretto
+- [ ] repo corretta esplicitata
 
 ## Non in scope
 

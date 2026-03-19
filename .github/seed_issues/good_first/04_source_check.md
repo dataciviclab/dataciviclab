@@ -21,9 +21,9 @@ Controllare una fonte pubblica già usata o candidata e lasciare una nota breve 
 
 ## Done quando
 
-- la fonte e verificata
-- i limiti principali sono documentati
-- il risultato e leggibile in 10-15 righe
+- [ ] la fonte e verificata
+- [ ] i limiti principali sono documentati
+- [ ] il risultato e leggibile in 10-15 righe
 
 ## Non in scope
 

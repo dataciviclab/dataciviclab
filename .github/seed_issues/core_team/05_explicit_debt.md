@@ -21,9 +21,9 @@ Prendere un debito già emerso e renderlo esplicito in modo utile, senza gonfiar
 
 ## Done quando
 
-- il debito e formulato in modo concreto
-- non viene gonfiato in lavoro inutile
-- c’è un criterio chiaro per riprenderlo piu avanti
+- [ ] il debito e formulato in modo concreto
+- [ ] non viene gonfiato in lavoro inutile
+- [ ] c’è un criterio chiaro per riprenderlo piu avanti
 
 ## Non in scope
 

@@ -20,9 +20,9 @@ Fare una review rapida di un filone già vivo del Lab e indicare un solo prossim
 
 ## Done quando
 
-- il prossimo passo e chiaro
-- repo, file o thread di lavoro sono espliciti
-- non vengono aperti nuovi fronti inutili
+- [ ] il prossimo passo e chiaro
+- [ ] repo, file o thread di lavoro sono espliciti
+- [ ] non vengono aperti nuovi fronti inutili
 
 ## Non in scope
 

@@ -20,9 +20,9 @@ Controllare un file o una sezione documentale precisa per trovare link rotti o r
 
 ## Done quando
 
-- i link principali del perimetro scelto funzionano
-- gli eventuali riferimenti datati sono corretti o segnalati
-- il fix resta piccolo e mirato
+- [ ] i link principali del perimetro scelto funzionano
+- [ ] gli eventuali riferimenti datati sono corretti o segnalati
+- [ ] il fix resta piccolo e mirato
 
 ## Non in scope
 

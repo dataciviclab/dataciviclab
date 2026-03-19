@@ -20,9 +20,9 @@ Rendere più leggibile un output già esistente aggiungendo una nota metodologic
 
 ## Done quando
 
-- la nota chiarisce almeno un limite reale
-- non duplica inutilmente altra documentazione
-- aiuta un lettore nuovo a non sovra-interpretare l'output
+- [ ] la nota chiarisce almeno un limite reale
+- [ ] non duplica inutilmente altra documentazione
+- [ ] aiuta un lettore nuovo a non sovra-interpretare l'output
 
 ## Non in scope
 
