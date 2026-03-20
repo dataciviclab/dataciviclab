@@ -23,7 +23,7 @@ Guarda:
 Il punto di ingresso per contribuire è questa repo hub.
 
 Per iniziare in modo semplice:
-- guarda il catalogo seed in [`.github/seed_issues/`](../.github/seed_issues/README.md)
+- cerca una issue aperta: [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) o [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team)
 - leggi [CONTRIBUTING.md](../CONTRIBUTING.md) per capire cosa entra in questa repo
 - usa [local-setup.md](local-setup.md) se devi configurare il workspace minimo del Lab
 - cerca una `good first issue` se vuoi un task leggero
@@ -69,4 +69,4 @@ Vai al [README](../README.md).
 Vai alla [Open Board](https://github.com/orgs/dataciviclab/projects/5).
 
 "Voglio partecipare?"
-Guarda il catalogo seed in `dataciviclab/.github/seed_issues/` e poi vai al progetto che ti interessa.
+Guarda le issue aperte di ingresso e poi vai al progetto che ti interessa: [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) o [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team).
