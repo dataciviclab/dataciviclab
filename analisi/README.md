@@ -1,28 +1,29 @@
-# Preanalysis
+# analisi/
 
-`analisi/` è lo spazio pubblico di validazione dei candidati progetto.
+`analisi/` e' la destinazione finale del layer pubblico dei filoni attivi del Lab.
 
-Non è una sandbox tecnica.
-Non è una repo progetto già matura.
+Non e' una sandbox tecnica.
+Non e' una tappa obbligata verso una repo dedicata.
 
-Qui rendiamo visibile il processo minimo:
+Il contratto tecnico (dataset.yml, sql/, pipeline) vive in `dataset-incubator`.
+Qui arriva solo il layer pubblico:
 
-`dataset -> contratto tecnico verificato -> prima analisi pubblica -> decisione`
+`dataset-incubator (contratto tecnico) -> analisi/ (README, notebook, Discussion)`
 
 ## Scopo
 
-Usare un perimetro piccolo e leggibile per decidere in tempi rapidi se un filone:
+Rendere visibile il lavoro in corso con un perimetro leggibile, e decidere in tempi rapidi se un filone:
 
-- va promosso a repo progetto dedicata
-- va tenuto ancora in preanalisi
+- continua in analisi/ (destinazione normale per la maggioranza dei filoni)
+- va promosso a repo dedicata (solo se il filone lo giustifica)
 - va archiviato
 
 ## Modello
 
-Il contratto tecnico (dataset.yml, sql/, note interne) vive in `dataset-incubator`.
+Il contratto tecnico (dataset.yml, sql/, note interne) vive in `dataset-incubator` — anche dopo che il filone e' in analisi/.
 Qui arriva solo il layer pubblico: README, notebook, eventuali asset leggeri.
 
-I filoni in `analisi/` promossi prima di questo modello possono contenere ancora file tecnici — sono storico del vecchio approccio.
+I filoni entrati in analisi/ prima di questo modello possono contenere ancora file tecnici — sono storico.
 
 ## Cosa entra
 
@@ -85,9 +86,9 @@ analisi/
 
 ## Relazione con `projects/`
 
-`analisi/` resta il luogo di lavoro per i candidati non ancora promossi.
+La maggioranza dei filoni in `analisi/` non passa mai a repo dedicata — e va bene cosi.
 
-Quando un filone esce da `analisi/` e passa a repo dedicata:
+Quando un filone esce da `analisi/` e passa a repo dedicata (eccezione):
 
 - il lavoro tecnico esce da `dataciviclab`
 - in `dataciviclab/projects/` resta una scheda leggera del progetto

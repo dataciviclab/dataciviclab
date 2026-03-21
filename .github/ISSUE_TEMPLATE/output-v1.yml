@@ -87,6 +87,6 @@ body:
     attributes:
       label: Prossimo passo operativo
       description: Qual è il prossimo passo concreto dopo l'apertura di questa issue?
-      placeholder: Aprire preanalysis, rifinire notebook, scrivere README, allineare docs, ecc.
+      placeholder: Rifinire notebook, scrivere README analisi/, pubblicare risposta Discussion, ecc.
     validations:
       required: true
