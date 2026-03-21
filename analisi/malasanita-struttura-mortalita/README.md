@@ -41,7 +41,7 @@ La `v2` (`decessi_evitabili_30plus_per_100k_pop_totale`) è mantenuta come proxy
 
 ## Output
 
-- `notebooks/malasanita_preanalysis_v3.ipynb` — notebook principale (v3 baseline raccomandata)
+- `notebooks/malasanita_v3.ipynb` — notebook principale (v3 baseline raccomandata)
 - artifact: `mart_compose_regioni_v3.parquet` — join 21/21, prodotto da incubator privato
 
 ## Contratto tecnico

@@ -27,7 +27,7 @@ Discussion collegata: [#115](https://github.com/orgs/dataciviclab/discussions/11
 ## Output minimo atteso
 
 - `mart_mix_regioni` con quota del mix regionale per fonte su produzione netta
-- notebook pubblico `notebooks/terna_electricity_by_source_preanalysis_v1.ipynb`
+- notebook pubblico `notebooks/terna_electricity_by_source_v1.ipynb`
 - primo output pubblico centrato su:
   - pattern nazionale `2020-2024`
   - ruolo distinto di fotovoltaico e idroelettrico
