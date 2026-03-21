@@ -1,6 +1,6 @@
 # Flusso dataset / progetto
 
-Questa pagina descrive il flusso canonico del Lab per trasformare una domanda civica in un progetto dati leggibile, verificabile e potenzialmente promosso a repo dedicata.
+Questa pagina descrive il flusso canonico del Lab per trasformare una domanda civica in un progetto dati leggibile, verificabile e — se il lavoro lo giustifica — promosso a repo dedicata.
 
 ## Vista rapida
 
@@ -8,21 +8,24 @@ Questa pagina descrive il flusso canonico del Lab per trasformare una domanda ci
 Domanda civica
   -> Discussion
   -> issue operativa
-  -> dataset-incubator (se serve validazione tecnica)
-  -> dataciviclab/analisi
-  -> repo dedicata dal project-template
-  -> scheda leggera in dataciviclab/projects
+  -> dataset-incubator (contratto tecnico: dataset.yml, sql, pipeline)
+  -> dataciviclab/analisi (layer pubblico: README, notebook, Discussion)
+  -> [solo se giustificato] repo dedicata dal project-template
 ```
 
 Non tutti i filoni passano da ogni step.
-Il percorso dipende dalla maturità della domanda, dalla complessità tecnica e dal livello di validazione già raggiunto.
+La maggior parte vive in `analisi/` senza diventare mai una repo dedicata — e va bene cosi.
 
 ## Regola pratica
 
-- `dataciviclab` è l'hub pubblico
-- `dataset-incubator` è il luogo di incubazione tecnica dei candidati ancora da stringere o validare
-- `analisi/` è lo spazio pubblico di validazione dei filoni che hanno già una prima storia leggibile
-- una repo dedicata nasce quando il filone merita sviluppo continuo e non è più solo una prova o una preanalisi
+- `dataciviclab` e' l'hub pubblico: Discussions, task cross-repo, `analisi/`, `projects/`
+- `dataset-incubator` e' la casa permanente del contratto tecnico di ogni filone
+- `analisi/` e' la destinazione finale del layer pubblico: README civico, notebook leggibile, Discussion collegata
+- una repo dedicata nasce solo quando il filone richiede sviluppo continuativo e governance propria
+
+Il contratto tecnico (dataset.yml, sql/, pipeline) resta in `dataset-incubator` anche dopo la promozione in analisi/.
+Il layer pubblico (README, notebook) vive in `dataciviclab/analisi/`.
+Le due cose sono complementari, non alternative.
 
 ## Step 1: Discussion
 
@@ -30,7 +33,7 @@ Si parte da una domanda civica o da un tema pubblico abbastanza chiaro da merita
 
 La `Discussion` serve a:
 - formulare meglio la domanda
-- chiarire perché conta
+- chiarire perche' conta
 - raccogliere primi dubbi, fonti e angoli possibili
 - capire se il tema ha abbastanza sostanza per diventare un filone
 
@@ -49,103 +52,95 @@ La issue serve a:
 - creare un punto di riferimento operativo
 
 La prima issue non deve descrivere tutto il progetto.
-Deve solo dire qual è il prossimo passo utile.
+Deve solo dire qual e' il prossimo passo utile.
 
-## Step 3: quando usare dataset-incubator
+## Step 3: dataset-incubator — il contratto tecnico
 
-`dataset-incubator` si usa quando il filone ha bisogno di validazione tecnica o di restringere ancora il proprio contratto.
+`dataset-incubator` e' il luogo dove si costruisce e si stabilizza il contratto tecnico del filone.
 
-È il posto giusto se:
-- la fonte è ancora da verificare bene
-- il tracciato è ambiguo o instabile
-- serve capire se il dataset regge davvero
-- il primo mart o notebook non è ancora chiaro
-- il filone non è ancora pronto per il flusso pubblico completo
-
-Qui si lavora soprattutto su:
+Qui si lavora su:
 - `dataset.yml`
 - `sql/clean.sql`
 - `sql/mart.sql`
 - notebook `v0`
 - note di metodo
-- issue con label di stato
+
+E' il posto giusto se:
+- la fonte e' ancora da verificare bene
+- il tracciato e' ambiguo o instabile
+- serve capire se il dataset regge davvero
+- il primo mart o notebook non e' ancora chiaro
 
 Output minimo atteso:
 - run funzionante almeno sul perimetro iniziale
 - prima lettura che racconti qualcosa
 - decisione: archiviare, continuare o promuovere
 
-## Step 4: quando entrare in analisi
+Il contratto tecnico non esce mai da `dataset-incubator`.
+Anche dopo che il filone entra in `analisi/`, il riferimento tecnico resta li'.
 
-`dataciviclab/analisi` è lo spazio pubblico di validazione dei candidati che hanno già una prima storia leggibile.
+## Step 4: analisi/ — il layer pubblico
+
+`dataciviclab/analisi/` e' la destinazione finale del layer pubblico dei filoni attivi.
 
 Un filone entra in `analisi/` se ha:
 - una domanda civica chiara
 - una issue collegata a una Discussion
 - un output minimo atteso
-- un primo nucleo tecnico che regge
-- abbastanza sostanza da meritare visibilità pubblica
+- un primo nucleo tecnico che regge in DI
+- abbastanza sostanza da meritare visibilita' pubblica
 
-La forma può essere di due tipi:
-
-Il nucleo tecnico (dataset.yml, sql/, note) vive in `dataset-incubator`.
-In `dataciviclab/analisi/` arriva solo il layer pubblico:
-- `README`
+Cosa vive in `analisi/<slug>/`:
+- `README` con domanda, dataset, stato, link alla Discussion
 - notebook con lettura leggibile
-- eventuali asset leggeri
+- eventuali note o asset leggeri
 
-I filoni promossi prima di questo modello possono contenere ancora file tecnici — sono storico.
+Cosa non vive in `analisi/`:
+- dataset.yml, sql/, pipeline — restano in dataset-incubator
+- dati grezzi o output tecnici
 
-## Step 5: quando nasce una repo dedicata
+Per la maggior parte dei filoni, `analisi/` e' l'endpoint.
+Non e' un gradino verso qualcosa di piu': e' gia' il posto giusto.
 
-Una repo dedicata nasce dal `project-template` quando il filone non è più solo una preanalisi e richiede sviluppo continuo.
+## Step 5: quando nasce una repo dedicata (opzionale)
 
-Segnali tipici:
-- il dataset regge stabilmente
-- esiste già un output leggibile e condivisibile
-- il prossimo backlog è abbastanza chiaro
-- il filone ha valore sufficiente per vivere da progetto autonomo
+Una repo dedicata e' giustificata solo in casi specifici.
 
-La repo dedicata è la sede giusta per:
-- lavoro tecnico continuativo
-- notebook e output successivi
-- issue proprie
-- documentazione del progetto
-- pubblicazione e manutenzione
+Segnali che la giustificano:
+- il filone coinvolge piu' dataset indipendenti con pipeline proprie
+- esiste un output periodico che richiede aggiornamento continuativo
+- la community ha raggiunto una dimensione che richiede governance propria
+- il backlog e' abbastanza ampio da non stare in una Issue
 
-## Step 6: cosa resta in dataciviclab
+Se questi segnali non ci sono, il filone resta in `analisi/`.
+Aprire una repo dedicata troppo presto e' dispersivo: aumenta la manutenzione e spezza la visibilita' senza aggiungere valore.
 
-Quando un filone viene promosso:
-- il lavoro tecnico esce da `dataciviclab`
+Quando una repo nasce:
+- esce dal `project-template`
+- si collega alla Open Board
 - in `dataciviclab/projects/` resta una scheda leggera del progetto
 - la Discussion pubblica continua a vivere in `dataciviclab`
 
-In questo modo `dataciviclab` resta il punto di orientamento pubblico, senza duplicare il lavoro tecnico delle repo progetto.
+## Due percorsi tipici
 
-## Due percorsi validi
-
-### Percorso standard
+### Percorso senza repo dedicata (la maggioranza)
 
 ```text
 Discussion
   -> issue
-  -> analisi
-  -> repo dedicata
+  -> dataset-incubator (contratto tecnico)
+  -> analisi/ (layer pubblico, destinazione finale)
 ```
 
-È il percorso più semplice quando il filone è già abbastanza leggibile e non richiede incubazione tecnica in `dataset-incubator`.
-
-### Percorso con incubator
+### Percorso con repo dedicata (eccezione)
 
 ```text
 Discussion
   -> issue
-  -> dataset-incubator
-  -> analisi
-  -> repo dedicata
+  -> dataset-incubator (contratto tecnico)
+  -> analisi/ (layer pubblico)
+  -> repo dedicata (solo se giustificata dai segnali sopra)
 ```
-
-È il percorso giusto quando il filone ha bisogno di più consolidamento tecnico prima di diventare pubblico.
 
 ## Checklist sintetica
 
@@ -157,24 +152,25 @@ Discussion
 
 ### Per entrare in analisi
 - domanda leggibile
+- Discussion collegata
 - primo output minimo definito
 - notebook o mart che raccontano qualcosa
 - decisione esplicita di rendere pubblico il filone
 
-### Per promuovere a repo dedicata
+### Per aprire una repo dedicata
 - contratto tecnico stabile almeno sul perimetro iniziale
-- output minimo già riuscito
+- output minimo gia' riuscito
 - backlog successivo piccolo ma reale
-- README iniziale scrivibile senza inventare
+- segnali concreti che giustificano governance propria
 
 ## Repo coinvolte
 
 - `dataciviclab`: hub pubblico, Discussions, issue, `analisi/`, `projects/`
-- `dataset-incubator`: incubazione tecnica dei candidati
-- `project-template`: bootstrap di nuove repo dataset/progetto
+- `dataset-incubator`: contratto tecnico permanente dei filoni
+- `project-template`: bootstrap delle repo dedicate
 - `toolkit`: motore tecnico e workflow canonico dei dati
 
 ## Nota finale
 
-Il flusso non è una catena rigida.
-Serve a mantenere il Lab leggibile, a ridurre il backlog vago e a promuovere solo i filoni che hanno davvero iniziato a reggere.
+Il flusso non e' una catena rigida.
+Serve a mantenere il Lab leggibile, a ridurre il backlog vago e a promuovere solo i filoni che hanno davvero motivo di crescere.

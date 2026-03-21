@@ -26,8 +26,8 @@ Qui non stanno:
 - struttura operativa dei repo dataset
 
 Dentro `dataciviclab` ci sono due livelli utili:
-- `analisi/` per i candidati ancora in validazione
-- `projects/` per le schede leggere dei progetti già promossi a repo dedicate
+- `analisi/` layer pubblico dei filoni attivi: README civico, notebook, Discussion collegata
+- `projects/` schede leggere dei filoni promossi a repo dedicate
 
 ## `.github`
 

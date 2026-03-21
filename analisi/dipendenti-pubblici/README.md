@@ -49,7 +49,7 @@ Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui
 ## Contratto tecnico
 
 Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
-[candidates/dipendenti-pubblici-2021-2023](https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/dipendenti-pubblici-2021-2023)
+[candidates/dipendenti-pubblici](https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/dipendenti-pubblici)
 
 ## Decisione attesa al checkpoint
 

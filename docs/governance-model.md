@@ -24,7 +24,7 @@ Tiene insieme visione, struttura e qualita' complessiva.
 ### Contributor
 
 Aiuta a costruire un progetto, una documentazione o uno strumento utile.
-Il punto di ingresso e' una `good first issue` o un commento su una Discussion aperta.
+Il punto di ingresso e' una Discussion aperta o una `good first issue`.
 
 ### Core contributor
 
@@ -55,7 +55,7 @@ E' un ruolo trasversale, non un gradino della scala: un contributor puo' essere 
 - Per lavorare su una issue, lascia un commento — un maintainer risponde entro 7 giorni.
 - I core contributor emergono quando iniziano a reggere un filone nel tempo.
 
-Se non sai da dove partire, leggi [`docs/how-to-start.md`](how-to-start.md).
+Se non sai da dove partire, leggi [`docs/come-contribuire.md`](come-contribuire.md).
 
 ## Come nasce un nuovo progetto
 
@@ -63,7 +63,7 @@ Se non sai da dove partire, leggi [`docs/how-to-start.md`](how-to-start.md).
 2. Si verifica che esistano dati pubblici adatti.
 3. Se serve validazione tecnica, il candidato entra in `dataset-incubator`.
 4. Quando il filone ha una prima storia leggibile, entra in `analisi/` nel repo `dataciviclab`.
-5. I maintainer valutano se la preanalisi e' pronta per una repo dedicata.
+5. I maintainer valutano se il filone in analisi/ e' pronto per una repo dedicata.
 6. Se la proposta regge, nasce una nuova repo dal `project-template`.
 7. Il progetto entra nelle board pubbliche e nel flusso operativo del Lab.
 

@@ -1,4 +1,4 @@
-# 🧰 Playbook Maintainer
+# Playbook Maintainer
 
 Questa guida serve a chi apre e accompagna un nuovo progetto nel Lab.
 
@@ -30,7 +30,7 @@ In molti casi il percorso giusto non è ancora `Discussion -> repo`, ma:
 
 ## 3. Creare il repo progetto
 
-Se la proposta regge:
+Se la proposta regge e il filone non si risolve in analisi/:
 - crea il repo dal `project-template`
 - configura i file minimi del progetto
 - collega il repo alla [Open Board](https://github.com/orgs/dataciviclab/projects/5)

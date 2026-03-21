@@ -95,7 +95,7 @@ Esempio:
 
 ```bash
 cd toolkit
-python -m toolkit.cli.app run all --config ../dataset-incubator/candidates/mit-opere-incompiute-2020/dataset.yml
+python -m toolkit.cli.app run all --config ../dataset-incubator/candidates/irpef-comunale/dataset.yml
 ```
 
 Questo è il primo test utile:
