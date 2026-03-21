@@ -1,4 +1,4 @@
-# Preanalysis attive
+# Analisi attive
 
 | filone | discussion | issue | stato |
 |--------|------------|-------|-------|

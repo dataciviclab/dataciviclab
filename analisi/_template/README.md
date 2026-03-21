@@ -1,4 +1,4 @@
-# Template Candidato Preanalysis
+# Template Candidato Analisi
 
 ## Domanda principale
 
@@ -38,6 +38,6 @@ Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
 
 ## Decisione attesa al checkpoint
 
-- promuovere a repo dedicata
-- continuare 1 sprint
+- continuare in analisi/ (destinazione normale)
+- promuovere a repo dedicata (solo se giustificato)
 - archiviare
