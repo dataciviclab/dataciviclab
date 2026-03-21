@@ -43,9 +43,11 @@ Discussion collegata:
 
 ## Contratto tecnico
 
-Questo filone precede il modello dataset-incubator: il contratto tecnico è stato
-costruito direttamente in analisi/ con il vecchio modello autosufficiente.
-Non esiste un candidato corrispondente in DI.
+Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
+[candidates/irpef-comunale](https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/irpef-comunale)
+
+Nota: questo filone precede il modello DI. Il contratto e' stato migrato retroattivamente
+da dataciviclab/analisi/ a dataset-incubator.
 
 ## Decisione attesa al checkpoint
 

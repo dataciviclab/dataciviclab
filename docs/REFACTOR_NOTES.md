@@ -51,15 +51,15 @@ dove già vive nel modello attuale.
 
 ### Candidati da pulire
 
-- `analisi/irpef-comunale-2019-2023/README.md` — ha sezione Esecuzione + path output da rimuovere
-- `analisi/civile-flussi-2014-2024/README.md` — stessa cosa
-- `analisi/irpef-comunale-2019-2023/dataset.yml` — da valutare se tenerlo come riferimento storico
+- `analisi/irpef-comunale/README.md` — ha sezione Esecuzione + path output da rimuovere
+- `analisi/civile-flussi/README.md` — stessa cosa
+- `analisi/irpef-comunale/dataset.yml` — da valutare se tenerlo come riferimento storico
   o spostarlo in DI (dove probabilmente già vive)
 
 ### Candidati già puliti (solo nota civica)
 
 - `analisi/malasanita-struttura-mortalita/README.md`
-- `analisi/dipendenti-pubblici-2021-2023/README.md`
+- `analisi/dipendenti-pubblici/README.md`
 - `analisi/terna-electricity-by-source/README.md`
 
 ---
@@ -78,11 +78,11 @@ dove già vive nel modello attuale.
 ```
 | filone | discussion | checkpoint | stato |
 |--------|------------|------------|-------|
-| irpef-comunale-2019-2023 | #88 | 2026-Q1 | active |
-| civile-flussi-2014-2024 | ... | 2026-Q1 | active |
+| irpef-comunale | #88 | 2026-Q1 | active |
+| civile-flussi | ... | 2026-Q1 | active |
 | malasanita-struttura-mortalita | #99 | 2026-Q2 | active |
 | terna-electricity-by-source | ... | 2026-Q2 | active |
-| dipendenti-pubblici-2021-2023 | ... | 2026-Q2 | in valutazione |
+| dipendenti-pubblici | ... | 2026-Q2 | in valutazione |
 ```
 
 `registry/archived.md` diventa una lista reale delle analisi uscite (con motivo).
