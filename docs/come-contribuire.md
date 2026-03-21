@@ -45,7 +45,7 @@ Per contribuire a un progetto dataset:
 
 1. leggi il README della repo progetto
 2. guarda le issue aperte nella repo dedicata
-3. se non c'è ancora una repo dedicata, parti dalla Discussion o dalla analisi collegata
+3. se non c'è ancora una repo dedicata, parti dalla Discussion collegata
 
 Per il setup tecnico locale: [local-setup.md](local-setup.md).
 
