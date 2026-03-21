@@ -48,10 +48,10 @@ Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
 
 ## Provenienza
 
-Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come preanalysis nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.
+Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come analisi nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.
 
 ## Decisione attesa al checkpoint
 
 - confermare che il `v1` risponda già in modo difendibile alla domanda pubblica
 - decidere se la serie breve `2020-2024` basta per il primo output oppure se serva estensione ulteriore
-- valutare se il filone debba restare in `preanalysis` o avvicinarsi a una repo dedicata
+- valutare se il filone debba restare in `analisi` o avvicinarsi a una repo dedicata

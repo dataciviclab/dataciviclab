@@ -8,7 +8,7 @@ La documentazione descrive bene *come funziona il Lab* ma non risponde alla doma
 di chi arriva dall'esterno: "cosa avete già fatto?". Il flusso utente esterno è rotto in tre punti:
 
 1. nessun indice di output reali pubblicati
-2. salto brusco da "domanda civica" a gergo tecnico (venv, dataset-incubator, preanalysis)
+2. salto brusco da "domanda civica" a gergo tecnico (venv, dataset-incubator, analisi)
 3. stato reale del Lab non leggibile senza conoscere la struttura interna
 
 ---
@@ -25,19 +25,19 @@ Nota: il README ora linka `docs/come-contribuire.md` che non esiste ancora — d
 
 ---
 
-## Cleanup preanalysis/
+## Cleanup analisi/
 
 ### Il problema
 
-Le preanalysis irpef e civile-flussi sono ibride: hanno una sezione pubblica (domanda, dataset, stato)
+Le analisi irpef e civile-flussi sono ibride: hanno una sezione pubblica (domanda, dataset, stato)
 e una sezione tecnica legacy (comandi toolkit, path di output) che i README stessi dichiarano obsoleta:
 
-> "questo README conserva ancora un setup tecnico del vecchio modello preanalysis autosufficiente.
+> "questo README conserva ancora un setup tecnico del vecchio modello analisi autosufficiente.
 > Nel modello attuale il contratto tecnico di riferimento vive in dataset-incubator"
 
 ### Cosa fare
 
-Ogni README in preanalysis/ dovrebbe contenere solo:
+Ogni README in analisi/ dovrebbe contenere solo:
 
 - domanda principale
 - perché conta
@@ -51,16 +51,16 @@ dove già vive nel modello attuale.
 
 ### Candidati da pulire
 
-- `preanalysis/irpef-comunale-2019-2023/README.md` — ha sezione Esecuzione + path output da rimuovere
-- `preanalysis/civile-flussi-2014-2024/README.md` — stessa cosa
-- `preanalysis/irpef-comunale-2019-2023/dataset.yml` — da valutare se tenerlo come riferimento storico
+- `analisi/irpef-comunale-2019-2023/README.md` — ha sezione Esecuzione + path output da rimuovere
+- `analisi/civile-flussi-2014-2024/README.md` — stessa cosa
+- `analisi/irpef-comunale-2019-2023/dataset.yml` — da valutare se tenerlo come riferimento storico
   o spostarlo in DI (dove probabilmente già vive)
 
 ### Candidati già puliti (solo nota civica)
 
-- `preanalysis/malasanita-struttura-mortalita/README.md`
-- `preanalysis/dipendenti-pubblici-2021-2023/README.md`
-- `preanalysis/terna-electricity-by-source/README.md`
+- `analisi/malasanita-struttura-mortalita/README.md`
+- `analisi/dipendenti-pubblici-2021-2023/README.md`
+- `analisi/terna-electricity-by-source/README.md`
 
 ---
 
@@ -85,7 +85,7 @@ dove già vive nel modello attuale.
 | dipendenti-pubblici-2021-2023 | ... | 2026-Q2 | in valutazione |
 ```
 
-`registry/archived.md` diventa una lista reale delle preanalysis uscite (con motivo).
+`registry/archived.md` diventa una lista reale delle analisi uscite (con motivo).
 
 ---
 
@@ -148,14 +148,14 @@ CONTRIBUTING.md diventa solo un rimando breve, o si mantiene separato con le reg
 | problema | file coinvolti | azione |
 |----------|---------------|--------|
 | flusso Discussion->Issue spiegato in 3 posti | README, CONTRIBUTING, how-to-start | tenere solo in dataset-project-flow, rimandare dagli altri |
-| WIP limit non pubblico | governance-model, preanalysis/README | aggiungere in preanalysis/README dove ha senso |
+| WIP limit non pubblico | governance-model, analisi/README | aggiungere in analisi/README dove ha senso |
 | due CONTRIBUTING con flussi leggermente diversi | dataciviclab/CONTRIBUTING, .github/CONTRIBUTING | dataciviclab/CONTRIBUTING rimanda a .github per le regole comuni |
 
 ---
 
 ## Ordine di intervento consigliato
 
-1. Pulire preanalysis/ (rimuovere sezioni tecniche legacy dai README)
+1. Pulire analisi/ (rimuovere sezioni tecniche legacy dai README)
 2. Riscrivere registry/active.md come lista statica
 3. Creare docs/come-contribuire.md
 4. Aggiornare schede in projects/ con segnale e link output
@@ -169,7 +169,7 @@ Il README è già fatto (step 0).
 
 ## Decisioni aperte
 
-- `preanalysis/irpef/dataset.yml`: tenerlo come riferimento storico o eliminarlo?
+- `analisi/irpef/dataset.yml`: tenerlo come riferimento storico o eliminarlo?
   Se vive già in DI, elimina. Se non è in DI, spostarlo prima di eliminare da qui.
 - Profile org (`github/profile/README.md`): aggiornare in parallelo o dopo?
   Dipende da quanto cambia l'identità pubblica con questo refactor.

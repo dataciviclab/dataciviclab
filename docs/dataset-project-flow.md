@@ -9,7 +9,7 @@ Domanda civica
   -> Discussion
   -> issue operativa
   -> dataset-incubator (se serve validazione tecnica)
-  -> dataciviclab/preanalysis
+  -> dataciviclab/analisi
   -> repo dedicata dal project-template
   -> scheda leggera in dataciviclab/projects
 ```
@@ -21,7 +21,7 @@ Il percorso dipende dalla maturità della domanda, dalla complessità tecnica e 
 
 - `dataciviclab` è l'hub pubblico
 - `dataset-incubator` è il luogo di incubazione tecnica dei candidati ancora da stringere o validare
-- `preanalysis/` è lo spazio pubblico di validazione dei filoni che hanno già una prima storia leggibile
+- `analisi/` è lo spazio pubblico di validazione dei filoni che hanno già una prima storia leggibile
 - una repo dedicata nasce quando il filone merita sviluppo continuo e non è più solo una prova o una preanalisi
 
 ## Step 1: Discussion
@@ -75,11 +75,11 @@ Output minimo atteso:
 - prima lettura che racconti qualcosa
 - decisione: archiviare, continuare o promuovere
 
-## Step 4: quando entrare in preanalysis
+## Step 4: quando entrare in analisi
 
-`dataciviclab/preanalysis` è lo spazio pubblico di validazione dei candidati che hanno già una prima storia leggibile.
+`dataciviclab/analisi` è lo spazio pubblico di validazione dei candidati che hanno già una prima storia leggibile.
 
-Un filone entra in `preanalysis/` se ha:
+Un filone entra in `analisi/` se ha:
 - una domanda civica chiara
 - una issue collegata a una Discussion
 - un output minimo atteso
@@ -89,7 +89,7 @@ Un filone entra in `preanalysis/` se ha:
 La forma può essere di due tipi:
 
 Il nucleo tecnico (dataset.yml, sql/, note) vive in `dataset-incubator`.
-In `dataciviclab/preanalysis/` arriva solo il layer pubblico:
+In `dataciviclab/analisi/` arriva solo il layer pubblico:
 - `README`
 - notebook con lettura leggibile
 - eventuali asset leggeri
@@ -129,7 +129,7 @@ In questo modo `dataciviclab` resta il punto di orientamento pubblico, senza dup
 ```text
 Discussion
   -> issue
-  -> preanalysis
+  -> analisi
   -> repo dedicata
 ```
 
@@ -141,7 +141,7 @@ Discussion
 Discussion
   -> issue
   -> dataset-incubator
-  -> preanalysis
+  -> analisi
   -> repo dedicata
 ```
 
@@ -155,7 +155,7 @@ Discussion
 - primo perimetro tecnico plausibile
 - issue operativa aperta
 
-### Per entrare in preanalysis
+### Per entrare in analisi
 - domanda leggibile
 - primo output minimo definito
 - notebook o mart che raccontano qualcosa
@@ -169,7 +169,7 @@ Discussion
 
 ## Repo coinvolte
 
-- `dataciviclab`: hub pubblico, Discussions, issue, `preanalysis/`, `projects/`
+- `dataciviclab`: hub pubblico, Discussions, issue, `analisi/`, `projects/`
 - `dataset-incubator`: incubazione tecnica dei candidati
 - `project-template`: bootstrap di nuove repo dataset/progetto
 - `toolkit`: motore tecnico e workflow canonico dei dati

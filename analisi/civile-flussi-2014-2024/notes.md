@@ -35,4 +35,4 @@
 
 - quando aprire issue `dataciviclab` collegata formalmente alla Discussion
 - se il prossimo output deve restare su distretti o allargarsi a macroaree / uffici
-- se promuovere il filone dopo il primo follow-up pubblico oppure tenerlo ancora in preanalysis
+- se promuovere il filone dopo il primo follow-up pubblico oppure tenerlo ancora in analisi

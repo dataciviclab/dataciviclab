@@ -33,19 +33,19 @@ Se vuoi invece lavorare su qualcosa di più vicino al flusso tecnico del Lab,
 guarda le issue con label [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team):
 
 - review di filone
-- promozione di un candidato da preanalysis
+- promozione di un candidato da analisi
 - scelta del prossimo output
 
 ## Vuoi lavorare su un progetto dataset
 
 I progetti attivi sono nella [Open Board](https://github.com/orgs/dataciviclab/projects/5).
-Le preanalysis in corso sono in [preanalysis/](../preanalysis/).
+Le analisi in corso sono in [analisi/](../analisi/).
 
 Per contribuire a un progetto dataset:
 
 1. leggi il README della repo progetto
 2. guarda le issue aperte nella repo dedicata
-3. se non c'è ancora una repo dedicata, parti dalla Discussion o dalla preanalysis collegata
+3. se non c'è ancora una repo dedicata, parti dalla Discussion o dalla analisi collegata
 
 Per il setup tecnico locale: [local-setup.md](local-setup.md).
 

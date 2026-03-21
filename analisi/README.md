@@ -1,6 +1,6 @@
 # Preanalysis
 
-`preanalysis/` è lo spazio pubblico di validazione dei candidati progetto.
+`analisi/` è lo spazio pubblico di validazione dei candidati progetto.
 
 Non è una sandbox tecnica.
 Non è una repo progetto già matura.
@@ -22,11 +22,11 @@ Usare un perimetro piccolo e leggibile per decidere in tempi rapidi se un filone
 Il contratto tecnico (dataset.yml, sql/, note interne) vive in `dataset-incubator`.
 Qui arriva solo il layer pubblico: README, notebook, eventuali asset leggeri.
 
-I filoni in `preanalysis/` promossi prima di questo modello possono contenere ancora file tecnici — sono storico del vecchio approccio.
+I filoni in `analisi/` promossi prima di questo modello possono contenere ancora file tecnici — sono storico del vecchio approccio.
 
 ## Cosa entra
 
-Un candidato entra in `preanalysis/` se ha:
+Un candidato entra in `analisi/` se ha:
 
 1. una domanda civica formulata chiaramente
 2. una issue in `dataciviclab` collegata a una Discussion
@@ -71,7 +71,7 @@ Massimo 2-3 candidati attivi insieme.
 ## Struttura
 
 ```text
-preanalysis/
+analisi/
   README.md
   registry/
     archived.md
@@ -85,9 +85,9 @@ preanalysis/
 
 ## Relazione con `projects/`
 
-`preanalysis/` resta il luogo di lavoro per i candidati non ancora promossi.
+`analisi/` resta il luogo di lavoro per i candidati non ancora promossi.
 
-Quando un filone esce da `preanalysis/` e passa a repo dedicata:
+Quando un filone esce da `analisi/` e passa a repo dedicata:
 
 - il lavoro tecnico esce da `dataciviclab`
 - in `dataciviclab/projects/` resta una scheda leggera del progetto

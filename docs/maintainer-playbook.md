@@ -26,7 +26,7 @@ Prima di decidere se aprire subito una repo dedicata, passa dal flusso canonico 
 
 In molti casi il percorso giusto non è ancora `Discussion -> repo`, ma:
 - `Discussion -> issue -> dataset-incubator`
-- oppure `Discussion -> issue -> preanalysis`
+- oppure `Discussion -> issue -> analisi`
 
 ## 3. Creare il repo progetto
 
@@ -75,7 +75,7 @@ Le seed issue `core-team` servono a contributor con piu responsabilita:
 
 - review di filone
 - passaggio Discussion -> issue
-- promozione preanalysis -> progetto
+- promozione analisi -> progetto
 - definizione del prossimo output
 - debiti espliciti da tenere sotto controllo
 

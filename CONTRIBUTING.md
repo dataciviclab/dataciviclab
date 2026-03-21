@@ -14,7 +14,7 @@ Per le regole GitHub condivise dell'organizzazione, vedi
 
 - Discussions
 - docs brevi di orientamento
-- `preanalysis/` come layer pubblico delle analisi in corso
+- `analisi/` come layer pubblico delle analisi in corso
 - `projects/` come indice dei filoni promossi a repo dedicata
 - task cross-repo e decisioni organizzative
 

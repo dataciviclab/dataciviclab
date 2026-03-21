@@ -16,7 +16,7 @@ Repo: [progetto-pilota](https://github.com/dataciviclab/progetto-pilota) — das
 Serie storica delle principali voci di entrata e uscita dello Stato centrale. Fonte: OpenBDAP/RGS.
 Repo: [openbdap-saldi-storico-stato](https://github.com/dataciviclab/openbdap-saldi-storico-stato) — dataset aperto, discussioni pubbliche attive.
 
-Cosa stiamo analizzando adesso: [preanalysis/](preanalysis/).
+Cosa stiamo analizzando adesso: [analisi/](analisi/).
 
 ## Come partecipare
 

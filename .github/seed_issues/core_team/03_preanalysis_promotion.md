@@ -1,12 +1,12 @@
-Title: `[Seed] Valutare se una preanalysis va promossa, tenuta o congelata`
-Labels: `seed-issue`, `core-team`, `preanalysis`
+Title: `[Seed] Valutare se una analisi va promossa, tenuta o congelata`
+Labels: `seed-issue`, `core-team`, `analisi`
 
 Body:
 
 ```md
 ## Obiettivo
 
-Valutare se un candidato in `preanalysis/` deve:
+Valutare se un candidato in `analisi/` deve:
 
 - restare dov’è
 - essere promosso a repo dedicata
@@ -14,7 +14,7 @@ Valutare se un candidato in `preanalysis/` deve:
 
 ## Anchor
 
-- scegli un candidato preciso in `preanalysis/`
+- scegli un candidato preciso in `analisi/`
 - verifica solo ciò che serve per decidere il prossimo contenitore
 
 ## Task minimo

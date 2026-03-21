@@ -44,7 +44,7 @@ Issue collegata: [#131](https://github.com/dataciviclab/dataciviclab/issues/131)
 
 ## Provenienza
 
-Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come preanalysis nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.
+Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come analisi nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.
 
 ## Contratto tecnico
 

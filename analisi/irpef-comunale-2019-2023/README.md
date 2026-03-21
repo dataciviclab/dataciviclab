@@ -8,7 +8,7 @@ Come varia la capacità fiscale tra comuni e regioni nel dataset IRPEF comunale?
 
 - rende leggibili differenze territoriali su contribuenti, base imponibile e imposta netta
 - permette un primo confronto multi-anno tra regioni e comuni senza partire da indicatori troppo derivati
-- è un buon candidato pubblico per il flusso `Discussion -> issue -> preanalysis -> decisione`
+- è un buon candidato pubblico per il flusso `Discussion -> issue -> analisi -> decisione`
 
 Discussion collegata:
 
@@ -44,10 +44,10 @@ Discussion collegata:
 ## Contratto tecnico
 
 Questo filone precede il modello dataset-incubator: il contratto tecnico è stato
-costruito direttamente in preanalysis/ con il vecchio modello autosufficiente.
+costruito direttamente in analisi/ con il vecchio modello autosufficiente.
 Non esiste un candidato corrispondente in DI.
 
 ## Decisione attesa al checkpoint
 
-- continuare come preanalysis fino al primo output Discussion
+- continuare come analisi fino al primo output Discussion
 - poi decidere se promuovere a repo dedicata

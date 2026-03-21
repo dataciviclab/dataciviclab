@@ -8,7 +8,7 @@ Il carico della giustizia civile sta migliorando o peggiorando nei territori?
 
 - rende leggibile l'equilibrio tra nuovi procedimenti, definiti e arretrato
 - permette un confronto territoriale su una serie storica lunga (`2014-2024`)
-- è un buon candidato pubblico per il flusso `Discussion -> preanalysis -> output -> decisione`
+- è un buon candidato pubblico per il flusso `Discussion -> analisi -> output -> decisione`
 
 Discussion collegata:
 
@@ -50,4 +50,4 @@ Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
 
 - pubblicare il follow-up territoriale sulla Discussion
 - verificare se il primo output pubblico regge bene anche fuori dal notebook
-- poi decidere se tenere il filone in preanalysis oppure promuoverlo a repo dedicata
+- poi decidere se tenere il filone in analisi oppure promuoverlo a repo dedicata

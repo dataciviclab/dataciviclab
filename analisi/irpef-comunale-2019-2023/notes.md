@@ -4,7 +4,7 @@
 
 - [x] confermare domanda principale
 - [x] verificare disponibilità dati reali
-- [x] collegare la preanalysis alla Discussion IRPEF già aperta
+- [x] collegare la analisi alla Discussion IRPEF già aperta
 - [x] eseguire RAW/CLEAN/MART annuale
 - [x] definire un output minimo cross-year coerente con la Discussion
 - [x] migrare il multi-anno al layer `cross_year` nativo del toolkit
@@ -35,4 +35,4 @@
 
 - quando arricchire con popolazione per letture pro capite
 - quanto spingere il confronto tra comuni nella prima risposta pubblica
-- se tenere questo filone in preanalysis fino al primo commento Discussion oppure promuoverlo prima
+- se tenere questo filone in analisi fino al primo commento Discussion oppure promuoverlo prima

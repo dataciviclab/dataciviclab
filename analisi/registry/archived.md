@@ -3,7 +3,7 @@
 | filone | motivo uscita | decisione | nota |
 |--------|---------------|-----------|------|
 
-Nessuna preanalysis formalmente archiviata finora.
+Nessuna analisi formalmente archiviata finora.
 
 ## Regola
 

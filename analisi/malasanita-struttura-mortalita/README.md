@@ -8,7 +8,7 @@ Le regioni con meno personale sanitario hanno tassi di mortalità evitabile più
 
 - rende leggibile la geografia del proxy di rischio evitabile a livello regionale nel 2022
 - permette un primo confronto tra dotazione sanitaria territoriale e mortalità, senza inferenza causale
-- è il caso-pilota del flusso `Discussion -> incubator -> preanalysis -> decisione` del lab
+- è il caso-pilota del flusso `Discussion -> incubator -> analisi -> decisione` del lab
 
 Discussion collegata: `dataciviclab` Discussion `#99` — Malasanità in Italia.
 
@@ -51,7 +51,7 @@ Il contratto tecnico (compose, SQL, pipeline) vive in dataset-incubator:
 
 ## Stato
 
-- `active` in `dataciviclab/preanalysis`
+- `active` in `dataciviclab/analisi`
 - artifact v3 validato (`dataciviclab/dataset-incubator`, issue #24)
 - promozione completata: `dataciviclab/dataciviclab#117` (chiusa)
 
