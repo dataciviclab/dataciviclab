@@ -35,7 +35,7 @@ body:
     attributes:
       label: Output v1 atteso
       description: Qual è il primo output pubblico serio che vogliamo pubblicare?
-      placeholder: Preanalysis, notebook leggibile, pagina pubblica, report breve, dataset documentato...
+      placeholder: README civico in analisi/, notebook leggibile, pagina pubblica, report breve, dataset documentato...
     validations:
       required: true
   - type: textarea
