@@ -10,7 +10,7 @@ Scegliere il prossimo output pubblico minimo per un filone già attivo.
 
 ## Anchor
 
-- scegli un filone gia vivo con materiali leggibili
+- scegli un filone già vivo con materiali leggibili
 - lavora su un output che abbia senso adesso, non ideale in astratto
 
 ## Task minimo

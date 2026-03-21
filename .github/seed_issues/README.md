@@ -60,7 +60,7 @@ Sono quelle che:
 - hanno uno scope chiudibile in poco tempo
 - possono essere prese senza dover progettare il filone da zero
 
-Se una seed richiede prima di decidere il target, il repo o il formato del lavoro, probabilmente e ancora troppo larga.
+Se una seed richiede prima di decidere il target, il repo o il formato del lavoro, probabilmente è ancora troppo larga.
 
 ## Ritiro di una seed
 

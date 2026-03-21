@@ -10,7 +10,7 @@ Controllare una fonte pubblica già usata o candidata e lasciare una nota breve 
 
 ## Anchor
 
-- scegli una fonte precisa, con URL e contesto gia identificati
+- scegli una fonte precisa, con URL e contesto già identificati
 - il task si ferma alla verifica, non entra ancora in pipeline o clean
 
 ## Task minimo
@@ -28,6 +28,6 @@ Controllare una fonte pubblica già usata o candidata e lasciare una nota breve 
 ## Non in scope
 
 - costruire pipeline o notebook
-- fare gia analisi dei dati
+- fare già analisi dei dati
 - allargare il task a più fonti insieme
 ```

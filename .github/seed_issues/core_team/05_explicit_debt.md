@@ -10,7 +10,7 @@ Prendere un debito già emerso e renderlo esplicito in modo utile, senza gonfiar
 
 ## Anchor
 
-- scegli un debito gia reale: emerso in review, merge, notebook o passaggio di repo
+- scegli un debito già reale: emerso in review, merge, notebook o passaggio di repo
 - evita debiti troppo astratti o teorici
 
 ## Task minimo

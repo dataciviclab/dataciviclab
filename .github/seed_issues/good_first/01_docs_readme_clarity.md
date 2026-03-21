@@ -10,7 +10,7 @@ Rendere più chiara una sezione specifica di un README o di una guida breve già
 
 ## Anchor
 
-- scegli un file preciso del Lab gia vivo
+- scegli un file preciso del Lab già vivo
 - lavora su una sezione concreta, non su tutto il file
 
 ## Task minimo
