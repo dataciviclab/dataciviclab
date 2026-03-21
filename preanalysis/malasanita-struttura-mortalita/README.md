@@ -44,23 +44,6 @@ La `v2` (`decessi_evitabili_30plus_per_100k_pop_totale`) è mantenuta come proxy
 - `notebooks/malasanita_preanalysis_v3.ipynb` — notebook principale (v3 baseline raccomandata)
 - artifact: `mart_compose_regioni_v3.parquet` — join 21/21, prodotto da incubator privato
 
-## Esecuzione locale del notebook
-
-Il notebook non ricostruisce i dati grezzi dentro questo repo. Richiede accesso ai parquet già prodotti in `dataset-incubator`.
-
-Due modalità supportate:
-
-1. checkout sibling di `dataset-incubator` con `out/data` già generato:
-   - path atteso di default:
-     - `../dataset-incubator/out/data/mart/malasanita_a_strutture_asl/2022/mart_compose_regioni_v3.parquet`
-     - `../dataset-incubator/out/data/mart/malasanita_a_strutture_asl/2022/mart_compose_regioni_v2.parquet`
-
-2. override via variabili ambiente:
-   - `MALASANITA_V3_PARQUET`
-   - `MALASANITA_V2_PARQUET`
-
-Questa preanalysis è pubblica nel contenuto analitico, ma dipende da artifact generati a monte nell'incubator.
-
 ## Stato
 
 - `active` in `dataciviclab/preanalysis`

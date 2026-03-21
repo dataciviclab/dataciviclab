@@ -1,66 +1,36 @@
-# 🌱 Come Iniziare
+# Come iniziare
 
 Se sei arrivato qui da poco, non serve capire tutto subito.
 
 Questa pagina serve solo a orientarti in pochi minuti.
 
-## 👀 Se vuoi capire il progetto
+## Se vuoi capire il progetto
 
 Parti da qui:
+
 - [README.md](../README.md)
 - [Mappa delle repo](repository-map.md)
 - [Roadmap](https://github.com/orgs/dataciviclab/projects/2)
 
-## 📚 Se vuoi seguire i lavori
+## Se vuoi seguire i lavori
 
 Guarda:
+
 - [Open Board](https://github.com/orgs/dataciviclab/projects/5)
 - [Roadmap](https://github.com/orgs/dataciviclab/projects/2)
 - [Canali della community](community-channels.md)
 
-## 🙌 Se vuoi dare una mano
+## Se vuoi partecipare
 
-Il punto di ingresso per contribuire è questa repo hub.
+Il punto di ingresso più naturale è una domanda civica.
 
-Per iniziare in modo semplice:
-- cerca una issue aperta: [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) o [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team)
-- leggi [CONTRIBUTING.md](../CONTRIBUTING.md) per capire cosa entra in questa repo
-- usa [local-setup.md](local-setup.md) se devi configurare il workspace minimo del Lab
-- cerca una `good first issue` se vuoi un task leggero
-- guarda una issue `core-team` se vuoi un task più vicino al flusso vero del Lab
+Apri una [Discussion](https://github.com/orgs/dataciviclab/discussions/new) per formulare
+la tua domanda o per vedere se esiste già un filone sul tema che ti interessa.
 
-Se invece vuoi lavorare su un progetto specifico:
-- parti dal GitHub Project del momento o dalla repo dedicata
-- guarda le issue e lo stato del progetto
-- entra in Discussions o nel canale giusto se hai bisogno di contesto
+Se invece vuoi contribuire a qualcosa di concreto già in corso, leggi
+[come-contribuire.md](come-contribuire.md) per il percorso completo.
 
-Le issue reali di progetto continuano però a nascere da:
-- Discussion
-- preanalysis
-- output
-- lavoro tecnico concreto
-
-## ❓ Se parti da una domanda civica
-
-Questo è spesso il punto di ingresso più naturale nel Lab.
-
-Il flusso consigliato è:
-
-1. apri o cerca una **Discussion** per formulare bene la domanda
-2. chiarisci perché quella domanda conta, per chi è con quali dati si può affrontare
-3. quando la domanda diventa lavoro concreto, apri una **Issue** nella repo giusta
-4. se serve un progetto dedicato, si lavora dentro una repo dataset con una domanda principale chiara
-
-Le proposte iniziali del Lab passano quindi prima dalle Discussion dell'organizzazione. Le issue locali di `dataciviclab` servono soprattutto a passi già più maturi, come `output-v1`, decisioni organizzative o task cross-repo.
-
-Per vedere il percorso completo del Lab, incluso quando passare da `dataset-incubator` o da `preanalysis`, vedi [dataset-project-flow.md](dataset-project-flow.md).
-
-Una repo dataset può rispondere a più domande.
-Però non dovrebbe perdere il suo centro: ogni progetto deve avere una domanda civica principale che renda leggibile il perimetro del lavoro.
-
-## 🧭 Se non sai ancora dove andare
-
-Comincia da una domanda semplice:
+## Se non sai ancora dove andare
 
 "Voglio capire meglio il Lab?"
 Vai al [README](../README.md).
@@ -69,4 +39,5 @@ Vai al [README](../README.md).
 Vai alla [Open Board](https://github.com/orgs/dataciviclab/projects/5).
 
 "Voglio partecipare?"
-Guarda le issue aperte di ingresso e poi vai al progetto che ti interessa: [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) o [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team).
+Apri una [Discussion](https://github.com/orgs/dataciviclab/discussions/new) o
+guarda le [issue aperte](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).

@@ -41,26 +41,6 @@ Discussion collegata:
 - `cross_year` nativo del toolkit: pronto
 - notebook di lavoro: `notebooks/d1_capacita_fiscale_2019_2023.ipynb`
 
-## Esecuzione
-
-Nota: questo README conserva ancora un setup tecnico del vecchio modello `preanalysis` autosufficiente. Nel modello attuale il contratto tecnico di riferimento vive in `dataset-incubator`; i comandi sotto restano documentazione storica del run.
-
-Run annuale con `toolkit`:
-
-```powershell
-py -m toolkit.cli.app run all --config preanalysis/irpef-comunale-2019-2023/dataset.yml
-```
-
-Costruzione dell'output multi-anno:
-
-```powershell
-py -m toolkit.cli.app run cross_year --config preanalysis/irpef-comunale-2019-2023/dataset.yml
-```
-
-Output finale:
-
-- `out/data/cross/irpef_comunale_2019_2023/irpef_capacita_fiscale_multi_anno.parquet`
-
 ## Decisione attesa al checkpoint
 
 - continuare come preanalysis fino al primo output Discussion

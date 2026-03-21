@@ -41,16 +41,6 @@ Discussion collegata: [#115](https://github.com/orgs/dataciviclab/discussions/11
 - notebook `v1` pronto
 - check `Netta` vs `Lorda` verificato nel perimetro osservato
 
-## Esecuzione
-
-Nota: questo README riflette ancora il vecchio modello `preanalysis` autosufficiente. Nel modello attuale il contratto tecnico di riferimento vive in `dataset-incubator`; i comandi sotto restano documentazione storica del run.
-
-Run annuale con `toolkit`:
-
-```powershell
-py -m toolkit.cli.app run all --config preanalysis/terna-electricity-by-source/dataset.yml
-```
-
 ## Provenienza
 
 Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come preanalysis nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.
