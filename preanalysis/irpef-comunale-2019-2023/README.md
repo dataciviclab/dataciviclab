@@ -41,6 +41,12 @@ Discussion collegata:
 - `cross_year` nativo del toolkit: pronto
 - notebook di lavoro: `notebooks/d1_capacita_fiscale_2019_2023.ipynb`
 
+## Contratto tecnico
+
+Questo filone precede il modello dataset-incubator: il contratto tecnico è stato
+costruito direttamente in preanalysis/ con il vecchio modello autosufficiente.
+Non esiste un candidato corrispondente in DI.
+
 ## Decisione attesa al checkpoint
 
 - continuare come preanalysis fino al primo output Discussion

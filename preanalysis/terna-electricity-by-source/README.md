@@ -41,6 +41,11 @@ Discussion collegata: [#115](https://github.com/orgs/dataciviclab/discussions/11
 - notebook `v1` pronto
 - check `Netta` vs `Lorda` verificato nel perimetro osservato
 
+## Contratto tecnico
+
+Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
+[candidates/terna-electricity-by-source](https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/terna-electricity-by-source)
+
 ## Provenienza
 
 Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come preanalysis nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.

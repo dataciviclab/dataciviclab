@@ -41,6 +41,11 @@ Discussion collegata:
 - notebook D1: pronto
 - commento follow-up Discussion: pronto da pubblicare
 
+## Contratto tecnico
+
+Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
+[candidates/civile-flussi](https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/civile-flussi)
+
 ## Decisione attesa al checkpoint
 
 - pubblicare il follow-up territoriale sulla Discussion

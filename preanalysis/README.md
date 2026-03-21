@@ -42,8 +42,8 @@ Un candidato entra in `preanalysis/` se ha:
 
 ## Tracking
 
-I filoni attivi sono tracciati via issue in `dataciviclab` con label `preanalysis`.
-L'archivio dei filoni usciti sta in `registry/archived.md`.
+I filoni attivi sono in [registry/active.md](registry/active.md).
+I filoni usciti (archiviati o promossi) sono in [registry/archived.md](registry/archived.md).
 
 ## Limite WIP
 

@@ -44,6 +44,11 @@ La `v2` (`decessi_evitabili_30plus_per_100k_pop_totale`) è mantenuta come proxy
 - `notebooks/malasanita_preanalysis_v3.ipynb` — notebook principale (v3 baseline raccomandata)
 - artifact: `mart_compose_regioni_v3.parquet` — join 21/21, prodotto da incubator privato
 
+## Contratto tecnico
+
+Il contratto tecnico (compose, SQL, pipeline) vive in dataset-incubator:
+[candidates/malasanita-struttura-mortalita](https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/malasanita-struttura-mortalita)
+
 ## Stato
 
 - `active` in `dataciviclab/preanalysis`

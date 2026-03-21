@@ -46,6 +46,11 @@ Issue collegata: [#131](https://github.com/dataciviclab/dataciviclab/issues/131)
 
 Il filone è nato come candidato in `dataset-incubator` ed è stato promosso qui come preanalysis nel vecchio modello autosufficiente. Oggi il riferimento tecnico resta in `dataset-incubator`, mentre `dataciviclab` tiene il layer pubblico di lettura e notebook.
 
+## Contratto tecnico
+
+Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
+[candidates/dipendenti-pubblici-2021-2023](https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/dipendenti-pubblici-2021-2023)
+
 ## Decisione attesa al checkpoint
 
 - confermare che il primo output pubblico debba restare sul confronto tra comparti
