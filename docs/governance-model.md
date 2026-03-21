@@ -59,13 +59,8 @@ Se non sai da dove partire, leggi [`docs/come-contribuire.md`](come-contribuire.
 
 ## Come nasce un nuovo progetto
 
-1. Una domanda civica viene proposta in modo chiaro, di solito in una Discussion.
-2. Si verifica che esistano dati pubblici adatti.
-3. Se serve validazione tecnica, il candidato entra in `dataset-incubator`.
-4. Quando il filone ha una prima storia leggibile, entra in `analisi/` nel repo `dataciviclab`.
-5. I maintainer valutano se il filone in analisi/ e' pronto per una repo dedicata.
-6. Se la proposta regge, nasce una nuova repo dal `project-template`.
-7. Il progetto entra nelle board pubbliche e nel flusso operativo del Lab.
+Il flusso canonico dal scouting di un dataset alla pubblicazione e' in
+[docs/dataset-project-flow.md](dataset-project-flow.md).
 
 ## Principio guida
 

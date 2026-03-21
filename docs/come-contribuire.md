@@ -57,13 +57,9 @@ Il Lab è piccolo e le decisioni si prendono in modo trasparente su GitHub.
 - le issue servono a trasformarla in lavoro operativo
 - le PR sono il luogo di review prima di ogni merge
 
+La conversazione può partire ovunque — Discord, LinkedIn, in privato.
+La traccia utile deve restare su GitHub.
+
 Per capire come funziona la governance del Lab: [governance-model.md](governance-model.md).
 
-## Regole GitHub condivise
-
-Per le regole comuni di contribuzione valide su tutte le repo del Lab
-(template issue, stile PR, codice di condotta) vedi
-[`.github`](https://github.com/dataciviclab/.github).
-
-Per le regole specifiche di questa repo hub (`dataciviclab`):
-[CONTRIBUTING.md](../CONTRIBUTING.md).
+Per template issue, PR e codice di condotta validi su tutte le repo: [`.github`](https://github.com/dataciviclab/.github).
