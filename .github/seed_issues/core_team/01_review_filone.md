@@ -1,4 +1,4 @@
-Title: `[Seed] Valutare un filone attivo e proporre il prossimo passo`
+Title: `[Seed] Fare una review rapida di un filone già vivo e scegliere un solo prossimo passo`
 Labels: `seed-issue`, `core-team`, `workflow`
 
 Body:
@@ -6,17 +6,27 @@ Body:
 ```md
 ## Obiettivo
 
-Fare una review rapida di un filone attivo del Lab e proporre il prossimo passo minimo sensato.
+Fare una review rapida di un filone già vivo del Lab e indicare un solo prossimo passo minimo sensato.
 
-## Cosa fare
+## Anchor
 
-- guardare stato attuale, repo, Discussion e output disponibili
-- individuare il collo di bottiglia reale
-- proporre un solo prossimo passo, piccolo e difendibile
+- scegli un filone già vivo: repo, Discussion o preanalysis con materiali leggibili
+- evita filoni ancora troppo embrionali o non verificabili
 
-## Criteri di completamento
+## Task minimo
 
-- il prossimo passo è chiaro
-- scope e repo giusta sono espliciti
-- non vengono aperti nuovi fronti inutili
+- guarda stato attuale, output e collo di bottiglia reale
+- proponi un solo prossimo passo piccolo e difendibile
+
+## Done quando
+
+- [ ] il prossimo passo e chiaro
+- [ ] repo, file o thread di lavoro sono espliciti
+- [ ] non vengono aperti nuovi fronti inutili
+
+## Non in scope
+
+- riprogettare il filone intero
+- aprire 4-5 issue insieme
+- scegliere un output ideale ma non realistico
 ```

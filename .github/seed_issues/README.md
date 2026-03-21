@@ -29,7 +29,14 @@ Ogni file contiene:
 - `Labels`
 - `Body`
 
-La cartella e divisa in:
+Nel body ogni seed dovrebbe rendere subito leggibili:
+
+- `Anchor`: dove agganciarsi davvero nel Lab
+- `Task minimo`: una cosa sola da fare
+- `Done quando`: criterio di chiusura chiaro
+- `Non in scope`: cosa non allargare
+
+La cartella è divisa in:
 
 - `good_first/`
 - `core_team/`
@@ -43,6 +50,17 @@ Questi file possono essere usati in due modi:
 
 La Action non crea issue illimitate.
 Controlla quante seed issue aperte esistono già per ciascun bucket, contando solo le issue che hanno sia la label del bucket sia `seed-issue`, e apre solo gli slot mancanti fino al massimo dichiarato.
+
+## Criterio operativo
+
+Le seed migliori non sono quelle più generiche.
+Sono quelle che:
+
+- si agganciano a una repo, Discussion, notebook o area documentale già viva
+- hanno uno scope chiudibile in poco tempo
+- possono essere prese senza dover progettare il filone da zero
+
+Se una seed richiede prima di decidere il target, il repo o il formato del lavoro, probabilmente è ancora troppo larga.
 
 ## Ritiro di una seed
 

@@ -1,4 +1,4 @@
-Title: `[Seed] Verificare link e riferimenti in una sezione del Lab`
+Title: `[Seed] Verificare link e riferimenti in un file o sezione precisa`
 Labels: `seed-issue`, `good first issue`, `documentation`
 
 Body:
@@ -6,17 +6,27 @@ Body:
 ```md
 ## Obiettivo
 
-Controllare una piccola sezione del Lab per trovare link rotti, riferimenti datati o percorsi non più validi.
+Controllare un file o una sezione documentale precisa per trovare link rotti o riferimenti datati.
 
-## Cosa fare
+## Anchor
 
-- scegliere una pagina o una cartella documentale
-- verificare link interni ed esterni
-- segnalare o correggere riferimenti non più aggiornati
+- scegli un file preciso o una piccola cartella documentale
+- evita controlli su tutto il Lab
 
-## Criteri di completamento
+## Task minimo
 
-- i link principali funzionano
-- eventuali riferimenti datati sono corretti o documentati
-- il fix resta piccolo e mirato
+- verifica i link principali interni ed esterni
+- correggi o documenta solo i riferimenti davvero rotti o superati
+
+## Done quando
+
+- [ ] i link principali del perimetro scelto funzionano
+- [ ] gli eventuali riferimenti datati sono corretti o segnalati
+- [ ] il fix resta piccolo e mirato
+
+## Non in scope
+
+- audit completo di tutti i link del Lab
+- ristrutturare la documentazione
+- cambiare contenuto oltrè il necessario per correggere i riferimenti
 ```

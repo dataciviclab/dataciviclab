@@ -1,4 +1,4 @@
-Title: `[Seed] Trasformare una Discussion in 1-2 issue operative`
+Title: `[Seed] Trasformare una Discussion matura in 1-2 issue davvero prendibili`
 Labels: `seed-issue`, `core-team`, `workflow`, `discussion`
 
 Body:
@@ -6,17 +6,28 @@ Body:
 ```md
 ## Obiettivo
 
-Prendere una Discussion già abbastanza matura e tradurla in 1-2 issue operative sensate.
+Prendere una Discussion già abbastanza matura e tradurla in 1-2 issue operative davvero prendibili.
 
-## Cosa fare
+## Anchor
 
-- rileggere la Discussion
-- separare ciò che è domanda da ciò che è lavoro concreto
-- definire issue piccole, chiare e con criterio di chiusura
+- scegli una Discussion con abbastanza materiale da separare domanda e lavoro
+- evita thread ancora troppo aperti o troppo vaghi
 
-## Criteri di completamento
+## Task minimo
 
-- non più di 2 issue
-- scope stretto
-- repo corretta esplicitata
+- rileggi il thread
+- separa ciò che è domanda da ciò che è lavoro concreto
+- definisci al massimo 1-2 issue piccole e con criterio di chiusura
+
+## Done quando
+
+- [ ] non ci sono più di 2 issue
+- [ ] scope stretto
+- [ ] repo corretta esplicitata
+
+## Non in scope
+
+- aprire backlog largo
+- trasformare la Discussion in roadmap
+- mantenere issue troppo astratte
 ```

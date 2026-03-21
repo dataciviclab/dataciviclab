@@ -1,4 +1,4 @@
-Title: `[Seed] Rendere esplicito un debito tecnico o metodologico`
+Title: `[Seed] Rendere esplicito un debito già emerso senza aprire un refactor largo`
 Labels: `seed-issue`, `core-team`, `debt`
 
 Body:
@@ -6,17 +6,28 @@ Body:
 ```md
 ## Obiettivo
 
-Prendere un debito già noto e renderlo esplicito in modo utile, senza aprire subito un refactor largo.
+Prendere un debito già emerso e renderlo esplicito in modo utile, senza gonfiarlo in refactor largo.
 
-## Cosa fare
+## Anchor
 
-- chiarire dove sta il debito
-- spiegare perché non blocca subito il lavoro
-- definire quando andrebbe ripreso
+- scegli un debito già reale: emerso in review, merge, notebook o passaggio di repo
+- evita debiti troppo astratti o teorici
 
-## Criteri di completamento
+## Task minimo
 
-- il debito è formulato in modo concreto
-- non viene gonfiato in lavoro inutile
-- c'è un criterio chiaro per riprenderlo più avanti
+- chiarisci dove sta il debito
+- spiega perché non blocca subito il lavoro
+- definisci quando o a quale trigger andrebbe ripreso
+
+## Done quando
+
+- [ ] il debito e formulato in modo concreto
+- [ ] non viene gonfiato in lavoro inutile
+- [ ] c’è un criterio chiaro per riprenderlo piu avanti
+
+## Non in scope
+
+- aprire già il refactor
+- trasformare il debito in paura vaga
+- usarlo per riaprire tutto il filone
 ```

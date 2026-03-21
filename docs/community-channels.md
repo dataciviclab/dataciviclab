@@ -22,8 +22,9 @@ Serve per:
 Projects è il piano operativo condiviso.
 Se vuoi capire su cosa stiamo lavorando in questo momento, questo è il posto giusto.
 
-Le issue di ingresso e coordinamento leggero vengono invece mantenute nel repo `dataciviclab`, tramite il catalogo seed in:
-- [`.github/seed_issues/`](../.github/seed_issues/README.md)
+Le issue di ingresso e coordinamento leggero sono aperte nel repo `dataciviclab`:
+- [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team)
 
 ### Open Board
 

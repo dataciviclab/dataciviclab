@@ -24,7 +24,7 @@ Se vuoi contribuire:
 - usa le policy condivise nella repo `.github`
 - leggi [CONTRIBUTING.md](CONTRIBUTING.md) per il ruolo specifico di questa repo
 - se ti serve il setup minimo, parti da [docs/local-setup.md](docs/local-setup.md)
-- guarda il catalogo seed in [`.github/seed_issues/`](.github/seed_issues/README.md)
+- cerca una issue aperta: [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) o [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team)
 - leggi i [canali della community](docs/community-channels.md)
 - se lavori su un dataset, parti dal `project-template`
 
@@ -60,8 +60,9 @@ Le issue `core-team` servono per:
 - promozione di candidati da `preanalysis`
 - scelta del prossimo output
 
-Il catalogo seed sta qui:
-- [`.github/seed_issues/`](.github/seed_issues/README.md)
+Le issue di ingresso aperte sono qui:
+- [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team)
 
 Le issue reali di progetto non nascono da questo catalogo.
 Continuano a nascere da:

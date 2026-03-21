@@ -1,4 +1,4 @@
-Title: `[Seed] Migliorare la chiarezza di un README o guida breve`
+Title: `[Seed] Rendere più chiara una sezione specifica di README o guida breve`
 Labels: `seed-issue`, `good first issue`, `documentation`
 
 Body:
@@ -6,17 +6,27 @@ Body:
 ```md
 ## Obiettivo
 
-Migliorare la leggibilità di un README o di una guida breve del Lab senza cambiarne il senso operativo.
+Rendere più chiara una sezione specifica di un README o di una guida breve già esistente.
 
-## Cosa fare
+## Anchor
 
-- scegliere un README o una guida breve che oggi risulta poco chiara
-- proporre una riscrittura più lineare e leggibile
-- mantenere invariati contenuto e decisioni già prese
+- scegli un file preciso del Lab già vivo
+- lavora su una sezione concreta, non su tutto il file
 
-## Criteri di completamento
+## Task minimo
 
-- il testo è più leggibile di prima
-- non introduce cambi di policy
-- i riferimenti e i link restano corretti
+- riscrivi una sezione per renderla più lineare e leggibile
+- non cambiare decisioni, policy o perimetro del progetto
+
+## Done quando
+
+- [ ] la sezione scelta si capisce meglio senza contesto pregresso
+- [ ] link e riferimenti restano corretti
+- [ ] il fix è abbastanza piccolo da stare in una PR docs mirata
+
+## Non in scope
+
+- rifare il README intero
+- cambiare policy o naming del progetto
+- aprire nuovo lavoro tecnico
 ```
