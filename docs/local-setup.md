@@ -70,7 +70,7 @@ python -m pip install -e .
 Verifica minima:
 
 ```bash
-python -m toolkit.cli.app --help
+toolkit --help
 ```
 
 Se questo comando non parte, fermati qui e sistema prima l'ambiente.
@@ -94,8 +94,7 @@ Lo standard del Lab è usare il `dataset.yml` del candidate o del support datase
 Esempio:
 
 ```bash
-cd toolkit
-python -m toolkit.cli.app run all --config ../dataset-incubator/candidates/irpef-comunale/dataset.yml
+toolkit run all --config ../dataset-incubator/candidates/irpef-comunale/dataset.yml
 ```
 
 Questo è il primo test utile:
@@ -145,6 +144,6 @@ Se tutto è a posto, dovresti riuscire a:
 
 1. vedere le repo principali nel workspace locale
 2. usare la `.venv` del workspace
-3. lanciare `python -m toolkit.cli.app --help`
+3. lanciare `toolkit --help`
 4. eseguire almeno un `run all --config ...`
 5. trovare gli output nella cartella `out/` della repo giusta
