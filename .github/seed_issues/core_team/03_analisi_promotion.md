@@ -1,0 +1,36 @@
+Title: `[Seed] Valutare se una analisi va promossa, tenuta o congelata`
+Labels: `seed-issue`, `core-team`, `analisi`
+
+Body:
+
+```md
+## Obiettivo
+
+Valutare se un candidato in `analisi/` deve:
+
+- restare dov’è
+- essere promosso a repo dedicata
+- essere congelato
+
+## Anchor
+
+- scegli un candidato preciso in `analisi/`
+- verifica solo ciò che serve per decidere il prossimo contenitore
+
+## Task minimo
+
+- controlla se esistono già una pipeline minima, una Discussion leggibile o un output reale
+- valuta se il filone ha davvero bisogno di una repo propria ora
+
+## Done quando
+
+- [ ] decisione esplicita
+- [ ] motivazione breve ma chiara
+- [ ] nessuna promozione prematura
+
+## Non in scope
+
+- aprire subito la repo
+- ridisegnare il progetto
+- usare la seed per forzare una promozione non ancora matura
+```

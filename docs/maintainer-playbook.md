@@ -1,4 +1,4 @@
-# 🧰 Playbook Maintainer
+# Playbook Maintainer
 
 Questa guida serve a chi apre e accompagna un nuovo progetto nel Lab.
 
@@ -26,11 +26,11 @@ Prima di decidere se aprire subito una repo dedicata, passa dal flusso canonico 
 
 In molti casi il percorso giusto non è ancora `Discussion -> repo`, ma:
 - `Discussion -> issue -> dataset-incubator`
-- oppure `Discussion -> issue -> preanalysis`
+- oppure `Discussion -> issue -> analisi`
 
 ## 3. Creare il repo progetto
 
-Se la proposta regge:
+Se la proposta regge e il filone non si risolve in analisi/:
 - crea il repo dal `project-template`
 - configura i file minimi del progetto
 - collega il repo alla [Open Board](https://github.com/orgs/dataciviclab/projects/5)
@@ -75,7 +75,7 @@ Le seed issue `core-team` servono a contributor con piu responsabilita:
 
 - review di filone
 - passaggio Discussion -> issue
-- promozione preanalysis -> progetto
+- promozione analisi -> progetto
 - definizione del prossimo output
 - debiti espliciti da tenere sotto controllo
 

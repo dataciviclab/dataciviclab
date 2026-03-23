@@ -10,7 +10,7 @@ Fare una review rapida di un filone già vivo del Lab e indicare un solo prossim
 
 ## Anchor
 
-- scegli un filone già vivo: repo, Discussion o preanalysis con materiali leggibili
+- scegli un filone già vivo: repo, Discussion o analisi con materiali leggibili
 - evita filoni ancora troppo embrionali o non verificabili
 
 ## Task minimo

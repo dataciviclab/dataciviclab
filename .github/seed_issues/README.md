@@ -17,7 +17,7 @@ Il contesto operativo di queste seed segue il flusso canonico del Lab descritto 
 - massimo `5` seed issue aperte con label `core-team`
 - le issue reali di progetto continuano a nascere da:
   - Discussion
-  - preanalysis
+  - analisi
   - output
   - lavoro tecnico concreto
 

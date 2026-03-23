@@ -12,7 +12,7 @@ Qui stanno:
 - la spiegazione del progetto
 - la mappa dell'ecosistema
 - i link ai progetti, alle board e ai risultati pubblici
-- lo stato di `preanalysis/`
+- lo stato di `analisi/`
 - le schede in `projects/` dei filoni già promossi
 - la roadmap
 - le guide brevi per orientarsi
@@ -26,8 +26,8 @@ Qui non stanno:
 - struttura operativa dei repo dataset
 
 Dentro `dataciviclab` ci sono due livelli utili:
-- `preanalysis/` per i candidati ancora in validazione
-- `projects/` per le schede leggere dei progetti già promossi a repo dedicate
+- `analisi/` layer pubblico dei filoni attivi: README civico, notebook, Discussion collegata
+- `projects/` schede leggere dei filoni promossi a repo dedicate
 
 ## `.github`
 
@@ -88,7 +88,7 @@ Qui stanno:
 
 Qui non stanno:
 - output pubblici o notebook definitivi come standard
-- filoni già promossi a preanalysis o repo dedicata
+- filoni già promossi a analisi o repo dedicata
 
 ## Repo dataset
 
