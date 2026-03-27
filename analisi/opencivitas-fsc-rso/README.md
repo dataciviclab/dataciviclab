@@ -2,12 +2,12 @@
 
 ## Domanda principale
 
-I comuni con capacita fiscale piu bassa ricevono davvero piu risorse perequative in proporzione, oppure la dotazione finale FSC 2025 redistribuisce in modo meno intuitivo del previsto?
+I comuni con capacità fiscale più bassa ricevono davvero più risorse perequative in proporzione, oppure la dotazione finale FSC 2025 redistribuisce in modo meno intuitivo del previsto?
 
-## Perche conta
+## Perché conta
 
 - rende leggibile un meccanismo centrale della finanza comunale, non solo il suo peso nei bilanci
-- aiuta a distinguere tra capacita fiscale, fondo perequativo e dotazione finale FSC
+- aiuta a distinguere tra capacità fiscale, fondo perequativo e dotazione finale FSC
 - porta nel layer pubblico del Lab un primo output prudente su un dataset tecnico ma civicamente forte
 
 Discussion collegate:
@@ -27,14 +27,16 @@ Discussion collegate:
 ## Limiti principali
 
 - perimetro solo RSO: non usare mai "tutti i comuni italiani"
-- non e una serie storica: il v1 risponde su `2025`, non sui trend
+- non è una serie storica: il v1 risponde su `2025`, non sui trend
 - `fondo_perequativo` e `dotazione_finale_fsc` non sono la stessa cosa e non vanno letti come equivalenti
-- questa e una lettura descrittiva, non una valutazione causale o normativa del riparto
+- questa è una lettura descrittiva, non una valutazione causale o normativa del riparto
 
 ## Output
 
 - notebook pubblico: `notebooks/opencivitas_fsc_rso_v1.ipynb`
-- mart tecnico letto da `dataset-incubator/out/data/mart/opencivitas_fsc_2025_rso/2025/mart_compose_comuni.parquet`
+- mart tecnico letto da un path locale del workspace Lab:
+  `dataset-incubator/out/data/mart/opencivitas_fsc_2025_rso/2025/mart_compose_comuni.parquet`
+- il mart non è oggi disponibile come URL pubblico su GCS; chi legge il README su GitHub deve trattare quel path come riferimento tecnico locale
 
 ## Contratto tecnico
 
@@ -44,7 +46,7 @@ Il contratto tecnico del candidate vive in dataset-incubator:
 ## Stato
 
 - `active` in `dataciviclab/analisi`
-- candidate DI gia incubato e notebook v0 eseguito
+- candidate DI già incubato e notebook v0 eseguito
 - primo passaggio pubblico in analisi creato su base FSC 2025
 
 ## Decisione attesa al checkpoint
