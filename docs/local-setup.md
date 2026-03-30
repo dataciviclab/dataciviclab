@@ -36,23 +36,27 @@ dataciviclab-workspace/
 
 Dalla root del workspace:
 
-```bash
+```powershell
 python -m venv .venv
 ```
 
-Su Windows puoi usare anche `py -m venv .venv`.
+Su Windows puoi usare anche:
+
+```powershell
+py -m venv .venv
+```
 
 Poi attivalo.
 
 Su PowerShell:
 
-```bash
+```powershell
 .venv\Scripts\Activate.ps1
 ```
 
 Controllo rapido:
 
-```bash
+```powershell
 python -c "import sys; print(sys.executable)"
 ```
 
@@ -62,15 +66,16 @@ Il path deve puntare alla `.venv` del workspace.
 
 Vai nella repo `toolkit`:
 
-```bash
-cd toolkit
+```powershell
+Set-Location toolkit
 python -m pip install -e .
 ```
 
 Verifica minima:
 
-```bash
-toolkit --help
+```powershell
+Set-Location toolkit
+python -m toolkit.cli.app --help
 ```
 
 Se questo comando non parte, fermati qui e sistema prima l'ambiente.
@@ -84,20 +89,21 @@ Se usi VS Code, apri:
 Ti aiuta a:
 
 - vedere insieme le repo principali
-- usare più facilmente il Python locale giusto
+- usare piu' facilmente il Python locale giusto
 - navigare meglio tra repo diverse
 
 ## Primo comando reale
 
-Lo standard del Lab è usare il `dataset.yml` del candidate o del support dataset.
+Lo standard del Lab e' usare il `dataset.yml` del candidate o del support dataset.
 
 Esempio:
 
-```bash
-toolkit run all --config ../dataset-incubator/candidates/irpef-comunale/dataset.yml
+```powershell
+Set-Location toolkit
+python -m toolkit.cli.app run all --config ..\dataset-incubator\candidates\irpef-comunale\dataset.yml
 ```
 
-Questo è il primo test utile:
+Questo e' il primo test utile:
 
 - verifica che il toolkit parta
 - verifica che i path tra repo siano coerenti
@@ -105,7 +111,7 @@ Questo è il primo test utile:
 
 ## Dove vanno gli output
 
-Lo standard del Lab è:
+Lo standard del Lab e':
 
 - ogni repo viva ha il proprio `out/`
 - gli output runtime non stanno nel root del workspace
@@ -140,10 +146,10 @@ Qui vive la CLI e il motore di pipeline.
 
 ## Checklist finale
 
-Se tutto è a posto, dovresti riuscire a:
+Se tutto e' a posto, dovresti riuscire a:
 
 1. vedere le repo principali nel workspace locale
-2. usare la `.venv` del workspace
-3. lanciare `toolkit --help`
+2. usare una venv locale coerente
+3. lanciare `python -m toolkit.cli.app --help`
 4. eseguire almeno un `run all --config ...`
 5. trovare gli output nella cartella `out/` della repo giusta
