@@ -1,176 +1,104 @@
 # Flusso dataset / progetto
 
-Questa pagina descrive il flusso canonico del Lab per trasformare una domanda civica in un progetto dati leggibile, verificabile e — se il lavoro lo giustifica — promosso a repo dedicata.
+Questa pagina descrive il funnel canonico del Lab per trasformare un segnale o una domanda civica in un progetto dati leggibile, verificabile e, se il lavoro lo giustifica, promosso al catalogo pubblico.
 
-## Vista rapida
+## Vista rapida (Funnel v0)
 
 ```text
-Domanda civica
-  -> Discussion
-  -> issue operativa
-  -> dataset-incubator (contratto tecnico: dataset.yml, sql, pipeline)
-  -> dataciviclab/analisi (layer pubblico: README, notebook, Discussion)
-  -> [solo se giustificato] repo dedicata dal project-template
+1. SCOUTING   (source-check)
+  -> 2. VALIDATION (Reddit/Social - opzionale)
+    -> 3. CONSOLIDATION (GitHub Discussion)
+      -> 4. INCUBATION (dataset-incubator: contratto tecnico)
+        -> 5. ANALYSIS (analisi/findings: layer pubblico)
+          -> 6. PROMOTION (data-explorer: catalogo - opzionale)
 ```
 
-Non tutti i filoni passano da ogni step.
-La maggior parte vive in `analisi/` senza diventare mai una repo dedicata — e va bene cosi.
+Il percorso non e' una catena rigida, ma un funnel di selezione: non tutti i segnali diventano Discussion, non tutte le analisi finiscono in explorer.
 
 ## Regola pratica
 
-- `dataciviclab` e' l'hub pubblico: Discussions, task cross-repo, `analisi/`, `projects/`
-- `dataset-incubator` e' la casa permanente del contratto tecnico di ogni filone
-- `analisi/` e' la destinazione finale del layer pubblico: README civico, notebook leggibile, Discussion collegata
-- una repo dedicata nasce solo quando il filone richiede sviluppo continuativo e governance propria
+- **GitHub Discussion** e' l'**artifact canonico** di consolidamento: il posto dove le informazioni diventano stabili e referenziabili.
+- **Reddit / Social** sono i **sensori di segnale**: servono a testare la tensione civica di un tema prima di impegnare risorse GitHub, quando il caso lo richiede.
+- **dataset-incubator** e' la **casa tecnica**: conserva il contratto tecnico (`dataset.yml`, SQL, check) in modo permanente.
+- **analisi/** e' il **layer pubblico**: e' la destinazione finale per la maggior parte dei racconti del Lab.
 
-Il contratto tecnico (dataset.yml, sql/, pipeline) resta in `dataset-incubator` anche dopo la promozione in analisi/.
-Il layer pubblico (README, notebook) vive in `dataciviclab/analisi/`.
-Le due cose sono complementari, non alternative.
+---
 
-## Step 1: Discussion
+## Step 1: SCOUTING (source-check)
 
-Si parte da una domanda civica o da un tema pubblico abbastanza chiaro da meritare esplorazione.
+Si parte da una fonte o da un tema. Lo scouting tecnico serve ad assegnare un **verdict**.
+**Skill: `source-check`**
 
-La `Discussion` serve a:
-- formulare meglio la domanda
-- chiarire perche' conta
-- raccogliere primi dubbi, fonti e angoli possibili
-- capire se il tema ha abbastanza sostanza per diventare un filone
+Obiettivo: decidere se la fonte regge davvero su accesso, formato, domanda civica e rischio semantico.
 
-Output minimo:
-- una domanda leggibile
-- una prima ipotesi di fonte o dataset
-- un perimetro iniziale plausibile
+Esiti tipici:
 
-## Step 2: issue operativa
+- `go Discussion`
+- `aggiorna #N`
+- `watchlist`
+- `support dataset`
+- `no-go`
 
-Quando la domanda regge, va trasformata in una issue piccola e concreta.
+## Step 2: VALIDATION (segnale esterno)
 
-La issue serve a:
-- fissare il primo passo reale
-- evitare backlog vago
-- creare un punto di riferimento operativo
+Prima di aprire una Discussion su GitHub, possiamo testare l'interesse della community su Reddit o altri canali.
+**Formati consigliati: `Dataset Request` o `Question Check`**
 
-La prima issue non deve descrivere tutto il progetto.
-Deve solo dire qual e' il prossimo passo utile.
+Obiettivo: capire se la domanda civica genera risposte o interesse reale. Se il segnale e' debole, il tema puo' restare in `watchlist` locale senza appesantire il backlog GitHub.
 
-## Step 3: dataset-incubator — il contratto tecnico
+Nota: questo step e' opzionale, non obbligatorio per ogni dataset.
 
-`dataset-incubator` e' il luogo dove si costruisce e si stabilizza il contratto tecnico del filone.
+## Step 3: CONSOLIDATION (GitHub Discussion)
+
+Se il segnale e' positivo, oppure se il caso e' gia' abbastanza forte da consolidare direttamente, fissiamo tutto in una Discussion in `dataciviclab`.
+**Skill: `open-discussion`**
+
+Qui la domanda si fissa, le fonti si ordinano e il filone diventa un artifact pubblico condivisibile. Non e' il posto per chiedere "interessa?", ma per dire "ecco perche' questa pista merita attenzione".
+
+## Step 4: INCUBATION (dataset-incubator)
+
+Quando il perimetro v0 e' chiaro, il dataset entra formalmente in incubazione tecnica.
+**Skill: `intake-candidate`**
 
 Qui si lavora su:
+
 - `dataset.yml`
 - `sql/clean.sql`
 - `sql/mart.sql`
-- notebook `v0`
-- note di metodo
+- check minimi e note di metodo
 
-E' il posto giusto se:
-- la fonte e' ancora da verificare bene
-- il tracciato e' ambiguo o instabile
-- serve capire se il dataset regge davvero
-- il primo mart o notebook non e' ancora chiaro
+Output atteso: candidate o PR verde che garantisce la stabilita' tecnica del dato.
 
-Output minimo atteso:
-- run funzionante almeno sul perimetro iniziale
-- prima lettura che racconti qualcosa
-- decisione: archiviare, continuare o promuovere
+## Step 5: ANALYSIS (analisi/findings)
 
-Il contratto tecnico non esce mai da `dataset-incubator`.
-Anche dopo che il filone entra in `analisi/`, il riferimento tecnico resta li'.
+Il layer pubblico finale vive in `dataciviclab/analisi/<slug>/`.
+**Skill: `promote-analisi`**
 
-## Step 4: analisi/ — il layer pubblico
+Un filone entra in `analisi/` se il dato tecnico e' stabile e vogliamo pubblicare una lettura leggibile (README, notebook o finding). Per molti dataset, questo e' l'endpoint naturale del funnel.
 
-`dataciviclab/analisi/` e' la destinazione finale del layer pubblico dei filoni attivi.
+## Step 6: PROMOTION (data-explorer)
 
-Un filone entra in `analisi/` se ha:
-- una domanda civica chiara
-- una issue collegata a una Discussion
-- un output minimo atteso
-- un primo nucleo tecnico che regge in DI
-- abbastanza sostanza da meritare visibilita' pubblica
+Promozione al catalogo pubblico nazionale (`data-explorer`).
+**Skill: `add-to-explorer`**
 
-Cosa vive in `analisi/<slug>/`:
-- `README` con domanda, dataset, stato, link alla Discussion
-- notebook con lettura leggibile
-- eventuali note o asset leggeri
+Questo step e' opzionale: ha senso soprattutto se il dataset e' periodico, ha una domanda civica larga o e' un gap prioritario che merita una vista pubblica permanente.
 
-Cosa non vive in `analisi/`:
-- dataset.yml, sql/, pipeline — restano in dataset-incubator
-- dati grezzi o output tecnici
-
-Per la maggior parte dei filoni, `analisi/` e' l'endpoint.
-Non e' un gradino verso qualcosa di piu': e' gia' il posto giusto.
-
-## Step 5: quando nasce una repo dedicata (opzionale)
-
-Una repo dedicata e' giustificata solo in casi specifici.
-
-Segnali che la giustificano:
-- il filone coinvolge piu' dataset indipendenti con pipeline proprie
-- esiste un output periodico che richiede aggiornamento continuativo
-- la community ha raggiunto una dimensione che richiede governance propria
-- il backlog e' abbastanza ampio da non stare in una Issue
-
-Se questi segnali non ci sono, il filone resta in `analisi/`.
-Aprire una repo dedicata troppo presto e' dispersivo: aumenta la manutenzione e spezza la visibilita' senza aggiungere valore.
-
-Quando una repo nasce:
-- esce dal `project-template`
-- si collega alla Open Board
-- in `dataciviclab/projects/` resta una scheda leggera del progetto
-- la Discussion pubblica continua a vivere in `dataciviclab`
+---
 
 ## Due percorsi tipici
 
-### Percorso senza repo dedicata (la maggioranza)
+### 1. Percorso civico standard
 
-```text
-Discussion
-  -> issue
-  -> dataset-incubator (contratto tecnico)
-  -> analisi/ (layer pubblico, destinazione finale)
-```
+`Scouting -> Validation (opzionale) -> Discussion -> Incubation -> Analysis`
 
-### Percorso con repo dedicata (eccezione)
+### 2. Percorso prioritario (HVD / gap forti)
 
-```text
-Discussion
-  -> issue
-  -> dataset-incubator (contratto tecnico)
-  -> analisi/ (layer pubblico)
-  -> repo dedicata (solo se giustificata dai segnali sopra)
-```
+`Scouting -> Discussion -> Incubation -> Analysis -> Promotion`
 
-## Checklist sintetica
+---
 
-### Per entrare in dataset-incubator
-- domanda abbastanza chiara
-- fonte reale individuata
-- primo perimetro tecnico plausibile
-- issue operativa aperta
+## Note operative
 
-### Per entrare in analisi
-- domanda leggibile
-- Discussion collegata
-- primo output minimo definito
-- notebook o mart che raccontano qualcosa
-- decisione esplicita di rendere pubblico il filone
-
-### Per aprire una repo dedicata
-- contratto tecnico stabile almeno sul perimetro iniziale
-- output minimo gia' riuscito
-- backlog successivo piccolo ma reale
-- segnali concreti che giustificano governance propria
-
-## Repo coinvolte
-
-- `dataciviclab`: hub pubblico, Discussions, issue, `analisi/`, `projects/`
-- `dataset-incubator`: contratto tecnico permanente dei filoni
-- `project-template`: bootstrap delle repo dedicate
-- `toolkit`: motore tecnico e workflow canonico dei dati
-
-## Nota finale
-
-Il flusso non e' una catena rigida.
-Serve a mantenere il Lab leggibile, a ridurre il backlog vago e a promuovere solo i filoni che hanno davvero motivo di crescere.
+- **Anti-rumore**: non postare sui social per ogni aggiornamento tecnico.
+- **Issue madre**: usa `dataset-funnel.yml` in `dataciviclab` per tracciare la journey end-to-end nella Open Board.
+- **Chiusura**: una journey si chiude quando l'obiettivo del funnel viene raggiunto (`Analysis` o `Promotion`).

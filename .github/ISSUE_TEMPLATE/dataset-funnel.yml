@@ -1,0 +1,90 @@
+name: Dataset journey (funnel)
+description: Traccia un filone dataset end-to-end nella Open Board del Lab.
+title: "dataset: [SLUG]"
+labels: ["dataset", "funnel"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Utilizza questa issue come **Issue Madre** per tracciare il percorso di un dataset nel Lab, dallo scouting iniziale alla pubblicazione.
+        Questa issue non sostituisce il lavoro tecnico (che vive in `dataset-incubator`) ma serve a consolidare il progresso nella Open Board.
+
+  - type: input
+    id: slug
+    attributes:
+      label: Slug
+      description: Lo slug canonico del dataset (es. `istat-abitazioni-affitto-2023`).
+      placeholder: es. istat-abitazioni-affitto-2023
+    validations:
+      required: true
+
+  - type: textarea
+    id: civic_question
+    attributes:
+      label: Domanda civica
+      description: Qual e' la domanda pubblica o il gap che guida questo filone?
+      placeholder: Formula la domanda in modo chiaro e analitico.
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Fonte o dataset
+      description: Nome della fonte principale (es. ISTAT SDMX, ISPRA RDF, OpenBDAP).
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Fase attuale
+      description: Seleziona la fase corrente del funnel.
+      options:
+        - "1. SCOUTING (source-check)"
+        - "2. VALIDATION (Reddit/Social signal)"
+        - "3. CONSOLIDATION (GitHub Discussion)"
+        - "4. INCUBATION (dataset-incubator)"
+        - "5. ANALYSIS (analisi/findings)"
+        - "6. PROMOTION (data-explorer - opzionale)"
+        - "WATCHLIST"
+        - "BLOCKED"
+        - "NO-GO"
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Link utili
+      description: Incolla i link agli artifact man mano che vengono creati.
+      placeholder: |
+        - Source-check (nota locale):
+        - Validation (post Reddit):
+        - Discussion (GitHub):
+        - Issue Intake (DI):
+        - PR Candidate (DI):
+        - Analisi (folder/PR):
+        - Explorer:
+    validations:
+      required: false
+
+  - type: textarea
+    id: note
+    attributes:
+      label: Nota breve
+      description: Solo se serve a spiegare blocchi, scelte o cambi di rotta.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Guida alle skill del Lab**
+        - **SCOUTING**: usa la skill `source-check` per il primo audit tecnico.
+        - **VALIDATION**: usa draft Reddit o altri segnali esterni quando serve; non sempre e' obbligatoria.
+        - **CONSOLIDATION**: usa la skill `open-discussion` per creare l'artifact canonico.
+        - **INCUBATION**: usa la skill `intake-candidate` per il lavoro tecnico in DI.
+        - **ANALYSIS**: usa la skill `promote-analisi` per il layer narrativo.
+        - **PROMOTION**: usa la skill `add-to-explorer` per il catalogo pubblico.
