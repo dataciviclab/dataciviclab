@@ -29,6 +29,10 @@ Dentro `dataciviclab` ci sono due livelli utili:
 - `analisi/` layer pubblico dei filoni attivi: README civico, notebook, Discussion collegata
 - `projects/` schede leggere dei filoni promossi a repo dedicate
 
+Per orientarti tra i workflow pubblici cross-repo del Lab:
+
+- [workflows.md](workflows.md)
+
 ## `.github`
 
 È la repo delle regole comuni su GitHub.
@@ -89,6 +93,38 @@ Qui stanno:
 Qui non stanno:
 - output pubblici o notebook definitivi come standard
 - filoni già promossi a analisi o repo dedicata
+
+Workflow pubblici principali:
+
+- `intake-candidate`
+- `run-candidate`
+
+Vedi:
+
+- `../../dataset-incubator/workflows/README.md`
+
+## `source-observatory`
+
+È il layer pubblico di scouting e osservazione delle fonti.
+
+Qui stanno:
+- workflow di scouting della fonte
+- radar di salute di poche fonti strategiche
+- segnali `catalog-watch`
+- monitoraggio ristretto di poche resource Tier 1
+
+Qui non stanno:
+- intake tecnico dei candidate
+- pipeline dataset
+- governance del Lab
+
+Workflow pubblico principale:
+
+- `source-check`
+
+Vedi:
+
+- `../../source-observatory/workflows/README.md`
 
 ## Repo dataset
 
