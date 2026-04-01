@@ -33,6 +33,7 @@ domanda civica -> dati pubblici -> metodo chiaro -> output pubblico
 ```
 
 Il percorso completo, dal scouting di un dataset alla pubblicazione, è in [docs/dataset-project-flow.md](docs/dataset-project-flow.md).
+I workflow pubblici cross-repo del Lab sono raccolti in [docs/workflows.md](docs/workflows.md).
 
 Il principio resta lo stesso in ogni progetto:
 
@@ -51,5 +52,6 @@ Il principio resta lo stesso in ogni progetto:
 ## Per chi vuole contribuire attivamente
 
 - [docs/come-contribuire.md](docs/come-contribuire.md) — ruoli, flusso di lavoro, come entrare nel Lab
+- [docs/workflows.md](docs/workflows.md) — hub dei workflow pubblici tra le repo del Lab
 - [docs/repository-map.md](docs/repository-map.md) — mappa delle repo e cosa fa ognuna
 - [docs/governance-model.md](docs/governance-model.md) — come funzionano le decisioni

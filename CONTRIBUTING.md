@@ -5,6 +5,9 @@ Questa guida vale per la repo `dataciviclab`.
 Per la guida completa su come contribuire al Lab (percorsi, ruoli, flusso di lavoro),
 vedi [docs/come-contribuire.md](docs/come-contribuire.md).
 
+Per i workflow pubblici cross-repo del Lab, vedi anche
+[docs/workflows.md](docs/workflows.md).
+
 Per le regole GitHub condivise dell'organizzazione, vedi
 [`.github`](https://github.com/dataciviclab/.github).
 
@@ -39,3 +42,4 @@ Apri una issue in `dataciviclab` se il lavoro riguarda:
 - tieni il cambiamento piccolo e leggibile
 - spiega il perché, non solo il cosa
 - se tocchi il flusso tra repo, controlla [docs/dataset-project-flow.md](docs/dataset-project-flow.md)
+- se il tuo cambiamento riguarda il passaggio tra repo, controlla anche [docs/workflows.md](docs/workflows.md)

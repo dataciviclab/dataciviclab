@@ -24,10 +24,14 @@ Il percorso non e' una catena rigida, ma un funnel di selezione: non tutti i seg
 
 ---
 
-## Step 1: SCOUTING (source-check)
+## Step 1: SCOUTING
 
 Si parte da una fonte o da un tema. Lo scouting tecnico serve ad assegnare un **verdict**.
-**Skill: `source-check`**
+**Workflow pubblico: `source-check`**
+
+Repo:
+
+- `source-observatory`
 
 Obiettivo: decidere se la fonte regge davvero su accesso, formato, domanda civica e rischio semantico.
 
@@ -51,14 +55,18 @@ Nota: questo step e' opzionale, non obbligatorio per ogni dataset.
 ## Step 3: CONSOLIDATION (GitHub Discussion)
 
 Se il segnale e' positivo, oppure se il caso e' gia' abbastanza forte da consolidare direttamente, fissiamo tutto in una Discussion in `dataciviclab`.
-**Skill: `open-discussion`**
+**Workflow del Lab: `open-discussion`**
 
 Qui la domanda si fissa, le fonti si ordinano e il filone diventa un artifact pubblico condivisibile. Non e' il posto per chiedere "interessa?", ma per dire "ecco perche' questa pista merita attenzione".
 
 ## Step 4: INCUBATION (dataset-incubator)
 
 Quando il perimetro v0 e' chiaro, il dataset entra formalmente in incubazione tecnica.
-**Skill: `intake-candidate`**
+**Workflow pubblico: `intake-candidate`**
+
+Repo:
+
+- `dataset-incubator`
 
 Qui si lavora su:
 
@@ -69,17 +77,21 @@ Qui si lavora su:
 
 Output atteso: candidate o PR verde che garantisce la stabilita' tecnica del dato.
 
+Per il run tecnico vero e proprio del candidate:
+
+- `dataset-incubator/workflows/run-candidate.md`
+
 ## Step 5: ANALYSIS (analisi/findings)
 
 Il layer pubblico finale vive in `dataciviclab/analisi/<slug>/`.
-**Skill: `promote-analisi`**
+**Workflow del Lab: `promote-analisi`**
 
 Un filone entra in `analisi/` se il dato tecnico e' stabile e vogliamo pubblicare una lettura leggibile (README, notebook o finding). Per molti dataset, questo e' l'endpoint naturale del funnel.
 
 ## Step 6: PROMOTION (data-explorer)
 
 Promozione al catalogo pubblico nazionale (`data-explorer`).
-**Skill: `add-to-explorer`**
+**Workflow del Lab: `add-to-explorer`**
 
 Questo step e' opzionale: ha senso soprattutto se il dataset e' periodico, ha una domanda civica larga o e' un gap prioritario che merita una vista pubblica permanente.
 
@@ -102,3 +114,7 @@ Questo step e' opzionale: ha senso soprattutto se il dataset e' periodico, ha un
 - **Anti-rumore**: non postare sui social per ogni aggiornamento tecnico.
 - **Issue madre**: usa `dataset-funnel.yml` in `dataciviclab` per tracciare la journey end-to-end nella Open Board.
 - **Chiusura**: una journey si chiude quando l'obiettivo del funnel viene raggiunto (`Analysis` o `Promotion`).
+
+Per i puntatori ai workflow pubblici nelle repo del Lab:
+
+- [workflows.md](workflows.md)
