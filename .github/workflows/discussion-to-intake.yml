@@ -1,0 +1,74 @@
+name: Discussion to Intake Issue
+
+on:
+  discussion:
+    types: [labeled]
+
+jobs:
+  create-intake-issue:
+    if: github.event.label.name == 'intake' && github.event.discussion.category.name == 'Datasets'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Parse Discussion Body
+        id: parse
+        env:
+          DISCUSSION_BODY: ${{ github.event.discussion.body }}
+        run: |
+          # Run the parsing script and capture JSON output
+          JSON_DATA=$(python scripts/parse_discussion.py)
+          echo "PARSED_DATA=$JSON_DATA" >> $GITHUB_ENV
+          
+          # Debug output (optional)
+          echo "Extracted fields: $JSON_DATA"
+
+      - name: Create Issue in dataset-incubator
+        env:
+          GH_TOKEN: ${{ secrets.LAB_OPS_TOKEN || secrets.GITHUB_TOKEN }}
+          TITLE: "intake: ${{ github.event.discussion.title }}"
+          REPO: "dataciviclab/dataset-incubator"
+          URL: "${{ github.event.discussion.html_url }}"
+          AUTHOR: "${{ github.event.discussion.user.login }}"
+        run: |
+          # Extract fields from environment JSON
+          SOURCE=$(echo $PARSED_DATA | jq -r '.source // "N/D"')
+          QUESTION=$(echo $PARSED_DATA | jq -r '(.question // "") + "\n\n(Dettagli estratti da Discussion: " + env.URL + " proposta da @" + env.AUTHOR + ")"')
+          WHY_NOW=$(echo $PARSED_DATA | jq -r '.why_now // "N/D"')
+          SCOPE=$(echo $PARSED_DATA | jq -r '.scope // "N/D"')
+          NOTES=$(echo $PARSED_DATA | jq -r '.notes // ""')
+
+          # Create the issue using GitHub CLI
+          # Note: We use the 'intake' label and map to the body of the new-candidate template
+          gh issue create --repo $REPO \
+            --title "$TITLE" \
+            --label "intake" \
+            --body "### Tipo di intake
+          candidate
+          
+          ### Domanda guida o uso previsto
+          $QUESTION
+          
+          ### Fonte principale
+          $SOURCE
+          
+          ### Perimetro iniziale
+          $SCOPE
+          
+          ### Perché vale la pena incubarlo
+          $WHY_NOW
+          
+          ### Output minimo atteso
+          Mart minimo v0 (Automatico)
+          
+          ### Prossimo passo operativo
+          Validazione fonte e creazione primo dataset.yml
+          
+          ### Note o rischi noti
+          $NOTES"
