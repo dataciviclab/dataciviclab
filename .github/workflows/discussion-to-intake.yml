@@ -1,0 +1,127 @@
+name: Discussion to Intake Issue
+
+# Triggered when a discussion in the Datasets category receives the 'intake' label.
+# Creates an intake issue in dataset-incubator and posts a confirmation comment.
+#
+# Required secret: LAB_OPS_TOKEN — a PAT with repo scope on dataciviclab/dataset-incubator.
+# GITHUB_TOKEN alone is not sufficient (cross-repo issue creation requires explicit access).
+
+on:
+  discussion:
+    types: [labeled]
+
+jobs:
+  create-intake-issue:
+    if: github.event.label.name == 'intake' && github.event.discussion.category.name == 'Datasets'
+    runs-on: ubuntu-latest
+    permissions:
+      discussions: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Parse Discussion Body
+        env:
+          DISCUSSION_BODY: ${{ github.event.discussion.body }}
+        run: |
+          JSON_DATA=$(python scripts/parse_discussion.py)
+          echo "PARSED_DATA=$JSON_DATA" >> $GITHUB_ENV
+          echo "Extracted fields: $JSON_DATA"
+
+      - name: Build issue body
+        env:
+          URL: ${{ github.event.discussion.html_url }}
+          AUTHOR: ${{ github.event.discussion.user.login }}
+        run: |
+          SOURCE=$(echo "$PARSED_DATA" | jq -r '.source // "N/D"')
+          QUESTION=$(echo "$PARSED_DATA" | jq -r '.question // "N/D"')
+          WHY_NOW=$(echo "$PARSED_DATA" | jq -r '.why_now // "N/D"')
+          SCOPE=$(echo "$PARSED_DATA" | jq -r '.scope // "N/D"')
+          NOTES=$(echo "$PARSED_DATA" | jq -r '.notes // ""')
+
+          cat > issue_body.md << EOF
+          ### Tipo di intake
+          candidate
+
+          ### Domanda guida o uso previsto
+          ${QUESTION}
+
+          (Estratto da Discussion: ${URL} — proposta da @${AUTHOR})
+
+          ### Fonte principale
+          ${SOURCE}
+
+          ### Perimetro iniziale
+          ${SCOPE}
+
+          ### Perché vale la pena incubarlo
+          ${WHY_NOW}
+
+          ### Output minimo atteso
+          Mart minimo v0
+
+          ### Prossimo passo operativo
+          Validazione fonte e creazione primo dataset.yml
+
+          ### Note o rischi noti
+          ${NOTES}
+          EOF
+
+      - name: Check for existing intake issue (idempotency guard)
+        id: idempotency_check
+        env:
+          GH_TOKEN: ${{ secrets.LAB_OPS_TOKEN }}
+          DISCUSSION_URL: ${{ github.event.discussion.html_url }}
+          REPO: dataciviclab/dataset-incubator
+        run: |
+          EXISTING=$(gh issue list \
+            --repo "$REPO" \
+            --label "intake" \
+            --state open \
+            --search "$DISCUSSION_URL" \
+            --json url \
+            --jq '.[0].url // ""')
+          if [ -n "$EXISTING" ]; then
+            echo "Issue di intake già esistente per questa discussion: $EXISTING — skip."
+            echo "ISSUE_URL=$EXISTING" >> $GITHUB_ENV
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Issue in dataset-incubator
+        id: create_issue
+        if: steps.idempotency_check.outputs.skip == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.LAB_OPS_TOKEN }}
+          TITLE: "intake: ${{ github.event.discussion.title }}"
+          REPO: dataciviclab/dataset-incubator
+        run: |
+          ISSUE_URL=$(gh issue create \
+            --repo "$REPO" \
+            --title "$TITLE" \
+            --label "intake" \
+            --body-file issue_body.md)
+          echo "ISSUE_URL=$ISSUE_URL" >> $GITHUB_ENV
+
+      - name: Comment on Discussion
+        env:
+          GH_TOKEN: ${{ secrets.LAB_OPS_TOKEN }}
+          DISCUSSION_ID: ${{ github.event.discussion.node_id }}
+        run: |
+          gh api graphql \
+            -f query='mutation($discussionId: ID!, $body: String!) {
+              addDiscussionComment(input: {discussionId: $discussionId, body: $body}) {
+                comment { id }
+              }
+            }' \
+            -f discussionId="$DISCUSSION_ID" \
+            -f body="Issue di intake aperta in dataset-incubator: $ISSUE_URL
+
+          I campi sono stati estratti automaticamente dal corpo della discussion. Verificare che siano corretti prima di procedere con l'incubazione."
