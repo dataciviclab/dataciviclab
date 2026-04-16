@@ -63,6 +63,9 @@ def map_fields(parsed):
     return result
 
 
+REQUIRED_FIELDS = ("question", "source")
+
+
 def main():
     body = os.environ.get("DISCUSSION_BODY", "")
     if not body:
@@ -71,6 +74,15 @@ def main():
 
     parsed = parse_discussion_body(body)
     result = map_fields(parsed)
+
+    missing = [f for f in REQUIRED_FIELDS if not result.get(f)]
+    if missing:
+        print(
+            f"ERROR: campi obbligatori mancanti o non riconosciuti: {', '.join(missing)}. "
+            "Verificare che il template della discussion sia compilato correttamente.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
     # Output as JSON for GitHub Actions
     print(json.dumps(result))

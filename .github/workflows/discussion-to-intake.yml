@@ -73,8 +73,31 @@ jobs:
           ${NOTES}
           EOF
 
+      - name: Check for existing intake issue (idempotency guard)
+        id: idempotency_check
+        env:
+          GH_TOKEN: ${{ secrets.LAB_OPS_TOKEN }}
+          DISCUSSION_URL: ${{ github.event.discussion.html_url }}
+          REPO: dataciviclab/dataset-incubator
+        run: |
+          EXISTING=$(gh issue list \
+            --repo "$REPO" \
+            --label "intake" \
+            --state open \
+            --search "$DISCUSSION_URL" \
+            --json url \
+            --jq '.[0].url // ""')
+          if [ -n "$EXISTING" ]; then
+            echo "Issue di intake già esistente per questa discussion: $EXISTING — skip."
+            echo "ISSUE_URL=$EXISTING" >> $GITHUB_ENV
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create Issue in dataset-incubator
         id: create_issue
+        if: steps.idempotency_check.outputs.skip == 'false'
         env:
           GH_TOKEN: ${{ secrets.LAB_OPS_TOKEN }}
           TITLE: "intake: ${{ github.event.discussion.title }}"
