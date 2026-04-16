@@ -6,7 +6,7 @@ import json
 
 def parse_discussion_body(body):
     """
-    Parses a GitHub Discussion body (markdown with ### headings) to extract field values.
+    Parses a GitHub Discussion body (markdown with ##/### headings) to extract field values.
     Matching is case-insensitive and strips punctuation to tolerate minor template drift.
     """
     fields = {}
@@ -15,7 +15,7 @@ def parse_discussion_body(body):
 
     lines = body.splitlines()
     for line in lines:
-        match = re.match(r'^###\s+(.*)', line)
+        match = re.match(r'^#{2,3}\s+(.*)', line)
         if match:
             if current_label:
                 fields[current_label] = "\n".join(current_content).strip()
