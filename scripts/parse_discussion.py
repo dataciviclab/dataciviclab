@@ -113,7 +113,7 @@ def compact_fields(result):
     return compacted
 
 
-REQUIRED_FIELDS = ("question", "source")
+REQUIRED_FIELDS = ("source",)
 
 
 def main():
@@ -124,6 +124,12 @@ def main():
 
     parsed = parse_discussion_body(body)
     result = map_fields(parsed)
+
+    # Fallback: use discussion title as question if not found in body
+    if not result.get("question"):
+        title = os.environ.get("DISCUSSION_TITLE", "").strip()
+        if title:
+            result["question"] = title
 
     missing = [f for f in REQUIRED_FIELDS if not result.get(f)]
     if missing:

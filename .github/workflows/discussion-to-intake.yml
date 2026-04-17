@@ -29,6 +29,7 @@ jobs:
       - name: Parse Discussion Body
         env:
           DISCUSSION_BODY: ${{ github.event.discussion.body }}
+          DISCUSSION_TITLE: ${{ github.event.discussion.title }}
         run: |
           JSON_DATA=$(python scripts/parse_discussion.py)
           echo "PARSED_DATA=$JSON_DATA" >> $GITHUB_ENV
