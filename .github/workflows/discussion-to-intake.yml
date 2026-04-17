@@ -76,6 +76,15 @@ jobs:
               "",
               "### Note o rischi noti",
               field("notes", ""),
+              "",
+              "---",
+              "## Passi operativi",
+              "",
+              "Seguire il workflow canonico di intake:",
+              "",
+              "1. **Scaffolding candidate** — creare `candidates/{slug}/` con `dataset.yml`, `README.md`, `notes.md`, `sql/clean.sql`, `sql/mart.sql`, notebook v0",
+              "2. **Run pipeline** — `toolkit run all --config candidates/{slug}/dataset.yml`",
+              "3. **Review e PR** — verificare Definition of Done in [`workflows/intake-candidate.md`](../blob/main/workflows/intake-candidate.md), aprire PR con label `intake`",
           ]
 
           with open("issue_body.md", "w", encoding="utf-8") as f:
