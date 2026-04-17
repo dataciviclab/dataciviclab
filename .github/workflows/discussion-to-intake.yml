@@ -39,39 +39,48 @@ jobs:
           URL: ${{ github.event.discussion.html_url }}
           AUTHOR: ${{ github.event.discussion.user.login }}
         run: |
-          SOURCE=$(echo "$PARSED_DATA" | jq -r '.source // "N/D"')
-          QUESTION=$(echo "$PARSED_DATA" | jq -r '.question // "N/D"')
-          WHY_NOW=$(echo "$PARSED_DATA" | jq -r '.why_now // "N/D"')
-          SCOPE=$(echo "$PARSED_DATA" | jq -r '.scope // "N/D"')
-          NOTES=$(echo "$PARSED_DATA" | jq -r '.notes // ""')
+          python - << 'PY'
+          import json, os, textwrap
 
-          cat > issue_body.md << EOF
-          ### Tipo di intake
-          candidate
+          data = json.loads(os.environ["PARSED_DATA"])
+          url = os.environ["URL"]
+          author = os.environ["AUTHOR"]
 
-          ### Domanda guida o uso previsto
-          ${QUESTION}
+          def field(key, fallback="N/D"):
+              return data.get(key) or fallback
 
-          (Estratto da Discussion: ${URL} — proposta da @${AUTHOR})
+          lines = [
+              "### Tipo di intake",
+              "candidate",
+              "",
+              "### Domanda guida o uso previsto",
+              field("question"),
+              "",
+              f"(Estratto da Discussion: {url} — proposta da @{author})",
+              "",
+              "### Fonte principale",
+              field("source"),
+              "",
+              "### Perimetro iniziale",
+              field("scope"),
+              "",
+              "### Perché vale la pena incubarlo",
+              field("why_now"),
+              f"→ contesto completo: {url}",
+              "",
+              "### Output minimo atteso",
+              "Mart minimo v0",
+              "",
+              "### Prossimo passo operativo",
+              "Validazione fonte e creazione primo dataset.yml",
+              "",
+              "### Note o rischi noti",
+              field("notes", ""),
+          ]
 
-          ### Fonte principale
-          ${SOURCE}
-
-          ### Perimetro iniziale
-          ${SCOPE}
-
-          ### Perché vale la pena incubarlo
-          ${WHY_NOW}
-
-          ### Output minimo atteso
-          Mart minimo v0
-
-          ### Prossimo passo operativo
-          Validazione fonte e creazione primo dataset.yml
-
-          ### Note o rischi noti
-          ${NOTES}
-          EOF
+          with open("issue_body.md", "w", encoding="utf-8") as f:
+              f.write("\n".join(lines) + "\n")
+          PY
 
       - name: Check for existing intake issue (idempotency guard)
         id: idempotency_check

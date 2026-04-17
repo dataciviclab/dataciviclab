@@ -63,6 +63,56 @@ def map_fields(parsed):
     return result
 
 
+def _compact_text(text, max_lines):
+    """Keep first max_lines non-empty lines of a text block."""
+    lines = [l for l in text.splitlines() if l.strip()]
+    return "\n".join(lines[:max_lines])
+
+
+def _compact_bullets(text, max_bullets):
+    """Keep first max_bullets bullet lines; ignore narrative paragraphs after bullets end."""
+    bullets = []
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("-") or stripped.startswith("*"):
+            bullets.append(line)
+            if len(bullets) >= max_bullets:
+                break
+    # Fallback: if no bullets found, treat as plain text
+    if not bullets:
+        return _compact_text(text, max_bullets)
+    return "\n".join(bullets)
+
+
+# Per-field compact rules: (strategy, limit)
+_COMPACT_RULES = {
+    "question": ("text", 2),
+    "source":   ("bullets", 5),
+    "scope":    ("bullets", 5),
+    "why_now":  ("text", 3),
+    "notes":    ("bullets", 5),
+}
+
+
+def compact_fields(result):
+    """Apply per-field compaction rules to extracted fields."""
+    compacted = {}
+    for key, value in result.items():
+        if not value:
+            compacted[key] = value
+            continue
+        rule = _COMPACT_RULES.get(key)
+        if rule is None:
+            compacted[key] = value
+            continue
+        strategy, limit = rule
+        if strategy == "text":
+            compacted[key] = _compact_text(value, limit)
+        else:
+            compacted[key] = _compact_bullets(value, limit)
+    return compacted
+
+
 REQUIRED_FIELDS = ("question", "source")
 
 
@@ -84,8 +134,10 @@ def main():
         )
         sys.exit(1)
 
+    result = compact_fields(result)
+
     # Output as JSON for GitHub Actions
-    print(json.dumps(result))
+    print(json.dumps(result, ensure_ascii=False))
 
 
 if __name__ == "__main__":
