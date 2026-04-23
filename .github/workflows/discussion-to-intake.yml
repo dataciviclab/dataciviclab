@@ -130,6 +130,7 @@ jobs:
           echo "ISSUE_URL=$ISSUE_URL" >> $GITHUB_ENV
 
       - name: Comment on Discussion
+        if: vars.ISSUE_URL != ''
         env:
           GH_TOKEN: ${{ secrets.LAB_OPS_TOKEN }}
           DISCUSSION_ID: ${{ github.event.discussion.node_id }}
