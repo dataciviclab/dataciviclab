@@ -126,6 +126,18 @@ Vedi:
 
 - `../../source-observatory/workflows/README.md`
 
+## `agent-context-builder`
+
+Genera il contesto operativo usato dagli agenti AI del Lab.
+
+Qui sta:
+- la logica che produce `session_bootstrap.md`, `workspace_triage.json`, `topic_index.json`
+- gli artifact JSON consumati dalle repo del Lab
+
+Qui non sta:
+- la logica delle singole repo
+- i contenuti editoriali o i workflow
+
 ## Repo dataset
 
 Sono i progetti concreti.
