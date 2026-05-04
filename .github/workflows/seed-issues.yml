@@ -80,7 +80,14 @@ jobs:
                 .sort()
                 .map((name) => path.join(dir, name));
 
-              const seeds = files.map(parseSeed);
+              const seeds = files.map((filePath) => {
+                try {
+                  return parseSeed(filePath);
+                } catch (err) {
+                  core.warning(`Skipping malformed seed ${filePath}: ${err.message}`);
+                  return null;
+                }
+              }).filter(Boolean);
               const openIssues = await listOpenIssuesByLabels([bucket.label, "seed-issue"]);
               core.info(`Bucket ${bucket.dir}: ${openIssues.length} open seed issue(s) with labels '${bucket.label}' + 'seed-issue'`);
 
