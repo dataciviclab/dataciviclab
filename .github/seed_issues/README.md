@@ -13,8 +13,9 @@ Il contesto operativo di queste seed segue il flusso canonico del Lab descritto 
 
 ## Regole
 
-- massimo `5` seed issue aperte con label `good first issue`
-- massimo `5` seed issue aperte con label `core-team`
+- massimo `2` seed issue aperte con label `good first issue`
+- massimo `3` seed issue aperte con label `core-team`
+- **totale massimo 5** seed issue aperte in contemporanea su tutto il Lab
 - le issue reali di progetto continuano a nascere da:
   - Discussion
   - analisi

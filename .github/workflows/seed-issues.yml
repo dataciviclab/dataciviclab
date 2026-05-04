@@ -27,8 +27,8 @@ jobs:
             const repo = context.repo.repo;
             const baseDir = path.join(process.env.GITHUB_WORKSPACE, ".github", "seed_issues");
             const buckets = [
-              { dir: "good_first", label: "good first issue", maxOpen: 5 },
-              { dir: "core_team", label: "core-team", maxOpen: 5 },
+              { dir: "good_first", label: "good first issue", maxOpen: 2 },
+              { dir: "core_team", label: "core-team", maxOpen: 3 },
             ];
 
             function stripInlineMarkdown(value) {

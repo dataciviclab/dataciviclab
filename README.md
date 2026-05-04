@@ -9,13 +9,20 @@ Qui costruiamo progetti pubblici con metodo, calma e collaborazione.
 ## Come funziona il Lab
 
 ```
-domanda civica → dati pubblici → metodo chiaro → output pubblico
+domanda civica → scouting → incubazione → analisi → catalogo pubblico
 ```
 
-Ogni progetto parte da una domanda comprensibile, usa fonti difendibili,
-lascia tracce verificabili e pubblica risultati leggibili anche da chi non è tecnico.
+Il Lab ha quattro layer principali, ognuno con una repo dedicata:
 
-Il percorso completo è in [docs/dataset-project-flow.md](docs/dataset-project-flow.md).
+| Layer | Repo | Cosa fa |
+|---|---|---|
+| **Scouting** | `source-observatory` | Health check delle fonti, radar, catalog-watch |
+| **Incubazione** | `dataset-incubator` | Contratto tecnico (`dataset.yml`, SQL, pipeline) |
+| **Motore** | [`toolkit`](https://github.com/dataciviclab/toolkit) | RAW → CLEAN → MART, motore della pipeline |
+| **Catalogo** | [`data-explorer`](https://github.com/dataciviclab/data-explorer) | Frontend pubblico sui dataset puliti |
+
+Il percorso completo di un filone, dalla domanda civica all'output pubblico,
+è descritto in [docs/dataset-project-flow.md](docs/dataset-project-flow.md).
 
 ## Partecipa
 
