@@ -59,25 +59,22 @@ Il catalogo seed issue serve a tenere due corsie di ingresso semplici:
 
 Regola pratica:
 
-- massimo `5` issue aperte con label `good first issue`
-- massimo `5` issue aperte con label `core-team`
+- massimo `2` issue aperte con label `good first issue`
+- massimo `3` issue aperte con label `core-team`
+- **massimo 5 totali** in contemporanea — l'idea non è avere un backlog ma un ingresso controllato
 
 Il maintainer deve usare queste issue come buffer controllato, non come backlog generico.
 
-Le seed issue `good first issue` servono soprattutto a contributor leggeri:
+Le seed issue attive (2 `good first issue` + 3 `core-team` = 5 max):
 
-- docs
-- verifiche fonti
-- sintesi
-- note metodologiche piccole
+**Good first issue:**
+- `02_docs_link_check` — Verificare link e riferimenti in file/docs
+- `03_discussion_summary` — Sintetizzare una Discussion attiva in 6-8 righe
 
-Le seed issue `core-team` servono a contributor con piu responsabilita:
-
-- review di filone
-- passaggio Discussion -> issue
-- promozione analisi -> progetto
-- definizione del prossimo output
-- debiti espliciti da tenere sotto controllo
+**Core team:**
+- `01_review_filone` — Review rapida di un filone già vivo e prossimo passo
+- `04_next_output` — Scegliere il prossimo output pubblico da un filone attivo
+- `05_explicit_debt` — Rendere esplicito un debito tecnico già emerso
 
 Quando apre una seed issue, il maintainer deve ancorarla a un target reale del momento, non lasciarla generica se il contesto del Lab richiede una scelta esplicita.
 
@@ -87,6 +84,15 @@ Quando il progetto inizia a produrre materiali pubblici:
 - collega il repo al suo archivio pubblico
 - tieni aggiornato il progetto nella Open Board
 - rendi visibile dove trovare i risultati
+
+### Post-merge e pubblicazione GCS
+
+Dopo il merge di un candidate in `dataset-incubator`, il workflow `post-merge-candidate.yml`:
+1. Esegue un sample-run automatico
+2. Aggiorna `registry/pipeline_signals.json`
+3. Apre una draft PR di handoff con i comandi per push GCS, BQ e aggiornamento catalogo
+
+Il maintainer segue la [post-merge-candidate skill](https://github.com/dataciviclab/dataset-incubator/blob/main/skills/post-merge-candidate.md) per completare la pubblicazione.
 
 ## 6. Tenere il progetto leggibile
 

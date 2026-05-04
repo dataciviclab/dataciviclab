@@ -101,7 +101,7 @@ Workflow pubblici principali:
 
 Vedi:
 
-- `../../dataset-incubator/workflows/README.md`
+- `../../dataset-incubator/skills/README.md`
 
 ## `source-observatory`
 
@@ -124,7 +124,32 @@ Workflow pubblico principale:
 
 Vedi:
 
-- `../../source-observatory/workflows/README.md`
+- `../../source-observatory/skills/README.md`
+
+## `data-explorer`
+
+È il frontend pubblico del catalogo dataset del Lab.
+
+Qui sta:
+- la vista pubblica dei dataset puliti (`data/clean/` su GCS)
+- le schede dataset con metadati, periodo coperto e anteprime
+- l'interfaccia per query DuckDB sui parquet pubblici
+
+Qui non sta:
+- il contratto tecnico dei dataset (vive in `dataset-incubator`)
+- la logica di pipeline o trasformazione (vive in `toolkit`)
+
+## `agent-context-builder`
+
+Genera il contesto operativo usato dagli agenti AI del Lab.
+
+Qui sta:
+- la logica che produce `session_bootstrap.md`, `workspace_triage.json`, `topic_index.json`
+- gli artifact JSON consumati dalle repo del Lab
+
+Qui non sta:
+- la logica delle singole repo
+- i contenuti editoriali o i workflow
 
 ## Repo dataset
 

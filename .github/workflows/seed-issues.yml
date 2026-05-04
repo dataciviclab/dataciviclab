@@ -27,8 +27,8 @@ jobs:
             const repo = context.repo.repo;
             const baseDir = path.join(process.env.GITHUB_WORKSPACE, ".github", "seed_issues");
             const buckets = [
-              { dir: "good_first", label: "good first issue", maxOpen: 5 },
-              { dir: "core_team", label: "core-team", maxOpen: 5 },
+              { dir: "good_first", label: "good first issue", maxOpen: 2 },
+              { dir: "core_team", label: "core-team", maxOpen: 3 },
             ];
 
             function stripInlineMarkdown(value) {
@@ -80,7 +80,14 @@ jobs:
                 .sort()
                 .map((name) => path.join(dir, name));
 
-              const seeds = files.map(parseSeed);
+              const seeds = files.map((filePath) => {
+                try {
+                  return parseSeed(filePath);
+                } catch (err) {
+                  core.warning(`Skipping malformed seed ${filePath}: ${err.message}`);
+                  return null;
+                }
+              }).filter(Boolean);
               const openIssues = await listOpenIssuesByLabels([bucket.label, "seed-issue"]);
               core.info(`Bucket ${bucket.dir}: ${openIssues.length} open seed issue(s) with labels '${bucket.label}' + 'seed-issue'`);
 
