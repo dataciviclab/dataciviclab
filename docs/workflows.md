@@ -14,7 +14,7 @@ Non spiega tutta la logica interna del core team. Serve soprattutto a chiarire:
 
 Se parti da una fonte o da un dataset da verificare, il workflow pubblico di riferimento è:
 
-- [`source-observatory/workflows/source-check.md`](https://github.com/dataciviclab/source-observatory/blob/main/workflows/source-check.md)
+- [`source-observatory/skills/source-check.md`](https://github.com/dataciviclab/source-observatory/blob/main/skills/source-check.md)
 
 Questo è il passaggio giusto quando devi capire se una fonte regge davvero
 come pista del Lab.
@@ -32,7 +32,7 @@ Output tipici:
 Quando una discussion o una fonte sono abbastanza mature per entrare in
 incubazione tecnica, il workflow pubblico di riferimento è:
 
-- [`dataset-incubator/workflows/intake-candidate.md`](https://github.com/dataciviclab/dataset-incubator/blob/main/workflows/intake-candidate.md)
+- [`dataset-incubator/skills/intake-candidate.md`](https://github.com/dataciviclab/dataset-incubator/blob/main/skills/intake-candidate.md)
 
 Questo è il passaggio giusto quando vuoi trasformare un caso promettente in un
 candidate tecnico credibile.
@@ -42,7 +42,7 @@ candidate tecnico credibile.
 Quando un candidate esiste già e vuoi farlo girare davvero per vedere i dati,
 il workflow pubblico di riferimento è:
 
-- [`dataset-incubator/workflows/run-candidate.md`](https://github.com/dataciviclab/dataset-incubator/blob/main/workflows/run-candidate.md)
+- [`dataset-incubator/skills/run-candidate.md`](https://github.com/dataciviclab/dataset-incubator/blob/main/skills/run-candidate.md)
 
 Questo è il passaggio giusto quando vuoi eseguire il candidate end-to-end,
 leggere gli output e distinguere tra run riuscito e blocco tecnico reale.

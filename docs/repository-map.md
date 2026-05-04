@@ -101,7 +101,7 @@ Workflow pubblici principali:
 
 Vedi:
 
-- `../../dataset-incubator/workflows/README.md`
+- `../../dataset-incubator/skills/README.md`
 
 ## `source-observatory`
 
@@ -124,7 +124,7 @@ Workflow pubblico principale:
 
 Vedi:
 
-- `../../source-observatory/workflows/README.md`
+- `../../source-observatory/skills/README.md`
 
 ## `agent-context-builder`
 

@@ -79,7 +79,7 @@ Output atteso: candidate o PR verde che garantisce la stabilita' tecnica del dat
 
 Per il run tecnico vero e proprio del candidate:
 
-- `dataset-incubator/workflows/run-candidate.md`
+- `dataset-incubator/skills/run-candidate.md`
 
 ## Step 5: ANALYSIS (analisi/findings)
 
