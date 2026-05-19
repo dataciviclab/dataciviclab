@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const docsModules = import.meta.glob('/docs/*.md', { eager: true });
+
+interface DocMeta {
+  slug: string;
+  title: string;
+}
+
+const docsList: DocMeta[] = Object.entries(docsModules)
+  .map(([filepath, mod]: [string, any]) => {
+    const filename = filepath.split('/').pop() ?? '';
+    const slug = filename.replace(/\.md$/, '');
+    return {
+      slug,
+      title: mod.frontmatter?.title || slug.replace(/-/g, ' '),
+    };
+  })
+  .sort((a, b) => a.slug.localeCompare(b.slug));
+---
+
+<BaseLayout title="Documenti" description="Documentazione del DataCivicLab">
+  <p class="section-sub">Guide, mappe e procedure per orientarsi nel Lab.</p>
+
+  {docsList.length === 0 && <p><em>Nessun documento ancora pubblicato.</em></p>}
+
+  {docsList.map((entry) => (
+    <div class="card" style="padding: 1.25rem;">
+      <a href={`${import.meta.env.BASE_URL}docs/${entry.slug}/`} style="font-weight: 500; color: var(--text); text-decoration: none;">
+        {entry.title}
+      </a>
+      <div style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: 0.25rem;">
+        {entry.slug}
+      </div>
+    </div>
+  ))}
+</BaseLayout>

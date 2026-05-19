@@ -1,3 +1,7 @@
+---
+title: Playbook maintainer
+slug: maintainer-playbook
+---
 # Playbook Maintainer
 
 Questa guida serve a chi apre e accompagna un nuovo progetto nel Lab.

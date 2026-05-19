@@ -1,3 +1,7 @@
+---
+title: Setup locale minimo
+slug: local-setup
+---
 # Setup Locale Minimo
 
 Questa guida serve a mettere in piedi un ambiente locale minimo per lavorare nel Lab.

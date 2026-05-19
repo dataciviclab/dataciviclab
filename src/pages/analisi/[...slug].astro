@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob('/analisi/*/README.md', { eager: true });
+  return Object.entries(modules)
+    .filter(([filepath]) => !filepath.includes('/_template/') && !filepath.includes('/registry/'))
+    .map(([filepath, mod]: [string, any]) => {
+    const parts = filepath.split('/');
+    const slug = parts[parts.length - 2] ?? '';
+    return {
+      params: { slug },
+      props: { mod },
+    };
+  });
+}
+
+const { mod } = Astro.props;
+const parts = mod?.file?.split('/') ?? [];
+const slug = parts[parts.length - 2] ?? '';
+const title = mod?.frontmatter?.title || slug;
+const Content = mod?.Content;
+---
+
+<BaseLayout title={title}>
+  {Content ? (
+    <article>
+      <Content />
+    </article>
+  ) : (
+    <p>Contenuto non disponibile.</p>
+  )}
+</BaseLayout>

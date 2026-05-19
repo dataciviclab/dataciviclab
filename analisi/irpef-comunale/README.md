@@ -1,3 +1,9 @@
+---
+title: IRPEF comunale 2019-2023
+description: Come varia la capacità fiscale tra comuni e regioni nel dataset IRPEF comunale?
+topics: economia, fisco
+status: active
+---
 # IRPEF comunale 2019-2023
 
 ## Domanda principale

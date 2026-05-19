@@ -1,3 +1,9 @@
+---
+title: "Malasanità 2022: mortalità evitabile e dotazione sanitaria regionale"
+description: Le regioni con meno personale sanitario hanno tassi di mortalità evitabile più alti?
+topics: sanita
+status: active
+---
 # Malasanità 2022: mortalità evitabile e dotazione sanitaria regionale
 
 ## Domanda principale

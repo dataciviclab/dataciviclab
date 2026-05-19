@@ -1,3 +1,9 @@
+---
+title: Dipendenti pubblici 2021-2023
+description: Come sta cambiando il pubblico impiego tra il 2021 e il 2023, e in quali comparti si concentra la dinamica?
+topics: lavoro, pubblica-amministrazione
+status: active
+---
 # Dipendenti pubblici 2021-2023
 
 ## Domanda principale

@@ -1,3 +1,7 @@
+---
+title: Flusso dataset / progetto
+slug: dataset-project-flow
+---
 # Flusso dataset / progetto
 
 Questa pagina descrive il funnel canonico del Lab per trasformare un segnale o una domanda civica in un progetto dati leggibile, verificabile e, se il lavoro lo giustifica, promosso al catalogo pubblico.

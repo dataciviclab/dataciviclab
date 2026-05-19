@@ -1,3 +1,7 @@
+---
+title: Come contribuire a DataCivicLab
+slug: come-contribuire
+---
 # Come contribuire a DataCivicLab
 
 Non serve essere esperti per partecipare. Esistono percorsi diversi a seconda di cosa vuoi fare.

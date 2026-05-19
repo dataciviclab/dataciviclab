@@ -1,3 +1,7 @@
+---
+title: Mappa delle repo
+slug: repository-map
+---
 # Mappa Delle Repo
 
 Non serve conoscere tutte le repo per orientarsi nel Lab.
