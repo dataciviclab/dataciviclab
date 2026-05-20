@@ -84,7 +84,7 @@ I distretti del Sud guidano la riduzione del backlog. Bari è il più performant
 2. **Il 2024 è stato un anno critico**: rapporto D/S sceso a 0,997, primo segnale di inversione dal 2014.
 3. **Il 2025 ha recuperato** (1,028), ma 6 distretti restano sotto la soglia di pareggio.
 4. **Il Nord-Est è l'area più in difficoltà**: Venezia, Trento, Trieste, Bologna sotto 1.
-5. **Il Sud guida la riduzione del backlog**: Bari (-54,8%), Napoli (-51,2%), Reggio Calabria (-50,6%).
+5. **Il Sud guida la riduzione del backlog**: Bari (-54,8%), Reggio Calabria (-49,6%), Napoli (-43,3%).
 
 ### E allora?
 
