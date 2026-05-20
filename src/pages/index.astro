@@ -1,6 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatusBar from '../components/StatusBar.astro';
+
+const analisiModules = import.meta.glob('/analisi/*/README.md', { eager: true });
+const analisiEntries = Object.entries(analisiModules)
+  .filter(([filepath]) => !filepath.includes('/_template/') && !filepath.includes('/registry/'))
+  .map(([filepath, mod]: [string, any]) => {
+    const parts = filepath.split('/');
+    const slug = parts[parts.length - 2] ?? '';
+    const fm = mod.frontmatter ?? {};
+    return { slug, title: fm.title || slug };
+  })
+  .sort((a, b) => a.slug.localeCompare(b.slug));
+
+const analisiCount = analisiEntries.length;
+const ultimeAnalisi = analisiEntries.slice(-3).reverse();
 ---
 
 <BaseLayout title="DataCivicLab" description="Uno spazio civico dove proviamo a rendere i dati pubblici italiani più leggibili, utili e condivisibili.">
@@ -11,9 +25,17 @@ import StatusBar from '../components/StatusBar.astro';
       <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda" class="btn btn-primary">Fai una domanda</a>
       <a href={import.meta.env.BASE_URL + 'analisi/'} class="btn btn-secondary">Vedi le analisi</a>
     </div>
+    {ultimeAnalisi.length > 0 && (
+      <div class="hero-highlights">
+        <span class="highlights-label">In evidenza:</span>
+        {ultimeAnalisi.map((a) => (
+          <a href={`/analisi/${a.slug}/`} class="highlight-link">{a.title}</a>
+        ))}
+      </div>
+    )}
   </div>
 
-  <StatusBar />
+  <StatusBar analisiCount={analisiCount} />
 
   <h2>Come funziona</h2>
   <div class="steps">
@@ -65,11 +87,35 @@ import StatusBar from '../components/StatusBar.astro';
   </div>
 
   <h2>Partecipa</h2>
-  <p>Non serve saper programmare. Apri una Discussion con la tua domanda o unisciti alla community.</p>
+  <p>Non serve saper programmare. Scegli il canale giusto per te.</p>
   <div class="channels">
-    <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda" class="channel">💬 Discussion</a>
-    <a href="https://discord.gg/rAHpuTrYK3" class="channel">🎮 Discord</a>
-    <a href="https://www.linkedin.com/company/dataciviclab/" class="channel">🔗 LinkedIn</a>
-    <a href="https://github.com/orgs/dataciviclab/projects/5" class="channel">📋 Open Board</a>
+    <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda" class="channel">
+      <span class="channel-icon">💬</span>
+      <span class="channel-body">
+        <strong>Discussion</strong>
+        <small>Hai una domanda civica? Apri una discussione pubblica.</small>
+      </span>
+    </a>
+    <a href="https://discord.gg/rAHpuTrYK3" class="channel">
+      <span class="channel-icon">🎮</span>
+      <span class="channel-body">
+        <strong>Discord</strong>
+        <small>Chat della community: scambi veloci, idee, aiuto tra pari.</small>
+      </span>
+    </a>
+    <a href="https://www.linkedin.com/company/dataciviclab/" class="channel">
+      <span class="channel-icon">🔗</span>
+      <span class="channel-body">
+        <strong>LinkedIn</strong>
+        <small>Aggiornamenti, nuovi output e segnali dal Lab.</small>
+      </span>
+    </a>
+    <a href="https://github.com/orgs/dataciviclab/projects/5" class="channel">
+      <span class="channel-icon">📋</span>
+      <span class="channel-body">
+        <strong>Open Board</strong>
+        <small>La lista pubblica di ciò su cui stiamo lavorando.</small>
+      </span>
+    </a>
   </div>
 </BaseLayout>
