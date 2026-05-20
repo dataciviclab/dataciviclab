@@ -29,6 +29,11 @@ jobs:
             exit 0
           fi
           for nb in $changed; do
+            # Skip legacy v1 notebooks (cercano path locali _out/data/)
+            if echo "$nb" | grep -q '_v1\.ipynb$'; then
+              echo "⏭ Skip $nb (versione legacy, non eseguibile in CI)"
+              continue
+            fi
             echo "▶ $nb"
             cd "$(dirname "$nb")"
             jupyter nbconvert --to notebook --execute "$(basename "$nb")" --ExecutePreprocessor.timeout=300
