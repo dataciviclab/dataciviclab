@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://dataciviclab.github.io',
-  base: '/dataciviclab',
+  site: 'https://dataciviclab.org',
+  base: '',
   trailingSlash: 'always',
   image: {
     service: { entrypoint: 'astro/assets/services/noop' },
