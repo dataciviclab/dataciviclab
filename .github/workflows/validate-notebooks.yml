@@ -1,0 +1,36 @@
+name: Validate notebooks
+
+on:
+  pull_request:
+    paths:
+      - 'analisi/*/notebooks/*.ipynb'
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install duckdb pandas matplotlib jupyter nbconvert
+
+      - name: Execute modified notebooks
+        run: |
+          set -e
+          changed=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'analisi/*/notebooks/*.ipynb' 2>/dev/null || echo "")
+          if [ -z "$changed" ]; then
+            echo "Nessun notebook modificato in questa PR."
+            exit 0
+          fi
+          for nb in $changed; do
+            echo "▶ $nb"
+            cd "$(dirname "$nb")"
+            jupyter nbconvert --to notebook --execute "$(basename "$nb")" --ExecutePreprocessor.timeout=300
+            cd "$OLDPWD"
+          done
