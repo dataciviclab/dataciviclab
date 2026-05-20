@@ -21,6 +21,7 @@ const parts = mod?.file?.split('/') ?? [];
 const slug = parts[parts.length - 2] ?? '';
 const fm = mod?.frontmatter ?? {};
 const title = fm.title || slug;
+const description = fm.description || `Analisi: ${title}`;
 const Content = mod?.Content;
 
 const publishedSlugs = await fetchPublishedSlugs();
@@ -31,7 +32,7 @@ const explorerUrl = datasetSlug
   : null;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
   {Content ? (
     <article>
       <Content />

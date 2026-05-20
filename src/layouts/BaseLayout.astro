@@ -22,7 +22,7 @@ const baseUrl = import.meta.env.BASE_URL;
     <meta property="og:title" content={title + (title !== 'DataCivicLab' ? ' — DataCivicLab' : '')} />
     <meta property="og:description" content={description ?? 'DataCivicLab — spazio civico dati pubblici'} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={import.meta.env.SITE + import.meta.env.BASE_URL} />
+    <meta property="og:url" content={Astro.url.href} />
     <meta property="og:image" content={import.meta.env.BASE_URL + 'icon.svg'} />
     <meta name="twitter:card" content="summary" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

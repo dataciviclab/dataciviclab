@@ -1,6 +1,6 @@
 ---
 title: Dipendenti pubblici 2010-2023
-description: Come sta cambiando il pubblico impiego tra il 2010 e il 2023, è in quali comparti si concentra la dinamica?
+description: Come sta cambiando il pubblico impiego tra il 2010 e il 2023, e in quali comparti si concentra la dinamica?
 topics: lavoro, pubblica-amministrazione
 status: active
 dataset_slug: dipendenti_pubblici
@@ -16,6 +16,8 @@ Ma la storia non è "la PA che assume". È più sottile. La crescita è concentr
 > Popolazione italiana 2023: **58.997.201**. Dipendenti pubblici: **3.327.854**.  
 > **1 dipendente pubblico ogni 17 cittadini** (il 5,6% della popolazione).  
 > Sanità: 1 ogni 84 cittadini. Istruzione: 1 ogni 45 cittadini.
+>
+> _Fonte popolazione: ISTAT — Popolazione residente al 1° gennaio (anno 2023)._
 
 ---
 
@@ -80,11 +82,11 @@ Istruzione e Sanità crescono (+190k). Funzioni Locali e Centrali calano (-171k)
 | PERSONALE DIRITTO PUBBLICO | 30.815 | 27.728 | +3.087 |
 | FUNZIONI LOCALI | 44.533 | 41.458 | +3.075 |
 
-Il saldo +56k del 2023 e concentrato per il **77% in Sanità e Istruzione**.
+Il saldo +56k del 2023 è concentrato per il **77% in Sanità e Istruzione**.
 
 ## 4. Chi c'è dentro la PA? — la composizione di genere
 
-La PA italiana e **prevalentemente femminile**, ma con profonde differenze tra comparti.
+La PA italiana è **prevalentemente femminile**, ma con profonde differenze tra comparti.
 
 | Comparto | Donne | Quota % |
 |----------|-------|---------|
@@ -118,13 +120,13 @@ A differenza di quanto si potrebbe pensare, il part-time nella PA non è esploso
 1. **Dal 2010 al 2018 la PA ha perso 89.000 dipendenti** — un calo lento ma costante, effetto del blocco del turnover e dei tagli.
 2. **Dal 2019 la curva si inverte**, con un'accelerazione netta nel 2023: 248.000 assunti, saldo +56.000.
 3. **La crescita non è uniforme**: Istruzione (+178.000) e Sanità (+12.700) fanno tutto il lavoro. Funzioni Locali (-94.700) e Centrali (-76.100) continuano a calare.
-4. **Il 77% del saldo positivo 2023** e concentrato in Sanità e Istruzione.
+4. **Il 77% del saldo positivo 2023** è concentrato in Sanità e Istruzione.
 5. **La PA e prevalentemente femminile** ma con divari enormi: si va dal 77% dell'Istruzione al 14% del Personale in Regime di Diritto Pubblico.
 6. **Il part-time è stabile** al 5-6% — la flessibilità oraria non è un fenomeno in crescita.
 
 ### E allora?
 
-La PA italiana sta cambiando forma sotto i nostri occhi. Il suo profilo si sta riorientando verso **servizi alla persona** (sanita, istruzione) a scapito di **funzioni amministrative e centrali**.
+La PA italiana sta cambiando forma sotto i nostri occhi. Il suo profilo si sta riorientando verso **servizi alla persona** (sanità, istruzione) a scapito di **funzioni amministrative e centrali**.
 
 È il risultato di scelte politiche consapevoli? Dell'onda lunga del turnover bloccato per un decennio? O di entrambe?
 
