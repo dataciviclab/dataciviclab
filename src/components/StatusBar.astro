@@ -1,0 +1,46 @@
+---
+/**
+ * StatusBar — KPI live del Lab letti in build-time.
+ * Mostra fonti monitorate, dataset pubblicati, discussioni.
+ * Se gli artifact non sono raggiungibili, non mostra nulla.
+ */
+import { fetchCatalogStats, fetchRadarStats } from "../lib/lab-stats.js";
+
+const catalogStats = await fetchCatalogStats();
+const radarStats = await fetchRadarStats();
+const hasData = catalogStats || radarStats;
+---
+
+{hasData && (
+  <div class="status-bar">
+    {radarStats && (
+      <span class="stat">
+        <span class="stat-icon">📡</span>
+        <strong>{radarStats.total}</strong> fonti monitorate
+        <span class="stat-dots">
+          <span class="dot dot-green" title={`${radarStats.green} GREEN`}>
+            {radarStats.green}
+          </span>
+          <span class="dot dot-yellow" title={`${radarStats.yellow} YELLOW`}>
+            {radarStats.yellow}
+          </span>
+          <span class="dot dot-red" title={`${radarStats.red} RED`}>
+            {radarStats.red}
+          </span>
+        </span>
+      </span>
+    )}
+    {catalogStats && (
+      <span class="stat">
+        <span class="stat-icon">📚</span>
+        <strong>{catalogStats.published}</strong> dataset pubblicati
+      </span>
+    )}
+    <span class="stat">
+      <span class="stat-icon">💬</span>
+      <a href="https://github.com/orgs/dataciviclab/discussions" class="stat-link">
+        Discussioni aperte
+      </a>
+    </span>
+  </div>
+)}

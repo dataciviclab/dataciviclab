@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { fetchCatalogStats, fetchRadarStats } from '../lib/lab-stats.js';
+
+const catalogStats = await fetchCatalogStats();
+const radarStats = await fetchRadarStats();
+---
+
+<BaseLayout title="Ecosistema del Lab" description="I tre fronti pubblici di DataCivicLab: sito, dati, stato operativo">
+  <p class="section-sub">
+    DataCivicLab non è un solo posto. È un ecosistema di tre interfacce pubbliche,
+    ognuna pensata per un bisogno diverso. Questa pagina ti orienta.
+  </p>
+
+  <h2>I tre fronti pubblici</h2>
+
+  <div class="eco-grid">
+    <div class="eco-card">
+      <div class="eco-card-header">
+        <span class="eco-icon">🏛️</span>
+        <div>
+          <h3>dataciviclab.github.io</h3>
+          <span class="eco-tag">Vetrina del Lab</span>
+        </div>
+      </div>
+      <p>Il sito che stai visitando. Qui trovi la spiegazione del progetto, le analisi pubblicate,
+      i documenti e come partecipare.</p>
+      <ul class="eco-links">
+        <li><a href={import.meta.env.BASE_URL + 'analisi/'}>Analisi</a></li>
+        <li><a href={import.meta.env.BASE_URL + 'docs/'}>Documenti</a></li>
+        <li><a href={import.meta.env.BASE_URL + 'chi-siamo/'}>Chi siamo</a></li>
+      </ul>
+      <p class="eco-tech"><strong>Stack:</strong> Astro · Statico · Build-time</p>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-card-header">
+        <span class="eco-icon">📚</span>
+        <div>
+          <h3>data-explorer</h3>
+          <span class="eco-tag">Catalogo dataset</span>
+        </div>
+      </div>
+      <p>Il frontend interattivo per esplorare i dataset puliti del Lab.
+      Schede dataset, metadati, anteprime e query DuckDB dirette sui parquet pubblici.</p>
+      <ul class="eco-links">
+        <li><a href="https://dataciviclab.github.io/data-explorer/">Esplora il catalogo</a></li>
+        {catalogStats && (
+          <li><strong>{catalogStats.published}</strong> dataset pubblicati</li>
+        )}
+      </ul>
+      <p class="eco-tech"><strong>Stack:</strong> Observable Framework · DuckDB · GCS</p>
+    </div>
+
+    <div class="eco-card">
+      <div class="eco-card-header">
+        <span class="eco-icon">📊</span>
+        <div>
+          <h3>lab-dashboard</h3>
+          <span class="eco-tag">Dashboard operativa</span>
+        </div>
+      </div>
+      <p>Metriche e stato in tempo reale: salute delle fonti, pipeline CI, funnel candidate,
+      copertura dati, discussioni recenti. Per chi lavora nel Lab.</p>
+      <ul class="eco-links">
+        <li><a href="https://dataciviclab-dashboard.streamlit.app/">Apri la dashboard</a></li>
+        {radarStats && (
+          <li><strong>{radarStats.total}</strong> fonti monitorate · {radarStats.green} 🟢 {radarStats.yellow} 🟡 {radarStats.red} 🔴</li>
+        )}
+      </ul>
+      <p class="eco-tech"><strong>Stack:</strong> Streamlit · DuckDB · Altair · GitHub API</p>
+    </div>
+  </div>
+
+  <h2>Repository</h2>
+  <p>Tutto il codice del Lab è su GitHub. Ogni repo ha un ruolo preciso:</p>
+
+  <div class="eco-repo-grid">
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/dataciviclab">dataciviclab</a></span>
+      <span class="eco-repo-desc">Hub pubblico: sito, analisi, documenti, discussioni</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/source-observatory">source-observatory</a></span>
+      <span class="eco-repo-desc">Scouting e monitoraggio delle fonti pubbliche</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/dataset-incubator">dataset-incubator</a></span>
+      <span class="eco-repo-desc">Intake tecnico: candidate, pipeline, contratto dati</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/toolkit">toolkit</a></span>
+      <span class="eco-repo-desc">Motore RAW → CLEAN → MART</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/data-explorer">data-explorer</a></span>
+      <span class="eco-repo-desc">Frontend pubblico del catalogo dataset</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/lab-dashboard">lab-dashboard</a></span>
+      <span class="eco-repo-desc">Dashboard operativa interna</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/agent-context-builder">agent-context-builder</a></span>
+      <span class="eco-repo-desc">Contesto generato per agenti AI del Lab</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/lab-ops">lab-ops</a></span>
+      <span class="eco-repo-desc">Procedure, skill, operations del Lab</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/lab-connectors">lab-connectors</a></span>
+      <span class="eco-repo-desc">Adapter servizi esterni (Discord, GCS, GitHub)</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/.github">.github</a></span>
+      <span class="eco-repo-desc">Policy condivise, template, community health</span>
+    </div>
+  </div>
+
+  <h2>Il funnel</h2>
+  <p>Dal momento in cui arriva una domanda civica al momento in cui i dati sono pubblici:</p>
+  <div class="eco-funnel">
+    <span class="funnel-step">Domanda</span>
+    <span class="funnel-arrow">→</span>
+    <span class="funnel-step">Scouting</span>
+    <span class="funnel-arrow">→</span>
+    <span class="funnel-step">Incubazione</span>
+    <span class="funnel-arrow">→</span>
+    <span class="funnel-step">Analisi</span>
+    <span class="funnel-arrow">→</span>
+    <span class="funnel-step">Catalogo pubblico</span>
+  </div>
+
+  <h2>Come partecipare</h2>
+  <p>Non serve saper programmare.</p>
+  <ul>
+    <li><strong>Hai una domanda sui dati pubblici?</strong> — Apri una <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda">Discussion</a></li>
+    <li><strong>Hai trovato una fonte interessante?</strong> — Segnalala in una Discussion o passa su <a href="https://github.com/dataciviclab/source-observatory">source-observatory</a></li>
+    <li><strong>Vuoi scrivere pipeline?</strong> — Dai un'occhiata ai <a href="https://github.com/dataciviclab/dataset-incubator/labels/good%20first%20issue">good first issue in dataset-incubator</a></li>
+    <li><strong>Vuoi solo seguire il lavoro?</strong> — Unisciti al <a href="https://discord.gg/rAHpuTrYK3">Discord</a> o segui <a href="https://www.linkedin.com/company/dataciviclab/">LinkedIn</a></li>
+  </ul>
+</BaseLayout>

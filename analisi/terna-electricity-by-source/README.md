@@ -1,3 +1,10 @@
+---
+title: "Terna mix elettrico per fonte 2020-2024"
+description: Il mix elettrico italiano si sta spostando dalle fonti fossili?
+topics: energia, ambiente
+status: active
+dataset_slug: terna_electricity_by_source
+---
 # Terna mix elettrico per fonte 2020-2024
 
 ## Domanda principale

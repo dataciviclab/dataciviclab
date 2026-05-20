@@ -1,3 +1,10 @@
+---
+title: Civile flussi 2014-2024
+description: Il carico della giustizia civile sta migliorando o peggiorando nei territori?
+topics: giustizia
+status: active
+dataset_slug: civile_flussi
+---
 # Civile flussi 2014-2024
 
 ## Domanda principale

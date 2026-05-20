@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { fetchPublishedSlugs } from '../../lib/lab-stats.js';
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob('/analisi/*/README.md', { eager: true });
+  return Object.entries(modules)
+    .filter(([filepath]) => !filepath.includes('/_template/') && !filepath.includes('/registry/'))
+    .map(([filepath, mod]: [string, any]) => {
+    const parts = filepath.split('/');
+    const slug = parts[parts.length - 2] ?? '';
+    return {
+      params: { slug },
+      props: { mod },
+    };
+  });
+}
+
+const { mod } = Astro.props;
+const parts = mod?.file?.split('/') ?? [];
+const slug = parts[parts.length - 2] ?? '';
+const fm = mod?.frontmatter ?? {};
+const title = fm.title || slug;
+const description = fm.description || `Analisi: ${title}`;
+const Content = mod?.Content;
+
+const publishedSlugs = await fetchPublishedSlugs();
+const datasetSlug = fm.dataset_slug || null;
+const isPublished = datasetSlug ? publishedSlugs.has(datasetSlug) : false;
+const explorerUrl = datasetSlug
+  ? `https://dataciviclab.github.io/data-explorer/`
+  : null;
+---
+
+<BaseLayout title={title} description={description}>
+  {Content ? (
+    <article>
+      <Content />
+    </article>
+  ) : (
+    <p>Contenuto non disponibile.</p>
+  )}
+
+  {isPublished && (
+    <div class="explorer-callout" style="margin-top: 2rem;">
+      <span class="explorer-callout-icon">📚</span>
+      <div>
+        <strong>Dati disponibili su DataCivicLab Explorer</strong>
+        <p>I dataset usati in questa analisi sono pubblicati e interrogabili nel catalogo pubblico.</p>
+        <a href="https://dataciviclab.github.io/data-explorer/" class="btn btn-primary" style="display: inline-block; margin-top: 0.5rem;">
+          Esplora nel catalogo
+        </a>
+      </div>
+    </div>
+  )}
+</BaseLayout>

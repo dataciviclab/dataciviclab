@@ -1,0 +1,337 @@
+{
+  "trend_nazionale": [
+    {
+      "anno": 2010,
+      "totale": 3315347,
+      "assunti": 131382,
+      "cessati": 179523,
+      "saldo_netto": -48141
+    },
+    {
+      "anno": 2011,
+      "totale": 3283784,
+      "assunti": 154083,
+      "cessati": 159868,
+      "saldo_netto": -5785
+    },
+    {
+      "anno": 2012,
+      "totale": 3238949,
+      "assunti": 86722,
+      "cessati": 138251,
+      "saldo_netto": -51529
+    },
+    {
+      "anno": 2013,
+      "totale": 3233121,
+      "assunti": 92447,
+      "cessati": 106374,
+      "saldo_netto": -13927
+    },
+    {
+      "anno": 2014,
+      "totale": 3259613,
+      "assunti": 104012,
+      "cessati": 122321,
+      "saldo_netto": -18309
+    },
+    {
+      "anno": 2015,
+      "totale": 3257369,
+      "assunti": 155525,
+      "cessati": 149019,
+      "saldo_netto": 6506
+    },
+    {
+      "anno": 2016,
+      "totale": 3249688,
+      "assunti": 238859,
+      "cessati": 269255,
+      "saldo_netto": -30396
+    },
+    {
+      "anno": 2017,
+      "totale": 3244994,
+      "assunti": 183953,
+      "cessati": 204155,
+      "saldo_netto": -20202
+    },
+    {
+      "anno": 2018,
+      "totale": 3226267,
+      "assunti": 142793,
+      "cessati": 176390,
+      "saldo_netto": -33597
+    },
+    {
+      "anno": 2019,
+      "totale": 3245112,
+      "assunti": 167027,
+      "cessati": 188574,
+      "saldo_netto": -21547
+    },
+    {
+      "anno": 2020,
+      "totale": 3243499,
+      "assunti": 175812,
+      "cessati": 205982,
+      "saldo_netto": -30170
+    },
+    {
+      "anno": 2021,
+      "totale": 3240397,
+      "assunti": 197844,
+      "cessati": 206422,
+      "saldo_netto": -8578
+    },
+    {
+      "anno": 2022,
+      "totale": 3271447,
+      "assunti": 214649,
+      "cessati": 207336,
+      "saldo_netto": 7313
+    },
+    {
+      "anno": 2023,
+      "totale": 3327854,
+      "assunti": 248606,
+      "cessati": 192640,
+      "saldo_netto": 55966
+    }
+  ],
+  "trend_punti": {
+    "minimo": {
+      "valore": 3226267,
+      "anno": 2018
+    },
+    "massimo": {
+      "valore": 3327854,
+      "anno": 2023
+    },
+    "totale_2010": 3315347,
+    "totale_2023": 3327854,
+    "delta_2010_2023": 12507,
+    "assunti_2023": 248606,
+    "saldo_2023": 55966
+  },
+  "comparti_delta": [
+    {
+      "comparto": "ISTRUZIONE E RICERCA",
+      "anno_2010": 1128992,
+      "anno_2023": 1306941,
+      "delta": 177949,
+      "var_pct": 15.8
+    },
+    {
+      "comparto": "COMPARTO AUTONOMO O FUORI COMPARTO",
+      "anno_2010": 9184,
+      "anno_2023": 41250,
+      "delta": 32066,
+      "var_pct": 349.2
+    },
+    {
+      "comparto": "SANITA'",
+      "anno_2010": 688484,
+      "anno_2023": 701170,
+      "delta": 12686,
+      "var_pct": 1.8
+    },
+    {
+      "comparto": "PERSONALE IN REGIME DI DIRITTO PUBBLICO",
+      "anno_2010": 618745,
+      "anno_2023": 579322,
+      "delta": -39423,
+      "var_pct": -6.4
+    },
+    {
+      "comparto": "FUNZIONI CENTRALI",
+      "anno_2010": 281316,
+      "anno_2023": 205204,
+      "delta": -76112,
+      "var_pct": -27.1
+    },
+    {
+      "comparto": "FUNZIONI LOCALI",
+      "anno_2010": 588626,
+      "anno_2023": 493967,
+      "delta": -94659,
+      "var_pct": -16.1
+    }
+  ],
+  "focus_2023": [
+    {
+      "comparto": "SANITA'",
+      "assunti": 90861,
+      "cessati": 68738,
+      "saldo_netto": 22123,
+      "quota_assunzioni_pct": 36.5
+    },
+    {
+      "comparto": "ISTRUZIONE E RICERCA",
+      "assunti": 59639,
+      "cessati": 38802,
+      "saldo_netto": 20837,
+      "quota_assunzioni_pct": 24.0
+    },
+    {
+      "comparto": "FUNZIONI CENTRALI",
+      "assunti": 20541,
+      "cessati": 13658,
+      "saldo_netto": 6883,
+      "quota_assunzioni_pct": 8.3
+    },
+    {
+      "comparto": "PERSONALE IN REGIME DI DIRITTO PUBBLICO",
+      "assunti": 30815,
+      "cessati": 27728,
+      "saldo_netto": 3087,
+      "quota_assunzioni_pct": 12.4
+    },
+    {
+      "comparto": "FUNZIONI LOCALI",
+      "assunti": 44533,
+      "cessati": 41458,
+      "saldo_netto": 3075,
+      "quota_assunzioni_pct": 17.9
+    },
+    {
+      "comparto": "COMPARTO AUTONOMO O FUORI COMPARTO",
+      "assunti": 2217,
+      "cessati": 2256,
+      "saldo_netto": -39,
+      "quota_assunzioni_pct": 0.9
+    }
+  ],
+  "genere": [
+    {
+      "comparto": "ISTRUZIONE E RICERCA",
+      "donne": 1009242,
+      "uomini": 297699,
+      "quota_donne_pct": 77.2
+    },
+    {
+      "comparto": "SANITA'",
+      "donne": 486121,
+      "uomini": 215049,
+      "quota_donne_pct": 69.3
+    },
+    {
+      "comparto": "FUNZIONI LOCALI",
+      "donne": 282856,
+      "uomini": 211111,
+      "quota_donne_pct": 57.3
+    },
+    {
+      "comparto": "FUNZIONI CENTRALI",
+      "donne": 111732,
+      "uomini": 93472,
+      "quota_donne_pct": 54.4
+    },
+    {
+      "comparto": "COMPARTO AUTONOMO O FUORI COMPARTO",
+      "donne": 19083,
+      "uomini": 22167,
+      "quota_donne_pct": 46.3
+    },
+    {
+      "comparto": "PERSONALE IN REGIME DI DIRITTO PUBBLICO",
+      "donne": 79564,
+      "uomini": 499758,
+      "quota_donne_pct": 13.7
+    }
+  ],
+  "orario": [
+    {
+      "anno": 2010,
+      "tempo_pieno": 3141024,
+      "part_time": 174323,
+      "quota_pt_pct": 5.3
+    },
+    {
+      "anno": 2011,
+      "tempo_pieno": 3119524,
+      "part_time": 164260,
+      "quota_pt_pct": 5.0
+    },
+    {
+      "anno": 2012,
+      "tempo_pieno": 3065502,
+      "part_time": 173447,
+      "quota_pt_pct": 5.4
+    },
+    {
+      "anno": 2013,
+      "tempo_pieno": 3059345,
+      "part_time": 173776,
+      "quota_pt_pct": 5.4
+    },
+    {
+      "anno": 2014,
+      "tempo_pieno": 3082891,
+      "part_time": 176722,
+      "quota_pt_pct": 5.4
+    },
+    {
+      "anno": 2015,
+      "tempo_pieno": 3076158,
+      "part_time": 181211,
+      "quota_pt_pct": 5.6
+    },
+    {
+      "anno": 2016,
+      "tempo_pieno": 3066081,
+      "part_time": 183607,
+      "quota_pt_pct": 5.6
+    },
+    {
+      "anno": 2017,
+      "tempo_pieno": 3058399,
+      "part_time": 186595,
+      "quota_pt_pct": 5.8
+    },
+    {
+      "anno": 2018,
+      "tempo_pieno": 3036102,
+      "part_time": 190165,
+      "quota_pt_pct": 5.9
+    },
+    {
+      "anno": 2019,
+      "tempo_pieno": 3049060,
+      "part_time": 196052,
+      "quota_pt_pct": 6.0
+    },
+    {
+      "anno": 2020,
+      "tempo_pieno": 3053043,
+      "part_time": 190456,
+      "quota_pt_pct": 5.9
+    },
+    {
+      "anno": 2021,
+      "tempo_pieno": 3050780,
+      "part_time": 189617,
+      "quota_pt_pct": 5.9
+    },
+    {
+      "anno": 2022,
+      "tempo_pieno": 3084116,
+      "part_time": 187331,
+      "quota_pt_pct": 5.7
+    },
+    {
+      "anno": 2023,
+      "tempo_pieno": 3142127,
+      "part_time": 185727,
+      "quota_pt_pct": 5.6
+    }
+  ],
+  "popolazione": {
+    "pop_2023": 58997201,
+    "dip_2023": 3327854,
+    "rapporto_cittadini": 17,
+    "pct_popolazione": 5.6,
+    "sanita_per_cittadini": 84,
+    "istruzione_per_cittadini": 45
+  }
+}

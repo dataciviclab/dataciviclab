@@ -1,3 +1,9 @@
+---
+title: "OpenCivitas FSC 2025 (RSO)"
+description: I comuni con capacità fiscale più bassa ricevono davvero più risorse perequative in proporzione?
+topics: economia, enti-locali
+status: active
+---
 # OpenCivitas FSC 2025 (RSO)
 
 ## Domanda principale

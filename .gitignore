@@ -2,3 +2,9 @@ _out/
 .venv/
 *.pyc
 __pycache__/
+
+# Astro site
+node_modules/
+dist/
+.astro/
+

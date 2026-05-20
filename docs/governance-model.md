@@ -1,3 +1,7 @@
+---
+title: Modello di governance
+slug: governance-model
+---
 # Modello di governance
 
 DataCivicLab cresce in modo semplice:

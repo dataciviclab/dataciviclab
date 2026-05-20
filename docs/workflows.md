@@ -1,3 +1,7 @@
+---
+title: Workflow pubblici del Lab
+slug: workflows
+---
 # Workflow pubblici del Lab
 
 Questa pagina fa da hub dei workflow pubblici cross-repo di DataCivicLab.

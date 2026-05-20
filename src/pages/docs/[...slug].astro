@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob('/docs/*.md', { eager: true });
+  return Object.entries(modules).map(([filepath, mod]: [string, any]) => {
+    const filename = filepath.split('/').pop() ?? '';
+    const slug = filename.replace(/\.md$/, '');
+    return {
+      params: { slug },
+      props: { mod },
+    };
+  });
+}
+
+const { mod } = Astro.props;
+const filename = mod?.file?.split('/')?.pop() ?? '';
+const slug = filename.replace(/\.md$/, '');
+const title = mod?.frontmatter?.title || slug.replace(/-/g, ' ');
+const Content = mod?.Content;
+---
+
+<BaseLayout title={title}>
+  {Content ? (
+    <article>
+      <Content />
+    </article>
+  ) : (
+    <p>Contenuto non disponibile.</p>
+  )}
+</BaseLayout>

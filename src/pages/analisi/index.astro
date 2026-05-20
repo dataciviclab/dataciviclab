@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { fetchPublishedSlugs } from '../../lib/lab-stats.js';
+
+const analisiModules = import.meta.glob('/analisi/*/README.md', { eager: true });
+const publishedSlugs = await fetchPublishedSlugs();
+
+interface AnalisiMeta {
+  slug: string;
+  title: string;
+  excerpt: string;
+  topics: string[];
+  status: string;
+  datasetSlug: string | null;
+  isPublished: boolean;
+}
+
+const topicColors: Record<string, string> = {
+  economia: '#065f46',
+  fisco: '#065f46',
+  'pubblica-amministrazione': '#6d28d9',
+  giustizia: '#b91c1c',
+  sanita: '#0e7490',
+  energia: '#d97706',
+  ambiente: '#15803d',
+  'enti-locali': '#4338ca',
+};
+
+function topicBadgeColor(topic: string): string {
+  return topicColors[topic] ?? '#64748b';
+}
+
+const statusColor: Record<string, string> = {
+  active: '#16a34a',
+  archived: '#94a3b8',
+  review: '#d97706',
+};
+
+const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
+  .filter(([filepath]) => !filepath.includes('/_template/') && !filepath.includes('/registry/'))
+  .map(([filepath, mod]: [string, any]) => {
+    const parts = filepath.split('/');
+    const slug = parts[parts.length - 2] ?? '';
+    const fm = mod.frontmatter ?? {};
+    const datasetSlug = fm.dataset_slug || null;
+    return {
+      slug,
+      title: fm.title || slug,
+      excerpt: fm.description || '',
+      topics: fm.topics ? fm.topics.split(',').map((t: string) => t.trim()) : [],
+      status: fm.status || 'active',
+      datasetSlug,
+      isPublished: datasetSlug ? publishedSlugs.has(datasetSlug) : false,
+    };
+  })
+  .sort((a, b) => a.slug.localeCompare(b.slug));
+---
+
+<BaseLayout title="Analisi" description="Lavori in corso e finding pubblici del DataCivicLab">
+  <p class="section-sub">
+    Ogni filone parte da una domanda civica e arriva a un'analisi pubblica con notebook e dati.
+  </p>
+
+  {analisiList.length === 0 && <p><em>Nessuna analisi ancora pubblicata.</em></p>}
+
+  {analisiList.map((entry) => (
+    <div class="card">
+      <h2><a href={`${import.meta.env.BASE_URL}analisi/${entry.slug}/`}>{entry.title}</a></h2>
+      {entry.excerpt && <p>{entry.excerpt}</p>}
+      <div class="analisi-meta">
+        {entry.topics.length > 0
+          ? entry.topics.map((topic) => (
+              <span class="topic-badge" style={`background: ${topicBadgeColor(topic)}`}>
+                {topic}
+              </span>
+            ))
+          : <span class="topic-badge muted">generale</span>
+        }
+        <span class="topic-badge" style={`background: ${statusColor[entry.status] ?? '#64748b'}`}>
+          {entry.status}
+        </span>
+        {entry.isPublished && (
+          <a href="https://dataciviclab.github.io/data-explorer/" class="explorer-badge">
+            📚 Su Explorer
+          </a>
+        )}
+      </div>
+    </div>
+  ))}
+</BaseLayout>
