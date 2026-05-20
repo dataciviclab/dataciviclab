@@ -56,18 +56,23 @@ Il Nord-Est è l'area più in difficoltà: Venezia, Trento, Trieste e Bologna so
 
 ## 3. Il recupero del backlog — dove è stato più rapido
 
-Quasi tutti i distretti (25 su 26) hanno ridotto il backlog dal 2014. L'unico in controtendenza è Sassari (+5,0%). I miglioramenti più netti:
+Quasi tutti i distretti (25 su 26) hanno ridotto il backlog dal 2014. L'unico in controtendenza è Trieste (+12,0%). I miglioramenti più netti:
 
 | Distretto | Backlog 2014 | Backlog 2025 | Variazione |
 |-----------|-------------|-------------|-----------|
-| Bari | 247.328 | 111.855 | **-54,8%** |
-| Napoli | 461.533 | 225.367 | -51,2% |
-| Reggio Calabria | 127.696 | 63.116 | -50,6% |
-| Salerno | 166.022 | 83.470 | -49,7% |
-| Lecce | 131.453 | 68.960 | -47,5% |
-| Potenza | 39.359 | 50.177 | +27,5% |
+| **Bari** | 247.328 | 111.716 | **-54,8%** |
+| Reggio Calabria | 68.585 | 34.581 | -49,6% |
+| Perugia | 57.351 | 29.298 | -48,9% |
+| Messina | 94.266 | 49.997 | -47,0% |
+| Catanzaro | 157.875 | 88.569 | -43,9% |
+| Napoli | 469.442 | 266.025 | -43,3% |
+| Salerno | 166.022 | 66.413 | -42,8% |
+| Campobasso | 21.052 | 12.358 | -41,3% |
+| Ancona | 71.344 | 42.320 | -40,7% |
+| Catania | 156.651 | 95.358 | -39,1% |
+| Potenza | 56.000 | 34.744 | -38,0% |
 
-I distretti del Sud guidano la riduzione del backlog. Potenza è tra i pochi distretti con backlog in crescita insieme a Sassari (+5,0%), ma in valore assoluto resta contenuto.
+I distretti del Sud guidano la riduzione del backlog. Bari è il più performante (-54,8%), seguito da Reggio Calabria e Perugia. Trieste è l'unico distretto con backlog in crescita (+12,0%).
 
 ---
 
