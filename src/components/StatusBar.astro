@@ -1,14 +1,21 @@
 ---
 /**
  * StatusBar — KPI live del Lab letti in build-time.
- * Mostra fonti monitorate, dataset pubblicati, discussioni.
+ * Mostra fonti monitorate, dataset pubblicati, analisi, discussioni.
  * Se gli artifact non sono raggiungibili, non mostra nulla.
+ *
+ * @prop {number} [analisiCount] - numero di analisi attive in analisi/
  */
 import { fetchCatalogStats, fetchRadarStats } from "../lib/lab-stats.js";
 
+export interface Props {
+  analisiCount?: number;
+}
+
+const { analisiCount } = Astro.props;
 const catalogStats = await fetchCatalogStats();
 const radarStats = await fetchRadarStats();
-const hasData = catalogStats || radarStats;
+const hasData = catalogStats || radarStats || analisiCount != null;
 ---
 
 {hasData && (
@@ -36,11 +43,27 @@ const hasData = catalogStats || radarStats;
         <strong>{catalogStats.published}</strong> dataset pubblicati
       </span>
     )}
+    {analisiCount != null && analisiCount > 0 && (
+      <span class="stat">
+        <span class="stat-icon">📊</span>
+        <a href="/analisi/" class="stat-link">
+          <strong>{analisiCount}</strong> analisi attive
+        </a>
+      </span>
+    )}
     <span class="stat">
       <span class="stat-icon">💬</span>
       <a href="https://github.com/orgs/dataciviclab/discussions" class="stat-link">
         Discussioni aperte
       </a>
     </span>
+  </div>
+)}
+{radarStats && (
+  <div class="status-legend">
+    <span class="legend-item"><span class="dot dot-green"></span> GREEN</span>
+    <span class="legend-item"><span class="dot dot-yellow"></span> YELLOW</span>
+    <span class="legend-item"><span class="dot dot-red"></span> RED</span>
+    <span class="legend-label">stato di salute delle fonti</span>
   </div>
 )}
