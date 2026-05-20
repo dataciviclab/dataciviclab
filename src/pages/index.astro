@@ -1,24 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatusBar from '../components/StatusBar.astro';
-import fs from 'node:fs';
 
 const analisiModules = import.meta.glob('/analisi/*/README.md', { eager: true });
-const analisiEntries = Object.entries(analisiModules)
+const analisiCount = Object.entries(analisiModules)
   .filter(([filepath]) => !filepath.includes('/_template/') && !filepath.includes('/registry/'))
-  .map(([filepath, mod]: [string, any]) => {
-    const parts = filepath.split('/');
-    const slug = parts[parts.length - 2] ?? '';
-    const fm = mod.frontmatter ?? {};
-    // Legge la data di ultima modifica del file markdown
-    let mtime = 0;
-    try { mtime = fs.statSync(mod.file).mtimeMs; } catch {}
-    return { slug, title: fm.title || slug, mtime };
-  })
-  .sort((a, b) => b.mtime - a.mtime);
-
-const analisiCount = analisiEntries.length;
-const ultimeAnalisi = analisiEntries.slice(0, 3);
+  .length;
 ---
 
 <BaseLayout title="DataCivicLab" description="Uno spazio civico dove proviamo a rendere i dati pubblici italiani più leggibili, utili e condivisibili.">
@@ -29,14 +16,6 @@ const ultimeAnalisi = analisiEntries.slice(0, 3);
       <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda" class="btn btn-primary">Fai una domanda</a>
       <a href={import.meta.env.BASE_URL + 'analisi/'} class="btn btn-secondary">Vedi le analisi</a>
     </div>
-    {ultimeAnalisi.length > 0 && (
-      <div class="hero-highlights">
-        <span class="highlights-label">In evidenza:</span>
-        {ultimeAnalisi.map((a) => (
-          <a href={`/analisi/${a.slug}/`} class="highlight-link">{a.title}</a>
-        ))}
-      </div>
-    )}
   </div>
 
   <StatusBar analisiCount={analisiCount} />
