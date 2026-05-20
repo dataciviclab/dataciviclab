@@ -32,7 +32,7 @@ jobs:
           for file in files:
               text = file.read_text(encoding="utf-8")
               for target in pattern.findall(text):
-                  if target.startswith(("http://", "https://", "mailto:", "#")):
+                  if target.startswith(("http://", "https://", "mailto:", "#", "/")):
                       continue
                   target_path = target.split("#", 1)[0]
                   if not target_path:
