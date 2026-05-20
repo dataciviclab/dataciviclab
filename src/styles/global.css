@@ -451,36 +451,17 @@ footer {
   color: var(--text-tertiary);
 }
 
-/* ---- Layer rows ---- */
-.layers {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin: 1rem 0 1.5rem;
+.step-detail {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  margin-top: 0.5rem;
+  line-height: 1.5;
 }
 
-.layer-row {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  background: var(--bg-muted);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-}
-
-.layer-row .tag {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.step-detail a {
   color: var(--accent);
-  min-width: 90px;
-}
-
-.layer-row .desc {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 /* ---- Hero ---- */
