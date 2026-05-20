@@ -28,7 +28,7 @@
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
-  --max-width: 800px;
+  --max-width: 880px;
 }
 
 /* ---- Variables: Dark ---- */
@@ -478,7 +478,7 @@ footer {
 .hero p {
   font-size: 1.15rem;
   color: var(--text-secondary);
-  max-width: 600px;
+  max-width: 660px;
   margin: 0 auto 1.5rem;
 }
 
