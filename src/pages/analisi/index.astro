@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { fetchPublishedSlugs } from '../../lib/lab-stats.js';
 
 const analisiModules = import.meta.glob('/analisi/*/README.md', { eager: true });
+const publishedSlugs = await fetchPublishedSlugs();
 
 interface AnalisiMeta {
   slug: string;
@@ -9,6 +11,8 @@ interface AnalisiMeta {
   excerpt: string;
   topics: string[];
   status: string;
+  datasetSlug: string | null;
+  isPublished: boolean;
 }
 
 const topicColors: Record<string, string> = {
@@ -38,12 +42,15 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
     const parts = filepath.split('/');
     const slug = parts[parts.length - 2] ?? '';
     const fm = mod.frontmatter ?? {};
+    const datasetSlug = fm.dataset_slug || null;
     return {
       slug,
       title: fm.title || slug,
       excerpt: fm.description || '',
       topics: fm.topics ? fm.topics.split(',').map((t: string) => t.trim()) : [],
       status: fm.status || 'active',
+      datasetSlug,
+      isPublished: datasetSlug ? publishedSlugs.has(datasetSlug) : false,
     };
   })
   .sort((a, b) => a.slug.localeCompare(b.slug));
@@ -72,9 +79,11 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
         <span class="topic-badge" style={`background: ${statusColor[entry.status] ?? '#64748b'}`}>
           {entry.status}
         </span>
-        <span style="font-size: 0.8rem; color: var(--text-tertiary);">
-          {entry.slug}
-        </span>
+        {entry.isPublished && (
+          <a href="https://dataciviclab.github.io/data-explorer/" class="explorer-badge">
+            📚 Su Explorer
+          </a>
+        )}
       </div>
     </div>
   ))}

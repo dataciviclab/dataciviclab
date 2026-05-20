@@ -39,6 +39,7 @@ const baseUrl = import.meta.env.BASE_URL;
         <nav>
           <a href={baseUrl + 'analisi/'}>Analisi</a>
           <a href={baseUrl + 'docs/'}>Documenti</a>
+          <a href={baseUrl + 'ecosistema/'}>Ecosistema</a>
           <a href={baseUrl + 'chi-siamo/'}>Chi siamo</a>
         </nav>
       </header>
@@ -48,13 +49,25 @@ const baseUrl = import.meta.env.BASE_URL;
       </main>
 
       <footer>
-        <span>DataCivicLab — 2026</span>
-        <div class="links">
-          <a href="https://github.com/orgs/dataciviclab/discussions">Discussion</a>
-          <a href="https://discord.gg/rAHpuTrYK3">Discord</a>
-          <a href="https://www.linkedin.com/company/dataciviclab/">LinkedIn</a>
-          <a href="https://github.com/dataciviclab">GitHub</a>
-          <a href="https://dataciviclab.github.io/data-explorer/">Catalogo dataset</a>
+        <div class="footer-row">
+          <span class="footer-brand">DataCivicLab — 2026</span>
+          <div class="footer-links">
+            <span class="footer-group-label">Community</span>
+            <a href="https://github.com/orgs/dataciviclab/discussions">Discussion</a>
+            <a href="https://discord.gg/rAHpuTrYK3">Discord</a>
+            <a href="https://www.linkedin.com/company/dataciviclab/">LinkedIn</a>
+          </div>
+          <div class="footer-links">
+            <span class="footer-group-label">Piattaforme</span>
+            <a href="https://dataciviclab.github.io/data-explorer/">Catalogo dataset</a>
+            <a href="https://dataciviclab-dashboard.streamlit.app/">Dashboard operativa</a>
+            <a href="https://github.com/dataciviclab">GitHub</a>
+          </div>
+          <div class="footer-links">
+            <span class="footer-group-label">Lavori in corso</span>
+            <a href="https://github.com/orgs/dataciviclab/projects/5">Open Board</a>
+            <a href="https://github.com/orgs/dataciviclab/projects/2">Roadmap</a>
+          </div>
         </div>
       </footer>
     </div>
