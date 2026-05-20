@@ -362,8 +362,8 @@ footer {
 
 /* ---- Channel buttons ---- */
 .channels {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   margin: 1rem 0;
 }
@@ -413,12 +413,13 @@ footer {
 .steps {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1rem;
   margin: 2rem 0;
 }
 
 .step {
-  flex: 1 1 140px;
+  flex: 0 1 250px;
   text-align: center;
   padding: 1.25rem 1rem;
   background: var(--bg-muted);
@@ -799,11 +800,15 @@ footer {
   }
 
   .steps {
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .step {
-    flex: 1 1 calc(50% - 0.5rem);
+    flex: 1 1 100%;
+  }
+
+  .channels {
+    grid-template-columns: 1fr;
   }
 
   footer {
