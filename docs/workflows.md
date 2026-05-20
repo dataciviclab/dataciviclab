@@ -70,4 +70,4 @@ leggere gli output e distinguere tra run riuscito e blocco tecnico reale.
 
 Se vuoi il quadro generale del funnel:
 
-- [dataset-project-flow.md](dataset-project-flow.md)
+- [dataset-project-flow](/docs/dataset-project-flow/)

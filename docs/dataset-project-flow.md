@@ -132,4 +132,4 @@ Questo step e' opzionale: ha senso soprattutto se il dataset e' periodico, ha un
 
 Per i puntatori ai workflow pubblici nelle repo del Lab:
 
-- [workflows.md](workflows.md)
+- [workflows](/docs/workflows/)
