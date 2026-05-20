@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="it"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>IRPEF comunale 2019-2023 — DataCivicLab</title><meta name="description" content="Come varia la capacità fiscale tra comuni e regioni nel dataset IRPEF comunale?"><link rel="icon" type="image/svg+xml" href="/dataciviclab/icon.svg"><link rel="alternate icon" href="/dataciviclab/favicon.ico"><meta property="og:title" content="IRPEF comunale 2019-2023 — DataCivicLab"><meta property="og:description" content="Come varia la capacità fiscale tra comuni e regioni nel dataset IRPEF comunale?"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.github.io/dataciviclab/analisi/irpef-comunale/"><meta property="og:image" content="/dataciviclab/icon.svg"><meta name="twitter:card" content="summary"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/dataciviclab/_astro/BaseLayout.B8XwM0Li.css"></head> <body> <div class="layout"> <header> <a href="/dataciviclab/" class="logo"> <img src="/dataciviclab/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;">
+DataCivicLab
+</a> <nav> <a href="/dataciviclab/analisi/">Analisi</a> <a href="/dataciviclab/docs/">Documenti</a> <a href="/dataciviclab/ecosistema/">Ecosistema</a> <a href="/dataciviclab/chi-siamo/">Chi siamo</a> </nav> </header> <main> <article> <h1 id="irpef-comunale-2019-2023">IRPEF comunale 2019-2023</h1>
+<h2 id="domanda-principale">Domanda principale</h2>
+<p>Come varia la capacità fiscale tra comuni e regioni nel dataset IRPEF comunale?</p>
+<h2 id="perché-conta">Perché conta</h2>
+<ul>
+<li>rende leggibili differenze territoriali su contribuenti, base imponibile e imposta netta</li>
+<li>permette un primo confronto multi-anno tra regioni e comuni senza partire da indicatori troppo derivati</li>
+<li>è un buon candidato pubblico per il flusso <code>Discussion -> issue -> analisi -> decisione</code></li>
+</ul>
+<p>Discussion collegata:</p>
+<ul>
+<li><code>dataciviclab</code> Discussion <code>#88</code> su IRPEF/capacità fiscale</li>
+</ul>
+<h2 id="dataset">Dataset</h2>
+<ul>
+<li>fonte: <a href="https://www1.finanze.gov.it/finanze/analisi_stat/public/index.php?search_class%5B0%5D=cCOMUNE&#x26;opendata=yes">ZIP annuali ufficiali MEF / Finanze</a></li>
+<li>copertura temporale in analisi: <code>2019-2023</code></li>
+<li>copertura territoriale: comuni italiani + aggregazione regionale derivata</li>
+<li>limiti noti:
+<ul>
+<li>schema non perfettamente stabile tra annualità</li>
+<li>lieve calo del numero di righe comunali tra <code>2019</code> e <code>2023</code></li>
+<li>niente arricchimento popolazione nel perimetro minimo</li>
+</ul>
+</li>
+</ul>
+<h2 id="output-minimo-atteso">Output minimo atteso</h2>
+<ul>
+<li><code>irpef_by_regione</code> annuale</li>
+<li><code>irpef_by_comune</code> annuale</li>
+<li><code>irpef_capacita_fiscale_multi_anno</code> come artefatto unico cross-year per leggere:
+<ul>
+<li>totali e medie per contribuente</li>
+<li>quote dei comuni sulla propria regione</li>
+<li>rank regionali e nazionali</li>
+<li>delta vs anno precedente</li>
+</ul>
+</li>
+</ul>
+<h2 id="stato">Stato</h2>
+<ul>
+<li><code>active</code></li>
+<li><code>raw</code>, <code>clean</code>, <code>mart</code> annuali: pronti</li>
+<li><code>cross_year</code> nativo del toolkit: pronto</li>
+<li>notebook di lavoro: <code>notebooks/d1_capacita_fiscale_2019_2023.ipynb</code></li>
+</ul>
+<h2 id="contratto-tecnico">Contratto tecnico</h2>
+<p>Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
+<a href="https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/irpef-comunale">candidates/irpef-comunale</a></p>
+<p>Nota: questo filone precede il modello DI. Il contratto e’ stato migrato retroattivamente
+da dataciviclab/analisi/ a dataset-incubator.</p>
+<h2 id="decisione-attesa-al-checkpoint">Decisione attesa al checkpoint</h2>
+<ul>
+<li>continuare come analisi fino al primo output Discussion</li>
+<li>poi decidere se promuovere a repo dedicata</li>
+</ul> </article><div class="explorer-callout" style="margin-top: 2rem;"> <span class="explorer-callout-icon">📚</span> <div> <strong>Dati disponibili su DataCivicLab Explorer</strong> <p>I dataset usati in questa analisi sono pubblicati e interrogabili nel catalogo pubblico.</p> <a href="https://dataciviclab.github.io/data-explorer/" class="btn btn-primary" style="display: inline-block; margin-top: 0.5rem;">
+Esplora nel catalogo
+</a> </div> </div> </main> <footer> <div class="footer-row"> <span class="footer-brand">DataCivicLab — 2026</span> <div class="footer-links"> <span class="footer-group-label">Community</span> <a href="https://github.com/orgs/dataciviclab/discussions">Discussion</a> <a href="https://discord.gg/rAHpuTrYK3">Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/">LinkedIn</a> </div> <div class="footer-links"> <span class="footer-group-label">Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/">Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/">Dashboard operativa</a> <a href="https://github.com/dataciviclab">GitHub</a> </div> <div class="footer-links"> <span class="footer-group-label">Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5">Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2">Roadmap</a> </div> </div> </footer> </div> </body></html>

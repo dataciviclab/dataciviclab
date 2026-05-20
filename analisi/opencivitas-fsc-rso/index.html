@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="it"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OpenCivitas FSC 2025 (RSO) — DataCivicLab</title><meta name="description" content="I comuni con capacità fiscale più bassa ricevono davvero più risorse perequative in proporzione?"><link rel="icon" type="image/svg+xml" href="/dataciviclab/icon.svg"><link rel="alternate icon" href="/dataciviclab/favicon.ico"><meta property="og:title" content="OpenCivitas FSC 2025 (RSO) — DataCivicLab"><meta property="og:description" content="I comuni con capacità fiscale più bassa ricevono davvero più risorse perequative in proporzione?"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.github.io/dataciviclab/analisi/opencivitas-fsc-rso/"><meta property="og:image" content="/dataciviclab/icon.svg"><meta name="twitter:card" content="summary"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/dataciviclab/_astro/BaseLayout.B8XwM0Li.css"></head> <body> <div class="layout"> <header> <a href="/dataciviclab/" class="logo"> <img src="/dataciviclab/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;">
+DataCivicLab
+</a> <nav> <a href="/dataciviclab/analisi/">Analisi</a> <a href="/dataciviclab/docs/">Documenti</a> <a href="/dataciviclab/ecosistema/">Ecosistema</a> <a href="/dataciviclab/chi-siamo/">Chi siamo</a> </nav> </header> <main> <article> <h1 id="opencivitas-fsc-2025-rso">OpenCivitas FSC 2025 (RSO)</h1>
+<h2 id="domanda-principale">Domanda principale</h2>
+<p>I comuni con capacità fiscale più bassa ricevono davvero più risorse perequative in proporzione, oppure la dotazione finale FSC 2025 redistribuisce in modo meno intuitivo del previsto?</p>
+<h2 id="perché-conta">Perché conta</h2>
+<ul>
+<li>rende leggibile un meccanismo centrale della finanza comunale, non solo il suo peso nei bilanci</li>
+<li>aiuta a distinguere tra capacità fiscale, fondo perequativo e dotazione finale FSC</li>
+<li>porta nel layer pubblico del Lab un primo output prudente su un dataset tecnico ma civicamente forte</li>
+</ul>
+<p>Discussion collegate:</p>
+<ul>
+<li><code>dataciviclab</code> Discussion <a href="https://github.com/orgs/dataciviclab/discussions/91">#91</a> - grandi comuni e composizione delle entrate</li>
+<li><code>dataciviclab</code> Discussion <a href="https://github.com/orgs/dataciviclab/discussions/114">#114</a> - dipendenza dai trasferimenti vs tributi propri</li>
+<li><code>dataset-incubator</code> Discussion <a href="https://github.com/dataciviclab/dataset-incubator/discussions/75">#75</a> - FSC 2025 / OpenCivitas</li>
+</ul>
+<h2 id="dataset">Dataset</h2>
+<ul>
+<li>fonte principale: <a href="https://www.opencivitas.it/it/dataset/2025-comuni-delle-regioni-statuto-ordinario-%E2%80%93-fondo-di-solidariet%C3%A0-comunale-2025">OpenCivitas / Sogei - FSC 2025 per i Comuni delle Regioni a Statuto Ordinario</a></li>
+<li>file dati: <a href="https://docs.opencivitas.it/2025_VAR_FSC_1_2025_csv.zip">2025_VAR_FSC_1_2025_csv.zip</a></li>
+<li>metadati enti: <a href="https://docs.opencivitas.it/Metadati_Enti_FSC_2025_xlsx.zip">Metadati Enti FSC 2025</a></li>
+<li>copertura temporale: <code>2025</code></li>
+<li>copertura geografica: solo comuni delle Regioni a Statuto Ordinario</li>
+</ul>
+<h2 id="limiti-principali">Limiti principali</h2>
+<ul>
+<li>perimetro solo RSO: non usare mai “tutti i comuni italiani”</li>
+<li>non è una serie storica: il v1 risponde su <code>2025</code>, non sui trend</li>
+<li><code>fondo_perequativo</code> e <code>dotazione_finale_fsc</code> non sono la stessa cosa e non vanno letti come equivalenti</li>
+<li>questa è una lettura descrittiva, non una valutazione causale o normativa del riparto</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li>notebook pubblico: <code>notebooks/opencivitas_fsc_rso_v1.ipynb</code></li>
+<li>mart tecnico letto da un path locale del workspace Lab:
+<code>dataset-incubator/out/data/mart/opencivitas_fsc_2025_rso/2025/mart_compose_comuni.parquet</code></li>
+<li>il mart non è oggi disponibile come URL pubblico su GCS; chi legge il README su GitHub deve trattare quel path come riferimento tecnico locale</li>
+</ul>
+<h2 id="contratto-tecnico">Contratto tecnico</h2>
+<p>Il contratto tecnico del candidate vive in dataset-incubator:
+<a href="https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/opencivitas-fsc-rso">candidates/opencivitas-fsc-rso</a></p>
+<h2 id="stato">Stato</h2>
+<ul>
+<li><code>active</code> in <code>dataciviclab/analisi</code></li>
+<li>candidate DI già incubato e notebook v0 eseguito</li>
+<li>primo passaggio pubblico in analisi creato su base FSC 2025</li>
+</ul>
+<h2 id="decisione-attesa-al-checkpoint">Decisione attesa al checkpoint</h2>
+<ul>
+<li>verificare se il notebook v1 regge bene come primo output pubblico</li>
+<li>decidere se serve una discussion DCL dedicata al FSC oppure se il filone resta agganciato a <code>#91</code> e <code>#114</code></li>
+</ul> </article> </main> <footer> <div class="footer-row"> <span class="footer-brand">DataCivicLab — 2026</span> <div class="footer-links"> <span class="footer-group-label">Community</span> <a href="https://github.com/orgs/dataciviclab/discussions">Discussion</a> <a href="https://discord.gg/rAHpuTrYK3">Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/">LinkedIn</a> </div> <div class="footer-links"> <span class="footer-group-label">Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/">Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/">Dashboard operativa</a> <a href="https://github.com/dataciviclab">GitHub</a> </div> <div class="footer-links"> <span class="footer-group-label">Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5">Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2">Roadmap</a> </div> </div> </footer> </div> </body></html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="it"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Workflow pubblici del Lab — DataCivicLab</title><link rel="icon" type="image/svg+xml" href="/dataciviclab/icon.svg"><link rel="alternate icon" href="/dataciviclab/favicon.ico"><meta property="og:title" content="Workflow pubblici del Lab — DataCivicLab"><meta property="og:description" content="DataCivicLab — spazio civico dati pubblici"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.github.io/dataciviclab/docs/workflows/"><meta property="og:image" content="/dataciviclab/icon.svg"><meta name="twitter:card" content="summary"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/dataciviclab/_astro/BaseLayout.B8XwM0Li.css"></head> <body> <div class="layout"> <header> <a href="/dataciviclab/" class="logo"> <img src="/dataciviclab/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;">
+DataCivicLab
+</a> <nav> <a href="/dataciviclab/analisi/">Analisi</a> <a href="/dataciviclab/docs/">Documenti</a> <a href="/dataciviclab/ecosistema/">Ecosistema</a> <a href="/dataciviclab/chi-siamo/">Chi siamo</a> </nav> </header> <main> <article> <h1 id="workflow-pubblici-del-lab">Workflow pubblici del Lab</h1>
+<p>Questa pagina fa da hub dei workflow pubblici cross-repo di DataCivicLab.</p>
+<p>Non spiega tutta la logica interna del core team. Serve soprattutto a chiarire:</p>
+<ul>
+<li>da dove si entra</li>
+<li>qual è il passo successivo</li>
+<li>in quale repo si lavora davvero</li>
+</ul>
+<h2 id="mappa-rapida">Mappa rapida</h2>
+<h3 id="1-fonte---discussion">1. Fonte -> Discussion</h3>
+<p>Se parti da una fonte o da un dataset da verificare, il workflow pubblico di riferimento è:</p>
+<ul>
+<li><a href="https://github.com/dataciviclab/source-observatory/blob/main/skills/source-check.md"><code>source-observatory/skills/source-check.md</code></a></li>
+</ul>
+<p>Questo è il passaggio giusto quando devi capire se una fonte regge davvero
+come pista del Lab.</p>
+<p>Output tipici:</p>
+<ul>
+<li><code>go Discussion</code></li>
+<li><code>watchlist</code></li>
+<li><code>support dataset</code></li>
+<li><code>aggiorna artefatto esistente</code></li>
+<li><code>no-go</code></li>
+</ul>
+<h3 id="2-discussion---candidate">2. Discussion -> Candidate</h3>
+<p>Quando una discussion o una fonte sono abbastanza mature per entrare in
+incubazione tecnica, il workflow pubblico di riferimento è:</p>
+<ul>
+<li><a href="https://github.com/dataciviclab/dataset-incubator/blob/main/skills/intake-candidate.md"><code>dataset-incubator/skills/intake-candidate.md</code></a></li>
+</ul>
+<p>Questo è il passaggio giusto quando vuoi trasformare un caso promettente in un
+candidate tecnico credibile.</p>
+<h3 id="3-candidate---run">3. Candidate -> Run</h3>
+<p>Quando un candidate esiste già e vuoi farlo girare davvero per vedere i dati,
+il workflow pubblico di riferimento è:</p>
+<ul>
+<li><a href="https://github.com/dataciviclab/dataset-incubator/blob/main/skills/run-candidate.md"><code>dataset-incubator/skills/run-candidate.md</code></a></li>
+</ul>
+<p>Questo è il passaggio giusto quando vuoi eseguire il candidate end-to-end,
+leggere gli output e distinguere tra run riuscito e blocco tecnico reale.</p>
+<h2 id="ruolo-delle-repo">Ruolo delle repo</h2>
+<ul>
+<li><code>dataciviclab</code>
+<ul>
+<li>hub pubblico del funnel, Discussions, analisi, orientamento</li>
+</ul>
+</li>
+<li><code>source-observatory</code>
+<ul>
+<li>workflow di scouting e osservazione delle fonti</li>
+</ul>
+</li>
+<li><code>dataset-incubator</code>
+<ul>
+<li>intake tecnico, candidate, run e contratto tecnico permanente</li>
+</ul>
+</li>
+<li><code>toolkit</code>
+<ul>
+<li>motore tecnico e guide di uso del runtime, non funnel del Lab</li>
+</ul>
+</li>
+</ul>
+<h2 id="regola-pratica">Regola pratica</h2>
+<ul>
+<li>workflow ricorrente di scouting -> <code>source-observatory</code></li>
+<li>workflow ricorrente di intake e run -> <code>dataset-incubator</code></li>
+<li><code>dataciviclab</code> racconta il funnel e rimanda alla repo giusta</li>
+</ul>
+<p>Se vuoi il quadro generale del funnel:</p>
+<ul>
+<li><a href="dataset-project-flow.md">dataset-project-flow.md</a></li>
+</ul> </article> </main> <footer> <div class="footer-row"> <span class="footer-brand">DataCivicLab — 2026</span> <div class="footer-links"> <span class="footer-group-label">Community</span> <a href="https://github.com/orgs/dataciviclab/discussions">Discussion</a> <a href="https://discord.gg/rAHpuTrYK3">Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/">LinkedIn</a> </div> <div class="footer-links"> <span class="footer-group-label">Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/">Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/">Dashboard operativa</a> <a href="https://github.com/dataciviclab">GitHub</a> </div> <div class="footer-links"> <span class="footer-group-label">Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5">Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2">Roadmap</a> </div> </div> </footer> </div> </body></html>
