@@ -1,43 +1,66 @@
-# Template Candidato Analisi
+---
+title: ""
+description: ""
+topics:
+status: active
+dataset_slug: ""
+---
 
-## Domanda principale
+# Titolo — sottotitolo
 
-Scrivi una domanda civica chiara in una frase.
+**Hook**: una o due frasi che catturano l'attenzione e dicono il risultato principale.
 
-## Perché conta
+> Numeri chiave in evidenza, se utili subito.
 
-- per chi è utile
-- quale decisione o comprensione può migliorare
+---
+
+## 1. Prima sezione narrativa
+
+Introduzione al tema. Perché il problema è rilevante. Cosa cercano i dati.
+
+| Anno | Metrica | Metrica |
+|------|---------|---------|
+| 2020 |  |  |
+| 2023 |  |  |
+
+![Descrizione figura](figures/<slug>_<desc>.png)
+
+Testo che commenta la tabella e la figura. Ogni **dato** deve essere verificabile dal notebook.
+
+## 2. Seconda sezione
+
+Altra dimensione dell'analisi. Tabella, figura, commento.
+
+## Cosa abbiamo imparato
+
+### I fatti
+
+1. **Primo risultato** — evidenza.
+2. **Secondo risultato** — evidenza.
+3. **Terzo risultato** — evidenza.
+
+### E allora?
+
+Domanda civica conclusiva. Non una risposta, ma una domanda che apre.
+
+---
 
 ## Dataset
 
-- fonte
-- copertura temporale
-- copertura territoriale
-- limiti noti
+- **Fonte**:
+- **Copertura temporale**:
+- **Dataset in clean-query**: `<slug>`
 
-## Output minimo atteso
+### Limiti
 
-Definisci un output piccolo ma pubblicabile:
+-
 
-- notebook con lettura v1 e finding principale
-- tabella sintetica commentata
+---
+
+## Notebook
+
+- `notebooks/<slug>_v2.ipynb` — validazione dati, genera figure in `figures/`
 
 ## Contratto tecnico
 
-Il contratto tecnico (dataset.yml, SQL, pipeline) vive in dataset-incubator:
 [candidates/<slug>](https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/<slug>)
-
-## Discussion collegata
-
-- Discussion: [link]
-
-## Stato
-
-- `active` / `in valutazione` / `archiviato`
-
-## Decisione attesa al checkpoint
-
-- continuare in analisi/ (destinazione normale)
-- promuovere a repo dedicata (solo se giustificato)
-- archiviare
