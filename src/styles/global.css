@@ -260,12 +260,12 @@ img {
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: #0f172a;
 }
 
 .btn-primary:hover {
   background: var(--accent-hover);
-  color: #fff;
+  color: #0f172a;
   text-decoration: none;
 }
 
