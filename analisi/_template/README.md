@@ -23,7 +23,10 @@ Introduzione al tema. Perché il problema è rilevante. Cosa cercano i dati.
 | 2020 |  |  |
 | 2023 |  |  |
 
-![Descrizione figura](figures/<slug>_<desc>.png)
+<!--
+  TODO: aggiungi figura salvata dal notebook in figures/.
+  Esempio: ![Trend nazionale](figures/nome_trend.png)
+-->
 
 Testo che commenta la tabella e la figura. Ogni **dato** deve essere verificabile dal notebook.
 
