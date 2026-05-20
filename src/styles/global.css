@@ -662,7 +662,7 @@ footer {
 /* ---- Ecosistema ---- */
 .eco-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin: 1.5rem 0;
 }
@@ -808,6 +808,10 @@ footer {
   }
 
   .channels {
+    grid-template-columns: 1fr;
+  }
+
+  .eco-grid {
     grid-template-columns: 1fr;
   }
 
