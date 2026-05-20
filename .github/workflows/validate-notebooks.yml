@@ -23,7 +23,7 @@ jobs:
       - name: Execute modified notebooks
         run: |
           set -e
-          changed=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'analisi/*/notebooks/*.ipynb' 2>/dev/null || echo "")
+          changed=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD -- 'analisi/*/notebooks/*.ipynb' 2>/dev/null || echo "")
           if [ -z "$changed" ]; then
             echo "Nessun notebook modificato in questa PR."
             exit 0

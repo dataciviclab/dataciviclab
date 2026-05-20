@@ -11,8 +11,8 @@ dataset_slug: terna_electricity_by_source
 
 Il 2023 era stato un anno di siccità (idrico in sofferenza). Il 2024 ha recuperato, con l'idrico che ha prodotto 54.757 GWh contro i 42.068 del 2023 (+30%). Il fotovoltaico ha aggiunto 5.282 GWh (+17%). Il termoelettrico ha perso quota, scendendo da 162.588 a 152.080 GWh.
 
-> Produzione netta 2024: **270.963 GWh**.  
-> Quota rinnovabili: **43,9%** (era 38,6% nel 2023).  
+> Produzione netta 2024: **270.963 GWh**.
+> Quota rinnovabili: **43,9%** (era 38,6% nel 2023).
 > Fossili in calo: **-10.508 GWh** (-6,5%).
 
 ---
