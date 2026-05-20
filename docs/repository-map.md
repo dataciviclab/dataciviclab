@@ -35,7 +35,7 @@ Dentro `dataciviclab` ci sono due livelli utili:
 
 Per orientarti tra i workflow pubblici cross-repo del Lab:
 
-- [workflows.md](workflows.md)
+- [workflows](/docs/workflows/)
 
 ## `.github`
 

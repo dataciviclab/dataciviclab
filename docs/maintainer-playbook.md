@@ -26,7 +26,7 @@ Prima di aprire un nuovo repo, controlla che:
 - il perimetro sia abbastanza piccolo da poter partire bene
 
 Prima di decidere se aprire subito una repo dedicata, passa dal flusso canonico del Lab:
-- [dataset-project-flow.md](dataset-project-flow.md)
+- [dataset-project-flow](/docs/dataset-project-flow/)
 
 In molti casi il percorso giusto non è ancora `Discussion -> repo`, ma:
 - `Discussion -> issue -> dataset-incubator`

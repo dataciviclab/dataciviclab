@@ -59,12 +59,12 @@ E' un ruolo trasversale, non un gradino della scala: un contributor puo' essere 
 - Per lavorare su una issue, lascia un commento — un maintainer risponde entro 7 giorni.
 - I core contributor emergono quando iniziano a reggere un filone nel tempo.
 
-Se non sai da dove partire, leggi [`docs/come-contribuire.md`](come-contribuire.md).
+Se non sai da dove partire, leggi [come-contribuire](/docs/come-contribuire/).
 
 ## Come nasce un nuovo progetto
 
 Il flusso canonico dal scouting di un dataset alla pubblicazione e' in
-[docs/dataset-project-flow.md](dataset-project-flow.md).
+[dataset-project-flow](/docs/dataset-project-flow/).
 
 ## Principio guida
 

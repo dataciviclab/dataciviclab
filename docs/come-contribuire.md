@@ -20,8 +20,8 @@ Non serve saper programmare. Serve saper formulare bene la domanda e indicare,
 se la conosci, la fonte pubblica di riferimento.
 
 Quando una Discussion matura e diventa lavoro concreto, si apre una issue nella repo giusta.
-Il flusso completo è in [dataset-project-flow.md](dataset-project-flow.md).
-Per i workflow pubblici nelle repo giuste, vedi anche [workflows.md](workflows.md).
+Il flusso completo è in [dataset-project-flow](/docs/dataset-project-flow/).
+Per i workflow pubblici nelle repo giuste, vedi anche [workflows](/docs/workflows/).
 
 ## Vuoi contribuire a un lavoro in corso
 
@@ -52,7 +52,7 @@ Per contribuire a un progetto dataset:
 2. guarda le issue aperte nella repo dedicata
 3. se non c'è ancora una repo dedicata, parti dalla Discussion collegata
 
-Per il setup tecnico locale: [local-setup.md](local-setup.md).
+Per il setup tecnico locale: [local-setup](/docs/local-setup/).
 
 ## Come funzionano le decisioni
 
@@ -65,6 +65,6 @@ Il Lab è piccolo e le decisioni si prendono in modo trasparente su GitHub.
 La conversazione può partire ovunque — Discord, LinkedIn, in privato.
 La traccia utile deve restare su GitHub.
 
-Per capire come funziona la governance del Lab: [governance-model.md](governance-model.md).
+Per capire come funziona la governance del Lab: [governance-model](/docs/governance-model/).
 
 Per template issue, PR e codice di condotta validi su tutte le repo: [`.github`](https://github.com/dataciviclab/.github).
