@@ -121,7 +121,7 @@ A differenza di quanto si potrebbe pensare, il part-time nella PA non è esploso
 2. **Dal 2019 la curva si inverte**, con un'accelerazione netta nel 2023: 248.000 assunti, saldo +56.000.
 3. **La crescita non è uniforme**: Istruzione (+178.000) e Sanità (+12.700) fanno tutto il lavoro. Funzioni Locali (-94.700) e Centrali (-76.100) continuano a calare.
 4. **Il 77% del saldo positivo 2023** è concentrato in Sanità e Istruzione.
-5. **La PA e prevalentemente femminile** ma con divari enormi: si va dal 77% dell'Istruzione al 14% del Personale in Regime di Diritto Pubblico.
+5. **La PA è prevalentemente femminile** ma con divari enormi: si va dal 77% dell'Istruzione al 14% del Personale in Regime di Diritto Pubblico.
 6. **Il part-time è stabile** al 5-6% — la flessibilità oraria non è un fenomeno in crescita.
 
 ### E allora?
