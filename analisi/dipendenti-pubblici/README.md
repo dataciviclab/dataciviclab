@@ -1,5 +1,6 @@
 ---
 title: Dipendenti pubblici 2010-2023
+date: 2026-03-14
 description: Come sta cambiando il pubblico impiego tra il 2010 e il 2023, e in quali comparti si concentra la dinamica?
 topics: lavoro, pubblica-amministrazione
 status: active

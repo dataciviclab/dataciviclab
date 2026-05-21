@@ -1,9 +1,9 @@
 import rss from '@astrojs/rss';
-import { statSync } from 'node:fs';
 
 /**
  * Feed RSS delle analisi pubbliche di DataCivicLab.
- * Generato in build-time, ordinato per data di modifica del README (più recente prima).
+ * Generato in build-time, ordinato per data (dal frontmatter, più recente prima).
+ * Ogni analisi deve avere `date: YYYY-MM-DD` nel frontmatter del README.
  */
 export async function GET(context) {
   const modules = import.meta.glob('/analisi/*/README.md', { eager: true });
@@ -13,21 +13,7 @@ export async function GET(context) {
     .map(([path, mod]) => {
       const slug = path.split('/').slice(-2, -1)[0];
       const fm = mod.frontmatter ?? {};
-
-      // Data: dal frontmatter se presente, altrimenti mtime del file reale
-      let pubDate;
-      if (fm.date) {
-        pubDate = new Date(fm.date);
-      } else {
-        try {
-          // mod.file contiene il path assoluto del filesystem (dato da Vite/Astro)
-          const filePath = mod?.file || path;
-          const stats = statSync(filePath);
-          pubDate = stats.mtime;
-        } catch {
-          pubDate = new Date();
-        }
-      }
+      const pubDate = fm.date ? new Date(fm.date) : new Date();
 
       return {
         title: fm.title || slug,
