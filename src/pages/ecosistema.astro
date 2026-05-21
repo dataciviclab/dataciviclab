@@ -45,9 +45,7 @@ const radarStats = await fetchRadarStats();
       Schede dataset, metadati, anteprime e query DuckDB dirette sui parquet pubblici.</p>
       <ul class="eco-links">
         <li><a href="https://dataciviclab.github.io/data-explorer/">Esplora il catalogo</a></li>
-        {catalogStats && (
-          <li><strong>{catalogStats.published}</strong> dataset pubblicati</li>
-        )}
+        <li><strong>{catalogStats.published}</strong> dataset pubblicati</li>
       </ul>
       <p class="eco-tech"><strong>Stack:</strong> Observable Framework · DuckDB · GCS</p>
     </div>
@@ -64,9 +62,7 @@ const radarStats = await fetchRadarStats();
       copertura dati, discussioni recenti. Per chi lavora nel Lab.</p>
       <ul class="eco-links">
         <li><a href="https://dataciviclab-dashboard.streamlit.app/">Apri la dashboard</a></li>
-        {radarStats && (
-          <li><strong>{radarStats.total}</strong> fonti monitorate · {radarStats.green} 🟢 {radarStats.yellow} 🟡 {radarStats.red} 🔴</li>
-        )}
+        <li><strong>{radarStats.total}</strong> fonti monitorate · {radarStats.green} 🟢 {radarStats.yellow} 🟡 {radarStats.red} 🔴</li>
       </ul>
       <p class="eco-tech"><strong>Stack:</strong> Streamlit · DuckDB · Altair · GitHub API</p>
     </div>

@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Pagina non trovata" description="La pagina che cerchi non esiste">
+  <div style="text-align: center; padding: 4rem 0;">
+    <h1>404</h1>
+    <p style="font-size: 1.15rem; margin-bottom: 2rem;">
+      La pagina che cerchi non esiste o è stata spostata.
+    </p>
+    <a href={import.meta.env.BASE_URL} class="btn btn-primary">Torna alla homepage</a>
+  </div>
+</BaseLayout>
