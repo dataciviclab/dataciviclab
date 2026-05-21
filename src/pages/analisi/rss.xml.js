@@ -14,13 +14,15 @@ export async function GET(context) {
       const slug = path.split('/').slice(-2, -1)[0];
       const fm = mod.frontmatter ?? {};
 
-      // Data: dal frontmatter se presente, altrimenti mtime del file
+      // Data: dal frontmatter se presente, altrimenti mtime del file reale
       let pubDate;
       if (fm.date) {
         pubDate = new Date(fm.date);
       } else {
         try {
-          const stats = statSync(path);
+          // mod.file contiene il path assoluto del filesystem (dato da Vite/Astro)
+          const filePath = mod?.file || path;
+          const stats = statSync(filePath);
           pubDate = stats.mtime;
         } catch {
           pubDate = new Date();
