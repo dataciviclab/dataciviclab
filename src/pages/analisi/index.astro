@@ -88,3 +88,47 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
     </div>
   ))}
 </BaseLayout>
+
+<style>
+  .analisi-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .topic-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .topic-badge.muted {
+    background: var(--bg-muted);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border);
+  }
+
+  .explorer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--accent-light);
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+
+  .explorer-badge:hover {
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+  }
+</style>

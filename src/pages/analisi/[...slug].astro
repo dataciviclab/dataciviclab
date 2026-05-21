@@ -54,3 +54,27 @@ const explorerUrl = datasetSlug
     </div>
   )}
 </BaseLayout>
+
+<style>
+  .explorer-callout {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    background: var(--accent-light);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    align-items: flex-start;
+  }
+
+  .explorer-callout-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .explorer-callout p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0;
+    color: var(--text-secondary);
+  }
+</style>

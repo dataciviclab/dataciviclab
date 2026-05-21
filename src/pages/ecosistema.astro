@@ -137,3 +137,134 @@ const radarStats = await fetchRadarStats();
     <li><strong>Vuoi solo seguire il lavoro?</strong> — Unisciti al <a href="https://discord.gg/rAHpuTrYK3">Discord</a> o segui <a href="https://www.linkedin.com/company/dataciviclab/">LinkedIn</a></li>
   </ul>
 </BaseLayout>
+
+<style>
+  .eco-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .eco-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+
+  .eco-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .eco-card-header h3 {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+
+  .eco-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .eco-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .eco-links {
+    list-style: none;
+    margin: 0.75rem 0;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+
+  .eco-links li {
+    margin-bottom: 0.3rem;
+  }
+
+  .eco-tech {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    margin: 0.5rem 0 0;
+  }
+
+  .eco-repo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .eco-repo-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+  }
+
+  .eco-repo-name {
+    font-weight: 600;
+    white-space: nowrap;
+    min-width: 160px;
+  }
+
+  .eco-repo-name a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .eco-repo-name a:hover {
+    text-decoration: underline;
+  }
+
+  .eco-repo-desc {
+    color: var(--text-secondary);
+  }
+
+  .eco-funnel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+    padding: 1rem;
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .funnel-step {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--accent);
+    padding: 0.25rem 0.6rem;
+    background: var(--accent-light);
+    border-radius: var(--radius-sm);
+  }
+
+  .funnel-arrow {
+    color: var(--text-tertiary);
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 600px) {
+    .eco-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
