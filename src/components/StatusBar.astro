@@ -67,3 +67,85 @@ const hasData = catalogStats || radarStats || analisiCount != null;
     <span class="legend-label">stato di salute delle fonti</span>
   </div>
 )}
+
+<style>
+  .status-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+  }
+
+  .stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+
+  .stat-icon {
+    font-size: 1.1rem;
+  }
+
+  .stat-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .stat-link:hover {
+    text-decoration: underline;
+  }
+
+  .stat-dots {
+    display: inline-flex;
+    gap: 0.25rem;
+    margin-left: 0.35rem;
+  }
+
+  .dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 0.3rem;
+  }
+
+  .dot-green { background: #16a34a; }
+  .dot-yellow { background: #ca8a04; }
+  .dot-red { background: #dc2626; }
+
+  .status-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin: -0.5rem 0 1.5rem;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+  }
+
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .legend-label {
+    margin-left: 0.5rem;
+    font-style: italic;
+  }
+</style>
