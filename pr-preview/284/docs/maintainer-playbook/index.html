@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="it" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Playbook maintainer — DataCivicLab</title><link rel="icon" type="image/svg+xml" href="/pr-preview/284/icon.svg"><link rel="alternate icon" href="/pr-preview/284/favicon.ico"><meta property="og:title" content="Playbook maintainer — DataCivicLab"><meta property="og:description" content="DataCivicLab — spazio civico dati pubblici"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.org/pr-preview/284/docs/maintainer-playbook/"><meta property="og:image" content="/pr-preview/284/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/pr-preview/284/_astro/BaseLayout.DjFs_adb.css"></head> <body data-astro-cid-37fxchfa> <div class="layout" data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <a href="/pr-preview/284/" class="logo" data-astro-cid-37fxchfa> <img src="/pr-preview/284/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;" data-astro-cid-37fxchfa>
+DataCivicLab
+</a> <nav data-astro-cid-37fxchfa> <a href="/pr-preview/284/analisi/" data-astro-cid-37fxchfa>Analisi</a> <a href="/pr-preview/284/docs/" data-astro-cid-37fxchfa>Documenti</a> <a href="/pr-preview/284/ecosistema/" data-astro-cid-37fxchfa>Ecosistema</a> <a href="/pr-preview/284/chi-siamo/" data-astro-cid-37fxchfa>Chi siamo</a> </nav> </header> <main data-astro-cid-37fxchfa> <article> <h1 id="playbook-maintainer">Playbook Maintainer</h1>
+<p>Questa guida serve a chi apre e accompagna un nuovo progetto nel Lab.</p>
+<p>Il maintainer non è la persona che controlla tutto.
+È la persona che tiene il percorso leggibile, aiuta il progetto a partire bene e fa in modo che il lavoro resti chiaro nel tempo.</p>
+<h2 id="1-far-emergere-la-proposta">1. Far emergere la proposta</h2>
+<p>La proposta nasce in pubblico, di norma su GitHub Discussions.</p>
+<p>La domanda iniziale deve essere:</p>
+<ul>
+<li>chiara</li>
+<li>concreta</li>
+<li>spiegabile in una frase</li>
+</ul>
+<h2 id="2-verificare-il-perimetro">2. Verificare il perimetro</h2>
+<p>Prima di aprire un nuovo repo, controlla che:</p>
+<ul>
+<li>esistano dati pubblici difendibili</li>
+<li>il progetto abbia un’utilità civica chiara</li>
+<li>il perimetro sia abbastanza piccolo da poter partire bene</li>
+</ul>
+<p>Prima di decidere se aprire subito una repo dedicata, passa dal flusso canonico del Lab:</p>
+<ul>
+<li><a href="/docs/dataset-project-flow/">dataset-project-flow</a></li>
+</ul>
+<p>In molti casi il percorso giusto non è ancora <code>Discussion -> repo</code>, ma:</p>
+<ul>
+<li><code>Discussion -> issue -> dataset-incubator</code></li>
+<li>oppure <code>Discussion -> issue -> analisi</code></li>
+</ul>
+<h2 id="3-creare-il-repo-progetto">3. Creare il repo progetto</h2>
+<p>Se la proposta regge e il filone non si risolve in analisi/:</p>
+<ul>
+<li>crea il repo dal <code>project-template</code></li>
+<li>configura i file minimi del progetto</li>
+<li>collega il repo alla <a href="https://github.com/orgs/dataciviclab/projects/5">Open Board</a></li>
+<li>collegalo anche alla <a href="https://github.com/orgs/dataciviclab/projects/2">Roadmap</a> se ha rilevanza di milestone o direzione</li>
+</ul>
+<h2 id="4-avviare-il-lavoro">4. Avviare il lavoro</h2>
+<p>All’inizio servono poche cose:</p>
+<ul>
+<li>domanda civica chiara</li>
+<li>dati iniziali identificati</li>
+<li>issue principali aperte</li>
+<li>stato del progetto leggibile</li>
+</ul>
+<p>Se serve mantenere un piccolo buffer di issue di ingresso o di coordinamento:</p>
+<ul>
+<li>usa il catalogo locale in <code>.github/seed_issues/</code></li>
+<li>il workflow <code>seed-issues.yml</code> mantiene automaticamente gli slot mancanti</li>
+<li>mantieni pochi slot aperti</li>
+<li>non usare le seed issue per simulare lavoro di progetto che ancora non esiste</li>
+</ul>
+<h2 id="4a-tenere-leggibili-gli-ingressi-nel-lab">4a. Tenere leggibili gli ingressi nel Lab</h2>
+<p>Il catalogo seed issue serve a tenere due corsie di ingresso semplici:</p>
+<ul>
+<li><code>good first issue</code></li>
+<li><code>core-team</code></li>
+</ul>
+<p>Regola pratica:</p>
+<ul>
+<li>massimo <code>2</code> issue aperte con label <code>good first issue</code></li>
+<li>massimo <code>3</code> issue aperte con label <code>core-team</code></li>
+<li><strong>massimo 5 totali</strong> in contemporanea — l’idea non è avere un backlog ma un ingresso controllato</li>
+</ul>
+<p>Il maintainer deve usare queste issue come buffer controllato, non come backlog generico.</p>
+<p>Le seed issue attive (2 <code>good first issue</code> + 3 <code>core-team</code> = 5 max):</p>
+<p><strong>Good first issue:</strong></p>
+<ul>
+<li><code>02_docs_link_check</code> — Verificare link e riferimenti in file/docs</li>
+<li><code>03_discussion_summary</code> — Sintetizzare una Discussion attiva in 6-8 righe</li>
+</ul>
+<p><strong>Core team:</strong></p>
+<ul>
+<li><code>01_review_filone</code> — Review rapida di un filone già vivo e prossimo passo</li>
+<li><code>04_next_output</code> — Scegliere il prossimo output pubblico da un filone attivo</li>
+<li><code>05_explicit_debt</code> — Rendere esplicito un debito tecnico già emerso</li>
+</ul>
+<p>Quando apre una seed issue, il maintainer deve ancorarla a un target reale del momento, non lasciarla generica se il contesto del Lab richiede una scelta esplicita.</p>
+<h2 id="5-collegare-loutput-pubblico">5. Collegare l’output pubblico</h2>
+<p>Quando il progetto inizia a produrre materiali pubblici:</p>
+<ul>
+<li>collega il repo al suo archivio pubblico</li>
+<li>tieni aggiornato il progetto nella Open Board</li>
+<li>rendi visibile dove trovare i risultati</li>
+</ul>
+<h3 id="post-merge-e-pubblicazione-gcs">Post-merge e pubblicazione GCS</h3>
+<p>Dopo il merge di un candidate in <code>dataset-incubator</code>, il workflow <code>post-merge-candidate.yml</code>:</p>
+<ol>
+<li>Esegue un sample-run automatico</li>
+<li>Aggiorna <code>registry/pipeline_signals.json</code></li>
+<li>Apre una draft PR di handoff con i comandi per push GCS, BQ e aggiornamento catalogo</li>
+</ol>
+<p>Il maintainer segue la <a href="https://github.com/dataciviclab/dataset-incubator/blob/main/skills/post-merge-candidate.md">post-merge-candidate skill</a> per completare la pubblicazione.</p>
+<h2 id="6-tenere-il-progetto-leggibile">6. Tenere il progetto leggibile</h2>
+<p>Il compito del maintainer non è fare tutto.
+È fare in modo che chi arriva capisca:</p>
+<ul>
+<li>a che punto siamo</li>
+<li>cosa stiamo costruendo</li>
+<li>dove serve aiuto</li>
+</ul> </article> </main> <footer data-astro-cid-37fxchfa> <div class="footer-row" data-astro-cid-37fxchfa> <span class="footer-brand" data-astro-cid-37fxchfa>DataCivicLab — 2026</span> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Community</span> <a href="https://github.com/orgs/dataciviclab/discussions" data-astro-cid-37fxchfa>Discussion</a> <a href="https://discord.gg/rAHpuTrYK3" data-astro-cid-37fxchfa>Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/" data-astro-cid-37fxchfa>LinkedIn</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/" data-astro-cid-37fxchfa>Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/" data-astro-cid-37fxchfa>Dashboard operativa</a> <a href="https://github.com/dataciviclab" data-astro-cid-37fxchfa>GitHub</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5" data-astro-cid-37fxchfa>Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2" data-astro-cid-37fxchfa>Roadmap</a> </div> </div> </footer> </div></body></html>

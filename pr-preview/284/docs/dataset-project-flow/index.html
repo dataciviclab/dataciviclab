@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="it" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Flusso dataset / progetto — DataCivicLab</title><link rel="icon" type="image/svg+xml" href="/pr-preview/284/icon.svg"><link rel="alternate icon" href="/pr-preview/284/favicon.ico"><meta property="og:title" content="Flusso dataset / progetto — DataCivicLab"><meta property="og:description" content="DataCivicLab — spazio civico dati pubblici"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.org/pr-preview/284/docs/dataset-project-flow/"><meta property="og:image" content="/pr-preview/284/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/pr-preview/284/_astro/BaseLayout.DjFs_adb.css"></head> <body data-astro-cid-37fxchfa> <div class="layout" data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <a href="/pr-preview/284/" class="logo" data-astro-cid-37fxchfa> <img src="/pr-preview/284/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;" data-astro-cid-37fxchfa>
+DataCivicLab
+</a> <nav data-astro-cid-37fxchfa> <a href="/pr-preview/284/analisi/" data-astro-cid-37fxchfa>Analisi</a> <a href="/pr-preview/284/docs/" data-astro-cid-37fxchfa>Documenti</a> <a href="/pr-preview/284/ecosistema/" data-astro-cid-37fxchfa>Ecosistema</a> <a href="/pr-preview/284/chi-siamo/" data-astro-cid-37fxchfa>Chi siamo</a> </nav> </header> <main data-astro-cid-37fxchfa> <article> <h1 id="flusso-dataset--progetto">Flusso dataset / progetto</h1>
+<p>Questa pagina descrive il funnel canonico del Lab per trasformare un segnale o una domanda civica in un progetto dati leggibile, verificabile e, se il lavoro lo giustifica, promosso al catalogo pubblico.</p>
+<h2 id="vista-rapida">Vista rapida</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>1. SCOUTING      (source-observatory: source-check)</span></span>
+<span class="line"><span>   -> 2. CONSOLIDATION (GitHub Discussion)</span></span>
+<span class="line"><span>      -> 3. INCUBATION (dataset-incubator: contratto tecnico + toolkit)</span></span>
+<span class="line"><span>         -> 4. ANALYSIS (dataciviclab/analisi/: layer pubblico)</span></span>
+<span class="line"><span>            -> 5. PROMOTION (data-explorer: catalogo pubblico - opzionale)</span></span></code></pre>
+<p>Il percorso non e’ una catena rigida, ma un funnel di selezione: non tutti i segnali diventano Discussion, non tutte le analisi finiscono in explorer.</p>
+<p>Validation via social (Reddit) e’ un passo opzionale, utile per testare la tensione civica su temi nuovi prima di consolidare in GitHub.</p>
+<h2 id="regola-pratica">Regola pratica</h2>
+<ul>
+<li><strong>GitHub Discussion</strong> e’ l’<strong>artifact canonico</strong> di consolidamento: il posto dove le informazioni diventano stabili e referenziabili.</li>
+<li><strong>Reddit / Social</strong> sono i <strong>sensori di segnale</strong>: servono a testare la tensione civica di un tema prima di impegnare risorse GitHub, quando il caso lo richiede.</li>
+<li><strong>dataset-incubator</strong> e’ la <strong>casa tecnica</strong>: conserva il contratto tecnico (<code>dataset.yml</code>, SQL, check, <code>pipeline_signals.json</code>) in modo permanente.</li>
+<li><strong>toolkit</strong> e’ il <strong>motore</strong>: RAW → CLEAN → MART, convalidato da mypy in CI e coverage ≥80%.</li>
+<li><strong>analisi/</strong> e’ il <strong>layer pubblico</strong>: e’ la destinazione finale per la maggior parte dei racconti del Lab.</li>
+<li><strong>data-explorer</strong> e’ il <strong>catalogo</strong>: espone i dataset puliti del Lab con schede, metadati e query DuckDB.</li>
+</ul>
+<hr>
+<h2 id="step-1-scouting">Step 1: SCOUTING</h2>
+<p>Si parte da una fonte o da un tema. Lo scouting tecnico serve ad assegnare un <strong>verdict</strong>.
+<strong>Workflow pubblico: <code>source-check</code></strong></p>
+<p>Repo:</p>
+<ul>
+<li><code>source-observatory</code></li>
+</ul>
+<p>Obiettivo: decidere se la fonte regge davvero su accesso, formato, domanda civica e rischio semantico.</p>
+<p>Esiti tipici:</p>
+<ul>
+<li><code>go Discussion</code></li>
+<li><code>aggiorna #N</code></li>
+<li><code>watchlist</code></li>
+<li><code>support dataset</code></li>
+<li><code>no-go</code></li>
+</ul>
+<h2 id="step-2-validation-segnale-esterno">Step 2: VALIDATION (segnale esterno)</h2>
+<p>Prima di aprire una Discussion su GitHub, possiamo testare l’interesse della community su Reddit o altri canali.
+<strong>Formati consigliati: <code>Dataset Request</code> o <code>Question Check</code></strong></p>
+<p>Obiettivo: capire se la domanda civica genera risposte o interesse reale. Se il segnale e’ debole, il tema puo’ restare in <code>watchlist</code> locale senza appesantire il backlog GitHub.</p>
+<p>Nota: questo step e’ opzionale, non obbligatorio per ogni dataset.</p>
+<h2 id="step-3-consolidation-github-discussion">Step 3: CONSOLIDATION (GitHub Discussion)</h2>
+<p>Se il segnale e’ positivo, oppure se il caso e’ gia’ abbastanza forte da consolidare direttamente, fissiamo tutto in una Discussion in <code>dataciviclab</code>.
+<strong>Workflow del Lab: <code>open-discussion</code></strong></p>
+<p>Qui la domanda si fissa, le fonti si ordinano e il filone diventa un artifact pubblico condivisibile. Non e’ il posto per chiedere “interessa?”, ma per dire “ecco perche’ questa pista merita attenzione”.</p>
+<h2 id="step-4-incubation-dataset-incubator--toolkit">Step 4: INCUBATION (dataset-incubator + toolkit)</h2>
+<p>Quando il perimetro e’ chiaro, il dataset entra formalmente in incubazione tecnica.
+<strong>Workflow pubblico: <code>intake-candidate</code></strong></p>
+<p>Repo:</p>
+<ul>
+<li><code>dataset-incubator</code> (contratto tecnico)</li>
+<li><code>toolkit</code> (motore di esecuzione)</li>
+</ul>
+<p>Qui si lavora su:</p>
+<ul>
+<li><code>dataset.yml</code> con schema validato da Pydantic</li>
+<li><code>sql/clean.sql</code> e <code>sql/mart.sql</code></li>
+<li>validazione via <code>toolkit validate all</code></li>
+<li>gate <code>toolkit blocker-hints</code> in PR CI</li>
+<li><code>pipeline_signals.json</code> aggiornato automaticamente dopo il merge</li>
+</ul>
+<p>Output atteso: PR verde (<code>toolkit run all</code> + <code>validate all</code> passa, blocker_count = 0).</p>
+<p>Per il run tecnico vero e proprio del candidate:</p>
+<ul>
+<li><code>dataset-incubator/skills/run-candidate.md</code></li>
+</ul>
+<p>Dopo il merge, il workflow <code>post-merge-candidate.yml</code> aggiorna i segnali e apre
+una draft PR di handoff per il maintainer con i comandi GCS/BQ.</p>
+<h2 id="step-5-analysis-analisifindings">Step 5: ANALYSIS (analisi/findings)</h2>
+<p>Il layer pubblico finale vive in <code>dataciviclab/analisi/&#x3C;slug>/</code>.
+<strong>Workflow del Lab: <code>promote-analisi</code></strong></p>
+<p>Un filone entra in <code>analisi/</code> se il dato tecnico e’ stabile e vogliamo pubblicare una lettura leggibile (README, notebook o finding). Per molti dataset, questo e’ l’endpoint naturale del funnel.</p>
+<h2 id="step-6-promotion-data-explorer">Step 6: PROMOTION (data-explorer)</h2>
+<p>Promozione al catalogo pubblico nazionale (<a href="https://github.com/dataciviclab/data-explorer"><code>data-explorer</code></a>).
+<strong>Workflow del Lab: <code>add-to-explorer</code></strong></p>
+<p>Il dataset viene registrato in <code>registry/clean_catalog.json</code> con slug, periodo, colonne e location GCS.
+La validazione del catalogo e dei path GCS e’ automatica via CI (<code>validate-clean-catalog.yml</code>).</p>
+<p>Questo step e’ opzionale: ha senso soprattutto se il dataset e’ periodico, ha una domanda civica larga o e’ un gap prioritario che merita una vista pubblica permanente.</p>
+<hr>
+<h2 id="due-percorsi-tipici">Due percorsi tipici</h2>
+<h3 id="1-percorso-civico-standard">1. Percorso civico standard</h3>
+<p><code>Scouting -> Validation (opzionale) -> Discussion -> Incubation -> Analysis</code></p>
+<h3 id="2-percorso-prioritario-hvd--gap-forti">2. Percorso prioritario (HVD / gap forti)</h3>
+<p><code>Scouting -> Discussion -> Incubation -> Analysis -> Promotion</code></p>
+<hr>
+<h2 id="note-operative">Note operative</h2>
+<ul>
+<li><strong>Anti-rumore</strong>: non postare sui social per ogni aggiornamento tecnico.</li>
+<li><strong>Issue madre</strong>: usa <code>dataset-funnel.yml</code> in <code>dataciviclab</code> per tracciare la journey end-to-end nella Open Board.</li>
+<li><strong>Chiusura</strong>: una journey si chiude quando l’obiettivo del funnel viene raggiunto (<code>Analysis</code> o <code>Promotion</code>).</li>
+</ul>
+<p>Per i puntatori ai workflow pubblici nelle repo del Lab:</p>
+<ul>
+<li><a href="/docs/workflows/">workflows</a></li>
+</ul> </article> </main> <footer data-astro-cid-37fxchfa> <div class="footer-row" data-astro-cid-37fxchfa> <span class="footer-brand" data-astro-cid-37fxchfa>DataCivicLab — 2026</span> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Community</span> <a href="https://github.com/orgs/dataciviclab/discussions" data-astro-cid-37fxchfa>Discussion</a> <a href="https://discord.gg/rAHpuTrYK3" data-astro-cid-37fxchfa>Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/" data-astro-cid-37fxchfa>LinkedIn</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/" data-astro-cid-37fxchfa>Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/" data-astro-cid-37fxchfa>Dashboard operativa</a> <a href="https://github.com/dataciviclab" data-astro-cid-37fxchfa>GitHub</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5" data-astro-cid-37fxchfa>Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2" data-astro-cid-37fxchfa>Roadmap</a> </div> </div> </footer> </div></body></html>
