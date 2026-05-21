@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="it" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Workflow pubblici del Lab — DataCivicLab</title><link rel="icon" type="image/svg+xml" href="/pr-preview/285/icon.svg"><link rel="alternate icon" href="/pr-preview/285/favicon.ico"><meta property="og:title" content="Workflow pubblici del Lab — DataCivicLab"><meta property="og:description" content="DataCivicLab — spazio civico dati pubblici"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.org/pr-preview/285/docs/workflows/"><meta property="og:image" content="https://dataciviclab.org/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="DataCivicLab — Analisi" href="/pr-preview/285/analisi/rss.xml"><link rel="stylesheet" href="/pr-preview/285/_astro/BaseLayout.BwrmPOwX.css"></head> <body data-astro-cid-37fxchfa> <div class="layout" data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <a href="/pr-preview/285/" class="logo" data-astro-cid-37fxchfa> <img src="/pr-preview/285/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;" data-astro-cid-37fxchfa>
+DataCivicLab
+</a> <nav data-astro-cid-37fxchfa> <a href="/pr-preview/285/analisi/" data-astro-cid-37fxchfa>Analisi</a> <a href="/pr-preview/285/docs/" data-astro-cid-37fxchfa>Documenti</a> <a href="/pr-preview/285/ecosistema/" data-astro-cid-37fxchfa>Ecosistema</a> <a href="/pr-preview/285/chi-siamo/" data-astro-cid-37fxchfa>Chi siamo</a> </nav> </header> <main data-astro-cid-37fxchfa> <article> <h1 id="workflow-pubblici-del-lab">Workflow pubblici del Lab</h1>
+<p>Questa pagina fa da hub dei workflow pubblici cross-repo di DataCivicLab.</p>
+<p>Non spiega tutta la logica interna del core team. Serve soprattutto a chiarire:</p>
+<ul>
+<li>da dove si entra</li>
+<li>qual è il passo successivo</li>
+<li>in quale repo si lavora davvero</li>
+</ul>
+<h2 id="mappa-rapida">Mappa rapida</h2>
+<h3 id="1-fonte---discussion">1. Fonte -> Discussion</h3>
+<p>Se parti da una fonte o da un dataset da verificare, il workflow pubblico di riferimento è:</p>
+<ul>
+<li><a href="https://github.com/dataciviclab/source-observatory/blob/main/skills/source-check.md"><code>source-observatory/skills/source-check.md</code></a></li>
+</ul>
+<p>Questo è il passaggio giusto quando devi capire se una fonte regge davvero
+come pista del Lab.</p>
+<p>Output tipici:</p>
+<ul>
+<li><code>go Discussion</code></li>
+<li><code>watchlist</code></li>
+<li><code>support dataset</code></li>
+<li><code>aggiorna artefatto esistente</code></li>
+<li><code>no-go</code></li>
+</ul>
+<h3 id="2-discussion---candidate">2. Discussion -> Candidate</h3>
+<p>Quando una discussion o una fonte sono abbastanza mature per entrare in
+incubazione tecnica, il workflow pubblico di riferimento è:</p>
+<ul>
+<li><a href="https://github.com/dataciviclab/dataset-incubator/blob/main/skills/intake-candidate.md"><code>dataset-incubator/skills/intake-candidate.md</code></a></li>
+</ul>
+<p>Questo è il passaggio giusto quando vuoi trasformare un caso promettente in un
+candidate tecnico credibile.</p>
+<h3 id="3-candidate---run">3. Candidate -> Run</h3>
+<p>Quando un candidate esiste già e vuoi farlo girare davvero per vedere i dati,
+il workflow pubblico di riferimento è:</p>
+<ul>
+<li><a href="https://github.com/dataciviclab/dataset-incubator/blob/main/skills/run-candidate.md"><code>dataset-incubator/skills/run-candidate.md</code></a></li>
+</ul>
+<p>Questo è il passaggio giusto quando vuoi eseguire il candidate end-to-end,
+leggere gli output e distinguere tra run riuscito e blocco tecnico reale.</p>
+<h2 id="ruolo-delle-repo">Ruolo delle repo</h2>
+<ul>
+<li><code>dataciviclab</code>
+<ul>
+<li>hub pubblico del funnel, Discussions, analisi, orientamento</li>
+</ul>
+</li>
+<li><code>source-observatory</code>
+<ul>
+<li>workflow di scouting e osservazione delle fonti</li>
+</ul>
+</li>
+<li><code>dataset-incubator</code>
+<ul>
+<li>intake tecnico, candidate, run e contratto tecnico permanente</li>
+</ul>
+</li>
+<li><code>toolkit</code>
+<ul>
+<li>motore tecnico e guide di uso del runtime, non funnel del Lab</li>
+</ul>
+</li>
+</ul>
+<h2 id="regola-pratica">Regola pratica</h2>
+<ul>
+<li>workflow ricorrente di scouting -> <code>source-observatory</code></li>
+<li>workflow ricorrente di intake e run -> <code>dataset-incubator</code></li>
+<li><code>dataciviclab</code> racconta il funnel e rimanda alla repo giusta</li>
+</ul>
+<p>Se vuoi il quadro generale del funnel:</p>
+<ul>
+<li><a href="/docs/dataset-project-flow/">dataset-project-flow</a></li>
+</ul> </article> </main> <footer data-astro-cid-37fxchfa> <div class="footer-row" data-astro-cid-37fxchfa> <span class="footer-brand" data-astro-cid-37fxchfa>DataCivicLab — 2026</span> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Community</span> <a href="https://github.com/orgs/dataciviclab/discussions" data-astro-cid-37fxchfa>Discussion</a> <a href="https://discord.gg/rAHpuTrYK3" data-astro-cid-37fxchfa>Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/" data-astro-cid-37fxchfa>LinkedIn</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/" data-astro-cid-37fxchfa>Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/" data-astro-cid-37fxchfa>Dashboard operativa</a> <a href="https://github.com/dataciviclab" data-astro-cid-37fxchfa>GitHub</a> <a href="/pr-preview/285/analisi/rss.xml" data-astro-cid-37fxchfa>Feed RSS analisi</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5" data-astro-cid-37fxchfa>Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2" data-astro-cid-37fxchfa>Roadmap</a> </div> </div> </footer> </div></body></html>
