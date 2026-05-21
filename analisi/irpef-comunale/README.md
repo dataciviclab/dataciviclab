@@ -1,5 +1,6 @@
 ---
 title: IRPEF comunale 2019-2023
+date: 2026-03-08
 description: Come varia la capacità fiscale tra comuni e regioni?
 topics: economia, fisco
 status: active

@@ -2,7 +2,7 @@
 /**
  * StatusBar — KPI live del Lab letti in build-time.
  * Mostra fonti monitorate, dataset pubblicati, analisi, discussioni.
- * Se gli artifact non sono raggiungibili, non mostra nulla.
+ * I dati hanno un fallback locale se gli artifact remoti non sono raggiungibili.
  *
  * @prop {number} [analisiCount] - numero di analisi attive in analisi/
  */
@@ -15,38 +15,32 @@ export interface Props {
 const { analisiCount } = Astro.props;
 const catalogStats = await fetchCatalogStats();
 const radarStats = await fetchRadarStats();
-const hasData = catalogStats || radarStats || analisiCount != null;
 ---
 
-{hasData && (
-  <div class="status-bar">
-    {radarStats && (
-      <span class="stat">
-        <span class="stat-icon">📡</span>
-        <strong>{radarStats.total}</strong> fonti monitorate
-        <span class="stat-dots">
-          <span class="dot dot-green" title={`${radarStats.green} GREEN`}>
-            {radarStats.green}
-          </span>
-          <span class="dot dot-yellow" title={`${radarStats.yellow} YELLOW`}>
-            {radarStats.yellow}
-          </span>
-          <span class="dot dot-red" title={`${radarStats.red} RED`}>
-            {radarStats.red}
-          </span>
+<div class="status-bar">
+    <span class="stat">
+      <span class="stat-icon">📡</span>
+      <strong>{radarStats.total}</strong> fonti monitorate
+      <span class="stat-dots">
+        <span class="dot dot-green" title={`${radarStats.green} GREEN`}>
+          {radarStats.green}
+        </span>
+        <span class="dot dot-yellow" title={`${radarStats.yellow} YELLOW`}>
+          {radarStats.yellow}
+        </span>
+        <span class="dot dot-red" title={`${radarStats.red} RED`}>
+          {radarStats.red}
         </span>
       </span>
-    )}
-    {catalogStats && (
-      <span class="stat">
-        <span class="stat-icon">📚</span>
-        <strong>{catalogStats.published}</strong> dataset pubblicati
-      </span>
-    )}
+    </span>
+    <span class="stat">
+      <span class="stat-icon">📚</span>
+      <strong>{catalogStats.published}</strong> dataset pubblicati
+    </span>
     {analisiCount != null && analisiCount > 0 && (
       <span class="stat">
         <span class="stat-icon">📊</span>
-        <a href="/analisi/" class="stat-link">
+        <a href={import.meta.env.BASE_URL + 'analisi/'} class="stat-link">
           <strong>{analisiCount}</strong> analisi attive
         </a>
       </span>
@@ -58,15 +52,12 @@ const hasData = catalogStats || radarStats || analisiCount != null;
       </a>
     </span>
   </div>
-)}
-{radarStats && (
   <div class="status-legend">
     <span class="legend-item"><span class="dot dot-green"></span> GREEN</span>
     <span class="legend-item"><span class="dot dot-yellow"></span> YELLOW</span>
     <span class="legend-item"><span class="dot dot-red"></span> RED</span>
     <span class="legend-label">stato di salute delle fonti</span>
   </div>
-)}
 
 <style>
   .status-bar {

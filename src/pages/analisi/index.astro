@@ -15,27 +15,6 @@ interface AnalisiMeta {
   isPublished: boolean;
 }
 
-const topicColors: Record<string, string> = {
-  economia: '#065f46',
-  fisco: '#065f46',
-  'pubblica-amministrazione': '#6d28d9',
-  giustizia: '#b91c1c',
-  sanita: '#0e7490',
-  energia: '#d97706',
-  ambiente: '#15803d',
-  'enti-locali': '#4338ca',
-};
-
-function topicBadgeColor(topic: string): string {
-  return topicColors[topic] ?? '#64748b';
-}
-
-const statusColor: Record<string, string> = {
-  active: '#16a34a',
-  archived: '#94a3b8',
-  review: '#d97706',
-};
-
 const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
   .filter(([filepath]) => !filepath.includes('/_template/') && !filepath.includes('/registry/'))
   .map(([filepath, mod]: [string, any]) => {
@@ -70,13 +49,13 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
       <div class="analisi-meta">
         {entry.topics.length > 0
           ? entry.topics.map((topic) => (
-              <span class="topic-badge" style={`background: ${topicBadgeColor(topic)}`}>
+              <span class={`topic-badge topic-${topic}`}>
                 {topic}
               </span>
             ))
           : <span class="topic-badge muted">generale</span>
         }
-        <span class="topic-badge" style={`background: ${statusColor[entry.status] ?? '#64748b'}`}>
+        <span class={`topic-badge status-${entry.status}`}>
           {entry.status}
         </span>
         {entry.isPublished && (
@@ -104,6 +83,7 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
     font-size: 0.75rem;
     font-weight: 500;
     color: #fff;
+    background: #64748b;
   }
 
   .topic-badge.muted {
@@ -111,6 +91,20 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
     color: var(--text-tertiary);
     border: 1px solid var(--border);
   }
+
+  .topic-economia,
+  .topic-fisco { background: #065f46; }
+
+  .topic-pubblica-amministrazione { background: #6d28d9; }
+  .topic-giustizia { background: #b91c1c; }
+  .topic-sanita { background: #0e7490; }
+  .topic-energia { background: #d97706; }
+  .topic-ambiente { background: #15803d; }
+  .topic-enti-locali { background: #4338ca; }
+
+  .status-active { background: #16a34a; }
+  .status-archived { background: #94a3b8; }
+  .status-review { background: #d97706; }
 
   .explorer-badge {
     display: inline-flex;

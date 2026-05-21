@@ -1,5 +1,6 @@
 ---
 title: Flussi giustizia civile 2014-2025
+date: 2026-03-10
 description: Il carico della giustizia civile sta migliorando o peggiorando?
 topics: giustizia
 status: active
