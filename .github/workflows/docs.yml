@@ -35,16 +35,12 @@ jobs:
                   # Skip external URLs and anchors
                   if target.startswith(("http://", "https://", "mailto:", "#")):
                       continue
-                  # Check /docs/... absolute links against filesystem
+                  # Check /docs/... absolute links against actual file
                   if target.startswith("/docs/"):
                       # /docs/some-slug/ -> docs/some-slug.md
-                      # /docs/some-slug  -> docs/some-slug.md
-                      name = target.removeprefix("/docs/").removesuffix("/")
-                      candidates = [
-                          root / "docs" / f"{name}.md",
-                          root / "docs" / f"{name.split('/')[0]}.md",
-                      ]
-                      if not any(c.exists() for c in candidates):
+                      # /docs/ (index) -> skip (non è un file doc)
+                      name = target.removeprefix("/docs/").strip("/").split("/")[0]
+                      if name and not (root / "docs" / f"{name}.md").exists():
                           bad.append(f"{file.relative_to(root)} -> {target}")
                       continue
                   if target.startswith("/"):
