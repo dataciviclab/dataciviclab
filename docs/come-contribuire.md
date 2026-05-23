@@ -21,7 +21,6 @@ se la conosci, la fonte pubblica di riferimento.
 
 Quando una Discussion matura e diventa lavoro concreto, si apre una issue nella repo giusta.
 Il flusso completo è in [dataset-project-flow](/docs/dataset-project-flow/).
-Per i workflow pubblici nelle repo giuste, vedi anche [workflows](/docs/workflows/).
 
 ## Vuoi contribuire a un lavoro in corso
 
