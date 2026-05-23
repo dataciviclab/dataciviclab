@@ -32,7 +32,18 @@ jobs:
           for file in files:
               text = file.read_text(encoding="utf-8")
               for target in pattern.findall(text):
-                  if target.startswith(("http://", "https://", "mailto:", "#", "/")):
+                  # Skip external URLs and anchors
+                  if target.startswith(("http://", "https://", "mailto:", "#")):
+                      continue
+                  # Check /docs/... absolute links against actual file
+                  if target.startswith("/docs/"):
+                      # /docs/some-slug/ -> docs/some-slug.md
+                      # /docs/ (index) -> skip (non è un file doc)
+                      name = target.removeprefix("/docs/").strip("/").split("/")[0]
+                      if name and not (root / "docs" / f"{name}.md").exists():
+                          bad.append(f"{file.relative_to(root)} -> {target}")
+                      continue
+                  if target.startswith("/"):
                       continue
                   target_path = target.split("#", 1)[0]
                   if not target_path:

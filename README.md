@@ -48,7 +48,6 @@ Cerca una [issue con label `good first issue`](https://github.com/dataciviclab/d
 
 ## Per orientarti
 
-- [docs/workflows.md](docs/workflows.md) — i workflow pubblici e in quale repo si lavora
-- [docs/repository-map.md](docs/repository-map.md) — dove si trova ogni cosa nell'ecosistema
+- [docs/dataset-project-flow.md](docs/dataset-project-flow.md) — il flusso del Lab dalla domanda all'analisi
 - [docs/governance-model.md](docs/governance-model.md) — ruoli e come si decide
 - [docs/come-contribuire.md](docs/come-contribuire.md) — guida per nuovi contributor

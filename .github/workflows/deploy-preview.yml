@@ -38,6 +38,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           destination_dir: pr-preview/${{ github.event.number }}
+          exclude_assets: 'CNAME'
 
       - name: Comment PR with preview URL
         uses: actions/github-script@v7
