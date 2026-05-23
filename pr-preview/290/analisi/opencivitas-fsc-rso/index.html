@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="it" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OpenCivitas FSC 2025 (RSO) — DataCivicLab</title><meta name="description" content="I comuni con capacità fiscale più bassa ricevono davvero più risorse perequative in proporzione?"><link rel="icon" type="image/svg+xml" href="/pr-preview/290/icon.svg"><link rel="alternate icon" href="/pr-preview/290/favicon.ico"><meta property="og:title" content="OpenCivitas FSC 2025 (RSO) — DataCivicLab"><meta property="og:description" content="I comuni con capacità fiscale più bassa ricevono davvero più risorse perequative in proporzione?"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.org/pr-preview/290/analisi/opencivitas-fsc-rso/"><meta property="og:image" content="https://dataciviclab.org/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="DataCivicLab — Analisi" href="/pr-preview/290/analisi/rss.xml"><link rel="stylesheet" href="/pr-preview/290/_astro/BaseLayout.Bqm-MCyJ.css">
+<style>.explorer-callout[data-astro-cid-vs4wcbdp]{display:flex;gap:1rem;padding:1.25rem;margin-bottom:2rem;background:var(--accent-light);border:1px solid var(--accent);border-radius:var(--radius);align-items:flex-start}.explorer-callout-icon[data-astro-cid-vs4wcbdp]{font-size:1.5rem;flex-shrink:0}.explorer-callout[data-astro-cid-vs4wcbdp] p[data-astro-cid-vs4wcbdp]{font-size:.9rem;margin:.25rem 0 0;color:var(--text-secondary)}
+</style></head> <body data-astro-cid-37fxchfa> <div class="layout" data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <a href="/pr-preview/290/" class="logo" data-astro-cid-37fxchfa> <img src="/pr-preview/290/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;" data-astro-cid-37fxchfa>
+DataCivicLab
+</a> <nav data-astro-cid-37fxchfa> <a href="/pr-preview/290/analisi/" data-astro-cid-37fxchfa>Analisi</a> <a href="/pr-preview/290/docs/" data-astro-cid-37fxchfa>Documenti</a> <a href="/pr-preview/290/ecosistema/" data-astro-cid-37fxchfa>Ecosistema</a> <a href="/pr-preview/290/chi-siamo/" data-astro-cid-37fxchfa>Chi siamo</a> </nav> </header> <main data-astro-cid-37fxchfa> <article data-astro-cid-vs4wcbdp> <h1 id="opencivitas-fsc-2025-rso">OpenCivitas FSC 2025 (RSO)</h1>
+<h2 id="domanda-principale">Domanda principale</h2>
+<p>I comuni con capacità fiscale più bassa ricevono davvero più risorse perequative in proporzione, oppure la dotazione finale FSC 2025 redistribuisce in modo meno intuitivo del previsto?</p>
+<h2 id="perché-conta">Perché conta</h2>
+<ul>
+<li>rende leggibile un meccanismo centrale della finanza comunale, non solo il suo peso nei bilanci</li>
+<li>aiuta a distinguere tra capacità fiscale, fondo perequativo e dotazione finale FSC</li>
+<li>porta nel layer pubblico del Lab un primo output prudente su un dataset tecnico ma civicamente forte</li>
+</ul>
+<p>Discussion collegate:</p>
+<ul>
+<li><code>dataciviclab</code> Discussion <a href="https://github.com/orgs/dataciviclab/discussions/91">#91</a> - grandi comuni e composizione delle entrate</li>
+<li><code>dataciviclab</code> Discussion <a href="https://github.com/orgs/dataciviclab/discussions/114">#114</a> - dipendenza dai trasferimenti vs tributi propri</li>
+<li><code>dataset-incubator</code> Discussion <a href="https://github.com/dataciviclab/dataset-incubator/discussions/75">#75</a> - FSC 2025 / OpenCivitas</li>
+</ul>
+<h2 id="dataset">Dataset</h2>
+<ul>
+<li>fonte principale: <a href="https://www.opencivitas.it/it/dataset/2025-comuni-delle-regioni-statuto-ordinario-%E2%80%93-fondo-di-solidariet%C3%A0-comunale-2025">OpenCivitas / Sogei - FSC 2025 per i Comuni delle Regioni a Statuto Ordinario</a></li>
+<li>file dati: <a href="https://docs.opencivitas.it/2025_VAR_FSC_1_2025_csv.zip">2025_VAR_FSC_1_2025_csv.zip</a></li>
+<li>metadati enti: <a href="https://docs.opencivitas.it/Metadati_Enti_FSC_2025_xlsx.zip">Metadati Enti FSC 2025</a></li>
+<li>copertura temporale: <code>2025</code></li>
+<li>copertura geografica: solo comuni delle Regioni a Statuto Ordinario</li>
+</ul>
+<h2 id="limiti-principali">Limiti principali</h2>
+<ul>
+<li>perimetro solo RSO: non usare mai “tutti i comuni italiani”</li>
+<li>non è una serie storica: il v1 risponde su <code>2025</code>, non sui trend</li>
+<li><code>fondo_perequativo</code> e <code>dotazione_finale_fsc</code> non sono la stessa cosa e non vanno letti come equivalenti</li>
+<li>questa è una lettura descrittiva, non una valutazione causale o normativa del riparto</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li>notebook pubblico: <code>notebooks/opencivitas_fsc_rso_v1.ipynb</code></li>
+<li>mart tecnico letto da un path locale del workspace Lab:
+<code>dataset-incubator/out/data/mart/opencivitas_fsc_2025_rso/2025/mart_compose_comuni.parquet</code></li>
+<li>il mart non è oggi disponibile come URL pubblico su GCS; chi legge il README su GitHub deve trattare quel path come riferimento tecnico locale</li>
+</ul>
+<h2 id="contratto-tecnico">Contratto tecnico</h2>
+<p>Il contratto tecnico del candidate vive in dataset-incubator:
+<a href="https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/opencivitas-fsc-rso">candidates/opencivitas-fsc-rso</a></p>
+<h2 id="stato">Stato</h2>
+<ul>
+<li><code>active</code> in <code>dataciviclab/analisi</code></li>
+<li>candidate DI già incubato e notebook v0 eseguito</li>
+<li>primo passaggio pubblico in analisi creato su base FSC 2025</li>
+</ul>
+<h2 id="decisione-attesa-al-checkpoint">Decisione attesa al checkpoint</h2>
+<ul>
+<li>verificare se il notebook v1 regge bene come primo output pubblico</li>
+<li>decidere se serve una discussion DCL dedicata al FSC oppure se il filone resta agganciato a <code>#91</code> e <code>#114</code></li>
+</ul> </article> </main> <footer data-astro-cid-37fxchfa> <div class="footer-row" data-astro-cid-37fxchfa> <span class="footer-brand" data-astro-cid-37fxchfa>DataCivicLab — 2026</span> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Community</span> <a href="https://github.com/orgs/dataciviclab/discussions" data-astro-cid-37fxchfa>Discussion</a> <a href="https://discord.gg/rAHpuTrYK3" data-astro-cid-37fxchfa>Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/" data-astro-cid-37fxchfa>LinkedIn</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/" data-astro-cid-37fxchfa>Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/" data-astro-cid-37fxchfa>Dashboard operativa</a> <a href="https://github.com/dataciviclab" data-astro-cid-37fxchfa>GitHub</a> <a href="/pr-preview/290/analisi/rss.xml" data-astro-cid-37fxchfa>Feed RSS analisi</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5" data-astro-cid-37fxchfa>Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2" data-astro-cid-37fxchfa>Roadmap</a> </div> </div> </footer> </div></body></html>
