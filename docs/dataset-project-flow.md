@@ -72,7 +72,8 @@ Dopo la pubblicazione su GCS (`gs://dataciviclab-clean/{slug}/`), il dataset
 
 Se il dato è stabile e la domanda civica lo giustifica, il team pubblica
 un'analisi in `analisi/<slug>/` con README pubblico, notebook tecnico e
-figure. È la destinazione finale per la maggior parte dei filoni.
+figure (vedi [skills/new-analysis.md](../skills/new-analysis.md)).
+È la destinazione finale per la maggior parte dei filoni.
 
 ### Catalogo (data-explorer — opzionale)
 
@@ -94,6 +95,4 @@ Domanda → Scouting → Incubazione → Analisi
 Domanda → Scouting → Incubazione → Analisi → Catalogo (data-explorer)
 ```
 
----
 
-Per i workflow pubblici operativi: [workflows](/docs/workflows/).
