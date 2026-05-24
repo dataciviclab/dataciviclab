@@ -1,6 +1,7 @@
 ---
 title: AIFA Spesa farmaceutica convenzionata 2018-2024
 description: Quanto spende il SSN per i farmaci e dove vanno i soldi?
+date: 2026-05-24
 topics: sanita
 status: active
 dataset_slug: aifa_spesa_consumo
@@ -12,7 +13,7 @@ dataset_slug: aifa_spesa_consumo
 Nel 2024 il Servizio Sanitario Nazionale ha speso circa **10 miliardi di euro** per la farmaceutica convenzionata (classe A), erogando poco più di 1 miliardo di confezioni. La spesa è sostanzialmente stabile dal 2018, con una flessione leggera (-1%) compensata dall'aumento del peso delle patologie croniche.
 
 > Spesa 2024: **10,0 miliardi di euro** (classe A).
-> Confezioni erogate: **1.042 milioni**.
+> Confezioni erogate: **1.041 milioni**.
 > Cardiovascolare: **31,2%** della spesa (era 29,3% nel 2018).
 
 ---
