@@ -10,7 +10,7 @@ dataset_slug: consip_consumi_convenzione
 
 **La spesa della PA in convenzioni Consip è calata del 16% in tre anni, ma l'energia elettrica assorbe da sola il 74% del totale. Comuni e enti territoriali sono i principali acquirenti, Lazio e Lombardia le regioni che spendono di più.**
 
-Nel 2024 le amministrazioni pubbliche italiane hanno speso circa **3,1 miliardi di euro** attraverso le convenzioni Consip. Il dato è in calo rispetto ai 3,6 miliardi del 2023 (-16%), ma la composizione della spesa è fortemente concentrata: energia elettrica, gas e carburanti rappresentano il 98% del totale.
+Nel 2024 le amministrazioni pubbliche italiane hanno speso circa **3,1 miliardi di euro** attraverso le convenzioni Consip. Il dato è in calo rispetto ai 3,6 miliardi del 2023 (-15%), mentre il calo cumulato 2023-2025 raggiunge il -16%. La composizione della spesa è fortemente concentrata: energia elettrica, gas e carburanti rappresentano il 98% del totale.
 
 > Spesa 2024: **3.077 milioni di euro** (3,1 miliardi).
 > Energia elettrica: **74%** della spesa totale.
