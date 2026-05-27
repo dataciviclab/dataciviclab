@@ -45,7 +45,7 @@ jobs:
         with:
           script: |
             const prNumber = context.issue.number;
-            const previewUrl = `https://dataciviclab.org/pr-preview/${prNumber}/`;
+            const previewUrl = `https://dataciviclab.github.io/dataciviclab/pr-preview/${prNumber}/`;
             github.rest.issues.createComment({
               issue_number: prNumber,
               owner: context.repo.owner,
