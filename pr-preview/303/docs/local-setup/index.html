@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="it" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Setup locale minimo — DataCivicLab</title><link rel="icon" type="image/svg+xml" href="/pr-preview/303/icon.svg"><link rel="alternate icon" href="/pr-preview/303/favicon.ico"><meta property="og:title" content="Setup locale minimo — DataCivicLab"><meta property="og:description" content="DataCivicLab — spazio civico dati pubblici"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.org/pr-preview/303/docs/local-setup/"><meta property="og:image" content="https://dataciviclab.org/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="DataCivicLab — Analisi" href="/pr-preview/303/analisi/rss.xml"><link rel="stylesheet" href="/pr-preview/303/_astro/BaseLayout.yAuxxr8P.css"></head> <body data-astro-cid-37fxchfa> <div class="layout" data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <a href="/pr-preview/303/" class="logo" data-astro-cid-37fxchfa> <img src="/pr-preview/303/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;" data-astro-cid-37fxchfa>
+DataCivicLab
+</a> <nav data-astro-cid-37fxchfa> <a href="/pr-preview/303/analisi/" data-astro-cid-37fxchfa>Analisi</a> <a href="/pr-preview/303/docs/" data-astro-cid-37fxchfa>Documenti</a> <a href="/pr-preview/303/ecosistema/" data-astro-cid-37fxchfa>Ecosistema</a> <a href="/pr-preview/303/chi-siamo/" data-astro-cid-37fxchfa>Chi siamo</a> </nav> </header> <main data-astro-cid-37fxchfa> <article> <h1 id="setup-locale-minimo">Setup Locale Minimo</h1>
+<p>Questa guida serve a mettere in piedi un ambiente locale minimo per lavorare nel Lab.</p>
+<p>Non copre tutto il ruolo di maintainer o core contributor.
+Copre solo il setup necessario per arrivare a un primo workflow funzionante.</p>
+<h2 id="requisiti-minimi">Requisiti minimi</h2>
+<p>Serve avere:</p>
+<ul>
+<li>Git</li>
+<li>Python 3.11+</li>
+<li>VS Code consigliato, non obbligatorio</li>
+</ul>
+<h2 id="repo-minime-da-avere">Repo minime da avere</h2>
+<p>Per partire bastano:</p>
+<ul>
+<li><code>dataciviclab</code></li>
+<li><code>dataset-incubator</code></li>
+<li><code>toolkit</code></li>
+</ul>
+<p>Se lavori nel workspace completo del Lab, tienile sotto una stessa cartella locale.</p>
+<p>Esempio:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>dataciviclab-workspace/</span></span>
+<span class="line"><span>  dataciviclab/</span></span>
+<span class="line"><span>  dataset-incubator/</span></span>
+<span class="line"><span>  toolkit/</span></span></code></pre>
+<h2 id="crea-lambiente-python-locale">Crea l’ambiente Python locale</h2>
+<p>Dalla root del workspace:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m venv .venv</span></span></code></pre>
+<p>Su Windows puoi usare anche:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#E1E4E8">py </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m venv .venv</span></span></code></pre>
+<p>Poi attivalo.</p>
+<p>Su PowerShell:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#E1E4E8">.venv\Scripts\Activate.ps1</span></span></code></pre>
+<p>Controllo rapido:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">c </span><span style="color:#9ECBFF">"import sys; print(sys.executable)"</span></span></code></pre>
+<p>Il path deve puntare alla <code>.venv</code> del workspace.</p>
+<h2 id="installa-il-toolkit">Installa il toolkit</h2>
+<p>Vai nella repo <code>toolkit</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#79B8FF">Set-Location</span><span style="color:#E1E4E8"> toolkit</span></span>
+<span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m pip install </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">e .</span></span></code></pre>
+<p>Verifica minima:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#79B8FF">Set-Location</span><span style="color:#E1E4E8"> toolkit</span></span>
+<span class="line"><span style="color:#E1E4E8">toolkit </span><span style="color:#F97583">--</span><span style="color:#E1E4E8">help</span></span></code></pre>
+<p>Se questo comando non parte, fermati qui e sistema prima l’ambiente.</p>
+<h2 id="apri-il-workspace-in-vs-code">Apri il workspace in VS Code</h2>
+<p>Se usi VS Code, apri:</p>
+<p><code>dataciviclab.code-workspace</code></p>
+<p>Ti aiuta a:</p>
+<ul>
+<li>vedere insieme le repo principali</li>
+<li>usare piu’ facilmente il Python locale giusto</li>
+<li>navigare meglio tra repo diverse</li>
+</ul>
+<h2 id="primo-comando-reale">Primo comando reale</h2>
+<p>Lo standard del Lab e’ usare il <code>dataset.yml</code> del candidate o del support dataset.</p>
+<p>Esempio:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#79B8FF">Set-Location</span><span style="color:#E1E4E8"> toolkit</span></span>
+<span class="line"><span style="color:#E1E4E8">toolkit run all </span><span style="color:#F97583">--</span><span style="color:#E1E4E8">config ..\dataset</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">incubator\candidates\irpef</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">comunale\dataset.yml</span></span></code></pre>
+<p>Questo e’ il primo test utile:</p>
+<ul>
+<li>verifica che il toolkit parta</li>
+<li>verifica che i path tra repo siano coerenti</li>
+<li>produce output reali</li>
+</ul>
+<h2 id="dove-vanno-gli-output">Dove vanno gli output</h2>
+<p>Lo standard del Lab e’:</p>
+<ul>
+<li>ogni repo viva ha il proprio <code>out/</code></li>
+<li>gli output runtime non stanno nel root del workspace</li>
+</ul>
+<p>Quindi:</p>
+<ul>
+<li>un candidate in <code>dataset-incubator</code> scrive in <code>dataset-incubator/out/</code></li>
+<li>una repo progetto scrive nel proprio <code>out/</code></li>
+</ul>
+<h2 id="ruoli-minimi-delle-repo">Ruoli minimi delle repo</h2>
+<h3 id="dataset-incubator"><code>dataset-incubator</code></h3>
+<p>Qui vive il contratto tecnico minimo:</p>
+<ul>
+<li><code>dataset.yml</code></li>
+<li><code>sql/</code></li>
+<li>note tecniche</li>
+<li>notebook <code>v0</code></li>
+</ul>
+<h3 id="dataciviclab"><code>dataciviclab</code></h3>
+<p>Qui vive il layer pubblico leggero:</p>
+<ul>
+<li>README</li>
+<li>notebook <code>v1</code></li>
+<li>docs, discussion e task cross-repo</li>
+</ul>
+<h3 id="toolkit"><code>toolkit</code></h3>
+<p>Qui vive la CLI e il motore di pipeline.</p>
+<h2 id="checklist-finale">Checklist finale</h2>
+<p>Se tutto e’ a posto, dovresti riuscire a:</p>
+<ol>
+<li>vedere le repo principali nel workspace locale</li>
+<li>usare una venv locale coerente</li>
+<li>lanciare <code>toolkit --help</code></li>
+<li>eseguire almeno un <code>run all --config ...</code></li>
+<li>trovare gli output nella cartella <code>out/</code> della repo giusta</li>
+</ol> </article> </main> <footer data-astro-cid-37fxchfa> <div class="footer-row" data-astro-cid-37fxchfa> <span class="footer-brand" data-astro-cid-37fxchfa>DataCivicLab — 2026</span> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Community</span> <a href="https://github.com/orgs/dataciviclab/discussions" data-astro-cid-37fxchfa>Discussion</a> <a href="https://discord.gg/rAHpuTrYK3" data-astro-cid-37fxchfa>Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/" data-astro-cid-37fxchfa>LinkedIn</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/" data-astro-cid-37fxchfa>Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/" data-astro-cid-37fxchfa>Dashboard operativa</a> <a href="https://github.com/dataciviclab" data-astro-cid-37fxchfa>GitHub</a> <a href="/pr-preview/303/analisi/rss.xml" data-astro-cid-37fxchfa>Feed RSS analisi</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5" data-astro-cid-37fxchfa>Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2" data-astro-cid-37fxchfa>Roadmap</a> </div> </div> </footer> </div></body></html>
