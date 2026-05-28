@@ -15,7 +15,7 @@ Nel 2025, il Fondo di Solidarietà Comunale ha coinvolto **6.572 comuni** delle 
 > Correlazione CF vs FP: **-0,784** (forte e negativa = il meccanismo funziona).
 > Contributori netti: **1.693 comuni** (26% del totale).
 > CF media contributori: **631 EUR/ab** (quasi il doppio della media nazionale).
-> Da P10 a P90: **x2** (196 → 586 EUR/ab).
+> Da P10 a P90: **x3** (196 → 586 EUR/ab).
 
 ---
 
