@@ -9,3 +9,9 @@ contact_links:
   - name: Roadmap
     url: https://github.com/orgs/dataciviclab/projects/2
     about: Guarda qui direzione, progetti e milestone del Lab.
+  - name: Segnalazione dataset
+    url: https://github.com/dataciviclab/dataset-incubator/issues/new/choose
+    about: Per problemi su un dataset o richiesta nuovo dataset.
+  - name: Source Observatory
+    url: https://github.com/dataciviclab/source-observatory/issues/new/choose
+    about: Per problemi su scouting fonti o radar.

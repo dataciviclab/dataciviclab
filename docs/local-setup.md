@@ -14,7 +14,7 @@ Copre solo il setup necessario per arrivare a un primo workflow funzionante.
 Serve avere:
 
 - Git
-- Python 3.11+
+- Python 3.12+
 - VS Code consigliato, non obbligatorio
 
 ## Repo minime da avere
@@ -34,6 +34,10 @@ dataciviclab-workspace/
   dataciviclab/
   dataset-incubator/
   toolkit/
+  lab-connectors/      # dipendenza condivisa (opzionale, per sviluppo locale)
+  source-observatory/  # scouting fonti (opzionale)
+  agent-context-builder/ # contesto agenti AI (opzionale)
+  data-explorer/       # frontend catalogo (Node.js, opzionale)
 ```
 
 ## Crea l'ambiente Python locale
@@ -66,19 +70,31 @@ python -c "import sys; print(sys.executable)"
 
 Il path deve puntare alla `.venv` del workspace.
 
-## Installa il toolkit
+## Installa i pacchetti Python
 
 Vai nella repo `toolkit`:
 
 ```powershell
 Set-Location toolkit
+python -m pip install -e ".[parquet,dev]"
+```
+
+Poi installa gli altri pacchetti (opzionali, servono per candidate e scouting):
+
+```powershell
+Set-Location lab-connectors
 python -m pip install -e .
+
+Set-Location dataset-incubator
+python -m pip install -e ".[dev]"
+
+Set-Location source-observatory
+python -m pip install -e ".[dev]"
 ```
 
 Verifica minima:
 
 ```powershell
-Set-Location toolkit
 toolkit --help
 ```
 
@@ -95,6 +111,19 @@ Ti aiuta a:
 - vedere insieme le repo principali
 - usare piu' facilmente il Python locale giusto
 - navigare meglio tra repo diverse
+
+## Variabili d'ambiente
+
+Il Lab usa alcune variabili d'ambiente per token e configurazione.
+Copia il file `.env.example` in `.env` nella root del workspace e compila i valori
+che ti servono (almeno `GITHUB_TOKEN`).
+
+```powershell
+Copy-Item .env.example .env
+```
+
+I token servono soprattutto per MCP e automazioni; per eseguire un candidate
+in locale non sono necessari.
 
 ## Primo comando reale
 
