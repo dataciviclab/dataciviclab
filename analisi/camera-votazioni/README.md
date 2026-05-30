@@ -8,9 +8,9 @@ dataset_slug: camera_votazioni_sparql
 ---
 # Camera dei Deputati: votazioni 2018-2025 — si vota di più ma con meno deputati
 
-**In 8 anni il numero di votazioni annuali è più che raddoppiato (+135%), mentre la media dei votanti per seduta è crollata del 46%. Nel 2025 votano in media 244 deputati per votazione, contro i 455 del 2018 — meno della metà dell'assemblea.**
+**In 8 anni il numero di votazioni annuali è più che raddoppiato (+135%), mentre la media dei votanti per seduta è crollata del 46%. Nel 2025 votano in media 244 deputati per votazione, contro i 455 del 2018 — il 61% dei 400 seggi.**
 
-Il 2023 ha segnato un punto di svolta: con l'inizio della XIX legislatura, le votazioni sono passate da circa 2.200 a oltre 4.600 annue. Nel 2024 hanno raggiunto il picco di 5.903 votazioni. Parallelamente, la partecipazione media è scesa sotto i 300 votanti per la prima volta nel 2023.
+Il 2023 ha segnato un punto di svolta: con l'inizio della XIX legislatura, le votazioni sono passate da circa 2.200 a oltre 4.600 annue. Nel 2024 hanno raggiunto il picco di 5.903 votazioni (+175% vs 2018). Parallelamente, la partecipazione media è scesa sotto i 300 votanti per la prima volta nel 2023.
 
 > Votazioni 2024: **5.903** (erano 2.144 nel 2018, +175%).
 > Media votanti 2025: **244** (erano 455 nel 2018, -46%).
@@ -57,7 +57,7 @@ Le votazioni finali (approvazione di disegni di legge) sono 648 in 8 anni. La qu
 
 ## 4. Votazione segreta
 
-Le votazioni segrete sono una quota marginale del totale, ma mostrano un leggero aumento negli anni più recenti.
+Le votazioni segrete sono una quota marginale del totale, in calo dal 2% (2018) allo 0,1% degli anni più recenti.
 
 ---
 
@@ -68,8 +68,8 @@ Le votazioni segrete sono una quota marginale del totale, ma mostrano un leggero
 1. **Le votazioni sono più che raddoppiate** da 2.144 (2018) a 5.903 (2024).
 2. **La partecipazione media è crollata del 46%**: da 455 a 244 votanti per votazione.
 3. **Le richieste di fiducia sono 114** in 8 anni, con un picco di 26 nel 2023.
-4. **Le leggi vengono quasi sempre approvate**: 646 su 648 votazioni finali hanno avuto esito positivo.
-5. **Il 2023 segna lo spartiacque**: cambio di legislatura, votazioni triplicate, partecipazione sotto 300.
+4. **Le leggi vengono quasi sempre approvate**: 646 su 648 votazioni finali hanno esito positivo (verificato con dati `approvato`).
+5. **Il 2023 segna lo spartiacque**: cambio di legislatura, votazioni più che raddoppiate, partecipazione sotto 300.
 
 ### E allora?
 
