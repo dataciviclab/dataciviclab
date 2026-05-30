@@ -8,7 +8,7 @@ Copre solo il setup necessario per arrivare a un primo workflow funzionante.</p>
 <p>Serve avere:</p>
 <ul>
 <li>Git</li>
-<li>Python 3.11+</li>
+<li>Python 3.12+</li>
 <li>VS Code consigliato, non obbligatorio</li>
 </ul>
 <h2 id="repo-minime-da-avere">Repo minime da avere</h2>
@@ -23,7 +23,11 @@ Copre solo il setup necessario per arrivare a un primo workflow funzionante.</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>dataciviclab-workspace/</span></span>
 <span class="line"><span>  dataciviclab/</span></span>
 <span class="line"><span>  dataset-incubator/</span></span>
-<span class="line"><span>  toolkit/</span></span></code></pre>
+<span class="line"><span>  toolkit/</span></span>
+<span class="line"><span>  lab-connectors/      # dipendenza condivisa (opzionale, per sviluppo locale)</span></span>
+<span class="line"><span>  source-observatory/  # scouting fonti (opzionale)</span></span>
+<span class="line"><span>  agent-context-builder/ # contesto agenti AI (opzionale)</span></span>
+<span class="line"><span>  data-explorer/       # frontend catalogo (Node.js, opzionale)</span></span></code></pre>
 <h2 id="crea-lambiente-python-locale">Crea l’ambiente Python locale</h2>
 <p>Dalla root del workspace:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m venv .venv</span></span></code></pre>
@@ -35,13 +39,21 @@ Copre solo il setup necessario per arrivare a un primo workflow funzionante.</p>
 <p>Controllo rapido:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">c </span><span style="color:#9ECBFF">"import sys; print(sys.executable)"</span></span></code></pre>
 <p>Il path deve puntare alla <code>.venv</code> del workspace.</p>
-<h2 id="installa-il-toolkit">Installa il toolkit</h2>
+<h2 id="installa-i-pacchetti-python">Installa i pacchetti Python</h2>
 <p>Vai nella repo <code>toolkit</code>:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#79B8FF">Set-Location</span><span style="color:#E1E4E8"> toolkit</span></span>
-<span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m pip install </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">e .</span></span></code></pre>
+<span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m pip install </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">e </span><span style="color:#9ECBFF">".[parquet,dev]"</span></span></code></pre>
+<p>Poi installa gli altri pacchetti (opzionali, servono per candidate e scouting):</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#79B8FF">Set-Location</span><span style="color:#E1E4E8"> lab</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">connectors</span></span>
+<span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m pip install </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">e .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">Set-Location</span><span style="color:#E1E4E8"> dataset</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">incubator</span></span>
+<span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m pip install </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">e </span><span style="color:#9ECBFF">".[dev]"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">Set-Location</span><span style="color:#E1E4E8"> source</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">observatory</span></span>
+<span class="line"><span style="color:#E1E4E8">python </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">m pip install </span><span style="color:#F97583">-</span><span style="color:#E1E4E8">e </span><span style="color:#9ECBFF">".[dev]"</span></span></code></pre>
 <p>Verifica minima:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#79B8FF">Set-Location</span><span style="color:#E1E4E8"> toolkit</span></span>
-<span class="line"><span style="color:#E1E4E8">toolkit </span><span style="color:#F97583">--</span><span style="color:#E1E4E8">help</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#E1E4E8">toolkit </span><span style="color:#F97583">--</span><span style="color:#E1E4E8">help</span></span></code></pre>
 <p>Se questo comando non parte, fermati qui e sistema prima l’ambiente.</p>
 <h2 id="apri-il-workspace-in-vs-code">Apri il workspace in VS Code</h2>
 <p>Se usi VS Code, apri:</p>
@@ -52,6 +64,13 @@ Copre solo il setup necessario per arrivare a un primo workflow funzionante.</p>
 <li>usare piu’ facilmente il Python locale giusto</li>
 <li>navigare meglio tra repo diverse</li>
 </ul>
+<h2 id="variabili-dambiente">Variabili d’ambiente</h2>
+<p>Il Lab usa alcune variabili d’ambiente per token e configurazione.
+Copia il file <code>.env.example</code> in <code>.env</code> nella root del workspace e compila i valori
+che ti servono (almeno <code>GITHUB_TOKEN</code>).</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="powershell"><code><span class="line"><span style="color:#79B8FF">Copy-Item</span><span style="color:#E1E4E8"> .env.example .env</span></span></code></pre>
+<p>I token servono soprattutto per MCP e automazioni; per eseguire un candidate
+in locale non sono necessari.</p>
 <h2 id="primo-comando-reale">Primo comando reale</h2>
 <p>Lo standard del Lab e’ usare il <code>dataset.yml</code> del candidate o del support dataset.</p>
 <p>Esempio:</p>
