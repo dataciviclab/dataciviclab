@@ -1,0 +1,24 @@
+name: Nuova analisi pubblica
+description: Proposta o avvio di una nuova analisi pubblica in dataciviclab/analisi/
+labels: [analisi]
+body:
+  - type: textarea
+    id: domanda
+    attributes:
+      label: Domanda civica
+      description: Qual è la domanda a cui l'analisi risponde?
+    validations:
+      required: true
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset di riferimento
+      description: Slug del dataset clean pubblicato (es. irpef_comunale)
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Tipo di analisi
+      options:
+        - Seed — primo sguardo su un dataset
+        - Approfondimento — analisi mirata su un tema
+        - Cross-dataset — analisi che combina più dataset

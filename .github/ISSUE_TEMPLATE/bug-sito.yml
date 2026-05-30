@@ -1,0 +1,19 @@
+name: Bug — Sito dataciviclab
+description: Segnala un problema sul sito pubblico (dataciviclab.github.io)
+labels: [bug]
+body:
+  - type: textarea
+    id: desc
+    attributes:
+      label: Descrizione
+      description: Cosa non funziona?
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL della pagina
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento atteso
