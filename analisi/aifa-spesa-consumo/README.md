@@ -4,6 +4,7 @@ description: Quanto spende il SSN per i farmaci e dove vanno i soldi?
 date: 2026-05-24
 topics: sanita
 status: active
+discussion: 242
 dataset_slug: aifa_spesa_consumo
 ---
 # AIFA Spesa farmaceutica 2018-2024 — il cardiovascolare domina, la spesa totale si contrae

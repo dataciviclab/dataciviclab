@@ -4,6 +4,7 @@ description: Le entrate dello Stato stanno cambiando composizione?
 date: 2026-05-24
 topics: economia, finanza-pubblica
 status: active
+discussion: 218
 dataset_slug: bdap_entrate_stato
 ---
 # Entrate dello Stato 2008-2024 — il peso dei prestiti raddoppia
