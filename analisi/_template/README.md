@@ -3,6 +3,8 @@ title: ""
 description: ""
 topics:
 status: active
+discussion:  # opzionale — numero della GitHub Discussion in categoria Analisi
+issue:  # opzionale — numero della GitHub Issue collegata
 dataset_slug: ""
 ---
 

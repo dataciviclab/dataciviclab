@@ -4,6 +4,7 @@ date: 2026-03-08
 description: Come varia la capacità fiscale tra comuni e regioni?
 topics: economia, fisco
 status: active
+discussion: 88
 dataset_slug: irpef_comunale
 ---
 # IRPEF comunale 2019-2023 — il divario fiscale in Italia

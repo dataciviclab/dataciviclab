@@ -4,6 +4,8 @@ date: 2026-03-14
 description: Il mix elettrico italiano si sta spostando dalle fonti fossili?
 topics: energia, ambiente
 status: active
+discussion: 115
+issue: 133
 dataset_slug: terna_electricity_by_source
 ---
 # Terna mix elettrico 2023-2024 — le rinnovabili sfiorano il 44%

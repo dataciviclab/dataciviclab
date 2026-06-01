@@ -4,6 +4,8 @@ date: 2026-03-12
 description: Le regioni con meno personale sanitario hanno tassi di mortalità evitabile più alti?
 topics: sanita
 status: active
+discussion: 99
+issue: 110
 ---
 # Malasanità 2022: mortalità evitabile e dotazione sanitaria regionale
 
