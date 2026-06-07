@@ -94,5 +94,3 @@ Domanda → Scouting → Incubazione → Analisi
 ```text
 Domanda → Scouting → Incubazione → Analisi → Catalogo (data-explorer)
 ```
-
-
