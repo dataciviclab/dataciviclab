@@ -1,0 +1,87 @@
+{
+  "folders": [
+    {
+      "name": "dataciviclab",
+      "path": "."
+    },
+    {
+      "name": "dataset-incubator",
+      "path": "../dataset-incubator"
+    },
+    {
+      "name": "toolkit",
+      "path": "../toolkit"
+    },
+    {
+      "name": "lab-connectors",
+      "path": "../lab-connectors"
+    },
+    {
+      "name": "source-observatory",
+      "path": "../source-observatory"
+    },
+    {
+      "name": "agent-context-builder",
+      "path": "../agent-context-builder"
+    },
+    {
+      "name": "data-explorer",
+      "path": "../data-explorer"
+    },
+    {
+      "name": "lab-dashboard",
+      "path": "../lab-dashboard"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "charliermarsh.ruff",
+      "ms-toolsai.jupyter",
+      "redhat.vscode-yaml",
+      "tamasfe.even-better-toml",
+      "yzhang.markdown-all-in-one"
+    ]
+  },
+  "settings": {
+    "editor.formatOnSave": true,
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "git.enableSmartCommit": false,
+    "python.defaultInterpreterPath": "../.venv/bin/python",
+    "python.analysis.languageServerMode": "light",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.indexing": false,
+    "python.analysis.exclude": [
+      "**/.venv/**",
+      "_local/tmp/**",
+      "_local/exports/**",
+      "**/.git/**"
+    ],
+    "python.terminal.activateEnvironment": true,
+    "ruff.nativeServer": "on",
+    "files.exclude": {
+      "**/.venv": true,
+      "**/.pytest_cache": true,
+      "**/.ruff_cache": true,
+      "**/__pycache__": true,
+      "**/*.egg-info": true,
+      "**/build": true,
+      "**/dist": true,
+      "**/.ipynb_checkpoints": true
+    },
+    "search.exclude": {
+      "**/.venv": true,
+      "**/.pytest_cache": true,
+      "**/.ruff_cache": true,
+      "**/__pycache__": true,
+      "**/*.egg-info": true,
+      "**/build": true,
+      "**/dist": true,
+      "**/.ipynb_checkpoints": true
+    }
+  }
+}
