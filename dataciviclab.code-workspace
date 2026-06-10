@@ -50,7 +50,7 @@
       "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "git.enableSmartCommit": false,
-    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.defaultInterpreterPath": "../.venv/bin/python",
     "python.analysis.languageServerMode": "light",
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.diagnosticMode": "openFilesOnly",

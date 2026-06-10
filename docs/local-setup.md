@@ -143,10 +143,10 @@ Include impostazioni consigliate, estensioni e exclude per cache/venv.
 
 ## 6. Variabili d'ambiente
 
-Copia il file `.env.example` in `.env` nella root del workspace:
+Copia il file `.env.example` (nella repo `dataciviclab`) in `.env` nella root del workspace:
 
 ```bash
-cp .env.example .env
+cp dataciviclab/.env.example .env
 ```
 
 Compila almeno `GITHUB_TOKEN` (serve per automazioni e MCP).
