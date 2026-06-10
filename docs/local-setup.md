@@ -2,187 +2,173 @@
 title: Setup locale minimo
 slug: local-setup
 ---
-# Setup Locale Minimo
+# Setup locale minimo
 
-Questa guida serve a mettere in piedi un ambiente locale minimo per lavorare nel Lab.
+Guida per **contributori esterni** che vogliono lavorare sui dataset del Lab.
 
-Non copre tutto il ruolo di maintainer o core contributor.
-Copre solo il setup necessario per arrivare a un primo workflow funzionante.
+Se fai parte del core team, la guida interna è in `lab-ops/operations/local-setup.md`
+(repo privata).
 
-## Requisiti minimi
-
-Serve avere:
+## Requisiti
 
 - Git
 - Python 3.12+
-- VS Code consigliato, non obbligatorio
+- VS Code (opzionale, ma semplifica)
 
-## Repo minime da avere
+## 1. Ottieni i repo
 
-Per partire bastano:
+### Contributore esterno (vuoi aprire PR)
 
-- `dataciviclab`
-- `dataset-incubator`
-- `toolkit`
+1. **Forka** ogni repo che ti serve dalla pagina GitHub del Lab.
+   - Esempio: https://github.com/dataciviclab/dataset-incubator → tasto `Fork`
+2. **Clona il tuo fork** (non l'originale):
 
-Se lavori nel workspace completo del Lab, tienile sotto una stessa cartella locale.
+   ```bash
+   git clone git@github.com:{TUO_USERNAME}/dataset-incubator.git
+   git clone git@github.com:{TUO_USERNAME}/toolkit.git
+   ```
 
-Esempio:
+3. **Aggiungi l'originale come upstream** per restare sincronizzato:
 
-```text
-dataciviclab-workspace/
+   ```bash
+   git remote add upstream git@github.com:dataciviclab/dataset-incubator.git
+   ```
+
+4. Lavora sempre su un **branch**, mai su `main`.
+
+### Hai accesso in scrittura
+
+Clona direttamente i repo dell'organizzazione:
+
+```bash
+git clone git@github.com:dataciviclab/toolkit.git
+git clone git@github.com:dataciviclab/dataset-incubator.git
+```
+
+## 2. Struttura workspace
+
+Metti tutti i repo nella stessa cartella. Esempio:
+
+```
+lavoro/
   dataciviclab/
   dataset-incubator/
   toolkit/
-  lab-connectors/      # dipendenza condivisa (opzionale, per sviluppo locale)
-  source-observatory/  # scouting fonti (opzionale)
-  agent-context-builder/ # contesto agenti AI (opzionale)
-  data-explorer/       # frontend catalogo (Node.js, opzionale)
+  lab-connectors/          # dipendenza condivisa (opzionale, vedi sotto)
+  source-observatory/      # scouting fonti (opzionale)
+  agent-context-builder/   # contesto agenti AI (opzionale)
+  data-explorer/           # frontend catalogo — Node.js (opzionale)
 ```
 
-## Crea l'ambiente Python locale
+Per partire bastano `dataciviclab`, `dataset-incubator` e `toolkit`.
+
+## 3. Crea l'ambiente Python
 
 Dalla root del workspace:
 
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**Windows (PowerShell):**
+
 ```powershell
 python -m venv .venv
-```
-
-Su Windows puoi usare anche:
-
-```powershell
-py -m venv .venv
-```
-
-Poi attivalo.
-
-Su PowerShell:
-
-```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-Controllo rapido:
+Verifica rapida:
 
-```powershell
+```bash
 python -c "import sys; print(sys.executable)"
 ```
 
 Il path deve puntare alla `.venv` del workspace.
 
-## Installa i pacchetti Python
+## 4. Installa i pacchetti
 
-Vai nella repo `toolkit`:
+### Minimo indispensabile — toolkit (include lab-connectors)
 
-```powershell
-Set-Location toolkit
-python -m pip install -e ".[parquet,dev]"
+```bash
+pip install -e "toolkit[parquet,dev]"
 ```
 
-Poi installa gli altri pacchetti (opzionali, servono per candidate e scouting):
+`toolkit` installa automaticamente `lab-connectors` (versione pinnata via git).
+Per un primo run questo basta.
 
-```powershell
-Set-Location lab-connectors
-python -m pip install -e .
+Poi installa `dataset-incubator`:
 
-Set-Location dataset-incubator
-python -m pip install -e ".[dev]"
-
-Set-Location source-observatory
-python -m pip install -e ".[dev]"
+```bash
+pip install -e "dataset-incubator[dev]"
 ```
 
-Verifica minima:
+### Opzionale — editable locale per lab-connectors
 
-```powershell
+Se devi modificare `lab-connectors`, installalo in editable dalla copia locale
+(sovrascrive la versione pinnata installata da toolkit):
+
+```bash
+pip install -e lab-connectors
+```
+
+### Opzionale — altri repo
+
+```bash
+pip install -e "source-observatory[dev]"
+pip install -e "agent-context-builder[dev]"
+```
+
+### Verifica minima
+
+```bash
 toolkit --help
 ```
 
-Se questo comando non parte, fermati qui e sistema prima l'ambiente.
+Se non parte, la venv non è attiva o l'installazione non è completa.
 
-## Apri il workspace in VS Code
+## 5. VS Code (opzionale)
 
-Se usi VS Code, apri:
+Il workspace file `dataciviclab.code-workspace` si trova nella repo `dataciviclab`.
 
-`dataciviclab.code-workspace`
+Se hai clonato `dataciviclab`, aprilo con:
 
-Ti aiuta a:
-
-- vedere insieme le repo principali
-- usare piu' facilmente il Python locale giusto
-- navigare meglio tra repo diverse
-
-## Variabili d'ambiente
-
-Il Lab usa alcune variabili d'ambiente per token e configurazione.
-Copia il file `.env.example` in `.env` nella root del workspace e compila i valori
-che ti servono (almeno `GITHUB_TOKEN`).
-
-```powershell
-Copy-Item .env.example .env
+```bash
+code dataciviclab/dataciviclab.code-workspace
 ```
 
-I token servono soprattutto per MCP e automazioni; per eseguire un candidate
-in locale non sono necessari.
+Oppure da VS Code: `File → Apri workspace file`.
 
-## Primo comando reale
+Include impostazioni consigliate, estensioni e exclude per cache/venv.
 
-Lo standard del Lab e' usare il `dataset.yml` del candidate o del support dataset.
+## 6. Variabili d'ambiente
 
-Esempio:
+Copia il file `.env.example` in `.env` nella root del workspace:
 
-```powershell
-Set-Location toolkit
-toolkit run all --config ..\dataset-incubator\candidates\irpef-comunale\dataset.yml
+```bash
+cp .env.example .env
 ```
 
-Questo e' il primo test utile:
+Compila almeno `GITHUB_TOKEN` (serve per automazioni e MCP).
+Per eseguire un candidate in locale i token non servono.
 
-- verifica che il toolkit parta
-- verifica che i path tra repo siano coerenti
-- produce output reali
+## 7. Primo run
 
-## Dove vanno gli output
+Una volta installato tutto, lancia un candidate per verificare che la pipeline funzioni:
 
-Lo standard del Lab e':
+```bash
+toolkit run all --config dataset-incubator/candidates/irpef-comunale/dataset.yml
+```
 
-- ogni repo viva ha il proprio `out/`
-- gli output runtime non stanno nel root del workspace
+Se tutto è a posto vedrai l'output in `dataset-incubator/out/`.
 
-Quindi:
+Cosa verifica questo comando:
+- che il toolkit parta e trovi le dipendenze
+- che i path tra repo siano coerenti
+- che la pipeline RAW → CLEAN → MART produca output reali
 
-- un candidate in `dataset-incubator` scrive in `dataset-incubator/out/`
-- una repo progetto scrive nel proprio `out/`
+## 8. Prossimi passi
 
-## Ruoli minimi delle repo
-
-### `dataset-incubator`
-
-Qui vive il contratto tecnico minimo:
-
-- `dataset.yml`
-- `sql/`
-- note tecniche
-- notebook `v0`
-
-### `dataciviclab`
-
-Qui vive il layer pubblico leggero:
-
-- README
-- notebook `v1`
-- docs, discussion e task cross-repo
-
-### `toolkit`
-
-Qui vive la CLI e il motore di pipeline.
-
-## Checklist finale
-
-Se tutto e' a posto, dovresti riuscire a:
-
-1. vedere le repo principali nel workspace locale
-2. usare una venv locale coerente
-3. lanciare `toolkit --help`
-4. eseguire almeno un `run all --config ...`
-5. trovare gli output nella cartella `out/` della repo giusta
+- Leggi [come-contribuire](/docs/come-contribuire/) per capire come partecipare
+- Cerca issue `good first issue` per un primo task
+- Quando sei pronto, apri una PR dal tuo fork
