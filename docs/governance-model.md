@@ -1,6 +1,7 @@
 ---
 title: Modello di governance
 slug: governance-model
+description: Ruoli, responsabilità e come si prendono le decisioni nel Lab.
 ---
 # Modello di governance
 
