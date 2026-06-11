@@ -1,6 +1,7 @@
 ---
 title: Flusso dataset / progetto
 slug: dataset-project-flow
+description: Come il Lab trasforma una domanda civica in dati pubblici — dal scouting alla pubblicazione.
 ---
 
 # Flusso dataset / progetto

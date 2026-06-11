@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import DocsLayout from '../../layouts/DocsLayout.astro';
 
 export async function getStaticPaths() {
   const modules = import.meta.glob('/docs/*.md', { eager: true });
@@ -17,15 +17,14 @@ const { mod } = Astro.props;
 const filename = mod?.file?.split('/')?.pop() ?? '';
 const slug = filename.replace(/\.md$/, '');
 const title = mod?.frontmatter?.title || slug.replace(/-/g, ' ');
+const description = mod?.frontmatter?.description;
 const Content = mod?.Content;
 ---
 
-<BaseLayout title={title}>
+<DocsLayout title={title} description={description} slug={slug}>
   {Content ? (
-    <article>
-      <Content />
-    </article>
+    <Content />
   ) : (
     <p>Contenuto non disponibile.</p>
   )}
-</BaseLayout>
+</DocsLayout>

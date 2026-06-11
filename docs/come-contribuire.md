@@ -1,6 +1,7 @@
 ---
 title: Come contribuire a DataCivicLab
 slug: come-contribuire
+description: Percorsi diversi per partecipare al Lab, anche senza saper programmare.
 ---
 # Come contribuire a DataCivicLab
 

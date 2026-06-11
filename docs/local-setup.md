@@ -1,6 +1,7 @@
 ---
 title: Setup locale minimo
 slug: local-setup
+description: Guida tecnica per contributori che vogliono eseguire la pipeline in locale.
 ---
 # Setup locale minimo
 
