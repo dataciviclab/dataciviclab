@@ -84,8 +84,8 @@ Guardare alle tonnellate per km² cambia la prospettiva. Le province con la più
 | Roma | Lazio | 110 | 437 |
 | Prato | Toscana | 7 | 423 |
 | Varese | Lombardia | 133 | 344 |
-| Genova | Liguria | 66 | 235 |
 | Padova | Veneto | 100 | 240 |
+| Genova | Liguria | 66 | 235 |
 | Venezia | Veneto | 42 | 213 |
 
 ![Top 15 province per ton/km²](figures/rifiuti-km2_top_province.png)
@@ -98,16 +98,18 @@ La classifica è dominata dall'area metropolitana di Napoli e Milano. Al contrar
 
 | Regione | Ton/km² | Regione | Ton/km² |
 |---------|---------|---------|---------|
-| Lombardia | 205,5 | Piemonte | 87,7 |
+| Lombardia | 205,5 | Friuli-Venezia Giulia | 80,7 |
 | Campania | 191,0 | Sicilia | 84,1 |
-| Lazio | 176,3 | Marche | 81,8 |
-| Liguria | 153,6 | Abruzzo | 54,8 |
+| Lazio | 176,3 | Abruzzo | 54,8 |
+| Liguria | 153,6 | Umbria | 54,2 |
 | Veneto | 138,9 | Calabria | 49,7 |
-| Emilia-Romagna | 130,3 | Sardegna | 30,4 |
-| Toscana | 94,3 | Basilicata | 18,7 |
-| Puglia | 92,7 | | |
+| Emilia-Romagna | 130,3 | Trentino-Alto Adige | 39,7 |
+| Toscana | 94,3 | Sardegna | 30,2 |
+| Puglia | 92,7 | Molise | 25,0 |
+| Piemonte | 87,7 | Basilicata | 18,7 |
+| Marche | 81,8 | | |
 
-*Valle d'Aosta (774,9 ton/km²) e Molise (25,0) sono casi particolari rispettivamente per la dimensione ridotta e la bassa densità.*
+*Valle d'Aosta (774,9 ton/km²) è un caso particolare per la dimensione ridotta (solo il comune capoluogo).*
 
 ## 4. I comuni più densi: la pressione locale
 
