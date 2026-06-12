@@ -173,7 +173,11 @@ La domanda non è più "se" si fa la differenziata, ma **perché aree con analog
 
 ### Cross-dataset
 
-I codici ISTAT dei comuni sardi sono cambiati dopo la riforma provinciale (2016-2021). ISPRA usa i codici pre-riforma, ISTAT SITUAS 2026 i nuovi. Per la Sardegna il join usa il nome normalizzato (caratteri non-ASCII rimossi): 377/377 comuni matchati. Per il resto d'Italia il join è sul codice ISTAT a 6 cifre. 3 comuni non hanno corrispondenza perché soppressi o fusi (Lirio PV, Castegnero VI, Nanto VI). Copertura complessiva: **99,96%**.
+I codici ISTAT dei comuni sardi sono cambiati dopo la riforma provinciale (2016-2021). ISPRA usa i codici pre-riforma, ISTAT SITUAS 2026 i nuovi. Per la Sardegna il join usa il nome normalizzato (caratteri non-ASCII rimossi) con vincolo regionale: **377/377 comuni matchati**, 0 duplicati.
+
+Per il resto d'Italia il join primario è sul codice ISTAT a 6 cifre. Per i comuni con codice cambiato tra le due versioni (es. Sovizzo VI: 024103 → 024128) si usa un fallback per nome normalizzato + provincia.
+
+**3 comuni** non hanno corrispondenza perché soppressi o fusi prima del 2026: Lirio (PV), Castegnero (VI), Nanto (VI). Copertura complessiva: **99,96%**.
 
 ### Limiti
 
