@@ -11,13 +11,13 @@ dataset_slug: terna_electricity_by_source
 
 # Terna mix elettrico 2015-2024 — le rinnovabili salgono dal 32% al 44%
 
-**In 10 anni la quota di elettricità da fonti rinnovabili in Italia è passata dal 32,1% al 43,9%. Il termoelettrico ha perso 40.000 GWh (-21%), il fotovoltaico è quasi raddoppiato (+57%) e l'eolico è cresciuto del 50%. La produzione totale scende da 283 a 271 TWh (-4,3%).**
+**In 10 anni la quota di elettricità da fonti rinnovabili in Italia è passata dal 32,1% al 43,8%. Il termoelettrico ha perso 40.000 GWh (-21%), il fotovoltaico è quasi raddoppiato (+57%) e l'eolico è cresciuto del 50%. La produzione totale scende da 283 a 271 TWh (-4,3%).**
 
 Tra il 2015 e il 2024 il mix elettrico italiano è cambiato in modo strutturale e misurabile. Il termoelettrico — che nel 2015 valeva il 68% della produzione — scende al 56%. Il fotovoltaico raddoppia la sua produzione. L'idroelettrico oscilla violentemente per via del clima, ma resta la seconda fonte rinnovabile per volume.
 
 > Produzione netta 2024: **271 TWh** (era 283 TWh nel 2015)
-> Quota rinnovabili: **43,9%** (era 32,1%, **+11,8 punti**)
-> Termoelettrico in calo: **-40.000 GWh** (-21%) 
+> Quota rinnovabili: **43,8%** (era 32,1%, **+11,7 punti**)
+> Termoelettrico in calo: **-40.000 GWh** (-21%)
 > Fotovoltaico: **+13.051 GWh** (+57%)
 > Eolico: **+7.478 GWh** (+50%)
 
@@ -35,9 +35,9 @@ Tra il 2015 e il 2024 il mix elettrico italiano è cambiato in modo strutturale 
 | 2021 | 189.711 | 47.478 | 25.039 | 20.927 | 5.914 | **289.070** | *99.358* | *34,4%* |
 | 2022 | 199.210 | 30.291 | 28.121 | 20.494 | 5.837 | **283.953** | *84.743* | *29,8%* |
 | 2023 | 162.588 | 42.068 | 30.711 | 23.640 | 5.692 | **264.708** | *102.119* | *38,6%* |
-| 2024 | 152.080 | 54.757 | 35.993 | 22.322 | 5.675 | **270.963** | *118.883* | *43,9%* |
+| 2024 | 152.080 | 54.757 | 35.993 | 22.322 | 5.675 | **270.963** | *118.747* | *43,8%* |
 
-*Produzione netta in GWh. Le rinnovabili includono idrico, fotovoltaico, eolico, geotermoelettrico e accumulo stand alone (dal 2023). 2017 escluso per anomalie nei dati (vedi caveat).*
+*Produzione netta in GWh. Le rinnovabili includono idrico, fotovoltaico, eolico e geotermoelettrico. Accumulo Stand Alone (batterie) è escluso perché non è una fonte di produzione. 2017 escluso per anomalie nei dati (vedi caveat).*
 
 ![Trend della produzione elettrica per fonte 2015-2024](figures/terna_trend_2015_2024.png)
 *Produzione netta annua per fonte (TWh). Il termoelettrico scende strutturalmente, il fotovoltaico cresce in modo costante. L'idrico è la variabile climatica dominante. I punti semitrasparenti sul 2017 mostrano i valori anomali, esclusi dal trend.*
@@ -66,7 +66,7 @@ L'eolico sale da **14.844 a 22.322 GWh** (+50%), con una crescita costante (~750
 
 ### 2.5 La produzione totale cala
 
-La produzione netta totale scende da **283 a 271 TWh** (-4,3%). In un paese con PIL in crescita, significa che efficienza energetica e generazione distribuita stanno riducendo il prelievo dalla rete.
+La produzione netta totale scende da **283 a 271 TWh** (-4,3%). In un paese con PIL in crescita, è un segnale che efficienza energetica e generazione distribuita potrebbero stare riducendo il prelievo dalla rete — ma servono dati su domanda e autoconsumo per confermarlo.
 
 ![Mix elettrico 2015 vs 2024](figures/terna_mix_2015_2024.png)
 *Confronto della composizione del mix: 2015 (32% rinnovabili) vs 2024 (44%). Il termoelettrico perde 12 punti, fotovoltaico ed eolico raddoppiano il loro peso.*
@@ -85,7 +85,7 @@ La produzione netta totale scende da **283 a 271 TWh** (-4,3%). In un paese con 
 | 2021 | 189.711 | 99.358 | — | 34,4% |
 | 2022 | 199.210 | 84.743 | — | 29,8% |
 | 2023 | 162.588 | 102.119 | 8 | 38,6% |
-| 2024 | 152.080 | 118.747 | 136 | 43,9% |
+| 2024 | 152.080 | 118.747 | 136 | 43,8% |
 
 ¹ Accumulo Stand Alone (batterie). Presente dal 2023, marginale ma in rapida crescita.
 
@@ -96,12 +96,12 @@ La produzione netta totale scende da **283 a 271 TWh** (-4,3%). In un paese con 
 
 ## Cosa abbiamo imparato
 
-1. **Le rinnovabili guadagnano 11,8 punti in 10 anni**: dal 32,1% al 43,9%.
+1. **Le rinnovabili guadagnano 11,7 punti in 10 anni**: dal 32,1% al 43,8%.
 2. **Il termoelettrico cala del 21%** (-40.000 GWh), ma resta al 56% del mix.
 3. **Il fotovoltaico è l'unica fonte in crescita costante**: +57%, con accelerazione netta post-2021.
 4. **L'idrico oscilla di 24.466 GWh** tra anno secco e anno piovoso — più dell'intero eolico.
 5. **L'eolico cresce del 50%** ma senza l'accelerazione del fotovoltaico.
-6. **La produzione totale cala del 4,3%**: efficienza e distribuzione riducono il prelievo.
+6. **La produzione totale cala del 4,3%**: possibile effetto di efficienza energetica e generazione distribuita, da confermare con dati su domanda.
 
 ### La domanda che resta
 
