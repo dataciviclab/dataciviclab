@@ -34,7 +34,7 @@ Tra il 2015 e il 2024 il mix elettrico italiano è cambiato in modo strutturale 
 | 2020 | 181.307 | 49.495 | 24.942 | 18.762 | 6.026 | **280.531** | *99.225* | *35,4%* |
 | 2021 | 189.711 | 47.478 | 25.039 | 20.927 | 5.914 | **289.070** | *99.358* | *34,4%* |
 | 2022 | 199.210 | 30.291 | 28.121 | 20.494 | 5.837 | **283.953** | *84.743* | *29,8%* |
-| 2023 | 162.588 | 42.068 | 30.711 | 23.640 | 5.692 | **264.708** | *102.119* | *38,6%* |
+| 2023 | 162.588 | 42.068 | 30.711 | 23.640 | 5.692 | **264.708** | *102.111* | *38,6%* |
 | 2024 | 152.080 | 54.757 | 35.993 | 22.322 | 5.675 | **270.963** | *118.747* | *43,8%* |
 
 *Produzione netta in GWh. Le rinnovabili includono idrico, fotovoltaico, eolico e geotermoelettrico. Accumulo Stand Alone (batterie) è escluso perché non è una fonte di produzione. 2017 escluso per anomalie nei dati (vedi caveat).*
@@ -84,7 +84,7 @@ La produzione netta totale scende da **283 a 271 TWh** (-4,3%). In un paese con 
 | 2020 | 181.307 | 99.225 | — | 35,4% |
 | 2021 | 189.711 | 99.358 | — | 34,4% |
 | 2022 | 199.210 | 84.743 | — | 29,8% |
-| 2023 | 162.588 | 102.119 | 8 | 38,6% |
+| 2023 | 162.588 | 102.111 | 8 | 38,6% |
 | 2024 | 152.080 | 118.747 | 136 | 43,8% |
 
 ¹ Accumulo Stand Alone (batterie). Presente dal 2023, marginale ma in rapida crescita.
