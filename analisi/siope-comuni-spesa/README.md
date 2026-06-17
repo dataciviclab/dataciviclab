@@ -1,7 +1,7 @@
 ---
 title: "Dove vanno i soldi dei comuni italiani?"
 description: "Analisi della spesa dei comuni italiani dal 2021 al 2025: trend, composizione per categoria e differenze territoriali."
-topics: [siope, finanza-pubblica, comuni, spesa-pubblica]
+topics: siope, finanza-pubblica, comuni, spesa-pubblica
 status: active
 dataset_slug: siope_uscite_comuni
 ---
