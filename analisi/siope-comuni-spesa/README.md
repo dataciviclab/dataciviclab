@@ -8,13 +8,13 @@ dataset_slug: siope_uscite_comuni
 
 # Dove vanno i soldi dei comuni italiani?
 
-**Nel 2024 i comuni italiani hanno speso circa 109 miliardi di euro.** La voce più pesante è l'acquisto di beni e servizi (36 miliardi, di cui quasi 9 solo per la raccolta rifiuti), seguita dagli investimenti in contributi (19 miliardi) e dal personale (14 miliardi).
+**Nel 2024 i comuni italiani hanno speso circa 109,5 miliardi di euro.** La voce più pesante è l'acquisto di beni e servizi (36 miliardi, di cui quasi 9 solo per la raccolta rifiuti), seguita dalle anticipazioni contabili (19 miliardi) e dai contributi agli investimenti (19 miliardi). Il personale pesa per 13,9 miliardi.
 
 ---
 
 ## 1. Trend nazionale 2021-2025
 
-La spesa totale dei comuni è cresciuta da 95,6 miliardi nel 2021 a **109,5 miliardi nel 2024** (+14,5% in tre anni). Il 2025 mostra 114,2 miliardi, ma è un dato parziale (anno in corso).
+La spesa totale dei comuni è cresciuta da 95,6 miliardi nel 2021 a 109,5 miliardi nel 2024 (+14,5% in tre anni). Il 2025 mostra 114,2 miliardi, dato parziale (anno in corso).
 
 ![Trend spesa nazionale](figures/siope-comuni-spesa_trend_nazionale.png)
 
@@ -26,11 +26,11 @@ La spesa totale dei comuni è cresciuta da 95,6 miliardi nel 2021 a **109,5 mili
 | 2024 | 109,5 |
 | 2025 | 114,2* |
 
-*2025: dato parziale (anno in corso).
+*2025: dato parziale.
 
 ## 2. Dove vanno i soldi?
 
-La componente più grande è **l'acquisto di beni e servizi** (36 mld nel 2024, il 33% del totale), seguita dalle **anticipazioni e partite di giro** (19 mld) e dai **contributi agli investimenti** (19 mld). Il personale pesa per 13,9 miliardi (13%).
+La componente più grande è l'**acquisto di beni e servizi** (36,0 mld nel 2024, il 33% del totale), seguita dalle **anticipazioni e partite di giro** (19,0 mld) e dai **contributi agli investimenti** (19,1 mld). Il **personale** pesa per 13,9 miliardi (13%).
 
 ![Composizione per categoria](figures/siope-comuni-spesa_composizione_categorie.png)
 
@@ -43,18 +43,21 @@ Le voci di spesa più consistenti nel 2024:
 | Split payment IVA | Anticipazioni | 4,7 |
 | Infrastrutture stradali | Contributi investimenti | 4,2 |
 | Utilizzo incassi vincolati (art. 195 TUEL) | Anticipazioni | 4,1 |
+| Altri servizi diversi n.a.c. | Acquisto beni e servizi | 3,4 |
+| Fabbricati ad uso scolastico | Contributi investimenti | 3,0 |
+| Contributi obbligatori per il personale | Personale | 2,9 |
 
 ![Top voci di spesa](figures/siope-comuni-spesa_top_voci.png)
 
 ## 3. Dove si spende di più?
 
-La **Lombardia** guida la spesa comunale con 16,5 miliardi, seguita da Lazio (12 mld), Sicilia (9,5 mld) e Campania (9,4 mld). La classifica rispecchia in gran parte la popolazione, ma non solo.
+La **Lombardia** guida la spesa comunale con 16,5 miliardi, seguita da Lazio (12,0), Sicilia (9,5), Campania (9,4), Emilia-Romagna (7,5) e Piemonte (7,1).
 
 ![Spesa per regione](figures/siope-comuni-spesa_spesa_regioni.png)
 
 ## 4. Il peso del personale
 
-L'incidenza della spesa per personale sul totale varia dal **14,6% in Trentino** all'**8,7% in Abruzzo**. La media nazionale è dell'11,9%.
+L'incidenza della spesa per personale varia dal **14,6% in Trentino** all'**8,7% in Abruzzo**. Media nazionale: 12,0%.
 
 ![Incidenza personale](figures/siope-comuni-spesa_incidenza_personale.png)
 
@@ -67,7 +70,7 @@ L'incidenza della spesa per personale sul totale varia dal **14,6% in Trentino**
 1. **La spesa dei comuni cresce** — da 95,6 a 109,5 miliardi in tre anni (+14,5%).
 2. **Beni e servizi è la voce regina** — 36 miliardi, di cui 8,8 solo per la raccolta rifiuti.
 3. **Il personale pesa il 12%** della spesa totale, con differenze territoriali marcate (dal 9% in Abruzzo al 15% in Trentino).
-4. **Gli investimenti crescono** — i contributi per investimenti passano da 11 a 19 miliardi (+73% tra 2021 e 2024).
+4. **Gli investimenti crescono** — i contributi per investimenti passano da 11,2 a 19,1 miliardi (+71% tra 2021 e 2024).
 
 ### E allora?
 
@@ -78,15 +81,14 @@ La crescita della spesa è trainata dagli investimenti (+8 miliardi in tre anni,
 ## Dataset
 
 - **Fonte**: SIOPE — Sistema Informativo sulle Operazioni degli Enti Pubblici (Ragioneria Generale dello Stato)
-- **Dataset**: `siope_uscite_comuni` (2021-2025) — spese dei comuni italiani
-- **Copertura**: 7.910 comuni, 20 regioni
 - **Accesso**: `https://storage.googleapis.com/dataciviclab-clean/siope/siope_uscite_comuni/{anno}/siope_uscite_comuni_{anno}_clean.parquet`
+- **Copertura**: 7.910 comuni, 20 regioni, 5 anni (2021-2025)
 
 ### Limiti
 
-- Il 2025 è un anno parziale (dati disponibili fino alla data di estrazione)
-- I dati SIOPE registrano gli impegni di spesa, non i pagamenti effettivi
-- Le "Anticipazioni" includono partite di giro contabili (split payment, incassi vincolati) che non rappresentano spesa reale
+- Il 2025 è un anno parziale
+- I dati SIOPE registrano impegni di spesa, non pagamenti effettivi
+- Le "Anticipazioni" includono partite di giro contabili (split payment, incassi vincolati) che non sono spesa reale
 
 ---
 
@@ -96,4 +98,4 @@ La crescita della spesa è trainata dagli investimenti (+8 miliardi in tre anni,
 
 ## Contratto tecnico
 
-I dati sono estratti dal progetto [open-siope](https://github.com/dataciviclab/open-siope), che pubblica i dati SIOPE puliti su GCS. Il dataset non è ancora nel catalogo clean di dataset-incubator ma è accessibile pubblicamente.
+I dati sono estratti dal progetto [open-siope](https://github.com/dataciviclab/open-siope), che pubblica i dati SIOPE puliti su GCS.
