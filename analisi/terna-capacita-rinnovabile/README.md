@@ -36,7 +36,7 @@ dataset_slug: terna_capacita_rinnovabile
 | 2023 | 30.319 | 19.274 | 12.336 | 4.079 | 817 | **66.825** |
 | 2024 | 37.002 | 19.637 | 12.990 | 4.062 | 817 | **74.508** |
 
-*Capacità lorda installata in MW. Fonte: Terna S.p.A.*
+*Capacità lorda installata in MW. Fonte: Terna S.p.A. Il 2017 mostra oscillazioni anomale (FV +2.657 MW, poi -1.832 MW l'anno dopo) — possibile discontinuità metodologica (vedi caveat).*
 
 ![Trend capacità rinnovabile per fonte 2015-2024](figures/terna_capacita_trend.png)
 *Capacità installata lorda per fonte (MW). Il fotovoltaico domina la crescita, l'idrico è stabile, l'eolico cresce moderatamente.*
@@ -54,7 +54,7 @@ La storia più importante è l'accelerazione del fotovoltaico dopo il 2021:
 
 **Fattore di accelerazione: 8×.**
 
-Questa accelerazione coincide con il recepimento della direttiva RED II (D.Lgs 199/2021) e con l'effetto combinato di incentivi (Superbonus, DM FER) e calo del costo dei pannelli. La capacità installata nei 3 anni post-2021 è quasi 4 volte quella dei 6 anni precedenti.
+Questa accelerazione coincide temporalmente con il recepimento della direttiva RED II (D.Lgs 199/2021). Altri fattori che possono aver contribuito: gli incentivi (Superbonus, DM FER) e il calo del costo dei pannelli. La capacità installata nei 3 anni post-2021 è quasi 4 volte quella dei 6 anni precedenti.
 
 Se il trend pre-2021 fosse continuato, oggi avremmo circa 25 GW di FV — 12 GW in meno della realtà.
 
@@ -112,7 +112,7 @@ L'eolico è concentrato al Sud: le prime 5 regioni (tutte meridionali) coprono l
 2. **Il fotovoltaico raddoppia** (+96%) e oggi vale metà della capacità rinnovabile nazionale.
 3. **L'accelerazione post-2021 è netta**: la crescita del FV è 8× più veloce rispetto al periodo 2015-2021.
 4. **L'eolico cresce ma senza accelerazione**: +42% in 10 anni, ritmo costante.
-5. **Idrico, bioenergie e geotermico sono stabili**: non c'è nuovo potenziale significativo.
+5. **Idrico, bioenergie e geotermico sono stabili**: la capacità installata non mostra aggiunte significative nel decennio.
 
 ### Perché è importante
 
@@ -131,7 +131,7 @@ Questi dati sulla capacità installata sono il **denominatore giusto** per legge
 
 - I dati di capacità lorda non distinguono tra impianti nuovi e repowering
 - Non è incluso l'accumulo a batterie (la capacità di accumulo è tracciata separatamente da Terna)
-- I dati 2017 sono regolari per la capacità (a differenza del dataset di produzione)
+- **2017 sospetto**: la capacità FV segna +2.657 MW sul 2016 e -1.832 MW sul 2018 — oscillazione anomala per installazioni. Possibile discontinuità metodologica Terna. I calcoli di media annua escludono il 2017.
 
 ---
 
