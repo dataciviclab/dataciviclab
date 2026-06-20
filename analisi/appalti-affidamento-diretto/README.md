@@ -8,7 +8,7 @@ dataset_slug: anac_bandi_gara
 
 # 81% affidamento diretto — come spende la PA italiana
 
-**L'affidamento diretto è la procedura più usata nei bandi della Pubblica Amministrazione: 8 lotti su 10 vengono pubblicati con affidamento diretto. Ma in valore la situazione è più bilanciata: gli affidamenti diretti coprono circa la metà della spesa totale. Le grandi gare si seguono con procedure aperte, le piccole con affidamento diretto.**
+**L'affidamento diretto è la procedura più usata nei bandi della Pubblica Amministrazione: 8 lotti su 10 vengono pubblicati con affidamento diretto. Ma in valore la situazione è più bilanciata: gli affidamenti diretti coprono circa la metà della spesa totale. Le grandi gare si svolgono con procedure aperte, le piccole con affidamento diretto.**
 
 > **3,36 milioni** di lotti analizzati (2023-2025), per un importo complessivo di **1.733 miliardi di euro**.
 
@@ -34,8 +34,8 @@ La fotografia è netta: **l'affidamento diretto rappresenta oltre l'80% dei lott
 
 ### Cosa significa
 
-- **Affidamento diretto**: 81% dei lotti, circa il 47% del valore. Sono gare di piccolo importo (media €200.000), spesso sotto soglia. Nel 2023 erano il 69%, nel 2024-2025 si attestano all'84%.
-- **Procedura aperta**: solo il 5% dei lotti, ma quasi il 30% del valore. Le gare europee e i grandi appalti.
+- **Affidamento diretto**: 81% dei lotti, circa il 47% del valore. Sono gare di piccolo importo (media €300.000), spesso sotto soglia. Nel 2023 erano il 69%, nel 2024-2025 si attestano all'84%.
+- **Procedura aperta**: solo il 6% dei lotti, ma quasi il 30% del valore. Le gare europee e i grandi appalti.
 - **Altre procedure**: negoziate, ristrette, in house — completano il quadro.
 
 ### Trend 2023-2025
@@ -48,7 +48,7 @@ La percentuale di affidamenti diretti è **cresciuta significativamente**: dal 6
 
 ![Distribuzione territoriale](figures/appalti_distribuzione_territoriale.png)
 
-La **Sezione Centrale ANAC (Consip e centrali di committenza)** gestisce il 30% della spesa totale — quasi 520 miliardi in 3 anni. Seguono Lombardia, Campania, Sicilia e Lazio.
+La **Sezione Centrale ANAC (Consip e centrali di committenza)** gestisce il 37% della spesa totale — circa 640 miliardi in 3 anni. Seguono Lombardia, Campania, Sicilia e Lazio.
 
 Le regioni del Nord-Ovest (Lombardia, Piemonte, Liguria, Valle d'Aosta) totalizzano circa 110 miliardi, il Sud e le Isole (Campania, Sicilia, Puglia, Calabria, Sardegna, Basilicata, Molise) circa 120 miliardi.
 
