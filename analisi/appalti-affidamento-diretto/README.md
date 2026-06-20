@@ -1,11 +1,7 @@
 ---
 title: "81% affidamento diretto — come spende la PA italiana"
 description: "Analisi delle procedure di scelta del contraente negli appalti pubblici italiani: 3 anni di bandi ANAC (2023-2025), oltre 3,36 milioni di lotti, 1.733 miliardi di euro."
-topics:
-  - appalti pubblici
-  - affidamento diretto
-  - trasparenza
-  - spesa pubblica
+topics: appalti-pubblici, affidamento-diretto, trasparenza, spesa-pubblica
 status: active
 dataset_slug: anac_bandi_gara
 ---
