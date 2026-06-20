@@ -8,7 +8,7 @@ dataset_slug: anac_bandi_gara
 
 # 81% affidamento diretto — come spende la PA italiana
 
-**L'affidamento diretto è la procedura più usata dalla Pubblica Amministrazione: 8 lotti su 10 vengono assegnati senza gara. Ma in valore la situazione è più bilanciata: gli affidamenti diretti coprono circa la metà della spesa totale. Le grandi gare si fanno con procedure aperte, le piccole con affidamento diretto.**
+**L'affidamento diretto è la procedura più usata nei bandi della Pubblica Amministrazione: 8 lotti su 10 vengono pubblicati con affidamento diretto. Ma in valore la situazione è più bilanciata: gli affidamenti diretti coprono circa la metà della spesa totale. Le grandi gare si seguono con procedure aperte, le piccole con affidamento diretto.**
 
 > **3,36 milioni** di lotti analizzati (2023-2025), per un importo complessivo di **1.733 miliardi di euro**.
 
@@ -56,23 +56,23 @@ Le regioni del Nord-Ovest (Lombardia, Piemonte, Liguria, Valle d'Aosta) totalizz
 
 | Categoria | Lotti | Importo (mld €) | Medio (k€) |
 |-----------|-------|-----------------|------------|
-| FORNITURE | 1,9 M | 787 | 405 |
-| SERVIZI | 1,9 M | 743 | 382 |
-| LAVORI | 0,5 M | 199 | 408 |
+| FORNITURE | 1,45 M | 781 | 538 |
+| SERVIZI | 1,48 M | 648 | 437 |
+| LAVORI | 0,43 M | 304 | 715 |
 
-Forniture e Servizi assorbono il 90% della spesa. I Lavori pubblici, pur con meno lotti, hanno importi medi più alti.
+Forniture e Servizi assorbono l'82% della spesa. I Lavori pubblici, pur con meno lotti, hanno gli importi medi più alti (715 k€).
 
 ---
 
-## 4. PNRR: 300.000 lotti per 155 miliardi
+## 4. PNRR: 301.000 lotti per 155 miliardi
 
-I bandi con flag PNRR rappresentano il **9% dei lotti** e il **9% del valore totale** nel triennio. La loro gestione è fortemente centralizzata: il 56% del valore PNRR passa dalla Sezione Centrale (Consip e centrali).
+I bandi con flag PNRR rappresentano il **9% dei lotti** e il **9% del valore totale** nel triennio. La loro gestione è meno centralizzata di quanto ci si aspetterebbe: solo il 48% passa dalla Sezione Centrale (Consip e centrali).
 
 | Area | % PNRR |
 |------|--------|
-| Centrale (Consip) | 56,5% |
-| Lombardia | 13,6% |
-| Altre regioni | 29,9% |
+| Centrale (Consip) | 48% |
+| Altre regioni | 45% |
+| Lombardia | 6% |
 
 ---
 
@@ -86,7 +86,7 @@ Ciononostante, gli appalti con urgenza dichiarata coprono una fetta significativ
 
 ## Domanda civica
 
-Perché 8 appalti su 10 vengono affidati direttamente, senza gara? La nuova soglia del Codice Appalti 2023 (D.Lgs. 36/2023) ha ampliato il perimetro dell'affidamento diretto: è una semplificazione efficace o una rinuncia alla concorrenza? I dati mostrano un balzo dal 69% all'84% in soli due anni.
+Perché 8 bandi su 10 vengono pubblicati con affidamento diretto, senza gara? La nuova soglia del Codice Appalti 2023 (D.Lgs. 36/2023) ha ampliato il perimetro dell'affidamento diretto: è una semplificazione efficace o una rinuncia alla concorrenza? I dati mostrano un balzo dal 69% all'84% in soli due anni.
 
 ---
 
