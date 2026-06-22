@@ -25,25 +25,19 @@ REPOS_CORE=(
   "dataciviclab/dataset-incubator"
   "dataciviclab/source-observatory"
   "dataciviclab/lab-connectors"
-  "dataciviclab/agent-context-builder"
   "dataciviclab/data-explorer"
 )
 
 REPOS_OPTIONAL=(
+  "dataciviclab/agent-context-builder"
   "dataciviclab/open-siope"
   "dataciviclab/eurostat"
-  "dataciviclab/italia-corpus"
-  "dataciviclab/senato-akn"
   "dataciviclab/lab-dashboard"
-  "dataciviclab/progetto-pilota"
-  "dataciviclab/openbdap-saldi-storico-stato"
 )
 
-REPOS_PRIVATE=(
-  "dataciviclab/lab-ops"
-  "dataciviclab/data-advocacy"
-  "dataciviclab/lab-ask"
-)
+# Nota: italia-corpus (1.6GB), senato-akn, progetto-pilota e openbdap-saldi-storico-stato
+# non sono inclusi nello script. Sono repo specialistici o preistorici.
+# Se servono: git clone https://github.com/dataciviclab/{repo}.git
 
 WORKSPACE_NAME="dataciviclab-workspace"
 # Default: HTTPS (funziona senza auth). Per SSH usa: GIT_BASE="git@github.com:"
@@ -112,6 +106,7 @@ clone_or_skip() {
     return 1
   fi
 }
+
 
 create_venv() {
   if [ -d ".venv" ]; then
@@ -245,8 +240,12 @@ print_contributor_steps() {
     fi
   done
   echo ""
-  log_warn "Repo privati non forkabili: ${REPOS_PRIVATE[*]}"
-  echo "  Contatta il team se ti servono."
+  log_warn "Repo non clonati (clona manualmente se servono):"
+  echo "    italia-corpus (1.6GB, corpus legislativo)"
+  echo "    senato-akn (atti parlamentari)"
+  echo "    progetto-pilota (primo esperimento Lab)"
+  echo "    openbdap-saldi-storico-stato (sperimentale)"
+  echo "    git clone https://github.com/dataciviclab/{repo}.git"
   echo ""
 }
 
@@ -285,7 +284,7 @@ workspace_mode() {
   done
 
   echo ""
-  echo -e "${CYAN}Optional...${NC}"
+  echo -e "${CYAN}📦 Repo opzionali...${NC}"
   for repo in "${REPOS_OPTIONAL[@]}"; do
     clone_or_skip "$repo" || true
   done
