@@ -56,7 +56,17 @@ Per il setup tecnico locale: [local-setup](/docs/local-setup/).
 
 ## Vuoi contribuire con codice
 
-Se sai già programmare e vuoi contribuire direttamente a un repo:
+Se sai già programmare e vuoi contribuire direttamente a un repo, hai due strade:
+
+### Setup rapido (consigliato)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash -s -- --contributor
+```
+
+Crea `dataciviclab-workspace/`, clona tutti i repo, installa le dipendenze e stampa i comandi per convertire i clone in fork.
+
+### Setup manuale
 
 1. **Forka** il repo su GitHub (tasto `Fork` in alto a destra)
 2. **Clona il tuo fork** in locale
@@ -64,7 +74,7 @@ Se sai già programmare e vuoi contribuire direttamente a un repo:
 4. **Lavora su un branch** — mai direttamente su `main`
 5. **Apri una PR** dal tuo fork al repo originale
 
-Per il setup tecnico dell'ambiente locale: [local-setup](/docs/local-setup/).
+Setup tecnico dettagliato: [local-setup](/docs/local-setup/).
 
 ## Come funzionano le decisioni
 

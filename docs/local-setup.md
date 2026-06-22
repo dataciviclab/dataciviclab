@@ -1,9 +1,9 @@
 ---
-title: Setup locale minimo
+title: Setup locale
 slug: local-setup
-description: Guida tecnica per contributori che vogliono eseguire la pipeline in locale.
+description: Guida tecnica per configurare l'ambiente di lavoro del Lab in un comando.
 ---
-# Setup locale minimo
+# Setup locale
 
 Guida per **contributori esterni** che vogliono lavorare sui dataset del Lab.
 
@@ -12,150 +12,109 @@ Se fai parte del core team, la guida interna è in `lab-ops/operations/local-set
 
 ## Requisiti
 
-- Git
-- Python 3.12+
+- **Git**
+- **Python 3.12+**
 - VS Code (opzionale, ma semplifica)
 
-## 1. Ottieni i repo
-
-### Contributore esterno (vuoi aprire PR)
-
-1. **Forka** ogni repo che ti serve dalla pagina GitHub del Lab.
-   - Esempio: https://github.com/dataciviclab/dataset-incubator → tasto `Fork`
-2. **Clona il tuo fork** (non l'originale):
-
-   ```bash
-   git clone git@github.com:{TUO_USERNAME}/dataset-incubator.git
-   git clone git@github.com:{TUO_USERNAME}/toolkit.git
-   ```
-
-3. **Aggiungi l'originale come upstream** per restare sincronizzato:
-
-   ```bash
-   git remote add upstream git@github.com:dataciviclab/dataset-incubator.git
-   ```
-
-4. Lavora sempre su un **branch**, mai su `main`.
-
-### Hai accesso in scrittura
-
-Clona direttamente i repo dell'organizzazione:
+## Setup rapido (consigliato)
 
 ```bash
-git clone git@github.com:dataciviclab/toolkit.git
-git clone git@github.com:dataciviclab/dataset-incubator.git
+curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash
 ```
 
-## 2. Struttura workspace
+Lo script:
 
-Metti tutti i repo nella stessa cartella. Esempio:
+1. Crea `dataciviclab-workspace/` nella directory corrente
+2. Clona tutti i repo del Lab (7 core + 7 opzionali)
+3. Crea `.venv` e installa tutte le dipendenze Python
+4. Copia `.env.example` in `.env`
+5. Genera `.mcp.json` con i server MCP del Lab
+
+Tempo stimato: 1-3 minuti (dipende dalla connessione).
+
+### Per contributori (fork)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash -s -- --contributor
+```
+
+Alla fine stampa i comandi per convertire ogni clone in fork con upstream.
+
+## Setup manuale
+
+Se preferisci non usare lo script o vuoi più controllo:
+
+### 1. Struttura workspace
+
+Metti tutti i repo nella stessa cartella:
 
 ```
 lavoro/
   dataciviclab/
-  dataset-incubator/
   toolkit/
-  lab-connectors/          # dipendenza condivisa (opzionale, vedi sotto)
-  source-observatory/      # scouting fonti (opzionale)
-  agent-context-builder/   # contesto agenti AI (opzionale)
-  data-explorer/           # frontend catalogo — Node.js (opzionale)
+  dataset-incubator/
+  lab-connectors/
+  source-observatory/
+  agent-context-builder/
+  data-explorer/
 ```
 
-Per partire bastano `dataciviclab`, `dataset-incubator` e `toolkit`.
+### 2. Contributore esterno (fork)
 
-## 3. Crea l'ambiente Python
+1. **Forka** ogni repo che ti serve dalla pagina GitHub del Lab (tasto `Fork`)
+2. **Clona il tuo fork**:
+   ```bash
+   git clone git@github.com:{TUO}/dataset-incubator.git
+   ```
+3. **Aggiungi l'upstream** per restare sincronizzato:
+   ```bash
+   git remote add upstream git@github.com:dataciviclab/dataset-incubator.git
+   ```
 
-Dalla root del workspace:
+### 3. Venv e dipendenze
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
-
-**Windows (PowerShell):**
-
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
-
-Verifica rapida:
-
-```bash
-python -c "import sys; print(sys.executable)"
-```
-
-Il path deve puntare alla `.venv` del workspace.
-
-## 4. Installa i pacchetti
-
-### Minimo indispensabile — toolkit (include lab-connectors)
-
-```bash
-pip install -e "toolkit[parquet,dev]"
-```
-
-`toolkit` installa automaticamente `lab-connectors` (versione pinnata via git).
-Per un primo run questo basta.
-
-Poi installa `dataset-incubator`:
-
-```bash
-pip install -e "dataset-incubator[dev]"
-```
-
-### Opzionale — editable locale per lab-connectors
-
-Se devi modificare `lab-connectors`, installalo in editable dalla copia locale
-(sovrascrive la versione pinnata installata da toolkit):
-
-```bash
 pip install -e lab-connectors
+pip install -e "toolkit[parquet,dev]"
+pip install --no-deps -e "dataset-incubator[dev]"
+pip install --no-deps -e "source-observatory[dev]"
+pip install -e agent-context-builder[mcp,dev]
+pip install --no-deps -e lab-connectors
 ```
 
-### Opzionale — altri repo
+### 4. Variabili d'ambiente
 
 ```bash
-pip install -e "source-observatory[dev]"
-pip install -e "agent-context-builder[dev]"
+cp dataciviclab/.env.example .env
+# Compila almeno GITHUB_TOKEN
 ```
 
-### Verifica minima
+### 5. Verifica
 
 ```bash
 toolkit --help
 ```
 
-Se non parte, la venv non è attiva o l'installazione non è completa.
+### 6. MCP (per AI agent)
 
-## 5. VS Code (opzionale)
+```bash
+cp dataciviclab/scripts/mcp-servers.json .mcp.json
+# Sostituisci __WORKSPACE__ con il path assoluto del workspace
+```
 
-Il workspace file `dataciviclab.code-workspace` si trova nella repo `dataciviclab`.
+## VS Code (opzionale)
 
-Se hai clonato `dataciviclab`, aprilo con:
+Apri il workspace file incluso in `dataciviclab`:
 
 ```bash
 code dataciviclab/dataciviclab.code-workspace
 ```
 
-Oppure da VS Code: `File → Apri workspace file`.
-
 Include impostazioni consigliate, estensioni e exclude per cache/venv.
 
-## 6. Variabili d'ambiente
-
-Copia il file `.env.example` (nella repo `dataciviclab`) in `.env` nella root del workspace:
-
-```bash
-cp dataciviclab/.env.example .env
-```
-
-Compila almeno `GITHUB_TOKEN` (serve per automazioni e MCP).
-Per eseguire un candidate in locale i token non servono.
-
-## 7. Primo run
-
-Una volta installato tutto, lancia un candidate per verificare che la pipeline funzioni:
+## Primo run
 
 ```bash
 toolkit run all --config dataset-incubator/candidates/irpef-comunale/dataset.yml
@@ -163,13 +122,7 @@ toolkit run all --config dataset-incubator/candidates/irpef-comunale/dataset.yml
 
 Se tutto è a posto vedrai l'output in `dataset-incubator/out/`.
 
-Cosa verifica questo comando:
-- che il toolkit parta e trovi le dipendenze
-- che i path tra repo siano coerenti
-- che la pipeline RAW → CLEAN → MART produca output reali
+## Prossimi passi
 
-## 8. Prossimi passi
-
-- Leggi [come-contribuire](/docs/come-contribuire/) per capire come partecipare
-- Cerca issue `good first issue` per un primo task
-- Quando sei pronto, apri una PR dal tuo fork
+- [come-contribuire](/docs/come-contribuire/) — percorsi per partecipare
+- Issue [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) — primo task
