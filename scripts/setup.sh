@@ -299,6 +299,12 @@ workspace_mode() {
   echo -e "${CYAN}🔌 MCP${NC}"
   generate_mcp_config "$PWD"
 
+  # Crea Makefile symlink se mancante
+  if [ ! -f "Makefile" ] && [ -f "dataciviclab/Makefile" ]; then
+    ln -s "dataciviclab/Makefile" "Makefile"
+    log_info "Makefile → symlink a dataciviclab/Makefile"
+  fi
+
   echo ""
   echo -e "${CYAN}✅ Verifica${NC}"
   if [ -d "toolkit" ]; then
@@ -357,45 +363,10 @@ fresh_mode() {
   echo -e "${CYAN}🔌 MCP${NC}"
   generate_mcp_config "$PWD"
 
-  # Scrivi Makefile se mancante
-  if [ ! -f "Makefile" ]; then
-    cat > Makefile << 'MAKEFILE'
-# DataCivicLab — Makefile del workspace
-#
-# Comandi:
-#   make info        — stato workspace
-#   make test        — esegui test
-#   make lint        — ruff check
-#   make bootstrap   — aggiorna workspace (clone mancanti, reinstalla)
-
-SHELL := /bin/bash
-.ONESHELL:
-.PHONY: bootstrap info test lint
-
-VENV := .venv
-PYTHON := $(VENV)/bin/python
-PIP := $(VENV)/bin/pip
-
-bootstrap:
-	bash dataciviclab/scripts/setup.sh --workspace
-
-info:
-	@echo "=============================================="
-	@echo "  DataCivicLab — Workspace Info"
-	@echo "=============================================="
-	@$(PYTHON) --version 2>/dev/null || echo "  .venv non attivo"
-	@echo ""
-	@echo "Repo presenti:"
-	@for d in */; do if [ -f "$$d/.git/HEAD" ]; then echo "  $$d"; fi; done
-
-test:
-	@echo "Usa: make test-toolkit | make test-di | ..."
-	@echo "Oppure: bash dataciviclab/scripts/setup.sh --workspace"
-
-lint:
-	@echo "Usa: cd {repo} && ruff check ."
-MAKEFILE
-    log_info "Makefile creato"
+  # Crea Makefile alla root del workspace (symlink a dataciviclab/Makefile)
+  if [ ! -f "Makefile" ] && [ -f "dataciviclab/Makefile" ]; then
+    ln -s "dataciviclab/Makefile" "Makefile"
+    log_info "Makefile → symlink a dataciviclab/Makefile"
   fi
 
   print_next_steps
