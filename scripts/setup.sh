@@ -299,14 +299,49 @@ workspace_mode() {
   echo -e "${CYAN}🔌 MCP${NC}"
   generate_mcp_config "$PWD"
 
-  # Crea symlink per comodità (Makefile, workspace VS Code)
+  # Symlink Makefile
   if [ ! -f "Makefile" ] && [ -f "dataciviclab/Makefile" ]; then
     ln -s "dataciviclab/Makefile" "Makefile"
     log_info "Makefile → symlink a dataciviclab/Makefile"
   fi
-  if [ ! -f "dataciviclab.code-workspace" ] && [ -f "dataciviclab/dataciviclab.code-workspace" ]; then
-    ln -s "dataciviclab/dataciviclab.code-workspace" "dataciviclab.code-workspace"
-    log_info "Workspace VS Code → symlink a dataciviclab/dataciviclab.code-workspace"
+  # Genera workspace VS Code per la root (non symlink: i path relativi differiscono)
+  if [ ! -f "dataciviclab.code-workspace" ]; then
+    cat > "dataciviclab.code-workspace" << 'WSEOF'
+{
+  "folders": [
+    { "name": "dataciviclab", "path": "dataciviclab" },
+    { "name": "toolkit", "path": "toolkit" },
+    { "name": "dataset-incubator", "path": "dataset-incubator" },
+    { "name": "source-observatory", "path": "source-observatory" },
+    { "name": "lab-connectors", "path": "lab-connectors" },
+    { "name": "data-explorer", "path": "data-explorer" },
+    { "name": "agent-context-builder", "path": "agent-context-builder" },
+    { "name": "open-siope", "path": "open-siope" },
+    { "name": "eurostat", "path": "eurostat" },
+    { "name": "lab-dashboard", "path": "lab-dashboard" }
+  ],
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "charliermarsh.ruff",
+      "ms-toolsai.jupyter",
+      "redhat.vscode-yaml",
+      "tamasfe.even-better-toml"
+    ]
+  },
+  "settings": {
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "ruff.nativeServer": "on",
+    "files.exclude": {
+      "**/.venv": true,
+      "**/__pycache__": true,
+      "**/.pytest_cache": true,
+      "**/.ruff_cache": true
+    }
+  }
+}
+WSEOF
+    log_info "dataciviclab.code-workspace generato per la root"
   fi
 
   echo ""
@@ -367,14 +402,49 @@ fresh_mode() {
   echo -e "${CYAN}🔌 MCP${NC}"
   generate_mcp_config "$PWD"
 
-  # Crea symlink per comodità (Makefile, workspace VS Code)
+  # Symlink Makefile
   if [ ! -f "Makefile" ] && [ -f "dataciviclab/Makefile" ]; then
     ln -s "dataciviclab/Makefile" "Makefile"
     log_info "Makefile → symlink a dataciviclab/Makefile"
   fi
-  if [ ! -f "dataciviclab.code-workspace" ] && [ -f "dataciviclab/dataciviclab.code-workspace" ]; then
-    ln -s "dataciviclab/dataciviclab.code-workspace" "dataciviclab.code-workspace"
-    log_info "Workspace VS Code → symlink a dataciviclab/dataciviclab.code-workspace"
+  # Genera workspace VS Code per la root (non symlink: i path relativi differiscono)
+  if [ ! -f "dataciviclab.code-workspace" ]; then
+    cat > "dataciviclab.code-workspace" << 'WSEOF'
+{
+  "folders": [
+    { "name": "dataciviclab", "path": "dataciviclab" },
+    { "name": "toolkit", "path": "toolkit" },
+    { "name": "dataset-incubator", "path": "dataset-incubator" },
+    { "name": "source-observatory", "path": "source-observatory" },
+    { "name": "lab-connectors", "path": "lab-connectors" },
+    { "name": "data-explorer", "path": "data-explorer" },
+    { "name": "agent-context-builder", "path": "agent-context-builder" },
+    { "name": "open-siope", "path": "open-siope" },
+    { "name": "eurostat", "path": "eurostat" },
+    { "name": "lab-dashboard", "path": "lab-dashboard" }
+  ],
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "charliermarsh.ruff",
+      "ms-toolsai.jupyter",
+      "redhat.vscode-yaml",
+      "tamasfe.even-better-toml"
+    ]
+  },
+  "settings": {
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "ruff.nativeServer": "on",
+    "files.exclude": {
+      "**/.venv": true,
+      "**/__pycache__": true,
+      "**/.pytest_cache": true,
+      "**/.ruff_cache": true
+    }
+  }
+}
+WSEOF
+    log_info "dataciviclab.code-workspace generato per la root"
   fi
 
   print_next_steps
