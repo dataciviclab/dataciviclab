@@ -31,6 +31,14 @@
     {
       "name": "lab-dashboard",
       "path": "../lab-dashboard"
+    },
+    {
+      "name": "open-siope",
+      "path": "../open-siope"
+    },
+    {
+      "name": "eurostat",
+      "path": "../eurostat"
     }
   ],
   "extensions": {

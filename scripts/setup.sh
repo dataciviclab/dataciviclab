@@ -299,10 +299,14 @@ workspace_mode() {
   echo -e "${CYAN}🔌 MCP${NC}"
   generate_mcp_config "$PWD"
 
-  # Crea Makefile symlink se mancante
+  # Crea symlink per comodità (Makefile, workspace VS Code)
   if [ ! -f "Makefile" ] && [ -f "dataciviclab/Makefile" ]; then
     ln -s "dataciviclab/Makefile" "Makefile"
     log_info "Makefile → symlink a dataciviclab/Makefile"
+  fi
+  if [ ! -f "dataciviclab.code-workspace" ] && [ -f "dataciviclab/dataciviclab.code-workspace" ]; then
+    ln -s "dataciviclab/dataciviclab.code-workspace" "dataciviclab.code-workspace"
+    log_info "Workspace VS Code → symlink a dataciviclab/dataciviclab.code-workspace"
   fi
 
   echo ""
@@ -363,10 +367,14 @@ fresh_mode() {
   echo -e "${CYAN}🔌 MCP${NC}"
   generate_mcp_config "$PWD"
 
-  # Crea Makefile alla root del workspace (symlink a dataciviclab/Makefile)
+  # Crea symlink per comodità (Makefile, workspace VS Code)
   if [ ! -f "Makefile" ] && [ -f "dataciviclab/Makefile" ]; then
     ln -s "dataciviclab/Makefile" "Makefile"
     log_info "Makefile → symlink a dataciviclab/Makefile"
+  fi
+  if [ ! -f "dataciviclab.code-workspace" ] && [ -f "dataciviclab/dataciviclab.code-workspace" ]; then
+    ln -s "dataciviclab/dataciviclab.code-workspace" "dataciviclab.code-workspace"
+    log_info "Workspace VS Code → symlink a dataciviclab/dataciviclab.code-workspace"
   fi
 
   print_next_steps
