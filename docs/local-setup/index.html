@@ -66,9 +66,11 @@ DataCivicLab
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">cp</span><span style="color:#9ECBFF"> dataciviclab/scripts/mcp-servers.json</span><span style="color:#9ECBFF"> .mcp.json</span></span>
 <span class="line"><span style="color:#6A737D"># Sostituisci __WORKSPACE__ con il path assoluto del workspace</span></span></code></pre>
 <h2 id="vs-code-opzionale">VS Code (opzionale)</h2>
-<p>Apri il workspace file incluso in <code>dataciviclab</code>:</p>
+<p>Dopo il setup rapido trovi un symlink alla root del workspace:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">code</span><span style="color:#9ECBFF"> dataciviclab.code-workspace</span></span></code></pre>
+<p>Include impostazioni consigliate, estensioni, exclude per cache/venv e path a tutti i repo del Lab.
+Se preferisci aprirlo dalla repo:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">code</span><span style="color:#9ECBFF"> dataciviclab/dataciviclab.code-workspace</span></span></code></pre>
-<p>Include impostazioni consigliate, estensioni e exclude per cache/venv.</p>
 <h2 id="primo-run">Primo run</h2>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">toolkit</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> all</span><span style="color:#79B8FF"> --config</span><span style="color:#9ECBFF"> dataset-incubator/candidates/irpef-comunale/dataset.yml</span></span></code></pre>
 <p>Se tutto è a posto vedrai l’output in <code>dataset-incubator/out/</code>.</p>
