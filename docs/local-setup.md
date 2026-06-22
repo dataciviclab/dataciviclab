@@ -106,18 +106,13 @@ cp dataciviclab/scripts/mcp-servers.json .mcp.json
 
 ## VS Code (opzionale)
 
-Dopo il setup rapido trovi un symlink alla root del workspace:
+Dopo il setup rapido trovi `dataciviclab.code-workspace` alla root del workspace:
 
 ```bash
 code dataciviclab.code-workspace
 ```
 
-Include impostazioni consigliate, estensioni, exclude per cache/venv e path a tutti i repo del Lab.
-Se preferisci aprirlo dalla repo:
-
-```bash
-code dataciviclab/dataciviclab.code-workspace
-```
+Include impostazioni consigliate, estensioni e path a tutti i repo del Lab.
 
 ## Primo run
 
