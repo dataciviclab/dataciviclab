@@ -10,11 +10,13 @@ SHELL := /bin/bash
 .ONESHELL:
 .PHONY: bootstrap info test lint
 
-VENV := .venv
+# Root della repo dataciviclab (funziona anche via symlink dal workspace)
+ROOT_DIR := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
+VENV := $(ROOT_DIR).venv
 PYTHON := $(VENV)/bin/python
 
 bootstrap:
-	bash scripts/setup.sh --workspace
+	bash $(ROOT_DIR)scripts/setup.sh --workspace
 
 info:
 	@echo "=============================================="
