@@ -46,7 +46,8 @@ REPOS_PRIVATE=(
 )
 
 WORKSPACE_NAME="dataciviclab-workspace"
-GIT_BASE="git@github.com:"
+# Default: HTTPS (funziona senza auth). Per SSH usa: GIT_BASE="git@github.com:"
+GIT_BASE="https://github.com/"
 GH_BASE="https://github.com/"
 BRANCH="main"
 

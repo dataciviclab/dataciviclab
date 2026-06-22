@@ -7,14 +7,12 @@
     },
     "clean-query": {
       "description": "Query SQL read-only su dati clean",
-      "command": "__WORKSPACE__/.venv/bin/python",
-      "args": ["__WORKSPACE__/dataset-incubator/tools/clean-query-mcp/server.py"]
+      "command": "__WORKSPACE__/.venv/bin/clean-query-mcp"
     },
     "source-observatory": {
       "description": "Scouting fonti, probe URL, inventory",
-      "command": "__WORKSPACE__/.venv/bin/python",
-      "args": ["__WORKSPACE__/source-observatory/so_mcp/so_server.py"],
-      "cwd": "/tmp"
+      "command": "__WORKSPACE__/.venv/bin/source-observatory-mcp",
+      "timeout": 30000
     },
     "dataciviclab-context": {
       "description": "Bootstrap contesto, topic index, triage",
