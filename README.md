@@ -6,6 +6,16 @@ Nasce per chi vuole capire meglio il proprio territorio senza perdersi nel rumor
 
 🌐 **[dataciviclab.org](https://dataciviclab.org)** — sito del Lab con analisi, documenti e stato in tempo reale.
 
+### Setup rapido
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash
+```
+
+Crea `dataciviclab-workspace/`, clona tutti i repo, installa le dipendenze e configura gli MCP per gli agenti AI.
+
+Serve solo Git e Python 3.12+. Guida completa: [docs/local-setup.md](docs/local-setup.md).
+
 ## Come funziona
 
 | Step | Cosa succede | Dove |

@@ -93,5 +93,5 @@ Apri una issue in `dataciviclab` se il lavoro riguarda:
 - [docs/come-contribuire.md](docs/come-contribuire.md) — guida per nuovi contributor
 - [docs/dataset-project-flow.md](docs/dataset-project-flow.md) — flusso dalla domanda all'analisi
 - [docs/governance-model.md](docs/governance-model.md) — ruoli e decisioni
-- [docs/local-setup.md](docs/local-setup.md) — setup tecnico locale
+- [docs/local-setup.md](docs/local-setup.md) — setup tecnico locale (o `curl ... setup.sh | bash`)
 - [`.github`](https://github.com/dataciviclab/.github) — policy condivise
