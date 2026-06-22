@@ -39,12 +39,6 @@ REPOS_OPTIONAL=(
 # non sono inclusi nello script. Sono repo specialistici o preistorici.
 # Se servono: git clone https://github.com/dataciviclab/{repo}.git
 
-REPOS_PRIVATE=(
-  "dataciviclab/lab-ops"
-  "dataciviclab/data-advocacy"
-  "dataciviclab/lab-ask"
-)
-
 WORKSPACE_NAME="dataciviclab-workspace"
 # Default: HTTPS (funziona senza auth). Per SSH usa: GIT_BASE="git@github.com:"
 GIT_BASE="https://github.com/"
@@ -245,9 +239,6 @@ print_contributor_steps() {
       echo ""
     fi
   done
-  echo ""
-  log_warn "Repo privati non forkabili: ${REPOS_PRIVATE[*]}"
-  echo "  Contatta il team se ti servono."
   echo ""
   log_warn "Repo non clonati (clona manualmente se servono):"
   echo "    italia-corpus (1.6GB, corpus legislativo)"
