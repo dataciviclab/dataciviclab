@@ -1,0 +1,59 @@
+{
+  "mcpServers": {
+    "toolkit": {
+      "description": "Comandi CLI + diagnostica pipeline",
+      "command": "__WORKSPACE__/.venv/bin/python",
+      "args": ["-m", "toolkit.mcp.server"]
+    },
+    "clean-query": {
+      "description": "Query SQL read-only su dati clean",
+      "command": "__WORKSPACE__/.venv/bin/python",
+      "args": ["__WORKSPACE__/dataset-incubator/tools/clean-query-mcp/server.py"]
+    },
+    "source-observatory": {
+      "description": "Scouting fonti, probe URL, inventory",
+      "command": "__WORKSPACE__/.venv/bin/python",
+      "args": ["__WORKSPACE__/source-observatory/so_mcp/so_server.py"],
+      "cwd": "/tmp"
+    },
+    "dataciviclab-context": {
+      "description": "Bootstrap contesto, topic index, triage",
+      "command": "__WORKSPACE__/.venv/bin/agent-context-mcp",
+      "env": {
+        "ACB_ENV_FILE": "__WORKSPACE__/.env"
+      }
+    },
+    "github-discussions": {
+      "description": "Leggi e cerca discussioni GitHub",
+      "command": "__WORKSPACE__/.venv/bin/python",
+      "args": ["__WORKSPACE__/lab-connectors/mcp_servers/github-discussions/server.py"]
+    },
+    "github": {
+      "description": "API GitHub (issue, PR, repo)",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"]
+    },
+    "fetch": {
+      "description": "Scarica pagine web e API",
+      "command": "npx",
+      "args": ["-y", "mcp-fetch-server"]
+    },
+    "eurostat": {
+      "description": "Query dati Eurostat (NUTS2/NUTS3)",
+      "command": "__WORKSPACE__/.venv/bin/python",
+      "args": ["__WORKSPACE__/eurostat/eurostat-mcp/server.py"],
+      "disabled": true
+    },
+    "siope": {
+      "description": "Bilanci enti pubblici italiani",
+      "command": "__WORKSPACE__/.venv/bin/python",
+      "args": ["__WORKSPACE__/open-siope/mcp_server/server.py"],
+      "disabled": true
+    },
+    "italia-corpus": {
+      "description": "Ricerca legislazione italiana",
+      "command": "__WORKSPACE__/.venv/bin/italia-corpus-mcp",
+      "disabled": true
+    }
+  }
+}

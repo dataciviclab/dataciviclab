@@ -177,6 +177,26 @@ copy_env() {
   fi
 }
 
+generate_mcp_config() {
+  local ws="$1"
+  local mcp_file="$ws/.mcp.json"
+  local template="$ws/dataciviclab/scripts/mcp-servers.json"
+
+  if [ -f "$mcp_file" ]; then
+    log_info ".mcp.json già presente"
+    return 0
+  fi
+
+  if [ ! -f "$template" ]; then
+    log_warn "template mcp-servers.json non trovato, salto MCP"
+    return 1
+  fi
+
+  # Sostituisce __WORKSPACE__ con il path reale e scrive .mcp.json
+  sed "s|__WORKSPACE__|$ws|g" "$template" > "$mcp_file"
+  log_info ".mcp.json creato da mcp-servers.json"
+}
+
 print_next_steps() {
   echo ""
   echo -e "${GREEN}==============================================${NC}"
@@ -191,10 +211,14 @@ print_next_steps() {
   echo "  ${CYAN}2.${NC} Modifica .env con i tuoi token:"
   echo "     ${YELLOW}GITHUB_TOKEN${NC} è l'unico obbligatorio"
   echo ""
-  echo "  ${CYAN}3.${NC} Verifica lo stato:"
+  echo "  ${CYAN}3.${NC} Configurazione MCP (per AI agent):"
+  echo "     È stato generato .mcp.json con i server del Lab."
+  echo "     Per OpenCode: copia il contenuto in opencode.json → mcp"
+  echo ""
+  echo "  ${CYAN}4.${NC} Verifica lo stato:"
   echo "     make info"
   echo ""
-  echo "  ${CYAN}4.${NC} Prova una pipeline:"
+  echo "  ${CYAN}5.${NC} Prova una pipeline:"
   echo "     make test"
   echo ""
 }
@@ -272,6 +296,10 @@ workspace_mode() {
   copy_env
 
   echo ""
+  echo -e "${CYAN}🔌 MCP${NC}"
+  generate_mcp_config "$PWD"
+
+  echo ""
   echo -e "${CYAN}✅ Verifica${NC}"
   if [ -d "toolkit" ]; then
     # shellcheck disable=SC1091
@@ -324,6 +352,10 @@ fresh_mode() {
   create_venv
   install_packages
   copy_env
+
+  echo ""
+  echo -e "${CYAN}🔌 MCP${NC}"
+  generate_mcp_config "$PWD"
 
   # Scrivi Makefile se mancante
   if [ ! -f "Makefile" ]; then
