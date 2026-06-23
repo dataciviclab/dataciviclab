@@ -98,6 +98,7 @@ Il **42,7%** delle risorse va a 32 enti (0,06% degli ETS con importo). In cima a
 | Ente | Regione | Scelte | Importo |
 |------|---------|--------|---------|
 | Fondazione AIRC per la ricerca sul cancro ETS | Lombardia | 1.763.993 | €71,8 milioni |
+| Fondazione Piemontese per la Ricerca sul Cancro | Piemonte | 275.603 | €12,2 milioni |
 | Emergency ONG ONLUS | Lombardia | 283.836 | €10,6 milioni |
 | Fondazione Lega del Filo d'Oro ETS | Marche | 287.574 | €9,3 milioni |
 | Associazione Italiana contro le Leucemie AIL ONLUS | Lazio | 256.435 | €8,7 milioni |
@@ -116,7 +117,6 @@ Il **42,7%** delle risorse va a 32 enti (0,06% degli ETS con importo). In cima a
 | Istituto Oncologico Veneto IRCCS | Veneto | 67.191 | €3,3 milioni |
 | Centro di Riferimento Oncologico | Friuli V.G. | 67.148 | €3,0 milioni |
 | Fondazione Città della Speranza ONLUS | Veneto | 71.290 | €2,4 milioni |
-| Ospedale Pediatrico Bambino Gesù | Lazio | 42.013 | €2,2 milioni |
 
 La top 10 concentra da sola **€147,7 milioni** (28% del totale). AIRC domina con il 14% di tutto il 5x1000.
 
