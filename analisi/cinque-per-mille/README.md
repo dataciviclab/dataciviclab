@@ -89,7 +89,7 @@ La maggior parte degli enti del Terzo Settore riceve importi molto piccoli. Il 5
 | 500.000 — 1M € | 20 | 0,04% | €13,4 milioni | 3,2% |
 | Oltre 1M € | 32 | 0,06% | €181,1 milioni | 42,7% |
 
-Il **42,7%** delle risorse va a 32 enti (0,06% degli ETS con importo). In cima alla classifica troviamo grandi fondazioni e istituti di ricerca. Il dato precedente (>1M con 1.537 enti) includeva erroneamente gli enti senza importo.
+Il **42,7%** delle risorse va a 32 enti (0,06% degli ETS con importo). In cima alla classifica troviamo grandi fondazioni e istituti di ricerca.
 
 ![Piramide per fascia](figures/cinque-per-mille_fasce.png)
 
