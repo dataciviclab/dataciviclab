@@ -124,7 +124,7 @@ La top 10 concentra da sola **€147,7 milioni** (28% del totale). AIRC domina c
 
 ## 5. Categorie nascoste — il peso dei piccoli
 
-Mentre i grandi enti di ricerca e sanità dominano la classifica, la **base polverizzata** del terzo settore — associazioni e ODV che ricevono poche migliaia di euro — rappresenta il 90% degli enti ma solo il 21% delle risorse.
+Mentre i grandi enti di ricerca e sanità dominano la classifica, la **base polverizzata** del terzo settore — associazioni e ODV che ricevono poche migliaia di euro — rappresenta circa il 90% degli ETS con importo positivo ma solo il 21% delle risorse destinate agli ETS.
 
 Tra gli enti medio-piccoli (5.000-50.000 €) troviamo realtà locali diffuse su tutto il territorio:
 
