@@ -10,35 +10,36 @@ dataset_slug: ade_cinque_per_mille
 
 # 5x1000 — €521 milioni distribuiti: dove vanno e chi li riceve
 
-**Nel 2024, 90.611 enti hanno ricevuto €521,9 milioni dal 5x1000. L'81% va al Terzo Settore. Ma la distribuzione è fortemente concentrata: Milano da sola assorbe il 29% del totale, e i primi 10 enti prendono il 28% delle risorse.**
+**Nel 2024, 90.611 enti hanno ricevuto €521,9 milioni dal 5x1000, da 15,1 milioni di scelte dei contribuenti. L'81% delle risorse va al Terzo Settore. Ma la distribuzione è fortemente concentrata: Milano da sola assorbe il 29% del totale, e i primi 10 enti prendono il 28% delle risorse.**
 
-Ogni anno i contribuenti italiani possono destinare il 5x1000 della propria IRPEF a enti del Terzo Settore, ricerca scientifica, ricerca sanitaria, comuni, associazioni sportive, beni culturali e aree protette. Con oltre €520 milioni e 16,7 milioni di scelte, è uno dei più grandi flussi di denaro pubblico al terzo settore italiano.
+Ogni anno i contribuenti italiani possono destinare il 5x1000 della propria IRPEF a enti del Terzo Settore, ricerca scientifica, ricerca sanitaria, comuni, associazioni sportive, beni culturali e aree protette. Con oltre €520 milioni e 15,1 milioni di scelte, è uno dei più grandi flussi di denaro pubblico al terzo settore italiano.
 
 Questa analisi esplora i dati pubblicati dall'Agenzia delle Entrate: chi riceve, dove, in quali categorie e con quali concentrazioni.
 
-> **90.611 enti beneficiari** · **€521,9 milioni** · **16,7 milioni di scelte**  
+> **90.611 enti beneficiari** · **€521,9 milioni** · **15,1 milioni di scelte**  
 > **81% al Terzo Settore** · **Top 10 enti:** 28% del totale
 
 ---
 
 ## 1. La distribuzione per categoria
 
-Il 5x1000 non è un blocco unico: si articola in sette categorie di beneficiari. La stragrande maggioranza delle risorse va agli enti del Terzo Settore (ETS e ONLUS), che da soli assorbono l'81% del totale.
+Il 5x1000 si articola in categorie di beneficiari. La stragrande maggioranza delle risorse va agli enti del Terzo Settore (ETS e ONLUS): se si includono anche gli ETS che svolgono attività di ricerca, la quota sale all'81% del totale.
 
 | Categoria | Enti | Importo | % su totale |
 |-----------|------|---------|-------------|
-| ETS / ONLUS | 68.089 | €305,6 milioni | 58,6% |
+| ETS / ONLUS | 68.122 | €309,5 milioni | 59,3% |
 | ETS + Ricerca scientifica e sanitaria | 10 | €95,8 milioni | 18,3% |
-| Ricerca sanitaria (solo) | 79 | €34,8 milioni | 6,7% |
-| Ricerca scientifica + sanitaria (non ETS) | 14 | €20,5 milioni | 3,9% |
-| Sportive dilettantistiche | 13.633 | €18,3 milioni | 3,5% |
-| ETS + Ricerca scientifica (solo) | 53 | €17,6 milioni | 3,4% |
-| Comuni | 7.845 | €15,3 milioni | 2,9% |
-| Ricerca scientifica (solo) | 377 | €8,0 milioni | 1,5% |
+| Ricerca sanitaria | 79 | €34,8 milioni | 6,7% |
+| Ricerca scientifica e sanitaria | 14 | €20,5 milioni | 3,9% |
+| Sportive dilettantistiche | 13.826 | €18,3 milioni | 3,5% |
+| ETS + Ricerca scientifica | 57 | €17,7 milioni | 3,4% |
+| Comuni | 7.909 | €15,3 milioni | 2,9% |
+| Ricerca scientifica | 386 | €8,3 milioni | 1,6% |
+| ETS + Ricerca sanitaria | 4 | €0,9 milioni | 0,2% |
 | Beni culturali | 183 | €0,5 milioni | 0,1% |
 | Aree protette | 21 | €0,4 milioni | 0,1% |
 
-*Nota: un ente può appartenere a più categorie. AIRC, ad esempio, è ETS, ricerca scientifica e ricerca sanitaria.*
+*Gli enti sono classificati in base alla categoria prevalente. AIRC (€71,8M), ad esempio, è ETS con attività di ricerca scientifica e sanitaria e compare nella riga "ETS + Ricerca scientifica e sanitaria".*
 
 ![Distribuzione per categoria](figures/cinque-per-mille_categorie.png)
 
@@ -75,19 +76,20 @@ A livello provinciale, la concentrazione è ancora più estrema: la sola provinc
 
 ## 3. La piramide degli enti
 
-La maggior parte degli enti del Terzo Settore riceve importi molto piccoli. Quasi la metà prende meno di 10.000 euro.
+La maggior parte degli enti del Terzo Settore riceve importi molto piccoli. Il 54% degli enti ETS con importo positivo prende meno di 10.000 euro. Circa 15.000 enti (il 22%) risultano con importo zero (N/D), probabilmente perché non hanno raggiunto la soglia minima per l'erogazione.
 
-| Fascia | Enti ETS | % enti | Importo totale | % sul totale |
-|--------|----------|--------|---------------|-------------|
+| Fascia | Enti ETS | % enti con importo | Importo totale | % sul totale |
+|--------|----------|-------------------|---------------|-------------|
+| N/D (0 €) | 15.008 | — | €0 | 0% |
 | 0 — 1.000 € | 24.134 | 44,2% | €10,9 milioni | 2,6% |
 | 1.000 — 10.000 € | 24.694 | 45,2% | €79,9 milioni | 18,9% |
 | 10.000 — 50.000 € | 3.783 | 6,9% | €72,1 milioni | 17,0% |
 | 50.000 — 100.000 € | 300 | 0,5% | €20,8 milioni | 4,9% |
 | 100.000 — 500.000 € | 222 | 0,4% | €45,7 milioni | 10,8% |
 | 500.000 — 1M € | 20 | 0,04% | €13,4 milioni | 3,2% |
-| Oltre 1M € | 1.537 | 2,8% | €181,1 milioni | 42,7% |
+| Oltre 1M € | 32 | 0,06% | €181,1 milioni | 42,7% |
 
-Il **42,7%** delle risorse va al 2,8% degli enti. In cima alla classifica troviamo grandi fondazioni e istituti di ricerca.
+Il **42,7%** delle risorse va a 32 enti (0,06% degli ETS con importo). In cima alla classifica troviamo grandi fondazioni e istituti di ricerca. Il dato precedente (>1M con 1.537 enti) includeva erroneamente gli enti senza importo.
 
 ![Piramide per fascia](figures/cinque-per-mille_fasce.png)
 
@@ -140,12 +142,12 @@ Questi enti, spesso sconosciuti a livello nazionale, sono presidi sociali fondam
 
 ### I fatti
 
-1. **€521,9 milioni** distribuiti a 90.611 enti nel 2024, da 16,7 milioni di scelte.
-2. **L'81% va al Terzo Settore** (ETS/ONLUS), che rappresenta il 75% degli enti.
+1. **€521,9 milioni** distribuiti a 90.611 enti nel 2024, da 15,1 milioni di scelte.
+2. **L'81% va al Terzo Settore** (ETS/ONLUS + ETS con ricerca), che rappresenta il 75% degli enti.
 3. **Concentrazione geografica estrema**: Milano (€151,8M) vale più di tutto il Sud Italia.
-4. **Concentrazione per ente**: il 2,8% degli enti prende il 42,7% delle risorse; AIRC da sola il 14%.
-5. **Base polverizzata**: 48.828 enti (54%) ricevono meno di 10.000 € ciascuno.
-6. **Le associazioni sportive** sono 13.633 enti ma prendono solo il 3,5% (€18,3M).
+4. **Concentrazione per ente**: 32 enti sopra 1M€ prendono il 42,7% delle risorse; AIRC da sola il 14%.
+5. **Base polverizzata**: 48.828 enti ETS (71% con importo) ricevono meno di 10.000 € ciascuno; 15.008 enti risultano con importo zero.
+6. **Le associazioni sportive** sono 13.826 enti ma prendono solo il 3,5% (€18,3M).
 7. **I comuni** ricevono €15,3M — meno della metà di AIRC da sola.
 
 ### E allora?
