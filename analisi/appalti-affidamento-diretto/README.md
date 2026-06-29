@@ -8,9 +8,9 @@ dataset_slug: anac_bandi_gara
 
 # 10 anni di appalti pubblici: da 167 a 635 miliardi in un decennio
 
-**In 10 anni (2016-2025) la PA italiana ha pubblicato oltre 6 milioni di lotti di gara per un valore complessivo di 3.504 miliardi di euro. I lotti sono passati da 332.000 a 1,48 milioni all'anno (+4,4x), trainati dall'esplosione degli affidamenti diretti dopo il nuovo Codice Appalti del 2023.**
+**In 10 anni (2016-2025) la PA italiana ha pubblicato quasi 6 milioni di lotti di gara per un valore complessivo di 3.504 miliardi di euro. I lotti sono passati da 332.000 a 1,48 milioni all'anno (+4,4x), trainati dall'esplosione degli affidamenti diretti dopo il nuovo Codice Appalti del 2023.**
 
-> **6 milioni** di lotti · **3.504 miliardi di €** · **2016-2025** · **+4,4x lotti in 10 anni**
+> **5,99 milioni** di lotti · **3.504 miliardi di €** · **2016-2025** · **+4,4x lotti in 10 anni**
 
 ---
 
@@ -39,7 +39,7 @@ Il 2022 segna un picco nell'importo medio (867.000 €), probabilmente legato a 
 
 ## 2. L'affidamento diretto conquista il mercato
 
-La fotografia è netta: **l'affidamento diretto è passato dal 39% dei lotti nel 2016 all'84% nel 2025**. Il nuovo Codice Appalti (D.Lgs. 36/2023), che ha alzato la soglia per l'affidamento diretto a 215.000 € per servizi e forniture e 1 milione per lavori, ha prodotto un effetto immediato.
+La fotografia è netta: **l'affidamento diretto è passato dal 39% dei lotti nel 2016 all'84% nel 2025**. Il nuovo Codice Appalti (D.Lgs. 36/2023, art. 50) ha alzato la soglia per l'affidamento diretto a 140.000 € per servizi e forniture e 150.000 € per lavori, producendo un effetto immediato.
 
 ![Evoluzione procedure](figures/appalti_evoluzione_procedure.png)
 
@@ -58,7 +58,7 @@ Il 2024 è l'anno di svolta: per la prima volta l'affidamento diretto supera in 
 
 ## 3. Dove va la spesa — distribuzione territoriale
 
-La **Sezione Centrale ANAC (Consip e centrali di committenza)** gestisce il 30% della spesa nel 2025. Seguono Lombardia (12%), Campania (7%) e Sicilia (7%).
+La **Sezione Centrale ANAC (Consip e centrali di committenza)** gestisce il 30% della spesa nel 2025. Seguono Lombardia (12%), Campania (7%) e Sicilia (7%). Un 9% di importi risulta non classificato per sezione regionale.
 
 ![Distribuzione territoriale](figures/appalti_distribuzione_territoriale.png)
 
@@ -78,7 +78,7 @@ Forniture e Servizi assorbono l'87% della spesa. I Lavori pubblici, pur con meno
 
 ## 4. Urgenza: un'etichetta quasi scontata
 
-Nel 2025 il **68% dei lotti** ha il flag urgenza attivo, per un valore di 416 miliardi di euro. Questo dato va letto con cautela: nella maggior parte dei casi la motivazione è "NON APPLICABILE", segnalando che il flag è spesso compilato come default amministrativo più che come indicatore di reale urgenza.
+Nel 2025 il **68% dei lotti** ha il flag urgenza attivo, per un valore di 287 miliardi di euro. Questo dato va letto con cautela: nella maggior parte dei casi la motivazione è "NON APPLICABILE", segnalando che il flag è spesso compilato come default amministrativo più che come indicatore di reale urgenza.
 
 L'urgenza era marginale nel 2016 (1,4% dei lotti) ed è diventata prevalente dal 2024, suggerendo un cambiamento nella compilazione della scheda bando più che un'impennata di reali necessità urgenti.
 
@@ -88,11 +88,11 @@ L'urgenza era marginale nel 2016 (1,4% dei lotti) ed è diventata prevalente dal
 
 ### I fatti
 
-1. **I lotti di gara sono quadruplicati in 10 anni**: da 332.000 (2016) a 1,48 milioni (2025).
+1. **I lotti di gara sono quasi 6 milioni in 10 anni** e sono quadruplicati: da 332.000 (2016) a 1,48 milioni (2025).
 2. **L'affidamento diretto è la nuova normalità**: ha superato l'84% dei lotti nel 2024-2025 dopo il nuovo Codice Appalti.
 3. **La PA centrale gestisce il 30% della spesa totale**: il resto è frammentato tra regioni, con Lombardia (12%), Campania (7%) e Sicilia (7%) ai primi posti.
 4. **Il valore medio per lotto si è dimezzato**: da 867.000 € (2022) a 430.000 € (2025), segno di una frammentazione della spesa in tante micro-gare.
-5. **Il flag urgenza è ormai compilato nel 68% dei casi**, ma spesso senza reale motivazione: è più un'abitudine amministrativa che un indicatore affidabile.
+5. **Il flag urgenza è ormai compilato nel 68% dei casi** (287 mld), ma spesso senza reale motivazione: è più un'abitudine amministrativa che un indicatore affidabile.
 
 ### E allora?
 
