@@ -1,5 +1,5 @@
 ---
-title: "RNA — Aiuti di Stato: 470 miliardi alle imprese italiane in 9 anni"
+title: "RNA — Aiuti di Stato: 480 miliardi alle imprese italiane in 10 anni"
 description: "Analisi del Registro Nazionale Aiuti di Stato (MIMIT): trend, distribuzione regionale, strumenti e beneficiari degli aiuti pubblici alle imprese italiane dal 2017 al 2026."
 topics: aiuti-di-stato, imprese, finanza-pubblica, COVID, sussidi
 status: active
@@ -7,11 +7,11 @@ discussion: 368
 dataset_slug: rna_aiuti_stato
 ---
 
-# Aiuti di Stato: 470 miliardi in 9 anni — la mappa del denaro pubblico alle imprese italiane
+# Aiuti di Stato: 480 miliardi in 10 anni — la mappa del denaro pubblico alle imprese italiane
 
-**Tra il 2017 e il 2026 lo Stato italiano ha concesso 470 miliardi di euro in aiuti alle imprese. Il biennio 2020-2021, da solo, vale il 43% del totale: lo shock COVID ha moltiplicato per 20 l'erogazione annuale, passata da 4,6 miliardi (2017) a 108 miliardi (2021).**
+**Tra il 2017 e il 2026 lo Stato italiano ha concesso 480 miliardi di euro in aiuti alle imprese. Il biennio 2020-2021, da solo, vale il 42% del totale: lo shock COVID ha moltiplicato per 20 l'erogazione annuale, passata da 4,6 miliardi (2017) a 108 miliardi (2021).**
 
-> 17 milioni di aiuti erogati · 470 miliardi di € · 2,3 milioni di imprese coinvolte
+> 17 milioni di aiuti erogati · 480 miliardi di € · 4,3 milioni di imprese coinvolte
 
 ---
 
@@ -37,6 +37,7 @@ L'andamento mostra tre fasi distinte:
 | 2023 | 53,2 | 2.946.581 | -33% |
 | 2024 | 29,7 | 2.413.641 | -44% |
 | 2025 | 42,9 | 2.139.134 | +45% |
+| **2026** | **51,2** | 643.105 | +19% |
 
 ## 2. Dove sono finiti i soldi? La distribuzione regionale
 
@@ -98,14 +99,14 @@ Solo **Banca del Mezzogiorno / MedioCredito Centrale** ha erogato 200 miliardi d
 
 ### I fatti
 
-1. **L'effetto COVID è stato enorme e concentrato**: in due anni (2020-2021) lo Stato ha erogato più della metà degli aiuti totali dell'intero decennio. L'importo medio per aiuto è passato da 14.000 € (2019) a 39.000 € (2021).
+1. **L'effetto COVID è stato enorme e concentrato**: in due anni (2020-2021) lo Stato ha erogato il 42% degli aiuti totali del decennio. L'importo medio per aiuto è passato da 14.000 € (2019) a 39.000 € (2021).
 2. **La distribuzione territoriale è disomogenea**: la Lombardia da sola ha ricevuto quanto le ultime 8 regioni messe insieme, ma il dato va letto alla luce della dimensione del tessuto produttivo.
 3. **Le garanzie sono lo strumento dominante**: il 55% del valore è garantito, non erogato direttamente. Questo significa che il rischio è solo potenziale, ma l'esposizione dello Stato è reale.
 4. **Il 7% degli aiuti vale l'1% ma riguarda il 27% delle operazioni**: gli aiuti De Minimis (sotto 200.000 €) sono micro-interventi capillari.
 
 ### E allora?
 
-_Dopo il 2021 gli aiuti sono calati, ma nel 2025 sono ancora 10 volte superiori al 2019. È fisiologico o strutturale? Il dato 2025 (42,9 mld) suggerisce che il nuovo «normale» è molto più alto del passato. Questi aiuti stanno producendo gli effetti sperati sulla competitività del sistema produttivo?_
+_Dopo il 2021 gli aiuti sono calati, ma nel 2025 sono ancora 6 volte superiori al 2019 e nel 2026 si attestano a 51 miliardi. È fisiologico o strutturale? Il nuovo «normale» sembra molto più alto del passato pre-COVID. Questi aiuti stanno producendo gli effetti sperati sulla competitività del sistema produttivo?_
 
 ---
 
