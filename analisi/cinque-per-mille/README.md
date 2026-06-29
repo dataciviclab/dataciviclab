@@ -138,9 +138,9 @@ La top 10 concentra da sola **€157 milioni** (26% del totale). AIRC domina con
 1. **€601 milioni** nel 2025, record assoluto (+15% in un anno), erogati a 95.977 enti da 15,5 milioni di scelte.
 2. **L'81% va al Terzo Settore** (ETS/ONLUS + ETS con ricerca), che rappresenta il 75% degli enti.
 3. **Concentrazione geografica estrema**: Milano vale più di tutto il Centro-Sud.
-4. **Concentrazione per ente**: 32 enti sopra 1M€ prendono il 42,7% delle risorse; AIRC da sola il 14%.
+4. **Concentrazione per ente**: 32 enti sopra 1M€ prendono il 43,7% delle risorse; AIRC da sola il 14%.
 5. **Il 2025 segna un'accelerazione**: la crescita è trainata dalla ricerca (scientifica + sanitaria), che passa da 176 a 211 milioni (+20%).
-6. **Base polverizzata**: oltre 48.000 enti ETS ricevono meno di 10.000 € ciascuno; 15.000 risultano con importo zero.
+6. **Base polverizzata**: oltre 49.000 enti ETS ricevono meno di 10.000 € ciascuno; 16.378 risultano con importo zero.
 7. **I comuni** ricevono €17M — meno di un quarto di AIRC da sola.
 
 ### E allora?
