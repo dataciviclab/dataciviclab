@@ -1,12 +1,7 @@
 ---
 title: "RNA — Aiuti di Stato: 470 miliardi alle imprese italiane in 9 anni"
 description: "Analisi del Registro Nazionale Aiuti di Stato (MIMIT): trend, distribuzione regionale, strumenti e beneficiari degli aiuti pubblici alle imprese italiane dal 2017 al 2026."
-topics:
-  - aiuti-di-stato
-  - imprese
-  - finanza-pubblica
-  - COVID
-  - sussidi
+topics: aiuti-di-stato, imprese, finanza-pubblica, COVID, sussidi
 status: active
 discussion: 368
 dataset_slug: rna_aiuti_stato
