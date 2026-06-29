@@ -39,19 +39,22 @@ Il 5x1000 si articola in categorie di beneficiari. La stragrande maggioranza del
 
 | Categoria | Enti | Importo | % su totale |
 |-----------|------|---------|-------------|
-| ETS / ONLUS | 71.808 | €335,0 milioni | 55,7% |
-| ETS + Ricerca scient. e san. | 10 | €101,6 milioni | 16,9% |
-| Ricerca sanitaria | 96 | €42,9 milioni | 7,1% |
-| Ricerca scientifica e sanitaria | 14 | €26,3 milioni | 4,4% |
-| Sportive dilettantistiche | 14.641 | €21,8 milioni | 3,6% |
-| ETS + Ricerca scientifica | 64 | €21,3 milioni | 3,5% |
-| Ricerca scientifica | 422 | €12,7 milioni | 2,1% |
-| Comuni | 8.125 | €17,0 milioni | 2,8% |
-| ETS + Ricerca sanitaria | 4 | €0,9 milioni | 0,2% |
-| Beni culturali | 203 | €0,7 milioni | 0,1% |
-| Aree protette | 26 | €0,5 milioni | 0,1% |
+| ETS / ONLUS | 70.366 | €326,3 milioni | 54,3% |
+| ETS + Ricerca scient. e san. | 8 | €110,3 milioni | 18,3% |
+| Ricerca sanitaria | 79 | €38,6 milioni | 6,4% |
+| Ricerca scientifica e sanitaria | 17 | €27,1 milioni | 4,5% |
+| ETS + Ricerca scientifica | 60 | €24,4 milioni | 4,1% |
+| Sportive dilettantistiche | 14.655 | €21,2 milioni | 3,5% |
+| Comuni | 7.751 | €16,6 milioni | 2,8% |
+| Ricerca scientifica | 399 | €9,7 milioni | 1,6% |
+| Senza categoria assegnata | 2.023 | €24,2 milioni | 4,0% |
+| ETS + Ricerca sanitaria | 3 | €1,0 milioni | 0,2% |
+| ETS + ASD | 250 | €0,6 milioni | 0,1% |
+| Beni culturali | 192 | €0,6 milioni | 0,1% |
+| Aree protette | 21 | €0,5 milioni | 0,1% |
+| ETS + Comune | 153 | €0,4 milioni | 0,1% |
 
-*Gli enti sono classificati in base alla categoria prevalente. AIRC (€82,7M), ad esempio, è ETS con attività di ricerca scientifica e sanitaria e compare nella riga "ETS + Ricerca scientifica e sanitaria".*
+*Gli enti sono classificati in base ai flag dichiarati nell'elenco dell'Agenzia delle Entrate. AIRC (€82,7M) è ETS con attività di ricerca scientifica e sanitaria e compare nella riga "ETS + Ricerca scient. e san.". La riga "Senza categoria assegnata" raccoglie 2.023 enti per cui nessun flag risulta attivo — probabilmente dati incompleti o residue da anni precedenti.*
 
 ![Distribuzione per categoria](figures/cinque-per-mille_categorie.png)
 
@@ -84,25 +87,28 @@ La distribuzione territoriale è fortemente polarizzata. Lombardia e Lazio da so
 
 ![Importi per regione](figures/cinque-per-mille_regioni.png)
 
-A livello provinciale, la concentrazione è ancora più estrema: la sola provincia di Milano (€172 milioni stimati) vale più di tutto il Centro-Sud Italia messo insieme.
+A livello provinciale, la concentrazione è ancora più estrema: la sola provincia di Milano (€175,1 milioni) vale più di tutto il Centro-Sud Italia messo insieme.
 
 ## 4. La piramide degli enti
 
-La maggior parte degli enti del Terzo Settore riceve importi molto piccoli. Circa il 54% degli enti ETS prende meno di 10.000 euro. Circa 15.000 enti (il 22%) risultano con importo zero, probabilmente perché non hanno raggiunto la soglia minima per l'erogazione.
+La maggior parte degli enti del Terzo Settore riceve importi molto piccoli. Circa il 52% degli enti ETS con importo positivo prende meno di 10.000 euro. Circa 16.378 enti (il 19%) risultano con importo zero, probabilmente perché non hanno raggiunto la soglia minima per l'erogazione.
 
-| Fascia | Importo totale | % sul totale ETS |
-|--------|---------------|------------------|
-| 0 — 1.000 € | €10,9 milioni | 2,6% |
-| 1.000 — 10.000 € | €79,9 milioni | 18,9% |
-| 10.000 — 50.000 € | €72,1 milioni | 17,0% |
-| 50.000 — 100.000 € | €20,8 milioni | 4,9% |
-| 100.000 — 500.000 € | €45,7 milioni | 10,8% |
-| 500.000 — 1M € | €13,4 milioni | 3,2% |
-| Oltre 1M € | €181,1 milioni | 42,7% |
+| Fascia | Enti (2025) | Importo totale | % sul totale ETS |
+|--------|-------------|---------------|------------------|
+| N/D (0 €) | 16.378 | €0 | 0% |
+| 0 — 1.000 € | 24.535 | €11,1 milioni | 2,4% |
+| 1.000 — 10.000 € | 24.856 | €80,8 milioni | 17,5% |
+| 10.000 — 50.000 € | 4.019 | €76,9 milioni | 16,6% |
+| 50.000 — 100.000 € | 342 | €23,1 milioni | 5,0% |
+| 100.000 — 500.000 € | 246 | €48,9 milioni | 10,6% |
+| 500.000 — 1M € | 29 | €19,1 milioni | 4,1% |
+| Oltre 1M € | 32 | €201,9 milioni | 43,7% |
 
-Il **42,7%** delle risorse va a 32 enti (0,06% degli ETS con importo). In cima alla classifica troviamo grandi fondazioni e istituti di ricerca.
+Il **43,7%** delle risorse va a 32 enti (0,03% degli ETS totali). In cima alla classifica troviamo grandi fondazioni e istituti di ricerca.
 
 ![Piramide per fascia](figures/cinque-per-mille_fasce.png)
+
+*Nota: la figura `fasce.png` si riferisce ai dati 2024 (strutturalmente simili). Il pattern di concentrazione è stabile tra gli anni.*
 
 ## 5. I top 10 beneficiari (2025)
 
