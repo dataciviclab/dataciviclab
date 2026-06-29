@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="it" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Malasanità 2022: mortalità evitabile e dotazione sanitaria regionale — DataCivicLab</title><meta name="description" content="Le regioni con meno personale sanitario hanno tassi di mortalità evitabile più alti?"><link rel="icon" type="image/svg+xml" href="/pr-preview/373/icon.svg"><link rel="alternate icon" href="/pr-preview/373/favicon.ico"><meta property="og:title" content="Malasanità 2022: mortalità evitabile e dotazione sanitaria regionale — DataCivicLab"><meta property="og:description" content="Le regioni con meno personale sanitario hanno tassi di mortalità evitabile più alti?"><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.org/pr-preview/373/analisi/malasanita-struttura-mortalita/"><meta property="og:image" content="https://dataciviclab.org/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="DataCivicLab — Analisi" href="/pr-preview/373/analisi/rss.xml"><link rel="stylesheet" href="/pr-preview/373/_astro/BaseLayout.jWGF_ZVx.css">
+<style>.explorer-callout[data-astro-cid-vs4wcbdp]{display:flex;gap:1rem;padding:1.25rem;margin-bottom:2rem;background:var(--accent-light);border:1px solid var(--accent);border-radius:var(--radius);align-items:flex-start}.explorer-callout-icon[data-astro-cid-vs4wcbdp]{font-size:1.5rem;flex-shrink:0}.explorer-callout[data-astro-cid-vs4wcbdp] p[data-astro-cid-vs4wcbdp]{font-size:.9rem;margin:.25rem 0 0;color:var(--text-secondary)}
+</style></head> <body data-astro-cid-37fxchfa> <div class="layout" data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <a href="/pr-preview/373/" class="logo" data-astro-cid-37fxchfa> <img src="/pr-preview/373/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;" data-astro-cid-37fxchfa>
+DataCivicLab
+</a> <nav data-astro-cid-37fxchfa> <a href="/pr-preview/373/analisi/" data-astro-cid-37fxchfa>Analisi</a> <a href="/pr-preview/373/docs/" data-astro-cid-37fxchfa>Documenti</a> <a href="/pr-preview/373/ecosistema/" data-astro-cid-37fxchfa>Ecosistema</a> <a href="/pr-preview/373/chi-siamo/" data-astro-cid-37fxchfa>Chi siamo</a> </nav> </header> <main data-astro-cid-37fxchfa> <article data-astro-cid-vs4wcbdp> <h1 id="malasanità-2022-mortalità-evitabile-e-dotazione-sanitaria-regionale">Malasanità 2022: mortalità evitabile e dotazione sanitaria regionale</h1>
+<h2 id="domanda-principale">Domanda principale</h2>
+<p>Le regioni con meno personale sanitario hanno tassi di mortalità evitabile più alti?</p>
+<h2 id="perché-conta">Perché conta</h2>
+<ul>
+<li>rende leggibile la geografia del proxy di rischio evitabile a livello regionale nel 2022</li>
+<li>permette un primo confronto tra dotazione sanitaria territoriale e mortalità, senza inferenza causale</li>
+<li>è il caso-pilota del flusso <code>Discussion -> incubator -> analisi -> decisione</code> del lab</li>
+</ul>
+<p>Discussion collegata: <code>dataciviclab</code> Discussion <code>#99</code> — Malasanità in Italia.</p>
+<h2 id="dataset">Dataset</h2>
+<ul>
+<li>fonti: Ministero della Salute (A: strutture ASL, C: strutture ricovero ASL) + ISTAT mortalità per causa (D)</li>
+<li>copertura temporale: 2022 (anno pivot unico di sovrapposizione completa tra le fonti)</li>
+<li>copertura territoriale: 21 regioni/PA</li>
+<li>limiti noti:
+<ul>
+<li>tre bande età disponibili in D (<code>30-69</code>, <code>70-84</code>, <code>85+</code>) — standardizzazione broad, non piena a 5 anni</li>
+<li>anno singolo 2022 — nessuna analisi longitudinale possibile</li>
+<li>Molise e Valle d’Aosta mostrano valori anomali su <code>personale_osp_per_100k</code> (fonte C) — interpretare con cautela</li>
+<li>nessuna inferenza causale — il progetto descrive associazioni</li>
+</ul>
+</li>
+</ul>
+<h2 id="metodo">Metodo</h2>
+<p>La metrica principale è <code>tasso_std_broad_evitabile_100k_30plus</code> (<code>v3</code>):</p>
+<ul>
+<li>stesse 12 cause Euro-2013 della <code>v2</code> (mortalità amenable/preventable)</li>
+<li>broad age-standardization 30+ su tre bande disponibili in D, con pesi ESP2013 aggregati</li>
+<li>elimina il denominatore ibrido della <code>v2</code> e produce un tasso più difendibile per il confronto inter-regionale</li>
+</ul>
+<p>La <code>v2</code> (<code>decessi_evitabili_30plus_per_100k_pop_totale</code>) è mantenuta come proxy grezzo di supporto.</p>
+<h2 id="perimetro-fuori-scope">Perimetro (fuori scope)</h2>
+<ul>
+<li>costo economico del contenzioso sanitario (AGENAS/Marsh) — follow-up separato</li>
+<li>dettaglio per disciplina/reparto dalla fonte B — fuori dal compose principale</li>
+<li>causalità</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li><code>notebooks/malasanita_v3.ipynb</code> — notebook principale (v3 baseline raccomandata)</li>
+<li>artifact: <code>mart_compose_regioni_v3.parquet</code> — join 21/21, prodotto da incubator privato</li>
+</ul>
+<h2 id="contratto-tecnico">Contratto tecnico</h2>
+<p>Il contratto tecnico (compose, SQL, pipeline) vive in dataset-incubator:
+<a href="https://github.com/dataciviclab/dataset-incubator/tree/main/candidates/malasanita-struttura-mortalita">candidates/malasanita-struttura-mortalita</a></p>
+<h2 id="stato">Stato</h2>
+<ul>
+<li><code>active</code> in <code>dataciviclab/analisi</code></li>
+<li>artifact v3 validato (<code>dataciviclab/dataset-incubator</code>, issue #24)</li>
+<li>promozione completata: <code>dataciviclab/dataciviclab#117</code> (chiusa)</li>
+</ul>
+<h2 id="prossimo-checkpoint">Prossimo checkpoint</h2>
+<ul>
+<li>valutare se promuovere a repo dedicata con dashboard/visualizzazioni</li>
+<li>decidere se estendere con dati AGENAS/contenzioso come secondo livello</li>
+</ul> </article> </main> <footer data-astro-cid-37fxchfa> <div class="footer-row" data-astro-cid-37fxchfa> <span class="footer-brand" data-astro-cid-37fxchfa>DataCivicLab — 2026</span> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Community</span> <a href="https://github.com/orgs/dataciviclab/discussions" data-astro-cid-37fxchfa>Discussion</a> <a href="https://discord.gg/rAHpuTrYK3" data-astro-cid-37fxchfa>Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/" data-astro-cid-37fxchfa>LinkedIn</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/" data-astro-cid-37fxchfa>Catalogo dataset</a> <a href="https://dataciviclab-dashboard.streamlit.app/" data-astro-cid-37fxchfa>Dashboard operativa</a> <a href="https://github.com/dataciviclab" data-astro-cid-37fxchfa>GitHub</a> <a href="/pr-preview/373/analisi/rss.xml" data-astro-cid-37fxchfa>Feed RSS analisi</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Lavori in corso</span> <a href="https://github.com/orgs/dataciviclab/projects/5" data-astro-cid-37fxchfa>Open Board</a> <a href="https://github.com/orgs/dataciviclab/projects/2" data-astro-cid-37fxchfa>Roadmap</a> </div> </div> </footer> </div></body></html>
