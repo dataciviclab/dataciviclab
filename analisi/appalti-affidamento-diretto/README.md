@@ -105,7 +105,7 @@ Il nuovo Codice Appalti ha semplificato le procedure, ma ha anche prodotto un ef
 - **Fonte**: ANAC — Autorità Nazionale Anticorruzione (Bandi di Gara CIG)
 - **Copertura temporale**: 2016-2025 (10 anni)
 - **Dataset in clean-query**: `anac_bandi_gara`
-- **6,4 milioni di lotti**, 48 colonne
+- **Quasi 6 milioni di lotti**, 48 colonne
 
 ### Limiti
 
