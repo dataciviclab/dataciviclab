@@ -8,9 +8,9 @@ dataset_slug: anac_bandi_gara
 
 # 10 anni di appalti pubblici: da 167 a 635 miliardi in un decennio
 
-**In 10 anni (2016-2025) la PA italiana ha pubblicato oltre 6,4 milioni di lotti di gara per un valore complessivo di 3.773 miliardi di euro. I lotti sono passati da 332.000 a 1,48 milioni all'anno (+4,4x), trainati dall'esplosione degli affidamenti diretti dopo il nuovo Codice Appalti del 2023.**
+**In 10 anni (2016-2025) la PA italiana ha pubblicato oltre 6 milioni di lotti di gara per un valore complessivo di 3.504 miliardi di euro. I lotti sono passati da 332.000 a 1,48 milioni all'anno (+4,4x), trainati dall'esplosione degli affidamenti diretti dopo il nuovo Codice Appalti del 2023.**
 
-> **6,4 milioni** di lotti · **3.773 miliardi di €** · **2016-2025** · **+4,4x lotti in 10 anni**
+> **6 milioni** di lotti · **3.504 miliardi di €** · **2016-2025** · **+4,4x lotti in 10 anni**
 
 ---
 
@@ -58,7 +58,7 @@ Il 2024 è l'anno di svolta: per la prima volta l'affidamento diretto supera in 
 
 ## 3. Dove va la spesa — distribuzione territoriale
 
-La **Sezione Centrale ANAC (Consip e centrali di committenza)** gestisce il 39% della spesa nel 2025. Seguono Lombardia (15%), Campania (8%) e Sicilia (8%).
+La **Sezione Centrale ANAC (Consip e centrali di committenza)** gestisce il 30% della spesa nel 2025. Seguono Lombardia (12%), Campania (7%) e Sicilia (7%).
 
 ![Distribuzione territoriale](figures/appalti_distribuzione_territoriale.png)
 
@@ -90,7 +90,7 @@ L'urgenza era marginale nel 2016 (1,4% dei lotti) ed è diventata prevalente dal
 
 1. **I lotti di gara sono quadruplicati in 10 anni**: da 332.000 (2016) a 1,48 milioni (2025).
 2. **L'affidamento diretto è la nuova normalità**: ha superato l'84% dei lotti nel 2024-2025 dopo il nuovo Codice Appalti.
-3. **La PA centrale gestisce il 39% della spesa totale**: il resto è frammentato tra regioni, con Lombardia (15%), Campania (8%) e Sicilia (8%) ai primi posti.
+3. **La PA centrale gestisce il 30% della spesa totale**: il resto è frammentato tra regioni, con Lombardia (12%), Campania (7%) e Sicilia (7%) ai primi posti.
 4. **Il valore medio per lotto si è dimezzato**: da 867.000 € (2022) a 430.000 € (2025), segno di una frammentazione della spesa in tante micro-gare.
 5. **Il flag urgenza è ormai compilato nel 68% dei casi**, ma spesso senza reale motivazione: è più un'abitudine amministrativa che un indicatore affidabile.
 
