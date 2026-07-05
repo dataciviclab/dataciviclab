@@ -12,7 +12,7 @@ dataset_slug:
 
 Quanto è profondo il divario tra Nord e Sud Italia? La risposta dipende da cosa misurate.
 
-Se guardate il PIL pro-capite, il gap è **1.6×** tra Bolzano e Calabria. Se guardate la povertà, sale a **6×**. Se guardate l'abbandono scolastico, il rapporto sale ancora di più.
+Se guardate il PIL pro-capite, il gap è **1.6×** tra Bolzano e Calabria. Se guardate la povertà, sale a **6.3×**. Se guardate l'abbandono scolastico, il rapporto è **2.6×** — ogni dimensione ha una geografia diversa.
 
 Questa analisi incrocia **5 dimensioni** — economia, povertà, sanità, istruzione e demografia — per dare una risposta multi-dimensionale.
 
@@ -112,7 +112,7 @@ Il Sud è più giovane, ma non più ricco. La combinazione **giovani + poveri + 
 1. **Il divario economico (2.8×) è solo la punta dell'iceberg** — la povertà (6.3×) e l'abbandono scolastico raccontano un gap più profondo.
 2. **Non esiste un solo divario** — ogni dimensione ha una geografia diversa. La sanità divide meno dell'istruzione.
 3. **Il Sud è più giovane ma non ne beneficia** — avere popolazione giovane non basta se mancano opportunità economiche e servizi.
-4. **Bolzano è un caso a sé** — prima per PIL, ultima per povertà, tra le migliori per istruzione. Un modello o un'eccezione?
+4. **Bolzano è un caso a sé** — prima per PIL, ultima per povertà, ma seconda peggiore per abbandono scolastico (14.7%). Un modello economico che non si traduce in istruzione.
 
 ### E allora?
 
@@ -127,6 +127,7 @@ Il divario Nord-Sud non è un problema solo economico. È un problema di **oppor
 - **Medici**: `eurostat_physicians_nuts2` — Eurostat, NUTS2, 1993-2021
 - **Posti letto**: `eurostat_hospital_beds_nuts2` — Eurostat, NUTS2, 1993-2024
 - **Struttura popolazione**: `eurostat_pop_structure_nuts3` — Eurostat, NUTS2, 2014-2025
+- **Abbandono scolastico**: `eurostat_early_school_leavers_nuts2` — Eurostat, NUTS2, 2000-2025
 - **Copertura temporale**: 2000-2025 (variabile per dataset)
 
 ### Limiti
