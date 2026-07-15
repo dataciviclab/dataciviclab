@@ -67,15 +67,15 @@ Escludendo gli uffici "obbligatori per legge" (Ufficio per la transizione al Dig
 
 ![Uffici più comuni nella PA](figures/uffici_piu_comuni.png)
 
-**Ufficio Tecnico** è il nome più comune (435 occorrenze), seguito da **Polizia Locale** (260), **Ufficio Tributi** (258) e **Ufficio Ragioneria** (258). **Area Tecnica** (246) e **Area Amministrativa** (205) rappresentano la macro-articolazione organizzativa dei grandi comuni.
+**Ufficio Tecnico** è il più diffuso (807 occorrenze unendo le varianti "Ufficio Tecnico", "UFFICIO TECNICO", "Ufficio Tecnico LL.PP."), seguito da **Polizia Locale** (788, che include "Polizia Municipale" e "Vigili Urbani") e **Ufficio Ragioneria** (707, che include "Ragioneria" e "Ufficio Ragioneria e Contabilità").
 
-Alcune differenze regionali emergono nei nomi: "Polizia Locale" è prevalente al Nord, "Polizia Municipale" al Centro-Sud, "Vigili Urbani" in alcuni contesti.
+La variabilità nei nomi riflette l'assenza di standardizzazione: ogni ente inserisce la denominazione in modo autonomo nell'IndicePA.
 
 Quanti enti hanno ciascun ufficio? Ecco la diffusione reale:
 
 ![Quanti enti hanno ciascun ufficio?](figures/presenza_uffici.png)
 
-L'**Ufficio Tecnico** è presente in 326 enti diversi, **Ragioneria** in 204, **Tributi** in 201. Significa che circa 1 comune su 4 ha un ufficio tributi dedicato — gli altri lo gestiscono in forma associata o con personale condiviso.
+L'**Ufficio Tecnico** è presente in 807 enti, **Polizia Locale** in 784, **Ufficio Ragioneria** in 705. Significa che 1 comune su 3 circa ha un ufficio tributi dedicato (577 enti) — gli altri lo gestiscono in forma associata o con personale condiviso.
 
 ## 5. La galassia delle partecipate
 
