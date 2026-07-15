@@ -1,6 +1,6 @@
 ---
 title: "La struttura della PA italiana"
-description: "Mappa della complessità organizzativa della Pubblica Amministrazione: 122.470 unità organizzative, 23.530 enti, fino a 9 livelli gerarchici. Un'analisi basata su IndicePA, BDAP e MEF."
+description: "Mappa della complessità organizzativa della Pubblica Amministrazione: 122.470 unità organizzative, 23.530 enti, fino a 9 livelli gerarchici. Un'analisi basata su IndicePA (AgID) e MEF."
 topics: pubblica-amministrazione, organizzazione, trasparenza, enti-pubblici
 status: active
 dataset_slug: ipa_unita_organizzative
