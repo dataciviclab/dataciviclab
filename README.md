@@ -1,63 +1,57 @@
 # DataCivicLab
 
-DataCivicLab è uno spazio civico dove proviamo a rendere i dati pubblici più leggibili, utili e condivisibili.
+Dati pubblici italiani, aperti e interrogabili. Per capire meglio il tuo
+territorio senza perdersi nel rumore.
 
-Nasce per chi vuole capire meglio il proprio territorio senza perdersi nel rumore, nei tecnicismi o nelle opinioni gridate. Qui costruiamo progetti pubblici con metodo, calma e collaborazione.
+🌐 **[dataciviclab.org](https://dataciviclab.org)**
 
-🌐 **[dataciviclab.org](https://dataciviclab.org)** — sito del Lab con analisi, documenti e stato in tempo reale.
+## Il Lab in numeri
 
-### Setup rapido
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash
-```
-
-Crea `dataciviclab-workspace/`, clona tutti i repo, installa le dipendenze e configura gli MCP per gli agenti AI.
-
-Serve solo Git e Python 3.12+. Guida completa: [docs/local-setup.md](docs/local-setup.md).
+| | |
+|---|---|
+| **Dataset pubblicati** | 84 |
+| **Analisi attive** | 18 |
+| **Fonti monitorate** | 36 |
+| **Discussion aperte** | 145 |
 
 ## Come funziona
 
-| Step | Cosa succede | Dove |
-|---|---|---|
-| 1. Domanda | Chiunque apre una discussione con una domanda civica | [GitHub Discussions](https://github.com/orgs/dataciviclab/discussions) |
-| 2. Scouting | Verifichiamo se esistono fonti pubbliche per rispondere | [`source-observatory`](https://github.com/dataciviclab/source-observatory) |
-| 3. Incubazione | Costruiamo pipeline riproducibili coi dati pubblici | [`dataset-incubator`](https://github.com/dataciviclab/dataset-incubator) + [`toolkit`](https://github.com/dataciviclab/toolkit) |
-| 4. Analisi | Produciamo finding e notebook pubblici | [`analisi/`](analisi/) |
-| 5. Catalogo | I dataset puliti finiscono nell'esploratore pubblico | [`data-explorer`](https://github.com/dataciviclab/data-explorer) |
+Dalla domanda civica al dato pronto per l'analisi:
 
-Il percorso completo è in [docs/dataset-project-flow.md](docs/dataset-project-flow.md).
+```
+Domanda → Scouting → Incubazione → Analisi → Catalogo pubblico
+```
+
+Dettaglio: [docs/dataset-project-flow.md](docs/dataset-project-flow.md)
 
 ## Le repo del Lab
 
 | Repo | Ruolo |
 |---|---|
-| [`dataciviclab`](https://github.com/dataciviclab/dataciviclab) | Hub pubblico: sito, analisi, documenti, discussioni |
-| [`source-observatory`](https://github.com/dataciviclab/source-observatory) | Scouting e monitoraggio delle fonti pubbliche |
-| [`dataset-incubator`](https://github.com/dataciviclab/dataset-incubator) | Intake tecnico: candidate, pipeline, contratto dati |
-| [`toolkit`](https://github.com/dataciviclab/toolkit) | Motore RAW → CLEAN → MART |
-| [`data-explorer`](https://github.com/dataciviclab/data-explorer) | Catalogo pubblico dei dataset puliti |
-| [`lab-dashboard`](https://github.com/dataciviclab/lab-dashboard) | Dashboard operativa: metriche, fonti, pipeline |
-| [`lab-connectors`](https://github.com/dataciviclab/lab-connectors) | Adapter per servizi esterni (Discord, GCS, GitHub) |
-| [`agent-context-builder`](https://github.com/dataciviclab/agent-context-builder) | Contesto operativo per agenti AI del Lab |
-| [`.github`](https://github.com/dataciviclab/.github) | Policy condivise, template, codice di condotta |
+| [`dataciviclab`](.) | Hub pubblico: sito, analisi, documenti |
+| [`source-observatory`](https://github.com/dataciviclab/source-observatory) | Scouting fonti pubbliche |
+| [`dataset-incubator`](https://github.com/dataciviclab/dataset-incubator) | Intake e incubazione dataset |
+| [`toolkit`](https://github.com/dataciviclab/toolkit) | Motore di pipeline dati |
+| [`data-explorer`](https://github.com/dataciviclab/data-explorer) | Catalogo pubblico dei dataset |
+| [`open-siope`](https://github.com/dataciviclab/open-siope) | Spesa pubblica italiana |
+| [`eurostat`](https://github.com/dataciviclab/eurostat) | Dati europei NUTS2/NUTS3 |
+| [`costituzione-italiana`](https://github.com/dataciviclab/costituzione-italiana) | Costituzione e giurisprudenza |
+| [`rna-aiuti-stato`](https://github.com/dataciviclab/rna-aiuti-stato) | Aiuti di Stato alle imprese |
+| [`open-conto-annuale`](https://github.com/dataciviclab/open-conto-annuale) | Personale PA italiana |
+| [`partecipate-monitor`](https://github.com/dataciviclab/partecipate-monitor) | Partecipate pubbliche |
+| · · · e altri repo di infrastruttura e progetto |
 
 ## Partecipa
 
-**Hai una domanda sui dati pubblici italiani?**
-Apri una [Discussion](https://github.com/orgs/dataciviclab/discussions/new?category=Domanda) — non serve saper programmare.
+- **Hai una domanda sui dati pubblici?** — apri una [Discussion](https://github.com/orgs/dataciviclab/discussions/new?category=Domanda), non serve saper programmare
+- **Vuoi contribuire?** — cerca [good first issues](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- **Seguici**: [Discord](https://discord.gg/rAHpuTrYK3) · [LinkedIn](https://www.linkedin.com/company/dataciviclab/)
+- **Lavori in corso**: [Open Board](https://github.com/orgs/dataciviclab/projects/5)
 
-**Vuoi contribuire a un lavoro in corso?**
-Cerca una [issue con label `good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+## Setup locale (per sviluppatori)
 
-**Vuoi scambiare idee o seguire gli aggiornamenti?**
+```bash
+curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash
+```
 
-- [Discord](https://discord.gg/rAHpuTrYK3) — chat della community, scambi veloci, aiuto tra pari
-- [LinkedIn](https://www.linkedin.com/company/dataciviclab/) — aggiornamenti, nuovi output e segnali dal Lab
-- [Open Board](https://github.com/orgs/dataciviclab/projects/5) — la lista pubblica di ciò su cui stiamo lavorando
-
-## Per orientarti
-
-- [docs/dataset-project-flow.md](docs/dataset-project-flow.md) — il flusso del Lab dalla domanda all'analisi
-- [docs/governance-model.md](docs/governance-model.md) — ruoli e come si decide
-- [docs/come-contribuire.md](docs/come-contribuire.md) — guida per nuovi contributor
+Serve Git e Python 3.12+. Guida: [docs/local-setup.md](docs/local-setup.md).
