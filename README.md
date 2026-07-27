@@ -5,15 +5,6 @@ territorio senza perdersi nel rumore.
 
 🌐 **[dataciviclab.org](https://dataciviclab.org)**
 
-## Il Lab in numeri
-
-| | |
-|---|---|
-| **Dataset pubblicati** | 84 |
-| **Analisi attive** | 18 |
-| **Fonti monitorate** | 36 |
-| **Discussion aperte** | 145 |
-
 ## Come funziona
 
 Dalla domanda civica al dato pronto per l'analisi:
