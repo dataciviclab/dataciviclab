@@ -5,24 +5,24 @@
  */
 
 const CATALOG_URL =
-  "https://raw.githubusercontent.com/dataciviclab/dataset-incubator/main/registry/clean_catalog.json";
+  "https://raw.githubusercontent.com/dataciviclab/dataset-incubator/main/registry/registry.json";
 
 const RADAR_URL =
   "https://raw.githubusercontent.com/dataciviclab/source-observatory/main/data/radar/radar_summary.json";
 
 /** Dati fallback (ultimi valori noti, usati se GitHub raw non risponde) */
-const FALLBACK_CATALOG = { total: 19, published: 7, incubating: 12 };
+const FALLBACK_CATALOG = { total: 114, published: 97, incubating: 17 };
 const FALLBACK_RADAR = { total: 14, green: 8, yellow: 3, red: 3 };
 
 /**
- * Legge clean_catalog.json e restituisce conteggi per stage.
+ * Legge registry.json e restituisce conteggi per stage.
  * @returns {{ total: number, published: number, incubating: number }}
  */
 export async function fetchCatalogStats() {
   try {
     const res = await fetch(CATALOG_URL);
     if (!res.ok) {
-      console.warn("[lab-stats] clean_catalog.json non raggiungibile, uso fallback");
+      console.warn("[lab-stats] registry.json non raggiungibile, uso fallback");
       return FALLBACK_CATALOG;
     }
     const data = await res.json();
@@ -33,7 +33,7 @@ export async function fetchCatalogStats() {
       incubating: datasets.filter((d) => d.stage === "incubating").length,
     };
   } catch (err) {
-    console.warn("[lab-stats] clean_catalog.json fetch fallito:", err.message, "— uso fallback");
+    console.warn("[lab-stats] registry.json fetch fallito:", err.message, "— uso fallback");
     return FALLBACK_CATALOG;
   }
 }
@@ -65,7 +65,7 @@ export async function fetchRadarStats() {
 }
 
 /**
- * Legge clean_catalog.json e restituisce un Set di slug dei dataset pubblicati.
+ * Legge registry.json e restituisce un Set di slug dei dataset pubblicati.
  * Utile per verificare se un'analisi ha un dataset corrispondente su explorer.
  * Se il fetch fallisce, ritorna Set vuoto (nessun badge "Su Explorer" mostrato).
  * @returns {Promise<Set<string>>}
