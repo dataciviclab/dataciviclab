@@ -17,8 +17,7 @@ projects/
 
 ## Regola pratica
 
-- `analisi/` = candidato ancora dentro `dataciviclab`
-- `projects/<slug>.md` = filone già promosso a repo dedicata
+- `projects/<slug>.md` = filone promosso a repo dedicata o dataset pubblicato su Explorer
 
 Lo stato del progetto vive nella scheda stessa, non nella gerarchia delle cartelle.
 

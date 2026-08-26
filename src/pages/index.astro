@@ -1,11 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatusBar from '../components/StatusBar.astro';
-
-const analisiModules = import.meta.glob('/analisi/*/README.md', { eager: true });
-const analisiCount = Object.entries(analisiModules)
-  .filter(([filepath]) => !filepath.includes('/_template/') && !filepath.includes('/registry/'))
-  .length;
 ---
 
 <BaseLayout title="DataCivicLab" description="Uno spazio civico dove proviamo a rendere i dati pubblici italiani più leggibili, utili e condivisibili.">
@@ -14,11 +9,11 @@ const analisiCount = Object.entries(analisiModules)
     <p>Uno spazio civico dove proviamo a rendere i dati pubblici italiani più utili per chi vuole capire meglio il proprio territorio.</p>
     <div class="hero-cta">
       <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda" class="btn btn-primary">Fai una domanda</a>
-      <a href={import.meta.env.BASE_URL + 'analisi/'} class="btn btn-secondary">Vedi le analisi</a>
+      <a href={import.meta.env.BASE_URL + 'progetti/'} class="btn btn-secondary">Vedi i progetti</a>
     </div>
   </div>
 
-  <StatusBar analisiCount={analisiCount} />
+  <StatusBar />
 
   <h2>Come funziona</h2>
   <div class="steps">
@@ -42,13 +37,7 @@ const analisiCount = Object.entries(analisiModules)
     </div>
     <div class="step">
       <div class="num">4</div>
-      <h3>Analisi</h3>
-      <p>Produciamo finding e notebook pubblici</p>
-      <span class="step-detail"><a href={import.meta.env.BASE_URL + 'analisi/'}>analisi/</a> · layer pubblico, README e notebook per ogni filone</span>
-    </div>
-    <div class="step">
-      <div class="num">5</div>
-      <h3>Catalogo</h3>
+      <h3>Esplorazione</h3>
       <p>I dataset puliti finiscono nell'esploratore pubblico</p>
       <span class="step-detail"><a href="https://dataciviclab.github.io/data-explorer/">data-explorer</a> · schede, metadati e query DuckDB</span>
     </div>

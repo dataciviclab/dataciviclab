@@ -8,20 +8,14 @@ Closes #
 
 ## Cosa cambia
 
-- [ ] Nuova analisi o aggiornamento (analisi/)
 - [ ] Modifica sito Astro (src/, public/, astro.config.mjs)
 - [ ] Documenti di orientamento (docs/)
+- [ ] Nuovo progetto o aggiornamento (projects/)
 - [ ] Governance / decisioni organizzative
 - [ ] Cross-repo task
 - [ ] Altro
 
 ## Checklist
-
-### Se tocchi analisi/
-
-- [ ] `analisi/<slug>/README.md` presente e leggibile
-- [ ] Notebook o figure puliti (nessun path assoluto)
-- [ ] Issue pubblica o Discussion collegata nel corpo della PR
 
 ### Se tocchi il sito Astro
 

@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'src/**'
-      - 'analisi/**'
+      - 'projects/**'
       - 'docs/**'
       - 'astro.config.mjs'
       - 'package.json'

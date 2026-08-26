@@ -29,7 +29,6 @@ REPOS_CORE=(
 )
 
 REPOS_OPTIONAL=(
-  "dataciviclab/agent-context-builder"
   "dataciviclab/open-siope"
   "dataciviclab/eurostat"
   "dataciviclab/lab-dashboard"
@@ -132,12 +131,6 @@ install_packages() {
   if [ -d "toolkit" ]; then
     log_step "toolkit..."
     pip install -q -e "toolkit[parquet,dev]"
-  fi
-
-  # agent-context-builder
-  if [ -d "agent-context-builder" ]; then
-    log_step "agent-context-builder..."
-    pip install -q --no-deps -e "agent-context-builder[mcp,dev]"
   fi
 
   # dataset-incubator
@@ -315,7 +308,6 @@ workspace_mode() {
     { "name": "source-observatory", "path": "source-observatory" },
     { "name": "lab-connectors", "path": "lab-connectors" },
     { "name": "data-explorer", "path": "data-explorer" },
-    { "name": "agent-context-builder", "path": "agent-context-builder" },
     { "name": "open-siope", "path": "open-siope" },
     { "name": "eurostat", "path": "eurostat" },
     { "name": "lab-dashboard", "path": "lab-dashboard" }
@@ -418,7 +410,6 @@ fresh_mode() {
     { "name": "source-observatory", "path": "source-observatory" },
     { "name": "lab-connectors", "path": "lab-connectors" },
     { "name": "data-explorer", "path": "data-explorer" },
-    { "name": "agent-context-builder", "path": "agent-context-builder" },
     { "name": "open-siope", "path": "open-siope" },
     { "name": "eurostat", "path": "eurostat" },
     { "name": "lab-dashboard", "path": "lab-dashboard" }

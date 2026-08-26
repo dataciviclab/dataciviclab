@@ -11,8 +11,9 @@ Termini che compaiono nei documenti e nelle discussioni del Lab.
 ---
 
 **Analisi**
-: Prodotto pubblico finale del Lab. Ogni analisi vive in `dataciviclab/analisi/<slug>/` con
-README, notebook e figure. Risponde a una domanda civica con dati verificabili.
+: Prodotto pubblico di un dataset. Le analisi vivevano in `dataciviclab/analisi/<slug>/` con
+README, notebook e figure. Oggi i dataset pubblici sono esplorabili su
+[data-explorer](https://dataciviclab.github.io/data-explorer/).
 
 **Candidate**
 : Un dataset in fase di incubazione in `dataset-incubator`. Ha un `dataset.yml`, SQL di
@@ -34,7 +35,7 @@ di dati e la successiva analisi. Chiunque può aprirne una.
 
 **Funnel**
 : Il percorso che va dalla domanda civica all'output pubblico:
-`Domanda → Scouting → Incubazione → Analisi → Catalogo`. Non è rigido — non tutte le
+`Domanda → Scouting → Incubazione → Esplorazione`. Non è rigido — non tutte le
 domande arrivano in fondo.
 
 **Finding**

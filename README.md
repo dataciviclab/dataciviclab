@@ -7,10 +7,10 @@ territorio senza perdersi nel rumore.
 
 ## Come funziona
 
-Dalla domanda civica al dato pronto per l'analisi:
+Dalla domanda civica al dato pubblico:
 
 ```
-Domanda → Scouting → Incubazione → Analisi → Catalogo pubblico
+Domanda → Scouting → Incubazione → Esplorazione
 ```
 
 Dettaglio: [docs/dataset-project-flow.md](docs/dataset-project-flow.md)
@@ -19,7 +19,7 @@ Dettaglio: [docs/dataset-project-flow.md](docs/dataset-project-flow.md)
 
 | Repo | Ruolo |
 |---|---|
-| [`dataciviclab`](.) | Hub pubblico: sito, analisi, documenti |
+| [`dataciviclab`](.) | Hub pubblico: sito, progetti, documenti |
 | [`source-observatory`](https://github.com/dataciviclab/source-observatory) | Scouting fonti pubbliche |
 | [`dataset-incubator`](https://github.com/dataciviclab/dataset-incubator) | Intake e incubazione dataset |
 | [`toolkit`](https://github.com/dataciviclab/toolkit) | Motore di pipeline dati |

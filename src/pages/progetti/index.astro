@@ -1,48 +1,58 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const analisiModules = import.meta.glob('/analisi/*/README.md', { eager: true });
+const projectModules = import.meta.glob('/projects/*.md', { eager: true });
 
-interface AnalisiMeta {
+interface ProgettoMeta {
   slug: string;
   title: string;
   excerpt: string;
   topics: string[];
   status: string;
-  datasetSlug: string | null;
+  repo: string | null;
 }
 
-const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
-  .filter(([filepath]) => !filepath.includes('/_template/') && !filepath.includes('/registry/'))
+const progettiList: ProgettoMeta[] = Object.entries(projectModules)
+  .filter(([filepath]) => !filepath.endsWith('/README.md'))
   .map(([filepath, mod]: [string, any]) => {
     const parts = filepath.split('/');
-    const slug = parts[parts.length - 2] ?? '';
+    const filename = parts[parts.length - 1] ?? '';
+    const slug = filename.replace(/\.md$/, '');
     const fm = mod.frontmatter ?? {};
     return {
       slug,
       title: fm.title || slug,
       excerpt: fm.description || '',
-      topics: fm.topics ? fm.topics.split(',').map((t: string) => t.trim()) : [],
+      topics: fm.topics || [],
       status: fm.status || 'active',
-      datasetSlug: fm.dataset_slug || null,
+      repo: fm.repo || null,
     };
   })
-  .sort((a, b) => a.slug.localeCompare(b.slug));
+  .sort((a, b) => {
+    // featured first, then by slug
+    const aMod = projectModules[`/projects/${a.slug}.md`] as any;
+    const bMod = projectModules[`/projects/${b.slug}.md`] as any;
+    const aFeatured = aMod?.frontmatter?.featured ?? false;
+    const bFeatured = bMod?.frontmatter?.featured ?? false;
+    if (aFeatured && !bFeatured) return -1;
+    if (!aFeatured && bFeatured) return 1;
+    return a.slug.localeCompare(b.slug);
+  });
 ---
 
-<BaseLayout title="Analisi" description="Lavori in corso e finding pubblici del DataCivicLab">
+<BaseLayout title="Progetti" description="I progetti pubblici del DataCivicLab">
   <p class="section-sub">
-    Ogni filone parte da una domanda civica e arriva a un'analisi pubblica con notebook e dati.
-    I dataset sono esplorabili su <a href="https://dataciviclab.github.io/data-explorer/">Data Explorer</a>.
+    Ogni progetto parte da una domanda civica e produce dati aperti, analisi e strumenti pubblici.
+    Alcuni sono attivi, altri sono reference — tutto il codice è su GitHub.
   </p>
 
-  {analisiList.length === 0 && <p><em>Nessuna analisi ancora pubblicata.</em></p>}
+  {progettiList.length === 0 && <p><em>Nessun progetto ancora pubblicato.</em></p>}
 
-  {analisiList.map((entry) => (
+  {progettiList.map((entry) => (
     <div class="card">
-      <h2><a href={`${import.meta.env.BASE_URL}analisi/${entry.slug}/`}>{entry.title}</a></h2>
+      <h2><a href={`${import.meta.env.BASE_URL}progetti/${entry.slug}/`}>{entry.title}</a></h2>
       {entry.excerpt && <p>{entry.excerpt}</p>}
-      <div class="analisi-meta">
+      <div class="progetto-meta">
         {entry.topics.length > 0
           ? entry.topics.map((topic) => (
               <span class={`topic-badge topic-${topic}`}>
@@ -54,9 +64,9 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
         <span class={`topic-badge status-${entry.status}`}>
           {entry.status}
         </span>
-        {entry.datasetSlug && (
-          <a href="https://dataciviclab.github.io/data-explorer/" class="explorer-badge">
-            📚 Su Explorer
+        {entry.repo && (
+          <a href={`https://github.com/${entry.repo}`} class="repo-badge">
+            GitHub →
           </a>
         )}
       </div>
@@ -65,7 +75,7 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
 </BaseLayout>
 
 <style>
-  .analisi-meta {
+  .progetto-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -97,12 +107,16 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
   .topic-energia { background: #d97706; }
   .topic-ambiente { background: #15803d; }
   .topic-enti-locali { background: #4338ca; }
+  .topic-finanza-pubblica { background: #065f46; }
+  .topic-trasparenza { background: #6d28d9; }
+  .topic-territorio { background: #15803d; }
+  .topic-lavoro { background: #0e7490; }
 
   .status-active { background: #16a34a; }
-  .status-archived { background: #94a3b8; }
+  .status-reference { background: #64748b; }
   .status-review { background: #d97706; }
 
-  .explorer-badge {
+  .repo-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
@@ -110,15 +124,16 @@ const analisiList: AnalisiMeta[] = Object.entries(analisiModules)
     border-radius: 999px;
     font-size: 0.75rem;
     font-weight: 600;
-    background: var(--accent-light);
-    color: var(--accent);
+    background: var(--bg-muted);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
     text-decoration: none;
     transition: all 0.15s;
   }
 
-  .explorer-badge:hover {
-    background: var(--accent);
-    color: #fff;
+  .repo-badge:hover {
+    background: var(--border);
+    color: var(--text);
     text-decoration: none;
   }
 </style>

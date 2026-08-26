@@ -23,10 +23,10 @@ const radarStats = await fetchRadarStats();
           <span class="eco-tag">Vetrina del Lab</span>
         </div>
       </div>
-      <p>Il sito che stai visitando. Qui trovi la spiegazione del progetto, le analisi pubblicate,
+      <p>Il sito che stai visitando. Qui trovi la spiegazione del progetto, i progetti del Lab,
       i documenti e come partecipare.</p>
       <ul class="eco-links">
-        <li><a href={import.meta.env.BASE_URL + 'analisi/'}>Analisi</a></li>
+        <li><a href={import.meta.env.BASE_URL + 'progetti/'}>Progetti</a></li>
         <li><a href={import.meta.env.BASE_URL + 'docs/'}>Documenti</a></li>
         <li><a href={import.meta.env.BASE_URL + 'chi-siamo/'}>Chi siamo</a></li>
       </ul>
@@ -71,10 +71,11 @@ const radarStats = await fetchRadarStats();
   <h2>Repository</h2>
   <p>Tutto il codice del Lab è su GitHub. Ogni repo ha un ruolo preciso:</p>
 
+  <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-top: 1.5rem;">Infrastruttura</h3>
   <div class="eco-repo-grid">
     <div class="eco-repo-row">
       <span class="eco-repo-name"><a href="https://github.com/dataciviclab/dataciviclab">dataciviclab</a></span>
-      <span class="eco-repo-desc">Hub pubblico: sito, analisi, documenti, discussioni</span>
+      <span class="eco-repo-desc">Hub pubblico: sito, progetti, documenti, discussioni</span>
     </div>
     <div class="eco-repo-row">
       <span class="eco-repo-name"><a href="https://github.com/dataciviclab/source-observatory">source-observatory</a></span>
@@ -93,20 +94,36 @@ const radarStats = await fetchRadarStats();
       <span class="eco-repo-desc">Frontend pubblico del catalogo dataset</span>
     </div>
     <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/lab-dashboard">lab-dashboard</a></span>
-      <span class="eco-repo-desc">Dashboard operativa interna</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/agent-context-builder">agent-context-builder</a></span>
-      <span class="eco-repo-desc">Contesto generato per agenti AI del Lab</span>
-    </div>
-    <div class="eco-repo-row">
       <span class="eco-repo-name"><a href="https://github.com/dataciviclab/lab-connectors">lab-connectors</a></span>
-      <span class="eco-repo-desc">Adapter servizi esterni (Discord, GCS, GitHub)</span>
+      <span class="eco-repo-desc">Libreria condivisa: HTTP, GCS, DuckDB</span>
+    </div>
+  </div>
+
+  <h3 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-top: 1.5rem;">Progetti</h3>
+  <div class="eco-repo-grid">
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/open-siope">open-siope</a></span>
+      <span class="eco-repo-desc">La spesa pubblica italiana — comuni, ASL, regioni, università</span>
     </div>
     <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/.github">.github</a></span>
-      <span class="eco-repo-desc">Policy condivise, template, community health</span>
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/open-conto-annuale">open-conto-annuale</a></span>
+      <span class="eco-repo-desc">1,8M di microdati sul personale della PA italiana</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/eurostat">eurostat</a></span>
+      <span class="eco-repo-desc">Dati regionali europei — PIL, popolazione, criminalità a livello NUTS3</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/dcl-bologna">dcl-bologna</a></span>
+      <span class="eco-repo-desc">Bologna in dati — mobilità, qualità dell'aria, demografia</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/rna-aiuti-stato">rna-aiuti-stato</a></span>
+      <span class="eco-repo-desc">Ogni aiuto pubblico alle imprese italiane — 17M+ record</span>
+    </div>
+    <div class="eco-repo-row">
+      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/partecipate-monitor">partecipate-monitor</a></span>
+      <span class="eco-repo-desc">Intelligence sulle partecipate pubbliche — 121 profili</span>
     </div>
   </div>
 
@@ -119,9 +136,7 @@ const radarStats = await fetchRadarStats();
     <span class="funnel-arrow">→</span>
     <span class="funnel-step">Incubazione</span>
     <span class="funnel-arrow">→</span>
-    <span class="funnel-step">Analisi</span>
-    <span class="funnel-arrow">→</span>
-    <span class="funnel-step">Catalogo pubblico</span>
+    <span class="funnel-step">Esplorazione</span>
   </div>
 
   <h2>Come partecipare</h2>
