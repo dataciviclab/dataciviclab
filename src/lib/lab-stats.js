@@ -63,24 +63,3 @@ export async function fetchRadarStats() {
     return FALLBACK_RADAR;
   }
 }
-
-/**
- * Legge registry.json e restituisce un Set di slug dei dataset pubblicati.
- * Utile per verificare se un'analisi ha un dataset corrispondente su explorer.
- * Se il fetch fallisce, ritorna Set vuoto (nessun badge "Su Explorer" mostrato).
- * @returns {Promise<Set<string>>}
- */
-export async function fetchPublishedSlugs() {
-  try {
-    const res = await fetch(CATALOG_URL);
-    if (!res.ok) return new Set();
-    const data = await res.json();
-    const datasets = data.datasets || [];
-    const published = datasets
-      .filter((d) => d.stage === "published")
-      .map((d) => d.slug);
-    return new Set(published);
-  } catch {
-    return new Set();
-  }
-}

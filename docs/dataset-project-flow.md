@@ -6,23 +6,22 @@ description: Come il Lab trasforma una domanda civica in dati pubblici — dal s
 
 # Flusso dataset / progetto
 
-Come il Lab trasforma una domanda civica in dati pubblici e analisi.
+Come il Lab trasforma una domanda civica in dati pubblici.
 
 ## Vista rapida
 
 ```text
-DOMANDA → SCOUTING → INCUBAZIONE → ANALISI → [CATALOGO]
+DOMANDA → SCOUTING → INCUBAZIONE → ESPLORAZIONE
 ```
 
-Non è una catena rigida: non tutte le domande arrivano all'analisi, non tutte
-le analisi finiscono nel catalogo.
+Non è una catena rigida: non tutte le domande arrivano all'esplorazione.
 
 ## Chi fa cosa
 
-- **`dataciviclab`** — hub pubblico: Discussions, analisi, orientamento
+- **`dataciviclab`** — hub pubblico: Discussions, progetti, orientamento
 - **`source-observatory`** — scouting e verifica delle fonti
 - **`dataset-incubator`** — casa tecnica: contratto (`dataset.yml`, SQL),
-  pipeline, catalogo (`clean_catalog.json`)
+  pipeline, catalogo (`registry.json`)
 - **`toolkit`** — motore RAW → CLEAN → MART
 - **`data-explorer`** — catalogo esplorabile dei dataset puliti
 
@@ -58,7 +57,7 @@ Esiti possibili:
 
 ---
 
-## Step 3: Incubazione → Analisi → Catalogo
+## Step 3: Incubazione → Esplorazione
 
 ### Incubazione (dataset-incubator + toolkit)
 
@@ -69,29 +68,24 @@ produce parquet validati.
 Dopo la pubblicazione su GCS (`gs://dataciviclab-clean/{slug}/`), il dataset
 è pronto per essere usato.
 
-### Analisi (dataciviclab/analisi/)
+### Esplorazione (data-explorer)
 
-Se il dato è stabile e la domanda civica lo giustifica, il team pubblica
-un'analisi in `analisi/<slug>/` con README pubblico, notebook tecnico e
-figure (vedi [skills/new-analysis.md](../skills/new-analysis.md)).
-È la destinazione finale per la maggior parte dei filoni.
-
-### Catalogo (data-explorer — opzionale)
-
-Per dataset periodici o con domanda civica larga, il dataset viene
-pubblicato nel catalogo esplorabile:
+Il dataset viene pubblicato nel catalogo esplorabile:
 [data-explorer](https://dataciviclab.github.io/data-explorer/).
+
+Lo stage `published` nel `registry.json` di `dataset-incubator` attiva
+la pubblicazione su Explorer.
+
+### Progetto dedicato (opzionale)
+
+Per filoni complessi che crescono oltre il singolo dataset, si apre una
+repo dedicata (es. `open-siope`, `eurostat`). Una scheda in
+`dataciviclab/projects/` mantiene il collegamento con l'hub.
 
 ---
 
-## Due percorsi tipici
+## Percorso tipico
 
-### Percorso standard
 ```text
-Domanda → Scouting → Incubazione → Analisi
-```
-
-### Percorso con catalogo
-```text
-Domanda → Scouting → Incubazione → Analisi → Catalogo (data-explorer)
+Domanda → Scouting → Incubazione → Esplorazione
 ```

@@ -5,10 +5,6 @@
       "command": "__WORKSPACE__/.venv/bin/python",
       "args": ["-m", "toolkit.mcp.server"]
     },
-    "clean-query": {
-      "description": "Query SQL read-only su dati clean",
-      "command": "__WORKSPACE__/.venv/bin/clean-query-mcp"
-    },
     "source-observatory": {
       "description": "Scouting fonti, probe URL, inventory",
       "command": "__WORKSPACE__/.venv/bin/source-observatory-mcp",
@@ -35,18 +31,6 @@
       "description": "Scarica pagine web e API",
       "command": "npx",
       "args": ["-y", "mcp-fetch-server"]
-    },
-    "eurostat": {
-      "description": "Query dati Eurostat (NUTS2/NUTS3)",
-      "command": "__WORKSPACE__/.venv/bin/python",
-      "args": ["__WORKSPACE__/eurostat/eurostat-mcp/server.py"],
-      "disabled": true
-    },
-    "siope": {
-      "description": "Bilanci enti pubblici italiani",
-      "command": "__WORKSPACE__/.venv/bin/python",
-      "args": ["__WORKSPACE__/open-siope/mcp_server/server.py"],
-      "disabled": true
     },
     "italia-corpus": {
       "description": "Ricerca legislazione italiana",

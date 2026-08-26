@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob('/projects/*.md', { eager: true });
+  return Object.entries(modules)
+    .filter(([filepath]) => !filepath.endsWith('/README.md'))
+    .map(([filepath, mod]: [string, any]) => {
+      const parts = filepath.split('/');
+      const filename = parts[parts.length - 1] ?? '';
+      const slug = filename.replace(/\.md$/, '');
+      return {
+        params: { slug },
+        props: { mod },
+      };
+    });
+}
+
+const { mod } = Astro.props;
+const parts = mod?.file?.split('/') ?? [];
+const filename = parts[parts.length - 1] ?? '';
+const slug = filename.replace(/\.md$/, '');
+const fm = mod?.frontmatter ?? {};
+const title = fm.title || slug;
+const description = fm.description || `Progetto: ${title}`;
+const Content = mod?.Content;
+const repo = fm.repo || null;
+const datasetSlug = fm.dataset_slug || null;
+const explorerUrl = datasetSlug
+  ? `https://dataciviclab.github.io/data-explorer/`
+  : null;
+---
+
+<BaseLayout title={title} description={description}>
+  {Content ? (
+    <article>
+      <div class="progetto-header">
+        <div class="progetto-links">
+          {repo && (
+            <a href={`https://github.com/${repo}`} class="btn btn-secondary">
+              GitHub →
+            </a>
+          )}
+          {explorerUrl && (
+            <a href={explorerUrl} class="btn btn-primary">
+              📚 Su Explorer
+            </a>
+          )}
+        </div>
+      </div>
+      <Content />
+    </article>
+  ) : (
+    <p>Contenuto non disponibile.</p>
+  )}
+</BaseLayout>
+
+<style>
+  .progetto-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .progetto-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+</style>

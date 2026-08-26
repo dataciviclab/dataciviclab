@@ -44,7 +44,7 @@ guarda le issue con label [`core-team`](https://github.com/dataciviclab/datacivi
 ## Vuoi lavorare su un progetto dataset
 
 I progetti attivi sono nella [Open Board](https://github.com/orgs/dataciviclab/projects/5).
-Le analisi in corso sono in [analisi/](../analisi/).
+I dataset pubblici sono su [Data Explorer](https://dataciviclab.github.io/data-explorer/).
 
 Per contribuire a un progetto dataset:
 

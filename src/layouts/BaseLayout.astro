@@ -28,7 +28,7 @@ const ogImageUrl = new URL('og-image.jpg', Astro.site).href;
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="alternate" type="application/rss+xml" title="DataCivicLab — Analisi" href={baseUrl + 'analisi/rss.xml'} />
+    <link rel="alternate" type="application/rss+xml" title="DataCivicLab — Aggiornamenti" href={baseUrl + 'progetti/rss.xml'} />
   </head>
   <body>
     <div class="layout">
@@ -38,9 +38,9 @@ const ogImageUrl = new URL('og-image.jpg', Astro.site).href;
           DataCivicLab
         </a>
         <nav>
-          <a href={baseUrl + 'analisi/'}>Analisi</a>
-          <a href={baseUrl + 'docs/'}>Documenti</a>
+          <a href={baseUrl + 'progetti/'}>Progetti</a>
           <a href={baseUrl + 'ecosistema/'}>Ecosistema</a>
+          <a href={baseUrl + 'docs/'}>Documenti</a>
           <a href={baseUrl + 'chi-siamo/'}>Chi siamo</a>
         </nav>
       </header>
@@ -60,15 +60,17 @@ const ogImageUrl = new URL('og-image.jpg', Astro.site).href;
           </div>
           <div class="footer-links">
             <span class="footer-group-label">Piattaforme</span>
-            <a href="https://dataciviclab.github.io/data-explorer/">Catalogo dataset</a>
-            <a href="https://dataciviclab-dashboard.streamlit.app/">Dashboard operativa</a>
-            <a href="https://github.com/dataciviclab">GitHub</a>
-            <a href={baseUrl + 'analisi/rss.xml'}>Feed RSS analisi</a>
+            <a href="https://dataciviclab.github.io/data-explorer/">Data Explorer</a>
+            <a href="https://github.com/dataciviclab/toolkit">Toolkit</a>
+            <a href="https://github.com/dataciviclab/source-observatory">Source Observatory</a>
+            <a href="https://github.com/dataciviclab/dataset-incubator">Dataset Incubator</a>
           </div>
           <div class="footer-links">
-            <span class="footer-group-label">Lavori in corso</span>
-            <a href="https://github.com/orgs/dataciviclab/projects/5">Open Board</a>
-            <a href="https://github.com/orgs/dataciviclab/projects/2">Roadmap</a>
+            <span class="footer-group-label">Repository</span>
+            <a href="https://github.com/dataciviclab/open-siope">open-siope</a>
+            <a href="https://github.com/dataciviclab/open-conto-annuale">open-conto-annuale</a>
+            <a href="https://github.com/dataciviclab/eurostat">eurostat</a>
+            <a href="https://github.com/dataciviclab/dcl-bologna">dcl-bologna</a>
           </div>
         </div>
       </footer>

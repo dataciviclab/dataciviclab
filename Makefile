@@ -28,7 +28,7 @@ info:
 	@for d in */; do if [ -f "$$d/.git/HEAD" ]; then echo "  $$d"; fi; done
 
 test:
-	@echo "Esegui: make test-toolkit | make test-di | make test-so | ..."
+	@echo "Test del sito: npm test"
 
 lint:
-	@echo "Esegui: cd {repo} && ruff check ."
+	@echo "Lint sito: npx astro check"

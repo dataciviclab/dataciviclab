@@ -1,21 +1,33 @@
-# progetto-pilota
+---
+title: progetto-pilota — Rifiuti urbani, il primo progetto del Lab
+description: Dashboard pubblica su raccolta differenziata e costi del servizio rifiuti per comune italiano. Il primo proof of work del DataCivicLab.
+status: reference
+featured: false
+topics: ["ambiente", "enti-locali"]
+dataset_slug:
+repo: dataciviclab/progetto-pilota
+site:
+---
 
-**Repo:** [dataciviclab/progetto-pilota](https://github.com/dataciviclab/progetto-pilota)
-**Dominio:** rifiuti urbani — raccolta differenziata, costi per abitante, benchmark comunali
-**Fonte:** ISPRA
-**Stato:** `reference` — primo proof of work pubblico del Lab, non più in sviluppo attivo
+## In breve
+
+Il primo progetto pubblico del DataCivicLab. Una dashboard che confronta
+**raccolta differenziata e costo per abitante** tra comuni italiani della
+stessa fascia demografica, basata sui dati ISPRA.
 
 ## Cosa abbiamo costruito
 
-Dashboard pubblica su raccolta differenziata e costi del servizio rifiuti per comune italiano.
-Permette un confronto territoriale su percentuale di differenziata e costo per abitante,
-con benchmark tra comuni della stessa fascia demografica.
+- **Benchmark comunali** su percentuale di differenziata e costo per abitante
+- **Confronto** tra comuni della stessa fascia demografica
+- **Dati ISPRA** sui rifiuti urbani
 
-## Discussions
+## Perché importa
 
-Le discussioni pubbliche vivono nella [repo del progetto](https://github.com/dataciviclab/progetto-pilota/discussions).
+Quanto costa il servizio rifiuti nel tuo comune rispetto ad altri della stessa
+taglia? È più bravo a differenziare? Queste domande non avevano risposta
+pronta — ora hanno una dashboard.
 
-## Note operative
+## Stato
 
-Nessun prossimo passo previsto, salvo micro-fix indispensabili.
-Il progetto usa una pipeline legacy (non toolkit); non è prevista migrazione.
+Reference — primo proof of work pubblico del Lab, non più in sviluppo attivo.
+Pipeline legacy (non toolkit); non è prevista migrazione.

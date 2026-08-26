@@ -15,7 +15,7 @@ Per le regole GitHub condivise dell'organizzazione, vedi
 - **Sito** — [dataciviclab.org](https://dataciviclab.org) basato su **Astro** (`src/`, `public/`, `astro.config.mjs`)
 - **Discussions** — domande, idee, confronto pubblico
 - **`docs/`** — documenti di orientamento (dataset-project-flow, governance, come-contribuire, local-setup)
-- **`analisi/`** — layer pubblico delle analisi in corso
+- **`analisi/`** — dataset pubblici in corso (legacy, in migrazione verso data-explorer)
 - **`projects/`** — indice dei filoni promossi a repo dedicata
 - **`skills/`** — guide operative per agenti e contributor
 - Task cross-repo e decisioni organizzative
@@ -55,18 +55,18 @@ src/
   layouts/      # layout di pagina
   lib/          # utility e funzioni condivise
   pages/        # pagine del sito
-    analisi/    # pagine delle analisi
     docs/       # pagine dei documenti
+    progetti/   # pagine dei progetti
   styles/       # stili globali
 public/         # asset statici
-analisi/        # sorgente delle pagine analisi (notebook, README)
+projects/       # schede dei progetti promossi a repo dedicata
 docs/           # sorgente dei documenti in markdown
 ```
 
 ### Aggiungere o modificare contenuti
 
 - **Docs**: modifica i file `.md` in `docs/` — le pagine Astro in `src/pages/docs/` li inglobano
-- **Analisi**: i contenuti vivono in `analisi/<slug>/`, le pagine in `src/pages/analisi/` li referenziano
+- **Progetti**: crea/modifica `.md` in `projects/` — le pagine Astro in `src/pages/progetti/` li renderizzano
 - **Pagine nuove**: crea un file `.astro` in `src/pages/` seguendo la struttura esistente
 
 ## Quando aprire issue qui
