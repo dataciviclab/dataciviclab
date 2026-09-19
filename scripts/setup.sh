@@ -34,8 +34,8 @@ REPOS_OPTIONAL=(
   "dataciviclab/lab-dashboard"
 )
 
-# Nota: italia-corpus (1.6GB), senato-akn, progetto-pilota e openbdap-saldi-storico-stato
-# non sono inclusi nello script. Sono repo specialistici o preistorici.
+# Nota: italia-corpus (1.6GB), senato-akn e progetto-pilota
+# non sono inclusi nello script. Sono repo specialistici.
 # Se servono: git clone https://github.com/dataciviclab/{repo}.git
 
 WORKSPACE_NAME="dataciviclab-workspace"
@@ -134,15 +134,15 @@ install_packages() {
   fi
 
   # dataset-incubator
-  if [ -d "dataset-incubator" ]; then
+  if [ -d "incubation/dataset-incubator" ]; then
     log_step "dataset-incubator..."
-    pip install -q --no-deps -e "dataset-incubator[dev]"
+    pip install -q --no-deps -e "incubation/dataset-incubator[dev]"
   fi
 
   # source-observatory
-  if [ -d "source-observatory" ]; then
+  if [ -d "incubation/source-observatory" ]; then
     log_step "source-observatory..."
-    pip install -q --no-deps -e "source-observatory[dev]"
+    pip install -q --no-deps -e "incubation/source-observatory[dev]"
   fi
 
   # ripristino lab-connectors (git pin lo sovrascrive)
@@ -158,8 +158,8 @@ copy_env() {
     log_info ".env già presente"
     return 0
   fi
-  if [ -f "dataciviclab/.env.example" ]; then
-    cp "dataciviclab/.env.example" ".env"
+  if [ -f "analysis/dataciviclab/.env.example" ]; then
+    cp "analysis/dataciviclab/.env.example" ".env"
     log_info ".env creato da .env.example — modificalo con i tuoi token"
   else
     log_warn ".env.example non trovato"
@@ -169,7 +169,7 @@ copy_env() {
 generate_mcp_config() {
   local ws="$1"
   local mcp_file="$ws/.mcp.json"
-  local template="$ws/dataciviclab/scripts/mcp-servers.json"
+  local template="$ws/analysis/dataciviclab/scripts/mcp-servers.json"
 
   if [ -f "$mcp_file" ]; then
     log_info ".mcp.json già presente"
@@ -237,7 +237,6 @@ print_contributor_steps() {
   echo "    italia-corpus (1.6GB, corpus legislativo)"
   echo "    senato-akn (atti parlamentari)"
   echo "    progetto-pilota (primo esperimento Lab)"
-  echo "    openbdap-saldi-storico-stato (sperimentale)"
   echo "    git clone https://github.com/dataciviclab/{repo}.git"
   echo ""
 }
@@ -263,9 +262,9 @@ workspace_mode() {
   echo ""
 
   # Verifica di essere in un workspace valido
-  if [ ! -d "dataciviclab" ]; then
-    log_error "Non sembri essere in un workspace DataCivicLab (manca dataciviclab/)"
-    echo "  Sei nella directory giusta? Dovrebbe contenere dataciviclab/, toolkit/, ..."
+  if [ ! -d "analysis/dataciviclab" ]; then
+    log_error "Non sembri essere in un workspace DataCivicLab (manca analysis/dataciviclab/)"
+    echo "  Sei nella directory giusta? Dovrebbe contenere analysis/dataciviclab/, toolkit/, ..."
     echo "  Altrimenti usa: $(basename "$0") (senza flag) per una fresh install"
     exit 1
   fi
@@ -293,24 +292,24 @@ workspace_mode() {
   generate_mcp_config "$PWD"
 
   # Symlink Makefile
-  if [ ! -f "Makefile" ] && [ -f "dataciviclab/Makefile" ]; then
-    ln -s "dataciviclab/Makefile" "Makefile"
-    log_info "Makefile → symlink a dataciviclab/Makefile"
+  if [ ! -f "Makefile" ] && [ -f "analysis/dataciviclab/Makefile" ]; then
+    ln -s "analysis/dataciviclab/Makefile" "Makefile"
+    log_info "Makefile → symlink a analysis/dataciviclab/Makefile"
   fi
   # Genera workspace VS Code per la root (non symlink: i path relativi differiscono)
   if [ ! -f "dataciviclab.code-workspace" ]; then
     cat > "dataciviclab.code-workspace" << 'WSEOF'
 {
   "folders": [
-    { "name": "dataciviclab", "path": "dataciviclab" },
+    { "name": "dataciviclab", "path": "analysis/dataciviclab" },
     { "name": "toolkit", "path": "toolkit" },
-    { "name": "dataset-incubator", "path": "dataset-incubator" },
-    { "name": "source-observatory", "path": "source-observatory" },
+    { "name": "dataset-incubator", "path": "incubation/dataset-incubator" },
+    { "name": "source-observatory", "path": "incubation/source-observatory" },
     { "name": "lab-connectors", "path": "lab-connectors" },
-    { "name": "data-explorer", "path": "data-explorer" },
+    { "name": "data-explorer", "path": "analysis/data-explorer" },
     { "name": "open-siope", "path": "open-siope" },
     { "name": "eurostat", "path": "eurostat" },
-    { "name": "lab-dashboard", "path": "lab-dashboard" }
+    { "name": "lab-dashboard", "path": "analysis/lab-dashboard" }
   ],
   "extensions": {
     "recommendations": [
@@ -395,24 +394,24 @@ fresh_mode() {
   generate_mcp_config "$PWD"
 
   # Symlink Makefile
-  if [ ! -f "Makefile" ] && [ -f "dataciviclab/Makefile" ]; then
-    ln -s "dataciviclab/Makefile" "Makefile"
-    log_info "Makefile → symlink a dataciviclab/Makefile"
+  if [ ! -f "Makefile" ] && [ -f "analysis/dataciviclab/Makefile" ]; then
+    ln -s "analysis/dataciviclab/Makefile" "Makefile"
+    log_info "Makefile → symlink a analysis/dataciviclab/Makefile"
   fi
   # Genera workspace VS Code per la root (non symlink: i path relativi differiscono)
   if [ ! -f "dataciviclab.code-workspace" ]; then
     cat > "dataciviclab.code-workspace" << 'WSEOF'
 {
   "folders": [
-    { "name": "dataciviclab", "path": "dataciviclab" },
+    { "name": "dataciviclab", "path": "analysis/dataciviclab" },
     { "name": "toolkit", "path": "toolkit" },
-    { "name": "dataset-incubator", "path": "dataset-incubator" },
-    { "name": "source-observatory", "path": "source-observatory" },
+    { "name": "dataset-incubator", "path": "incubation/dataset-incubator" },
+    { "name": "source-observatory", "path": "incubation/source-observatory" },
     { "name": "lab-connectors", "path": "lab-connectors" },
-    { "name": "data-explorer", "path": "data-explorer" },
+    { "name": "data-explorer", "path": "analysis/data-explorer" },
     { "name": "open-siope", "path": "open-siope" },
     { "name": "eurostat", "path": "eurostat" },
-    { "name": "lab-dashboard", "path": "lab-dashboard" }
+    { "name": "lab-dashboard", "path": "analysis/lab-dashboard" }
   ],
   "extensions": {
     "recommendations": [
@@ -452,10 +451,10 @@ WSEOF
 
 # ─── Entry point ─────────────────────────────────────────────────────
 
-# Se siamo già in un workspace (rileva dataciviclab/), workspace mode
+# Se siamo già in un workspace (rileva analysis/dataciviclab/), workspace mode
 if [ "$MODE" = "workspace" ]; then
   workspace_mode
-elif [ "$MODE" = "fresh" ] && [ -d "dataciviclab" ] && [ -d "toolkit" ]; then
+elif [ "$MODE" = "fresh" ] && [ -d "analysis/dataciviclab" ] && [ -d "toolkit" ]; then
   # Eseguito da dentro un workspace già esistente
   workspace_mode
 else

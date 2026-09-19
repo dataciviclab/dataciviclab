@@ -7,6 +7,15 @@ topics: ["economia", "finanza-pubblica"]
 dataset_slug:
 repo: dataciviclab/debito-pubblico-intelligence
 site:
+stats:
+  - value: "165"
+    label: "anni di serie storica"
+  - value: "5"
+    label: "segnali"
+  - value: "8"
+    label: "dataset"
+  - value: "fusion"
+    label: "layer"
 ---
 
 ## In breve

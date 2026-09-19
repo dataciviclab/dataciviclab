@@ -7,6 +7,15 @@ topics: ["pubblica-amministrazione", "economia", "lavoro"]
 dataset_slug:
 repo: dataciviclab/open-conto-annuale
 site:
+stats:
+  - value: "3.388.794"
+    label: "dipendenti pubblici"
+  - value: "€186 mld"
+    label: "costo lavoro"
+  - value: "60,2%"
+    label: "donne"
+  - value: "13"
+    label: "dataset"
 ---
 
 ## In breve

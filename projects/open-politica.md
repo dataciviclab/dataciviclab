@@ -7,6 +7,15 @@ topics: ["trasparenza", "democrazia"]
 dataset_slug:
 repo: dataciviclab/open-politica
 site:
+stats:
+  - value: "dal 1948"
+    label: "elezioni"
+  - value: "~36%"
+    label: "leggi dal governo"
+  - value: "108"
+    label: "decreti-legge"
+  - value: "7,7M"
+    label: "voti deputati"
 ---
 
 ## In breve

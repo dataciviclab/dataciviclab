@@ -6,7 +6,7 @@ import StatusBar from '../components/StatusBar.astro';
 <BaseLayout title="DataCivicLab" description="Uno spazio civico dove proviamo a rendere i dati pubblici italiani più leggibili, utili e condivisibili.">
   <div class="hero">
     <h1>Dati pubblici,<br />leggibili e condivisibili.</h1>
-    <p>Uno spazio civico dove proviamo a rendere i dati pubblici italiani più utili per chi vuole capire meglio il proprio territorio.</p>
+    <p class="hero-sub">Uno spazio civico dove proviamo a rendere i dati pubblici italiani più utili per chi vuole capire meglio il proprio territorio.</p>
     <div class="hero-cta">
       <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda" class="btn btn-primary">Fai una domanda</a>
       <a href={import.meta.env.BASE_URL + 'progetti/'} class="btn btn-secondary">Vedi i progetti</a>
@@ -23,23 +23,26 @@ import StatusBar from '../components/StatusBar.astro';
       <p>Chiunque apre una discussion con una domanda civica</p>
       <span class="step-detail">GitHub Discussions · <a href="https://github.com/orgs/dataciviclab/discussions">Apri una domanda</a></span>
     </div>
+    <div class="step-arrow">→</div>
     <div class="step">
       <div class="num">2</div>
       <h3>Scouting</h3>
       <p>Verifichiamo se esistono fonti pubbliche per rispondere</p>
-      <span class="step-detail"><a href="https://github.com/dataciviclab/source-observatory">source-observatory</a> · radar e monitoraggio fonti</span>
+      <span class="step-detail"><a href="https://github.com/dataciviclab/source-observatory">source-observatory</a></span>
     </div>
+    <div class="step-arrow">→</div>
     <div class="step">
       <div class="num">3</div>
       <h3>Incubazione</h3>
       <p>Costruiamo pipeline riproducibili coi dati pubblici</p>
-      <span class="step-detail"><a href="https://github.com/dataciviclab/dataset-incubator">dataset-incubator</a> · contratto tecnico e <a href="https://github.com/dataciviclab/toolkit">toolkit</a> RAW → CLEAN → MART</span>
+      <span class="step-detail"><a href="https://github.com/dataciviclab/dataset-incubator">dataset-incubator</a> + <a href="https://github.com/dataciviclab/toolkit">toolkit</a></span>
     </div>
+    <div class="step-arrow">→</div>
     <div class="step">
       <div class="num">4</div>
       <h3>Esplorazione</h3>
       <p>I dataset puliti finiscono nell'esploratore pubblico</p>
-      <span class="step-detail"><a href="https://dataciviclab.github.io/data-explorer/">data-explorer</a> · schede, metadati e query DuckDB</span>
+      <span class="step-detail"><a href="https://dataciviclab.github.io/data-explorer/">data-explorer</a></span>
     </div>
   </div>
   <p class="section-sub" style="text-align: center;">
@@ -83,19 +86,20 @@ import StatusBar from '../components/StatusBar.astro';
 <style>
   .hero {
     text-align: center;
-    padding: 1.5rem 0 2.5rem;
+    padding: 2rem 0 3rem;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     margin-bottom: 1rem;
   }
 
-  .hero p {
+  .hero-sub {
     font-size: 1.15rem;
     color: var(--text-secondary);
-    max-width: 660px;
-    margin: 0 auto 1.5rem;
+    max-width: 620px;
+    margin: 0 auto 1.75rem;
+    line-height: 1.7;
   }
 
   .hero-cta {
@@ -108,18 +112,29 @@ import StatusBar from '../components/StatusBar.astro';
   .steps {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     justify-content: center;
-    gap: 1rem;
+    gap: 0;
     margin: 2rem 0;
   }
 
   .step {
-    flex: 0 1 250px;
+    flex: 1 1 180px;
+    max-width: 220px;
     text-align: center;
     padding: 1.25rem 1rem;
     background: var(--bg-muted);
     border: 1px solid var(--border);
     border-radius: var(--radius);
+  }
+
+  .step-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--text-tertiary);
+    padding: 0 0.25rem;
   }
 
   .step .num {
@@ -137,14 +152,15 @@ import StatusBar from '../components/StatusBar.astro';
   }
 
   .step h3 {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin: 0 0 0.25rem;
   }
 
   .step p {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     margin: 0;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
+    line-height: 1.5;
   }
 
   .step-detail {
@@ -163,16 +179,16 @@ import StatusBar from '../components/StatusBar.astro';
   .channels {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    margin: 1rem 0;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
   }
 
   .channel {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    border-radius: var(--radius-sm);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius);
     border: 1px solid var(--border);
     color: var(--text-secondary);
     text-decoration: none;
@@ -183,10 +199,11 @@ import StatusBar from '../components/StatusBar.astro';
     border-color: var(--accent);
     color: var(--accent);
     text-decoration: none;
+    box-shadow: var(--shadow-sm);
   }
 
   .channel-icon {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     flex-shrink: 0;
     padding-top: 0.1rem;
   }
@@ -194,23 +211,27 @@ import StatusBar from '../components/StatusBar.astro';
   .channel-body {
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
+    gap: 0.2rem;
   }
 
   .channel-body strong {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text);
   }
 
   .channel-body small {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--text-tertiary);
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     .hero h1 {
-      font-size: 1.75rem;
+      font-size: 2rem;
+    }
+
+    .step-arrow {
+      display: none;
     }
 
     .steps {
@@ -219,6 +240,7 @@ import StatusBar from '../components/StatusBar.astro';
 
     .step {
       flex: 1 1 100%;
+      max-width: none;
     }
 
     .channels {

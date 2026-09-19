@@ -7,6 +7,15 @@ topics: ["enti-locali", "finanza-pubblica", "trasparenza"]
 dataset_slug:
 repo: dataciviclab/open-siope
 site:
+stats:
+  - value: "~18.000"
+    label: "enti coperti"
+  - value: "2021–2026"
+    label: "periodo"
+  - value: "~2.000"
+    label: "voci entrata"
+  - value: "4"
+    label: "comparti"
 ---
 
 ## In breve

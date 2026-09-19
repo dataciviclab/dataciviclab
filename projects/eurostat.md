@@ -7,6 +7,15 @@ topics: ["economia", "territorio", "demografia"]
 dataset_slug:
 repo: dataciviclab/eurostat
 site:
+stats:
+  - value: "30"
+    label: "dataset"
+  - value: "1980–2025"
+    label: "periodo"
+  - value: "NUTS2/3"
+    label: "granularità"
+  - value: "tutti UE"
+    label: "copertura"
 ---
 
 ## In breve

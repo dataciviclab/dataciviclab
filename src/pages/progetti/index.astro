@@ -10,6 +10,8 @@ interface ProgettoMeta {
   topics: string[];
   status: string;
   repo: string | null;
+  featured: boolean;
+  stats: { value: string; label: string }[];
 }
 
 const progettiList: ProgettoMeta[] = Object.entries(projectModules)
@@ -26,18 +28,17 @@ const progettiList: ProgettoMeta[] = Object.entries(projectModules)
       topics: fm.topics || [],
       status: fm.status || 'active',
       repo: fm.repo || null,
+      featured: fm.featured ?? false,
+      stats: fm.stats || [],
     };
   })
   .sort((a, b) => {
-    // featured first, then by slug
-    const aMod = projectModules[`/projects/${a.slug}.md`] as any;
-    const bMod = projectModules[`/projects/${b.slug}.md`] as any;
-    const aFeatured = aMod?.frontmatter?.featured ?? false;
-    const bFeatured = bMod?.frontmatter?.featured ?? false;
-    if (aFeatured && !bFeatured) return -1;
-    if (!aFeatured && bFeatured) return 1;
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
     return a.slug.localeCompare(b.slug);
   });
+
+const allTopics = [...new Set(progettiList.flatMap((p) => p.topics))].sort();
 ---
 
 <BaseLayout title="Progetti" description="I progetti pubblici del DataCivicLab">
@@ -46,61 +47,218 @@ const progettiList: ProgettoMeta[] = Object.entries(projectModules)
     Alcuni sono attivi, altri sono reference — tutto il codice è su GitHub.
   </p>
 
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter-btn active" data-topic="all">Tutti</button>
+    {allTopics.map((topic) => (
+      <button class="filter-btn" data-topic={topic}>
+        {topic}
+      </button>
+    ))}
+  </div>
+
   {progettiList.length === 0 && <p><em>Nessun progetto ancora pubblicato.</em></p>}
 
-  {progettiList.map((entry) => (
-    <div class="card">
-      <h2><a href={`${import.meta.env.BASE_URL}progetti/${entry.slug}/`}>{entry.title}</a></h2>
-      {entry.excerpt && <p>{entry.excerpt}</p>}
-      <div class="progetto-meta">
-        {entry.topics.length > 0
-          ? entry.topics.map((topic) => (
-              <span class={`topic-badge topic-${topic}`}>
-                {topic}
+  <div class="projects-grid" id="projects-list">
+    {progettiList.map((entry) => (
+      <a
+        href={`${import.meta.env.BASE_URL}progetti/${entry.slug}/`}
+        class="project-card"
+        data-topics={entry.topics.join(',')}
+      >
+        <div class="card-header">
+          <h3>{entry.title}</h3>
+          <span class={`status-dot status-${entry.status}`} title={entry.status}></span>
+        </div>
+        {entry.excerpt && <p class="card-excerpt">{entry.excerpt}</p>}
+        {entry.stats.length > 0 && (
+          <div class="card-stats">
+            {entry.stats.slice(0, 3).map((s) => (
+              <span class="card-stat">
+                <strong>{s.value}</strong> {s.label}
               </span>
-            ))
-          : <span class="topic-badge muted">generale</span>
-        }
-        <span class={`topic-badge status-${entry.status}`}>
-          {entry.status}
-        </span>
-        {entry.repo && (
-          <a href={`https://github.com/${entry.repo}`} class="repo-badge">
-            GitHub →
-          </a>
+            ))}
+          </div>
         )}
-      </div>
-    </div>
-  ))}
+        <div class="card-footer">
+          <div class="card-topics">
+            {entry.topics.slice(0, 3).map((topic) => (
+              <span class={`topic-badge topic-${topic}`}>{topic}</span>
+            ))}
+          </div>
+          {entry.repo && (
+            <span class="card-repo">GitHub →</span>
+          )}
+        </div>
+      </a>
+    ))}
+  </div>
 </BaseLayout>
 
+<script>
+  const filterBar = document.getElementById('filter-bar');
+  const cards = document.querySelectorAll('.project-card');
+
+  filterBar?.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('.filter-btn');
+    if (!btn) return;
+
+    filterBar.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const topic = btn.getAttribute('data-topic');
+
+    cards.forEach((card) => {
+      if (topic === 'all') {
+        (card as HTMLElement).style.display = '';
+      } else {
+        const cardTopics = card.getAttribute('data-topics')?.split(',') ?? [];
+        (card as HTMLElement).style.display = cardTopics.includes(topic) ? '' : 'none';
+      }
+    });
+  });
+</script>
+
 <style>
-  .progetto-meta {
+  .filter-bar {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    background: var(--bg-muted);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .filter-btn.active {
+    background: var(--accent);
+    color: var(--btn-primary-text);
+    border-color: var(--accent);
+  }
+
+  /* Grid layout */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s;
+  }
+
+  .project-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  .card-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+  }
+
+  .status-active { background: #16a34a; }
+  .status-reference { background: #64748b; }
+  .status-review { background: #d97706; }
+
+  .card-excerpt {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .card-stat {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+
+  .card-stat strong {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+
+  .card-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
   }
 
   .topic-badge {
     display: inline-block;
-    padding: 0.2rem 0.6rem;
+    padding: 0.15rem 0.5rem;
     border-radius: 999px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: #fff;
     background: #64748b;
   }
 
-  .topic-badge.muted {
-    background: var(--bg-muted);
-    color: var(--text-tertiary);
-    border: 1px solid var(--border);
-  }
-
-  .topic-economia,
-  .topic-fisco { background: #065f46; }
-
+  .topic-economia, .topic-fisco { background: #065f46; }
   .topic-pubblica-amministrazione { background: #6d28d9; }
   .topic-giustizia { background: #b91c1c; }
   .topic-sanita { background: #0e7490; }
@@ -111,29 +269,32 @@ const progettiList: ProgettoMeta[] = Object.entries(projectModules)
   .topic-trasparenza { background: #6d28d9; }
   .topic-territorio { background: #15803d; }
   .topic-lavoro { background: #0e7490; }
+  .topic-mobilita { background: #4338ca; }
+  .topic-democrazia { background: #b91c1c; }
+  .topic-demografia { background: #0e7490; }
+  .topic-bilancio { background: #065f46; }
+  .topic-fondi-europei { background: #d97706; }
+  .topic-acquisti-pubblici { background: #6d28d9; }
+  .topic-pnrr { background: #d97706; }
+  .topic-infrastrutture { background: #4338ca; }
+  .topic-patrimonio-pubblico { background: #15803d; }
+  .topic-sociale { background: #0e7490; }
+  .topic-terzo-settore { background: #0e7490; }
 
-  .status-active { background: #16a34a; }
-  .status-reference { background: #64748b; }
-  .status-review { background: #d97706; }
-
-  .repo-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
+  .card-repo {
     font-size: 0.75rem;
     font-weight: 600;
-    background: var(--bg-muted);
-    color: var(--text-secondary);
-    border: 1px solid var(--border);
-    text-decoration: none;
-    transition: all 0.15s;
+    color: var(--text-tertiary);
+    white-space: nowrap;
   }
 
-  .repo-badge:hover {
-    background: var(--border);
-    color: var(--text);
-    text-decoration: none;
+  .project-card:hover .card-repo {
+    color: var(--accent);
+  }
+
+  @media (max-width: 700px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

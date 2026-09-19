@@ -7,6 +7,15 @@ topics: ["enti-locali", "finanza-pubblica", "trasparenza"]
 dataset_slug:
 repo: dataciviclab/partecipate-monitor
 site: https://dataciviclab.github.io/partecipate-monitor/
+stats:
+  - value: "121"
+    label: "partecipate"
+  - value: "6"
+    label: "dataset incrociati"
+  - value: "0–100"
+    label: "score esposizione"
+  - value: "settimanale"
+    label: "scan automatico"
 ---
 
 ## In breve
