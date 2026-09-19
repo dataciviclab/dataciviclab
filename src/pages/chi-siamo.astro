@@ -1,27 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import StatusBar from '../components/StatusBar.astro';
 ---
 
 <BaseLayout title="Chi siamo" description="Chi c'è dietro DataCivicLab e come funziona">
-  <div class="csi-hero">
-    <h1>Dati pubblici,<br />una domanda civica alla volta.</h1>
-    <p>DataCivicLab è uno spazio civico aperto dove proviamo a rendere i dati pubblici italiani più leggibili, utili e condivisibili.</p>
-  </div>
-
-  <StatusBar />
-
-  <h2>Come funziona</h2>
-  <p>Il Lab segue un percorso dalla domanda all'output:</p>
-  <ol>
-    <li><strong>Domanda civica</strong> — chiunque può aprire una <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda">Discussion</a></li>
-    <li><strong>Scouting</strong> — verifichiamo se esistono fonti pubbliche per rispondere</li>
-    <li><strong>Incubazione</strong> — costruiamo pipeline dati riproducibili con <a href="https://github.com/dataciviclab/toolkit">toolkit</a></li>
-    <li><strong>Esplorazione</strong> — i dataset finiscono su <a href="https://dataciviclab.github.io/data-explorer/">data-explorer</a></li>
-  </ol>
-  <p class="csi-link">
-    <a href={import.meta.env.BASE_URL + 'ecosistema/'}>Vedi l'ecosistema completo →</a>
-  </p>
+  <h1>Chi siamo</h1>
+  <p>DataCivicLab è uno spazio civico aperto. Raccogliamo domande sui dati pubblici italiani e cerchiamo di rispondere con dati verificabili, pipeline riproducibili e strumenti aperti.</p>
 
   <h2>Principi</h2>
   <div class="csi-principi">
@@ -43,118 +26,23 @@ import StatusBar from '../components/StatusBar.astro';
     </div>
   </div>
 
+  <h2>Come partecipare</h2>
+  <p>Il modo più semplice è aprire una <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda">Discussion</a> con la tua domanda civica. Per i dettagli:</p>
+  <ul>
+    <li><a href={import.meta.env.BASE_URL + 'docs/come-contribuire/'}>Come contribuire</a> — percorsi diversi per partecipare</li>
+    <li><a href={import.meta.env.BASE_URL + 'docs/dataset-project-flow/'}>Flusso dataset/progetto</a> — come una domanda diventa dati pubblici</li>
+    <li><a href={import.meta.env.BASE_URL + 'ecosistema/'}>Ecosistema</a> — repo, strumenti e architettura</li>
+  </ul>
+
   <h2>Community</h2>
-  <div class="csi-channels">
-    <a href="https://github.com/orgs/dataciviclab/discussions" class="csi-channel">
-      <strong>GitHub Discussions</strong>
-      <small>Proposte, domande, confronto pubblico</small>
-    </a>
-    <a href="https://discord.gg/rAHpuTrYK3" class="csi-channel">
-      <strong>Discord</strong>
-      <small>Scambio veloce, idee, aiuto tra pari</small>
-    </a>
-    <a href="https://www.linkedin.com/company/dataciviclab/" class="csi-channel">
-      <strong>LinkedIn</strong>
-      <small>Aggiornamenti pubblici, nuovi output</small>
-    </a>
-    <a href="https://github.com/orgs/dataciviclab/projects/5" class="csi-channel">
-      <strong>Open Board</strong>
-      <small>La lista pubblica del lavoro in corso</small>
-    </a>
-  </div>
+  <ul>
+    <li><a href="https://github.com/orgs/dataciviclab/discussions">GitHub Discussions</a> — proposte, domande, confronto</li>
+    <li><a href="https://discord.gg/rAHpuTrYK3">Discord</a> — scambio veloce</li>
+    <li><a href="https://www.linkedin.com/company/dataciviclab/">LinkedIn</a> — aggiornamenti pubblici</li>
+    <li><a href="https://github.com/orgs/dataciviclab/projects/5">Open Board</a> — lavoro in corso</li>
+  </ul>
 
   <h2>Licenza</h2>
   <p>I dati e il codice del Lab sono rilasciati sotto licenze aperte.
-  Vedi il file <a href="https://github.com/dataciviclab/dataciviclab/blob/main/LICENSE">LICENSE</a> per i dettagli.</p>
+  Vedi <a href="https://github.com/dataciviclab/dataciviclab/blob/main/LICENSE">LICENSE</a>.</p>
 </BaseLayout>
-
-<style>
-  .csi-hero {
-    text-align: center;
-    padding: 1.5rem 0 0.5rem;
-  }
-
-  .csi-hero h1 {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .csi-hero p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .csi-link {
-    text-align: center;
-    margin-top: 1rem;
-  }
-
-  .csi-principi {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 1rem 0 1.5rem;
-  }
-
-  .csi-principio {
-    padding: 1.25rem;
-    background: var(--bg-muted);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-  }
-
-  .csi-principio h3 {
-    font-size: 0.95rem;
-    margin: 0 0 0.3rem;
-  }
-
-  .csi-principio p {
-    font-size: 0.88rem;
-    margin: 0;
-    line-height: 1.6;
-  }
-
-  .csi-channels {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    margin: 1rem 0 1.5rem;
-  }
-
-  .csi-channel {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    padding: 1rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.15s;
-  }
-
-  .csi-channel:hover {
-    border-color: var(--accent);
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .csi-channel strong {
-    font-size: 0.95rem;
-    color: var(--text);
-  }
-
-  .csi-channel small {
-    font-size: 0.82rem;
-    color: var(--text-tertiary);
-  }
-
-  @media (max-width: 600px) {
-    .csi-principi,
-    .csi-channels {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
