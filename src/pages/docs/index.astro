@@ -1,11 +1,117 @@
 ---
 import DocsLayout from '../../layouts/DocsLayout.astro';
+
+const docs = [
+  {
+    title: 'Come contribuire',
+    slug: 'come-contribuire',
+    description: 'Percorsi diversi per partecipare al Lab, anche senza saper programmare.',
+    group: 'Iniziare',
+  },
+  {
+    title: 'Flusso dataset / progetto',
+    slug: 'dataset-project-flow',
+    description: 'Come una domanda civica diventa dati pubblici — dal scouting alla pubblicazione.',
+    group: 'Iniziare',
+  },
+  {
+    title: 'Governance',
+    slug: 'governance-model',
+    description: 'Ruoli, responsabilità e come si prendono le decisioni nel Lab.',
+    group: 'Iniziare',
+  },
+  {
+    title: 'Domande frequenti',
+    slug: 'domande-frequenti',
+    description: 'Risposte alle domande più comuni su DataCivicLab.',
+    group: 'Approfondire',
+  },
+  {
+    title: 'Glossario',
+    slug: 'glossario',
+    description: 'Termini e concetti chiave del Lab, dal funnel ai layer della pipeline.',
+    group: 'Reference',
+  },
+  {
+    title: 'Setup locale',
+    slug: 'local-setup',
+    description: 'Come clonare i repo e configurare l\'ambiente di sviluppo.',
+    group: 'Reference',
+  },
+];
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <DocsLayout title="Documenti" description="Guide, mappe e procedure per orientarsi nel Lab.">
   <h1>Documenti</h1>
   <p class="section-sub">
-    Guide, mappe e procedure per orientarsi nel DataCivicLab.
-    Usa la sidebar a sinistra per navigare tra le pagine.
+    Guide e riferimenti per capire come funziona il Lab e come partecipare.
   </p>
+
+  <div class="docs-cards">
+    {docs.map((doc) => (
+      <a href={`${baseUrl}docs/${doc.slug}/`} class="docs-card">
+        <span class="docs-card-group">{doc.group}</span>
+        <h3>{doc.title}</h3>
+        <p>{doc.description}</p>
+      </a>
+    ))}
+  </div>
 </DocsLayout>
+
+<style>
+  .docs-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .docs-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s;
+  }
+
+  .docs-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .docs-card-group {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .docs-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text);
+  }
+
+  .docs-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    .docs-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

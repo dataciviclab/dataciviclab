@@ -5,26 +5,38 @@ import { docsNav, getNavContext } from '../data/docs-nav.js';
 export interface Props {
   title: string;
   description?: string;
-  /** Slug corrente per evidenziare nella sidebar e calcolare prev/next. */
   slug?: string;
 }
 
 const { title, description, slug } = Astro.props;
 const { prev, next } = getNavContext(slug ?? '');
 const baseUrl = import.meta.env.BASE_URL;
+
+// Raggruppa per group
+const groups = docsNav.reduce((acc, entry) => {
+  const g = entry.group || 'Altro';
+  if (!acc[g]) acc[g] = [];
+  acc[g].push(entry);
+  return acc;
+}, {} as Record<string, typeof docsNav>);
 ---
 
 <BaseLayout title={title} description={description}>
   <div class="docs-layout">
     <nav class="docs-sidebar">
       <div class="docs-sidebar-label">Documenti</div>
-      <ul>
-        {docsNav.map((entry) => (
-          <li class={entry.slug === slug ? 'active' : ''}>
-            <a href={`${baseUrl}docs/${entry.slug}/`}>{entry.title}</a>
-          </li>
-        ))}
-      </ul>
+      {Object.entries(groups).map(([group, entries]) => (
+        <div class="docs-nav-group">
+          <span class="docs-nav-group-label">{group}</span>
+          <ul>
+            {entries.map((entry) => (
+              <li class={entry.slug === slug ? 'active' : ''}>
+                <a href={`${baseUrl}docs/${entry.slug}/`}>{entry.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </nav>
 
     <article class="docs-content">
@@ -53,13 +65,13 @@ const baseUrl = import.meta.env.BASE_URL;
 <style>
   .docs-layout {
     display: flex;
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: flex-start;
   }
 
   /* ---- Sidebar ---- */
   .docs-sidebar {
-    flex: 0 0 200px;
+    flex: 0 0 180px;
     position: sticky;
     top: 1.5rem;
   }
@@ -73,17 +85,32 @@ const baseUrl = import.meta.env.BASE_URL;
     margin-bottom: 0.75rem;
   }
 
-  .docs-sidebar ul {
+  .docs-nav-group {
+    margin-bottom: 1rem;
+  }
+
+  .docs-nav-group-label {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    margin-bottom: 0.3rem;
+    padding-left: 0.5rem;
+  }
+
+  .docs-nav-group ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  .docs-sidebar li {
-    margin-bottom: 0.35rem;
+  .docs-nav-group li {
+    margin-bottom: 0.15rem;
   }
 
-  .docs-sidebar a {
+  .docs-nav-group a {
     display: block;
     font-size: 0.85rem;
     font-weight: 500;
@@ -95,14 +122,14 @@ const baseUrl = import.meta.env.BASE_URL;
     line-height: 1.4;
   }
 
-  .docs-sidebar a:hover {
+  .docs-nav-group a:hover {
     color: var(--accent);
     background: var(--accent-light);
     text-decoration: none;
   }
 
-  .docs-sidebar .active a,
-  .docs-sidebar .active a:hover {
+  .docs-nav-group .active a,
+  .docs-nav-group .active a:hover {
     color: var(--accent);
     background: var(--accent-light);
     font-weight: 600;
@@ -179,19 +206,35 @@ const baseUrl = import.meta.env.BASE_URL;
       flex: none;
       position: static;
       width: 100%;
-    }
-
-    .docs-sidebar ul {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.35rem;
+      gap: 0.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
     }
 
-    .docs-sidebar li {
+    .docs-sidebar-label {
+      width: 100%;
       margin-bottom: 0;
     }
 
-    .docs-sidebar a {
+    .docs-nav-group {
+      display: contents;
+    }
+
+    .docs-nav-group-label {
+      display: none;
+    }
+
+    .docs-nav-group ul {
+      display: contents;
+    }
+
+    .docs-nav-group li {
+      margin-bottom: 0;
+    }
+
+    .docs-nav-group a {
       font-size: 0.8rem;
       padding: 0.25rem 0.5rem;
       border: 1px solid var(--border);
