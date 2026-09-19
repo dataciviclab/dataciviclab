@@ -122,20 +122,22 @@ const allTopics = [...new Set(progettiList.flatMap((p) => p.topics))].sort();
   .filter-bar {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.5rem;
     margin-bottom: 2rem;
   }
 
   .filter-btn {
-    padding: 0.3rem 0.75rem;
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
     border-radius: 999px;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     font-weight: 500;
     border: 1px solid var(--border);
     background: var(--bg-muted);
     color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.15s;
+    white-space: nowrap;
   }
 
   .filter-btn:hover {
