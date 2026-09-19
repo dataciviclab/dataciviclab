@@ -11,9 +11,9 @@ Termini che compaiono nei documenti e nelle discussioni del Lab.
 ---
 
 **Analisi**
-: Prodotto pubblico di un dataset. Le analisi vivevano in `dataciviclab/analisi/<slug>/` con
-README, notebook e figure. Oggi i dataset pubblici sono esplorabili su
-[data-explorer](https://dataciviclab.github.io/data-explorer/).
+: Prodotto pubblico di un dataset. Oggi i dataset pubblici sono esplorabili su
+[data-explorer](https://dataciviclab.github.io/data-explorer/). Le analisi
+migrano da `dataciviclab/analisi/` a data-explorer.
 
 **Candidate**
 : Un dataset in fase di incubazione in `dataset-incubator`. Ha un `dataset.yml`, SQL di
@@ -22,7 +22,7 @@ supera una review.
 
 **CLEAN**
 : Secondo layer della pipeline. Dati normalizzati, con tipi consistenti, valori
-standardizzati e null gestiti. Pronto per analisi cross-dataset.
+standardizzati e null gestiti. Pronto per query cross-dataset.
 
 **Dataset**
 : Fonte dati pubblica incanalata nel Lab. Può essere un file CSV, un'API, un dataflow SDMX.
@@ -31,7 +31,7 @@ Ogni dataset ha un contratto (`dataset.yml`) che definisce fonte, periodicità e
 **Domanda civica**
 : Punto di ingresso del funnel. Una domanda su un fenomeno pubblico
 (es. "Perché in Sicilia i tempi della giustizia sono più lunghi?") che guida la ricerca
-di dati e la successiva analisi. Chiunque può aprirne una.
+di dati e la successiva elaborazione. Chiunque può aprirne una.
 
 **Funnel**
 : Il percorso che va dalla domanda civica all'output pubblico:
@@ -53,10 +53,10 @@ contratto (`dataset.yml`), delle SQL di pulizia, e la prima esecuzione della pip
 
 **Layer**
 : Ciascuno degli stadi della pipeline: RAW (dato originale), CLEAN (normalizzato),
-MART (aggregato per analisi). Ogni layer è un parquet su GCS con schema documentato.
+MART (aggregato per uso). Ogni layer è un parquet su GCS con schema documentato.
 
 **MART**
-: Terzo layer della pipeline. Dati aggregati e pronti per l'analisi diretta.
+: Terzo layer della pipeline. Dati aggregati e pronti per l'uso diretto.
 Ogni MART risponde a un uso specifico (es. serie storiche, ranking, distribuzioni).
 
 **Pipeline**

@@ -14,7 +14,7 @@ in vari repo, ma non è l'unico modo.
 
 Vedi [come-contribuire](/docs/come-contribuire/).
 
-## Come faccio a proporre un'analisi?
+## Come faccio a proporre un nuovo dataset?
 
 Apri una [Discussion](https://github.com/orgs/dataciviclab/discussions/new?category=Domanda)
 nella categoria **Domanda**. Spiega cosa vuoi capire e, se la conosci, indica la
@@ -25,7 +25,7 @@ fonte pubblica che potrebbe servire. Il team la prende in carico.
 - **Discussion** — spazio per formulare domande, esplorare idee, chiarire prima di
   decidere. Non richiede un'azione immediata.
 - **Issue** — task concreto e assegnabile. Si apre quando una discussione è matura
-  e serve un'azione specifica (aprire un intake, scrivere un'analisi, fixare un bug).
+  e serve un'azione specifica (aprire un intake, lavorare su un progetto, fixare un bug).
 
 ## Come deciso cosa fare?
 
@@ -51,9 +51,9 @@ Perché la fonte pubblica non ha ancora rilasciato dati più recenti.
 Non inventiamo dati. Se una fonte è ferma al 2023, il dataset è fermo al 2023.
 Il source-observatory monitora attivamente gli aggiornamenti.
 
-## Come faccio a segnalare un errore in un'analisi?
+## Come faccio a segnalare un errore in un dataset?
 
-Apri una issue nella repo `dataciviclab` con link all'analisi e descrizione
+Apri una issue nella repo del progetto con link al dataset e descrizione
 dell'errore. Se hai dubbi, apri prima una Discussion. Ogni errore confermato
 viene corretto e tracciato.
 
@@ -61,7 +61,7 @@ viene corretto e tracciato.
 
 Un'affermazione verificabile supportata dai dati. Esempio: "Nel 2023 le
 rinnovabili hanno coperto il 38% del fabbisogno elettrico italiano".
-I finding sono l'unità di output pubblico del Lab. Ogni analisi ne produce
+I finding sono l'unità di output pubblico del Lab. Ogni progetto ne produce
 3-5, con evidenza e limiti esplicitati.
 
 ## Posso fare una domanda sul territorio (comune, regione, provincia)?
