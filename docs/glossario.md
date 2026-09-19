@@ -11,9 +11,8 @@ Termini che compaiono nei documenti e nelle discussioni del Lab.
 ---
 
 **Analisi**
-: Prodotto pubblico di un dataset. Oggi i dataset pubblici sono esplorabili su
-[data-explorer](https://dataciviclab.github.io/data-explorer/). Le analisi
-migrano da `dataciviclab/analisi/` a data-explorer.
+: Prodotto pubblico di un dataset. I dataset pubblici sono esplorabili su
+[data-explorer](https://dataciviclab.github.io/data-explorer/).
 
 **Candidate**
 : Un dataset in fase di incubazione in `dataset-incubator`. Ha un `dataset.yml`, SQL di

@@ -71,7 +71,7 @@ su fenomeni misurabili, non su casi singoli non verificabili. Se la domanda
 è "Quanto ha speso il mio comune in X?", servono dati pubblici che coprano
 tutti i comuni — non possiamo fare richieste FOIA o ricerche ad hoc.
 
-## Come nantieni il Lab?
+## Come mantieni il Lab?
 
 DataCivicLab è un progetto volontario, senza finanziamenti. Il tempo è quello
 che i contributori riescono a dedicare. Per questo lavoriamo a rilascio
