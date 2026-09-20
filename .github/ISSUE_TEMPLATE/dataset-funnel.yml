@@ -56,7 +56,7 @@ body:
         - label: "3. Intake-candidate — candidate strutturato e PR mergiata in dataset-incubator"
         - label: "4. Post-merge — clean parquet su GCS e catalog aggiornato"
         - label: "5. Add-to-explorer — dataset pubblicato su data-explorer"
-        - label: "6. New-analysis — analisi pubblicata in dataciviclab/analisi/"
+        - label: "6. Public — dataset pubblicato su data-explorer"
 
   - type: dropdown
     id: status
@@ -69,7 +69,7 @@ body:
         - "Step 3 — Intake-candidate"
         - "Step 4 — Post-merge"
         - "Step 5 — Add-to-explorer"
-        - "Step 6 — New-analysis"
+        - "Step 6 — Public"
         - "WATCHLIST"
         - "BLOCKED"
         - "NO-GO"
@@ -89,7 +89,7 @@ body:
         - PR Candidate (DI #):
         - Post-merge (PR registry #):
         - Add-to-explorer (PR explorer #):
-        - New-analysis (PR DCL #):
+        - Public (PR explorer #):
     validations:
       required: false
 
@@ -114,7 +114,7 @@ body:
         | 3. Intake-candidate | `intake-candidate` | dataset-incubator |
         | 4. Post-merge | `post-merge-candidate` | dataset-incubator |
         | 5. Add-to-explorer | `add-to-explorer` | data-explorer |
-        | 6. New-analysis | `new-analysis` | dataciviclab |
+        | 6. Public | `add-to-explorer` | data-explorer |
 
         **Passaggio tra step**: ogni skill produce l'input della successiva.
         Se un filone viene da una segnalazione esterna (es. GitHub Discussion),
