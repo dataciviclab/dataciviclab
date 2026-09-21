@@ -7,6 +7,15 @@ topics: ["giustizia", "trasparenza"]
 dataset_slug:
 repo: dataciviclab/italia-corpus
 site:
+stats:
+  - value: "20.716"
+    label: "atti normativi"
+  - value: "20"
+    label: "collezioni"
+  - value: "108.490"
+    label: "archi"
+  - value: "757"
+    label: "con CELEX UE"
 ---
 
 ## In breve

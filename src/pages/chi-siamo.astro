@@ -3,23 +3,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Chi siamo" description="Chi c'è dietro DataCivicLab e come funziona">
-  <p>DataCivicLab è uno spazio civico aperto dove proviamo a rendere i dati pubblici più leggibili, utili e condivisibili.</p>
-
-  <h2>Come funziona</h2>
-  <p>Il Lab segue un percorso dalla domanda all'output:</p>
-  <ol>
-    <li><strong>Domanda civica</strong> — chiunque può aprire una <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda">Discussion</a></li>
-    <li><strong>Scouting</strong> — verifichiamo se esistono fonti pubbliche per rispondere</li>
-    <li><strong>Incubazione</strong> — costruiamo pipeline dati riproducibili</li>
-    <li><strong>Esplorazione</strong> — i dataset finiscono su <a href="https://dataciviclab.github.io/data-explorer/">data-explorer</a></li>
-  </ol>
+  <h1>Chi siamo</h1>
+  <p>DataCivicLab è uno spazio civico aperto. Raccogliamo domande sui dati pubblici italiani e cerchiamo di rispondere con dati verificabili, pipeline riproducibili e strumenti aperti.</p>
 
   <h2>Principi</h2>
+  <div class="csi-principi">
+    <div class="csi-principio">
+      <h3>Dati al ritmo giusto</h3>
+      <p>Lavoriamo al ritmo che i dati permettono, non più veloce. La qualità conta più della velocità.</p>
+    </div>
+    <div class="csi-principio">
+      <h3>Pubblico per default</h3>
+      <p>Tutto è aperto: codice, dati, discussioni, decisioni. Il lavoro del Lab è verificabile da chiunque.</p>
+    </div>
+    <div class="csi-principio">
+      <h3>Senza barriere</h3>
+      <p>Non servono competenze tecniche per partecipare. Le domande civiche sono il punto di ingresso.</p>
+    </div>
+    <div class="csi-principio">
+      <h3>Domande, non solo dati</h3>
+      <p>I dati non parlano da soli — servono domande, metodo e contesto per trasformarli in conoscenza.</p>
+    </div>
+  </div>
+
+  <h2>Come partecipare</h2>
+  <p>Il modo più semplice è aprire una <a href="https://github.com/orgs/dataciviclab/discussions/new?category=Domanda">Discussion</a> con la tua domanda civica. Per i dettagli:</p>
   <ul>
-    <li>Lavoriamo al ritmo che i dati permettono, non più veloce</li>
-    <li>Tutto è pubblico per default</li>
-    <li>Non servono competenze tecniche per partecipare</li>
-    <li>I dati non parlano da soli — servono domande, metodo e contesto</li>
+    <li><a href={import.meta.env.BASE_URL + 'docs/come-contribuire/'}>Come contribuire</a> — percorsi diversi per partecipare</li>
+    <li><a href={import.meta.env.BASE_URL + 'docs/dataset-project-flow/'}>Flusso dataset/progetto</a> — come una domanda diventa dati pubblici</li>
+    <li><a href={import.meta.env.BASE_URL + 'ecosistema/'}>Ecosistema</a> — repo, strumenti e architettura</li>
   </ul>
 
   <h2>Community</h2>
@@ -30,9 +42,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <li><a href="https://github.com/orgs/dataciviclab/projects/5">Open Board</a> — lavoro in corso</li>
   </ul>
 
-  <h2>Repository</h2>
-  <p>Tutto il codice del Lab è su <a href="https://github.com/dataciviclab">github.com/dataciviclab</a>.</p>
-
   <h2>Licenza</h2>
-  <p>I dati e il codice del Lab sono rilasciati sotto licenze aperte. Vedi il file <a href="https://github.com/dataciviclab/dataciviclab/blob/main/LICENSE">LICENSE</a> per i dettagli.</p>
+  <p>I dati e il codice del Lab sono rilasciati sotto licenze aperte.
+  Vedi <a href="https://github.com/dataciviclab/dataciviclab/blob/main/LICENSE">LICENSE</a>.</p>
 </BaseLayout>

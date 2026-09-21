@@ -38,7 +38,6 @@ Se vuoi invece lavorare su qualcosa di più vicino al flusso tecnico del Lab,
 guarda le issue con label [`core-team`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3Acore-team):
 
 - review di filone
-- promozione di un candidato da analisi
 - scelta del prossimo output
 
 ## Vuoi lavorare su un progetto dataset

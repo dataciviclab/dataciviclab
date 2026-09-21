@@ -5,12 +5,12 @@
  * Aggiungi qui una nuova pagina docs/ per farla comparire nella sidebar.
  */
 export const docsNav = [
-  { slug: 'come-contribuire',     title: 'Come contribuire' },
-  { slug: 'dataset-project-flow', title: 'Flusso dataset / progetto' },
-  { slug: 'governance-model',     title: 'Modello di governance' },
-  { slug: 'glossario',            title: 'Glossario' },
-  { slug: 'domande-frequenti',    title: 'Domande frequenti' },
-  { slug: 'local-setup',          title: 'Setup locale' },
+  { slug: 'come-contribuire',     title: 'Come contribuire',     group: 'Iniziare' },
+  { slug: 'dataset-project-flow', title: 'Flusso dataset',       group: 'Iniziare' },
+  { slug: 'governance-model',     title: 'Governance',           group: 'Iniziare' },
+  { slug: 'domande-frequenti',    title: 'Domande frequenti',    group: 'Approfondire' },
+  { slug: 'glossario',            title: 'Glossario',            group: 'Reference' },
+  { slug: 'local-setup',          title: 'Setup locale',         group: 'Reference' },
 ];
 
 /** Recupera indice e link prev/next per una slug. */

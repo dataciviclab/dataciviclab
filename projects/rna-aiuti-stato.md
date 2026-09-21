@@ -7,6 +7,15 @@ topics: ["economia", "finanza-pubblica", "trasparenza"]
 dataset_slug: rna_aiuti_stato
 repo: dataciviclab/rna-aiuti-stato
 site:
+stats:
+  - value: "~17M"
+    label: "singoli aiuti"
+  - value: "12.874"
+    label: "misure"
+  - value: "2017–2026"
+    label: "periodo"
+  - value: "704 MB"
+    label: "parquet"
 ---
 
 ## In breve

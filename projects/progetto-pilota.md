@@ -7,6 +7,11 @@ topics: ["ambiente", "enti-locali"]
 dataset_slug:
 repo: dataciviclab/progetto-pilota
 site:
+stats:
+  - value: "ISPRA"
+    label: "fonte"
+  - value: "benchmark"
+    label: "comunale"
 ---
 
 ## In breve

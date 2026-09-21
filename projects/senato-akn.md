@@ -7,6 +7,15 @@ topics: ["trasparenza", "democrazia"]
 dataset_slug:
 repo: dataciviclab/senato-akn
 site:
+stats:
+  - value: "68.114"
+    label: "file XML"
+  - value: "786 MB"
+    label: "corpus"
+  - value: "XIX leg."
+    label: "legislatura"
+  - value: "4,28×"
+    label: "rapporto decreto/testo"
 ---
 
 ## In breve

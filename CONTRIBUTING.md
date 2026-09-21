@@ -15,7 +15,6 @@ Per le regole GitHub condivise dell'organizzazione, vedi
 - **Sito** — [dataciviclab.org](https://dataciviclab.org) basato su **Astro** (`src/`, `public/`, `astro.config.mjs`)
 - **Discussions** — domande, idee, confronto pubblico
 - **`docs/`** — documenti di orientamento (dataset-project-flow, governance, come-contribuire, local-setup)
-- **`analisi/`** — dataset pubblici in corso (legacy, in migrazione verso data-explorer)
 - **`projects/`** — indice dei filoni promossi a repo dedicata
 - **`skills/`** — guide operative per agenti e contributor
 - Task cross-repo e decisioni organizzative
@@ -91,7 +90,7 @@ Apri una issue in `dataciviclab` se il lavoro riguarda:
 
 - [README.md](README.md) — panoramica del Lab
 - [docs/come-contribuire.md](docs/come-contribuire.md) — guida per nuovi contributor
-- [docs/dataset-project-flow.md](docs/dataset-project-flow.md) — flusso dalla domanda all'analisi
+- [docs/dataset-project-flow.md](docs/dataset-project-flow.md) — flusso dalla domanda al dataset pubblico
 - [docs/governance-model.md](docs/governance-model.md) — ruoli e decisioni
 - [docs/local-setup.md](docs/local-setup.md) — setup tecnico locale (o `curl ... setup.sh | bash`)
 - [`.github`](https://github.com/dataciviclab/.github) — policy condivise

@@ -11,8 +11,8 @@ const RADAR_URL =
   "https://raw.githubusercontent.com/dataciviclab/source-observatory/main/data/radar/radar_summary.json";
 
 /** Dati fallback (ultimi valori noti, usati se GitHub raw non risponde) */
-const FALLBACK_CATALOG = { total: 114, published: 97, incubating: 17 };
-const FALLBACK_RADAR = { total: 14, green: 8, yellow: 3, red: 3 };
+const FALLBACK_CATALOG = { total: 283, published: 68, incubating: 215 };
+const FALLBACK_RADAR = { total: 35, green: 35, yellow: 0, red: 0 };
 
 /**
  * Legge registry.json e restituisce conteggi per stage.

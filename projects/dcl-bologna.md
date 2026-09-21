@@ -7,6 +7,15 @@ topics: ["territorio", "mobilità", "ambiente"]
 dataset_slug:
 repo: dataciviclab/dcl-bologna
 site:
+stats:
+  - value: "18,6M"
+    label: "passaggi ZTL"
+  - value: "702"
+    label: "dataset"
+  - value: "dal 1986"
+    label: "serie storica"
+  - value: "15"
+    label: "dataset Lab"
 ---
 
 ## In breve

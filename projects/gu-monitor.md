@@ -7,6 +7,15 @@ topics: ["trasparenza", "giustizia"]
 dataset_slug:
 repo: dataciviclab/gu-monitor
 site:
+stats:
+  - value: "4.330"
+    label: "atti / 30gg"
+  - value: "7"
+    label: "serie"
+  - value: "~500"
+    label: "enti"
+  - value: "177/giorno"
+    label: "media"
 ---
 
 ## In breve

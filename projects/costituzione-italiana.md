@@ -7,6 +7,15 @@ topics: ["giustizia", "trasparenza"]
 dataset_slug:
 repo: dataciviclab/costituzione-italiana
 site:
+stats:
+  - value: "139"
+    label: "articoli"
+  - value: "21.534"
+    label: "sentenze"
+  - value: "15.969"
+    label: "citazioni"
+  - value: "7"
+    label: "dataset"
 ---
 
 ## In breve

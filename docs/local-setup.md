@@ -25,7 +25,7 @@ curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scri
 Lo script:
 
 1. Crea `dataciviclab-workspace/` nella directory corrente
-2. Clona tutti i repo del Lab (7 core + 7 opzionali)
+2. Clona tutti i repo del Lab
 3. Crea `.venv` e installa tutte le dipendenze Python
 4. Copia `.env.example` in `.env`
 5. Genera `.mcp.json` con i server MCP del Lab
@@ -55,7 +55,6 @@ lavoro/
   dataset-incubator/
   lab-connectors/
   source-observatory/
-  agent-context-builder/
   data-explorer/
 ```
 
@@ -80,7 +79,6 @@ pip install -e lab-connectors
 pip install -e "toolkit[parquet,dev]"
 pip install --no-deps -e "dataset-incubator[dev]"
 pip install --no-deps -e "source-observatory[dev]"
-pip install -e agent-context-builder[mcp,dev]
 pip install --no-deps -e lab-connectors
 ```
 
@@ -116,11 +114,13 @@ Include impostazioni consigliate, estensioni e path a tutti i repo del Lab.
 
 ## Primo run
 
+Esegui una pipeline per verificare che tutto funzioni:
+
 ```bash
-toolkit run all --config dataset-incubator/candidates/irpef-comunale/dataset.yml
+toolkit run all --config dataset-incubator/candidates/<slug>/dataset.yml
 ```
 
-Se tutto è a posto vedrai l'output in `dataset-incubator/out/`.
+Sostituisci `<slug>` con lo slug di un candidate attivo. Se tutto è a posto vedrai l'output in `dataset-incubator/out/`.
 
 ## Prossimi passi
 
