@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://dataciviclab.org/sitemap-index.xml
