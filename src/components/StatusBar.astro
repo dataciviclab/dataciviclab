@@ -5,11 +5,7 @@
  * I dati hanno un fallback locale se gli artifact remoti non sono raggiungibili.
  */
 import { fetchRadarStats } from "../lib/lab-stats.js";
-
-const projectModules = import.meta.glob("/projects/*.md", { eager: true });
-const publishedProjects = Object.keys(projectModules).filter(
-  (filepath) => !filepath.endsWith("/README.md"),
-).length;
+import { publishedProjectCount } from "../lib/projects.js";
 
 const radarStats = await fetchRadarStats();
 const baseUrl = import.meta.env.BASE_URL;
@@ -34,7 +30,7 @@ const baseUrl = import.meta.env.BASE_URL;
     <span class="stat">
       <span class="stat-icon">📁</span>
       <a href={`${baseUrl}progetti/`} class="stat-link">
-        <strong>{publishedProjects}</strong> progetti pubblicati
+        <strong>{publishedProjectCount}</strong> progetti pubblicati
       </a>
     </span>
     <span class="stat">
