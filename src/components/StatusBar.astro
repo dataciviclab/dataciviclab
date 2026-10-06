@@ -1,13 +1,14 @@
 ---
 /**
  * StatusBar — KPI live del Lab letti in build-time.
- * Mostra fonti monitorate, dataset pubblicati, discussioni.
+ * Mostra fonti monitorate, progetti pubblicati (schede projects/), discussioni.
  * I dati hanno un fallback locale se gli artifact remoti non sono raggiungibili.
  */
-import { fetchCatalogStats, fetchRadarStats } from "../lib/lab-stats.js";
+import { fetchRadarStats } from "../lib/lab-stats.js";
+import { publishedProjectCount } from "../lib/projects.js";
 
-const catalogStats = await fetchCatalogStats();
 const radarStats = await fetchRadarStats();
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <div class="status-bar">
@@ -27,8 +28,10 @@ const radarStats = await fetchRadarStats();
       </span>
     </span>
     <span class="stat">
-      <span class="stat-icon">📚</span>
-      <strong>{catalogStats.published}</strong> dataset pubblicati
+      <span class="stat-icon">📁</span>
+      <a href={`${baseUrl}progetti/`} class="stat-link">
+        <strong>{publishedProjectCount}</strong> progetti pubblicati
+      </a>
     </span>
     <span class="stat">
       <span class="stat-icon">💬</span>

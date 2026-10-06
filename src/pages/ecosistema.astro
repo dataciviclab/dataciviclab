@@ -1,9 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { fetchCatalogStats, fetchRadarStats } from '../lib/lab-stats.js';
+import { listPublishedProjects } from '../lib/projects.js';
 
 const catalogStats = await fetchCatalogStats();
 const radarStats = await fetchRadarStats();
+const progetti = listPublishedProjects();
+
+/** One-liner editoriali per ecosistema — solo testo, l'elenco viene da projects/ */
+const ecoDesc: Record<string, string> = {
+  'open-siope': 'La spesa pubblica italiana — comuni, ASL, regioni, università',
+  'open-conto-annuale': 'Il personale della PA — 3,4M dipendenti, €186 mld',
+  'bilancio-pubblico': 'Entrate, uscite e saldo del bilancio statale 2003–2026',
+  'eurostat': 'Dati regionali europei — PIL, popolazione, criminalità NUTS3',
+  'dcl-bologna': 'Bologna in dati — ZTL, qualità dell\'aria, demografia',
+  'rna-aiuti-stato': 'Ogni aiuto pubblico alle imprese — 17M+ record',
+  'costituzione-italiana': '139 articoli, 21K sentenze, 16K citazioni — interrogabile',
+  'open-politica': 'Elezioni dal 1948, Parlamento, governo — tutto interrogabile',
+  'gu-monitor': 'La Gazzetta Ufficiale monitorata — 4.330 atti / 30gg',
+  'italia-corpus': '20.716 atti normativi in Markdown, da Normattiva',
+  'senato-akn': 'Il lavoro del Senato per peso documentale, non per numero',
+  'debito-pubblico-intelligence': 'Intelligence sul debito — 165 anni, fusion layer, scenari',
+  'partecipate-monitor': '121 partecipate pubbliche — profili incrociati da 6 fonti',
+  'appalti-pubblici': 'Bandi, aggiudicazioni, imprese ANAC — 2016–2026',
+  'open-consip': 'Acquisti centralizzati PA — 174K imprese dual-use',
+  'open-pnrr': '194 mld PNRR — progetti, gare, pagamenti, indicatori',
+  'open-coesione': '346 mld coesione — 128K progetti, 7,2M soggetti',
+  'indice-pa': 'Anagrafe PA — 23K enti, 122K uffici, 53 categorie',
+  'terzo-settore': '150K ETS — 8 fonti incrociate, matching bandi',
+  'opere-pubbliche': '11,94M CUP — ANAC, PNRR, OpenCoesione incrociati',
+  'opencivitas': 'FSC e indicatori — 6.600 comuni, 2015–2025',
+  'patrimonio-territorio': '3,25M immobili pubblici — 100% georeferenziati',
+  'giustizia-amministrativa': 'Contenzioso della Giustizia Amministrativa — 31 sedi, 2017–2026',
+  'dichiarazioni-italia': 'IRPEF, IVA, IRES, IRAP — dichiarazioni fiscali MEF',
+  'imprese-italia': 'Demografia d\'impresa — stock, flussi, Marche comunali',
+  'open-inps': 'Lavoro, pensioni e welfare — 17 dataset INPS',
+  'pil-intelligence': 'PIL e GVA province, debito 1861–2025, confronti OCPI',
+  'sistema-bancario': 'Bilanci banche europee — EBA, BCE, World Bank',
+  'energia-italia': 'Sistema elettrico — Terna e GME, mix, prezzi, emissioni',
+  'open-ispra': 'Ambiente ISPRA — acque, suolo, pesticidi, frane',
+  'open-mur': 'Università italiana — 92 atenei, MUR/USTAT',
+  'rifiuti-urbani': 'Rifiuti urbani e speciali — Catasto ISPRA, comunale',
+  'inpa-reclutamento': 'Bandi e concorsi PA — portale inPA, tempi e trasparenza',
+  'open-noipa': 'Stipendi e dipendenti PA — NoiPA, 2019–2026',
+  'italia-dipendenze': 'Dipendenze strategiche — gas, metalli, concentrazione fornitura',
+  'progetto-pilota': 'Rifiuti urbani — primo proof of work del Lab (reference)',
+};
 ---
 
 <BaseLayout title="Ecosistema del Lab" description="I tre fronti pubblici di DataCivicLab: sito, dati, stato operativo">
@@ -103,96 +145,14 @@ const radarStats = await fetchRadarStats();
     </div>
   </div>
 
-  <h3 class="eco-section-title">Progetti <span class="eco-count">22</span></h3>
+  <h3 class="eco-section-title">Progetti <span class="eco-count">{progetti.length}</span></h3>
   <div class="eco-repo-grid">
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/open-siope">open-siope</a></span>
-      <span class="eco-repo-desc">La spesa pubblica italiana — comuni, ASL, regioni, università</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/open-conto-annuale">open-conto-annuale</a></span>
-      <span class="eco-repo-desc">Il personale della PA — 3,4M dipendenti, €186 mld</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/bilancio-pubblico">bilancio-pubblico</a></span>
-      <span class="eco-repo-desc">Entrate, uscite e saldo del bilancio statale 2003–2026</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/eurostat">eurostat</a></span>
-      <span class="eco-repo-desc">Dati regionali europei — PIL, popolazione, criminalità NUTS3</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/dcl-bologna">dcl-bologna</a></span>
-      <span class="eco-repo-desc">Bologna in dati — ZTL, qualità dell'aria, demografia</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/rna-aiuti-stato">rna-aiuti-stato</a></span>
-      <span class="eco-repo-desc">Ogni aiuto pubblico alle imprese — 17M+ record</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/costituzione-italiana">costituzione-italiana</a></span>
-      <span class="eco-repo-desc">139 articoli, 21K sentenze, 16K citazioni — interrogabile</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/open-politica">open-politica</a></span>
-      <span class="eco-repo-desc">Elezioni dal 1948, Parlamento, governo — tutto interrogabile</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/gu-monitor">gu-monitor</a></span>
-      <span class="eco-repo-desc">La Gazzetta Ufficiale monitorata — 4.330 atti / 30gg</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/italia-corpus">italia-corpus</a></span>
-      <span class="eco-repo-desc">20.716 atti normativi in Markdown, da Normattiva</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/senato-akn">senato-akn</a></span>
-      <span class="eco-repo-desc">Il lavoro del Senato per peso documentale, non per numero</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/debito-pubblico-intelligence">debito-pubblico-intelligence</a></span>
-      <span class="eco-repo-desc">Intelligence sul debito — 165 anni, fusion layer, scenari</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/partecipate-monitor">partecipate-monitor</a></span>
-      <span class="eco-repo-desc">121 partecipate pubbliche — profili incrociati da 6 fonti</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/appalti-pubblici">appalti-pubblici</a></span>
-      <span class="eco-repo-desc">Bandi, aggiudicazioni, imprese ANAC — 2016–2026</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/open-consip">open-consip</a></span>
-      <span class="eco-repo-desc">Acquisti centralizzati PA — 174K imprese dual-use</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/open-pnrr">open-pnrr</a></span>
-      <span class="eco-repo-desc">194 mld PNRR — progetti, gare, pagamenti, indicatori</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/open-coesione">open-coesione</a></span>
-      <span class="eco-repo-desc">346 mld coesione — 128K progetti, 7,2M soggetti</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/indice-pa">indice-pa</a></span>
-      <span class="eco-repo-desc">Anagrafe PA — 23K enti, 122K uffici, 53 categorie</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/terzo-settore">terzo-settore</a></span>
-      <span class="eco-repo-desc">150K ETS — 8 fonti incrociate, matching bandi</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/opere-pubbliche">opere-pubbliche</a></span>
-      <span class="eco-repo-desc">11,94M CUP — ANAC, PNRR, OpenCoesione incrociati</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/opencivitas">opencivitas</a></span>
-      <span class="eco-repo-desc">FSC e indicatori — 6.600 comuni, 2015–2025</span>
-    </div>
-    <div class="eco-repo-row">
-      <span class="eco-repo-name"><a href="https://github.com/dataciviclab/patrimonio-territorio">patrimonio-territorio</a></span>
-      <span class="eco-repo-desc">3,25M immobili pubblici — 100% georeferenziati</span>
-    </div>
+    {progetti.map((p) => (
+      <div class="eco-repo-row">
+        <span class="eco-repo-name"><a href={`https://github.com/${p.repo}`}>{p.slug}</a></span>
+        <span class="eco-repo-desc">{ecoDesc[p.slug] ?? p.title}</span>
+      </div>
+    ))}
   </div>
 
   <h2>Il funnel</h2>
