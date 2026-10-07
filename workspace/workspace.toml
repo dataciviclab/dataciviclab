@@ -74,12 +74,6 @@ repo = "dataciviclab/lab-dashboard"
 essential = false
 
 [[infra]]
-path = "infra/lab-ops"
-repo = "dataciviclab/lab-ops"
-essential = false
-private = true
-
-[[infra]]
 path = "infra/project-template"
 repo = "dataciviclab/project-template"
 essential = false
@@ -103,14 +97,13 @@ essential = false
 
 # Domains — raggruppamento umano. slug → path = <domain>/<slug>.
 # Aggiungere un progetto = una riga qui + clone.
-# Repo privati: visibility o private = true (doctor avvisa, clone salta).
+# Repo privati: NON elencati qui. Restano fuori dal setup pubblico.
 
 [domains.diritto-legge]
 costituzione-italiana = "dataciviclab/costituzione-italiana"
 giustizia-amministrativa = "dataciviclab/giustizia-amministrativa"
 gu-monitor = "dataciviclab/gu-monitor"
 italia-corpus = "dataciviclab/italia-corpus"
-legal-graph = { repo = "dataciviclab/legal-graph", private = true }
 open-politica = "dataciviclab/open-politica"
 senato-akn = "dataciviclab/senato-akn"
 

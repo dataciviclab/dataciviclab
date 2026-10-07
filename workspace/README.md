@@ -67,6 +67,13 @@ dataciviclab-workspace/
 
 I tool **non** hardcodano i nomi dei dominii: leggono `workspace.toml`.
 
+## Repo privati
+
+I repo privati dell’org **non stanno nel contratto** e non fanno parte di
+`make setup` / `make clone-core` / `make doctor`. Se ti servono, clonali a mano
+(e hai bisogno dei permessi GitHub giusti). Il setup pubblico resta riproducibile
+per chiunque.
+
 ## Aggiungere un progetto
 
 1. Riga in `workspace.toml` sotto `[domains.<cartella>]`
