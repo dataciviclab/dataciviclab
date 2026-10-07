@@ -1,11 +1,16 @@
 ---
 title: Setup locale
 slug: local-setup
-description: Guida tecnica per configurare l'ambiente di lavoro del Lab in un comando.
+description: Setup per contributor — da un singolo repo dataset al workspace multi-repo del Lab.
 ---
 # Setup locale
 
-Guida per **contributori esterni** che vogliono lavorare sui dataset del Lab.
+Guida per chi vuole lavorare sui dati o sul codice di DataCivicLab.
+
+**Due percorsi, non uno solo:**
+
+1. **Contributore su un progetto** — cloni *una* repo, ti basta quella (consigliato)
+2. **Workspace multi-repo** — core team o lavoro cross-repo (toolkit, incubator, …)
 
 Se fai parte del core team, la guida interna è in `lab-ops/operations/local-setup.md`
 (repo privata).
@@ -14,115 +19,189 @@ Se fai parte del core team, la guida interna è in `lab-ops/operations/local-set
 
 - **Git**
 - **Python 3.12+**
-- VS Code (opzionale, ma semplifica)
+- **Make** + bash (Linux, macOS, o Windows con [WSL](https://learn.microsoft.com/windows/wsl/))
+- VS Code (opzionale)
 
-## Setup rapido (consigliato)
+---
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash
-```
+## 1. Contributore su un singolo progetto (consigliato)
 
-Lo script:
-
-1. Crea `dataciviclab-workspace/` nella directory corrente
-2. Clona tutti i repo del Lab
-3. Crea `.venv` e installa tutte le dipendenze Python
-4. Copia `.env.example` in `.env`
-5. Genera `.mcp.json` con i server MCP del Lab
-
-Tempo stimato: 1-3 minuti (dipende dalla connessione).
-
-### Per contributori (fork)
+Non serve clonare tutto il Lab. Ogni repo dati è un’unità verticale con il suo
+Makefile, pyproject e test.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash -s -- --contributor
+git clone https://github.com/dataciviclab/open-siope.git
+cd open-siope
+# se il repo ha Makefile standard:
+make setup && make check
+# altrimenti:
+python3 -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
 ```
 
-Alla fine stampa i comandi per convertire ogni clone in fork con upstream.
+Sostituisci `open-siope` con il progetto che ti interessa. Esempi:
 
-## Setup manuale
+| Progetto | Repo |
+|---|---|
+| Spesa pubblica | `dataciviclab/open-siope` |
+| Costituzione | `dataciviclab/costituzione-italiana` |
+| Aiuti di Stato | `dataciviclab/rna-aiuti-stato` |
+| Elenco completo | [dataciviclab org](https://github.com/orgs/dataciviclab/repositories) |
 
-Se preferisci non usare lo script o vuoi più controllo:
+### Fork e PR
 
-### 1. Struttura workspace
+1. **Fork** sul repo che ti serve
+2. **Clona il tuo fork**
+3. **Upstream**: `git remote add upstream https://github.com/dataciviclab/<repo>.git`
+4. **Branch** — mai lavorare su `main`
+5. **PR** dal fork al repo originale
 
-Metti tutti i repo nella stessa cartella:
+Trovi le issue aperte sul repo del progetto o sulle `good first issue` nell’hub.
 
+---
+
+## 2. Workspace multi-repo (core / cross-repo)
+
+Il workspace è una cartella con **tanti clone** (toolkit, infra, progetti per dominio).
+Non è un singolo git repo: il **contratto** path/ruoli vive nell’hub pubblico.
+
+### Layout canonico
+
+```text
+dataciviclab-workspace/
+  toolkit/                 # core
+  lab-connectors/          # core
+  infra/                   # hub, incubator, SO, explorer, …
+  incubation/              # candidate
+  diritto-legge/           # domini (raggruppamento umano)
+  economia-finanza/
+  investimenti-territorio/
+  pubblica-amministrazione/
+  workspace.toml           # contratto (copiato dall'hub)
+  Makefile                 # interfaccia
+  ws.py
+  .venv/
+  .env
 ```
-lavoro/
-  dataciviclab/
-  toolkit/
-  dataset-incubator/
-  lab-connectors/
-  source-observatory/
-  data-explorer/
+
+I tool leggono `workspace.toml`: non hardcodano i nomi dei dominii.
+
+### Setup
+
+```bash
+mkdir dataciviclab-workspace && cd dataciviclab-workspace
+
+# 1. Hub (contiene contratto + docs)
+git clone https://github.com/dataciviclab/dataciviclab.git infra/dataciviclab
+
+# 2. Contratto + interfaccia alla root
+cp infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py} .
+
+# 3. Repo core + infra essenziali
+make clone-core
+
+# 4. Ambiente Python + install editable
+make setup
+
+# 5. Verifica
+make check
+make doctor
+make status
 ```
 
-### 2. Contributore esterno (fork)
+Tempo stimato: pochi minuti a seconda della connessione.
 
-1. **Forka** ogni repo che ti serve dalla pagina GitHub del Lab (tasto `Fork`)
-2. **Clona il tuo fork**:
-   ```bash
-   git clone git@github.com:{TUO}/dataset-incubator.git
-   ```
-3. **Aggiungi l'upstream** per restare sincronizzato:
-   ```bash
-   git remote add upstream git@github.com:dataciviclab/dataset-incubator.git
-   ```
+### Comandi workspace
 
-### 3. Venv e dipendenze
+| Comando | Cosa fa |
+|---|---|
+| `make help` | Mappa comandi |
+| `make setup` | `.venv` + install core/essential dal contratto |
+| `make clone-core` | Clona core + infra essenziali |
+| `make clone SLUG=open-siope` | Clona un repo dati dal contratto |
+| `make status` | Cosa è clonato / cosa manca |
+| `make doctor` | Valida layout vs `workspace.toml` |
+| `make env` | `.env.example` → `.env` se manca |
+| `make mcp` | Genera `.mcp.json` per agenti AI |
+| `make contributor` | Istruzioni fork/upstream per i repo presenti |
+
+### Ambiente e secret
+
+```bash
+make env
+# compila almeno GITHUB_TOKEN in .env
+```
+
+`GITHUB_TOKEN` è l’unico obbligatorio per MCP e automazioni GitHub.
+
+### MCP (agenti AI)
+
+```bash
+make mcp
+```
+
+Genera `.mcp.json` dalla root del workspace. Per OpenCode: copia il contenuto
+in `opencode.json` → `mcp` (o usa `_local/mcp/run-with-env.sh` se presente).
+
+### Un progetto dati in più
+
+```bash
+make clone SLUG=giustizia-amministrativa
+# oppure: make clone SLUG=legal-graph  (se privato: clone manuale)
+```
+
+Il path effettivo è nel contratto (`workspace.toml`), es. `diritto-legge/giustizia-amministrativa`.
+
+### VS Code
+
+```bash
+code dataciviclab.code-workspace   # se presente alla root
+```
+
+---
+
+## Setup manuale (senza Makefile workspace)
+
+Se preferisci non copiare il Makefile dell’hub:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e lab-connectors
 pip install -e "toolkit[parquet,dev]"
-pip install --no-deps -e "dataset-incubator[dev]"
-pip install --no-deps -e "source-observatory[dev]"
+pip install --no-deps -e "infra/dataset-incubator[dev]"
+pip install --no-deps -e "infra/source-observatory[dev]"
+pip install --no-deps -e "infra/agent-context-builder[mcp,dev]"
 pip install --no-deps -e lab-connectors
+cp infra/dataciviclab/.env.example .env
 ```
 
-### 4. Variabili d'ambiente
+Poi clona a mano i repo che ti servono nelle path del contratto.
 
-```bash
-cp dataciviclab/.env.example .env
-# Compila almeno GITHUB_TOKEN
-```
+---
 
-### 5. Verifica
+## Primo run (verifica pipeline)
+
+Dopo `make setup` e il clone di un candidate:
 
 ```bash
 toolkit --help
 ```
 
-### 6. MCP (per AI agent)
+Oppure, da un repo dati:
 
 ```bash
-cp dataciviclab/scripts/mcp-servers.json .mcp.json
-# Sostituisci __WORKSPACE__ con il path assoluto del workspace
+cd economia-finanza/open-siope
+make check
 ```
 
-## VS Code (opzionale)
+## Script legacy
 
-Dopo il setup rapido trovi `dataciviclab.code-workspace` alla root del workspace:
-
-```bash
-code dataciviclab.code-workspace
-```
-
-Include impostazioni consigliate, estensioni e path a tutti i repo del Lab.
-
-## Primo run
-
-Esegui una pipeline per verificare che tutto funzioni:
-
-```bash
-toolkit run all --config dataset-incubator/candidates/<slug>/dataset.yml
-```
-
-Sostituisci `<slug>` con lo slug di un candidate attivo. Se tutto è a posto vedrai l'output in `dataset-incubator/out/`.
+`scripts/setup.sh` è **deprecato**: path storici (`analysis/`, `incubation/`) non
+corrispondono più al layout. Usa `make setup` / `make clone-core` come sopra.
 
 ## Prossimi passi
 
 - [come-contribuire](/docs/come-contribuire/) — percorsi per partecipare
+- [workspace/README.md](../workspace/README.md) — dettaglio contratto workspace
 - Issue [`good first issue`](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) — primo task

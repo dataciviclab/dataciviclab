@@ -55,25 +55,41 @@ Per il setup tecnico locale: [local-setup](/docs/local-setup/).
 
 ## Vuoi contribuire con codice
 
-Se sai già programmare e vuoi contribuire direttamente a un repo, hai due strade:
+Se sai già programmare e vuoi contribuire direttamente a un repo:
 
-### Setup rapido (consigliato)
+### Consigliato: una repo per volta
+
+Ogni progetto dataset è self-contained. Clona solo quello che ti serve:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash -s -- --contributor
+git clone https://github.com/dataciviclab/<repo>.git
+cd <repo>
+make setup && make check   # se il repo ha Makefile standard
 ```
 
-Crea `dataciviclab-workspace/`, clona tutti i repo, installa le dipendenze e stampa i comandi per convertire i clone in fork.
+Poi fork, branch, PR. Dettagli: [local-setup](/docs/local-setup/).
 
-### Setup manuale
+### Workspace multi-repo (solo se ti serve)
 
-1. **Forka** il repo su GitHub (tasto `Fork` in alto a destra)
-2. **Clona il tuo fork** in locale
-3. **Aggiungi l'upstream**: `git remote add upstream git@github.com:dataciviclab/{repo}.git`
-4. **Lavora su un branch** — mai direttamente su `main`
-5. **Apri una PR** dal tuo fork al repo originale
+Per toolkit, incubation o lavoro cross-repo:
 
-Setup tecnico dettagliato: [local-setup](/docs/local-setup/).
+```bash
+git clone https://github.com/dataciviclab/dataciviclab.git infra/dataciviclab
+cp infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py} .
+make clone-core && make setup && make doctor
+```
+
+`make contributor` stampa i comandi fork/upstream per i repo già clonati.
+
+### Setup manuale fork/PR
+
+1. **Forka** il repo su GitHub (tasto `Fork`)
+2. **Clona il tuo fork**
+3. **Upstream**: `git remote add upstream https://github.com/dataciviclab/{repo}.git`
+4. **Branch** — mai direttamente su `main`
+5. **PR** dal fork al repo originale
+
+Setup tecnico: [local-setup](/docs/local-setup/).
 
 ## Come funzionano le decisioni
 

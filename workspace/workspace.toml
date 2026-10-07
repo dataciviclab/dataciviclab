@@ -1,0 +1,149 @@
+# DataCivicLab — contratto workspace
+#
+# Sorgente unica per path, ruoli e install dei repo del multi-repo workspace.
+# Letto da workspace/ws.py (make setup | clone | status | doctor).
+#
+# Formato TOML: parsing con tomllib della stdlib (Python 3.11+), zero dipendenze.
+# Path dei repo dati = <domain>/<slug>. I tool NON hardcodano i dominii:
+# leggono solo questo file.
+
+[workspace]
+name = "dataciviclab-workspace"
+python = "3.12"
+venv = ".venv"
+git_base = "https://github.com/"
+
+# Mai clonati dal setup pubblico (personale / sperimentali / vendor).
+exclude = [
+  "_local",
+  "esperimenti-locali",
+  "repos-gabry",
+  "vendors",
+  ".venv",
+  "lib",
+]
+
+# Repo core — path corti, sempre presenti nel workspace pieno.
+# install: pacchetto editable dopo make setup (lab-connectors per primo).
+
+[[core]]
+path = "lab-connectors"
+repo = "dataciviclab/lab-connectors"
+install = "lab-connectors"
+
+[[core]]
+path = "toolkit"
+repo = "dataciviclab/toolkit"
+install = "toolkit[parquet,dev]"
+
+# Infra — hub, pipeline, cataloghi. Non tutti obbligatori per ogni contributor.
+
+[[infra]]
+path = "infra/dataciviclab"
+repo = "dataciviclab/dataciviclab"
+essential = true
+# Hub Astro/docs — non un pacchetto Python installabile
+python = false
+
+[[infra]]
+path = "infra/dataset-incubator"
+repo = "dataciviclab/dataset-incubator"
+install = "infra/dataset-incubator[dev]"
+essential = true
+
+[[infra]]
+path = "infra/source-observatory"
+repo = "dataciviclab/source-observatory"
+install = "infra/source-observatory[dev]"
+essential = true
+
+[[infra]]
+path = "infra/agent-context-builder"
+repo = "dataciviclab/agent-context-builder"
+install = "infra/agent-context-builder[mcp,dev]"
+essential = true
+
+[[infra]]
+path = "infra/data-explorer"
+repo = "dataciviclab/data-explorer"
+essential = false
+
+[[infra]]
+path = "infra/lab-dashboard"
+repo = "dataciviclab/lab-dashboard"
+essential = false
+
+[[infra]]
+path = "infra/lab-ops"
+repo = "dataciviclab/lab-ops"
+essential = false
+private = true
+
+[[infra]]
+path = "infra/project-template"
+repo = "dataciviclab/project-template"
+essential = false
+
+[[infra]]
+path = "infra/eurostat"
+repo = "dataciviclab/eurostat"
+essential = false
+
+[[infra]]
+path = "infra/oecd-benchmark"
+repo = "dataciviclab/oecd-benchmark"
+essential = false
+
+# Incubation — candidate in pipeline, non ancora dominio pieno.
+
+[[incubation]]
+path = "incubation/forex-centuries-it"
+repo = "dataciviclab/forex-centuries-it"
+essential = false
+
+# Domains — raggruppamento umano. slug → path = <domain>/<slug>.
+# Aggiungere un progetto = una riga qui + clone.
+# Repo privati: visibility o private = true (doctor avvisa, clone salta).
+
+[domains.diritto-legge]
+costituzione-italiana = "dataciviclab/costituzione-italiana"
+giustizia-amministrativa = "dataciviclab/giustizia-amministrativa"
+gu-monitor = "dataciviclab/gu-monitor"
+italia-corpus = "dataciviclab/italia-corpus"
+legal-graph = { repo = "dataciviclab/legal-graph", private = true }
+open-politica = "dataciviclab/open-politica"
+senato-akn = "dataciviclab/senato-akn"
+
+[domains.economia-finanza]
+bilancio-pubblico = "dataciviclab/bilancio-pubblico"
+debito-pubblico-intelligence = "dataciviclab/debito-pubblico-intelligence"
+dichiarazioni-italia = "dataciviclab/dichiarazioni-italia"
+imprese-italia = "dataciviclab/imprese-italia"
+italia-dipendenze = "dataciviclab/italia-dipendenze"
+open-inps = "dataciviclab/open-inps"
+open-siope = "dataciviclab/open-siope"
+partecipate-monitor = "dataciviclab/partecipate-monitor"
+pil-intelligence = "dataciviclab/pil-intelligence"
+rna-aiuti-stato = "dataciviclab/rna-aiuti-stato"
+sistema-bancario = "dataciviclab/sistema-bancario"
+
+[domains.investimenti-territorio]
+appalti-pubblici = "dataciviclab/appalti-pubblici"
+dcl-bologna = "dataciviclab/dcl-bologna"
+energia-italia = "dataciviclab/energia-italia"
+open-coesione = "dataciviclab/open-coesione"
+open-consip = "dataciviclab/open-consip"
+open-ispra = "dataciviclab/open-ispra"
+open-mur = "dataciviclab/open-mur"
+open-pnrr = "dataciviclab/open-pnrr"
+opencivitas = "dataciviclab/opencivitas"
+opere-pubbliche = "dataciviclab/opere-pubbliche"
+rifiuti-urbani = "dataciviclab/rifiuti-urbani"
+terzo-settore = "dataciviclab/terzo-settore"
+
+[domains.pubblica-amministrazione]
+indice-pa = "dataciviclab/indice-pa"
+inpa-reclutamento = "dataciviclab/inpa-reclutamento"
+open-conto-annuale = "dataciviclab/open-conto-annuale"
+open-noipa = "dataciviclab/open-noipa"
+patrimonio-territorio = "dataciviclab/patrimonio-territorio"
