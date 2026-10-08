@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="it" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Setup locale — DataCivicLab</title><meta name="description" content="Setup per contributor — da un singolo repo dataset al workspace multi-repo del Lab."><link rel="icon" type="image/svg+xml" href="/pr-preview/454/icon.svg"><link rel="alternate icon" href="/pr-preview/454/favicon.ico"><meta property="og:title" content="Setup locale — DataCivicLab"><meta property="og:description" content="Setup per contributor — da un singolo repo dataset al workspace multi-repo del Lab."><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.org/pr-preview/454/docs/local-setup/"><meta property="og:image" content="https://dataciviclab.org/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="DataCivicLab — Aggiornamenti" href="/pr-preview/454/progetti/rss.xml"><link rel="stylesheet" href="/pr-preview/454/_astro/BaseLayout.BnagnM_9.css">
+<style>.docs-top-nav[data-astro-cid-mw7aashj]{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}.docs-pill[data-astro-cid-mw7aashj]{display:inline-block;padding:.35rem .85rem;border-radius:999px;font-size:.82rem;font-weight:500;color:var(--text-secondary);background:var(--bg-muted);border:1px solid var(--border);text-decoration:none;transition:all .15s;white-space:nowrap}.docs-pill[data-astro-cid-mw7aashj]:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}.docs-pill[data-astro-cid-mw7aashj].active{background:var(--accent);color:var(--btn-primary-text);border-color:var(--accent)}.docs-content[data-astro-cid-mw7aashj]{min-width:0}.docs-prevnext[data-astro-cid-mw7aashj]{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}.pn-link[data-astro-cid-mw7aashj]{text-decoration:none;display:flex;flex-direction:column;gap:.15rem;padding:.6rem .8rem;border:1px solid var(--border);border-radius:var(--radius-sm);transition:all .12s;flex:1}.pn-link[data-astro-cid-mw7aashj]:hover{border-color:var(--accent);text-decoration:none}.pn-prev[data-astro-cid-mw7aashj]{align-items:flex-start}.pn-next[data-astro-cid-mw7aashj]{align-items:flex-end;text-align:right}.pn-label[data-astro-cid-mw7aashj]{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600;color:var(--text-tertiary)}.pn-title[data-astro-cid-mw7aashj]{font-size:.85rem;font-weight:500;color:var(--text)}.pn-link[data-astro-cid-mw7aashj]:hover .pn-title[data-astro-cid-mw7aashj]{color:var(--accent)}
+</style></head> <body data-astro-cid-37fxchfa> <div class="layout" data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <a href="/pr-preview/454/" class="logo" data-astro-cid-37fxchfa> <img src="/pr-preview/454/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;" data-astro-cid-37fxchfa>
+DataCivicLab
+</a> <nav data-astro-cid-37fxchfa> <a href="/pr-preview/454/progetti/" data-astro-cid-37fxchfa>Progetti</a> <a href="/pr-preview/454/ecosistema/" data-astro-cid-37fxchfa>Ecosistema</a> <a href="/pr-preview/454/docs/" data-astro-cid-37fxchfa>Documenti</a> <a href="/pr-preview/454/chi-siamo/" data-astro-cid-37fxchfa>Chi siamo</a> </nav> </header> <main data-astro-cid-37fxchfa>  <div class="docs-top-nav" id="docs-nav" data-astro-cid-mw7aashj> <a href="/pr-preview/454/docs/come-contribuire/" class="docs-pill " data-astro-cid-mw7aashj> Come contribuire </a><a href="/pr-preview/454/docs/dataset-project-flow/" class="docs-pill " data-astro-cid-mw7aashj> Flusso dataset </a><a href="/pr-preview/454/docs/governance-model/" class="docs-pill " data-astro-cid-mw7aashj> Governance </a><a href="/pr-preview/454/docs/domande-frequenti/" class="docs-pill " data-astro-cid-mw7aashj> Domande frequenti </a><a href="/pr-preview/454/docs/glossario/" class="docs-pill " data-astro-cid-mw7aashj> Glossario </a><a href="/pr-preview/454/docs/local-setup/" class="docs-pill active" data-astro-cid-mw7aashj> Setup locale </a> </div> <article class="docs-content" data-astro-cid-mw7aashj> <h1 id="setup-locale">Setup locale</h1>
+<p>Guida per chi vuole lavorare sui dati o sul codice di DataCivicLab.</p>
+<p><strong>Due percorsi, non uno solo:</strong></p>
+<ol>
+<li><strong>Contributore su un progetto</strong> — cloni <em>una</em> repo, ti basta quella (consigliato)</li>
+<li><strong>Workspace multi-repo</strong> — core team o lavoro cross-repo (toolkit, incubator, …)</li>
+</ol>
+<p>Se fai parte del core team, la guida interna è in <code>lab-ops/operations/local-setup.md</code>
+(repo privata).</p>
+<h2 id="requisiti">Requisiti</h2>
+<ul>
+<li><strong>Git</strong></li>
+<li><strong>Python 3.12+</strong></li>
+<li><strong>Make</strong> + bash (Linux, macOS, o Windows con <a href="https://learn.microsoft.com/windows/wsl/">WSL</a>)</li>
+<li>VS Code (opzionale)</li>
+</ul>
+<hr>
+<h2 id="1-contributore-su-un-singolo-progetto-consigliato">1. Contributore su un singolo progetto (consigliato)</h2>
+<p>Non serve clonare tutto il Lab. Ogni repo dati è un’unità verticale con il suo
+Makefile, pyproject e test.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/dataciviclab/open-siope.git</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> open-siope</span></span>
+<span class="line"><span style="color:#6A737D"># se il repo ha Makefile standard:</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> setup</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> check</span></span>
+<span class="line"><span style="color:#6A737D"># altrimenti:</span></span>
+<span class="line"><span style="color:#B392F0">python3</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> venv</span><span style="color:#9ECBFF"> .venv</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">source</span><span style="color:#9ECBFF"> .venv/bin/activate</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> ".[dev]"</span></span></code></pre>
+<p>Sostituisci <code>open-siope</code> con il progetto che ti interessa. Esempi:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Progetto</th><th>Repo</th></tr></thead><tbody><tr><td>Spesa pubblica</td><td><code>dataciviclab/open-siope</code></td></tr><tr><td>Costituzione</td><td><code>dataciviclab/costituzione-italiana</code></td></tr><tr><td>Aiuti di Stato</td><td><code>dataciviclab/rna-aiuti-stato</code></td></tr><tr><td>Elenco completo</td><td><a href="https://github.com/orgs/dataciviclab/repositories">dataciviclab org</a></td></tr></tbody></table>
+<h3 id="fork-e-pr">Fork e PR</h3>
+<ol>
+<li><strong>Fork</strong> sul repo che ti serve</li>
+<li><strong>Clona il tuo fork</strong></li>
+<li><strong>Upstream</strong>: <code>git remote add upstream https://github.com/dataciviclab/&#x3C;repo>.git</code></li>
+<li><strong>Branch</strong> — mai lavorare su <code>main</code></li>
+<li><strong>PR</strong> dal fork al repo originale</li>
+</ol>
+<p>Trovi le issue aperte sul repo del progetto o sulle <code>good first issue</code> nell’hub.</p>
+<hr>
+<h2 id="2-workspace-multi-repo-core--cross-repo">2. Workspace multi-repo (core / cross-repo)</h2>
+<p>Il workspace è una cartella con <strong>tanti clone</strong> (toolkit, infra, progetti per dominio).
+Non è un singolo git repo: il <strong>contratto</strong> path/ruoli vive nell’hub pubblico.</p>
+<h3 id="layout-canonico">Layout canonico</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>dataciviclab-workspace/</span></span>
+<span class="line"><span>  toolkit/                 # core</span></span>
+<span class="line"><span>  lab-connectors/          # core</span></span>
+<span class="line"><span>  infra/                   # hub, incubator, SO, explorer, …</span></span>
+<span class="line"><span>  incubation/              # candidate</span></span>
+<span class="line"><span>  diritto-legge/           # domini (raggruppamento umano)</span></span>
+<span class="line"><span>  economia-finanza/</span></span>
+<span class="line"><span>  investimenti-territorio/</span></span>
+<span class="line"><span>  pubblica-amministrazione/</span></span>
+<span class="line"><span>  workspace.toml           # contratto (copiato dall'hub)</span></span>
+<span class="line"><span>  Makefile                 # interfaccia</span></span>
+<span class="line"><span>  ws.py</span></span>
+<span class="line"><span>  .venv/</span></span>
+<span class="line"><span>  .env</span></span></code></pre>
+<p>I tool leggono <code>workspace.toml</code>: non hardcodano i nomi dei dominii.</p>
+<h3 id="setup">Setup</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> dataciviclab-workspace</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> dataciviclab-workspace</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 1. Hub (contiene contratto + docs)</span></span>
+<span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/dataciviclab/dataciviclab.git</span><span style="color:#9ECBFF"> infra/dataciviclab</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 2. Contratto + interfaccia alla root</span></span>
+<span class="line"><span style="color:#B392F0">cp</span><span style="color:#9ECBFF"> infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py}</span><span style="color:#9ECBFF"> .</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 3. Repo core + infra essenziali</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> clone-core</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 4. Ambiente Python + install editable</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> setup</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 5. Verifica</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> check</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> doctor</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> status</span></span></code></pre>
+<p>Tempo stimato: pochi minuti a seconda della connessione.</p>
+<h3 id="comandi-workspace">Comandi workspace</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Comando</th><th>Cosa fa</th></tr></thead><tbody><tr><td><code>make help</code></td><td>Mappa comandi</td></tr><tr><td><code>make setup</code></td><td><code>.venv</code> + install core/essential dal contratto</td></tr><tr><td><code>make clone-core</code></td><td>Clona core + infra essenziali</td></tr><tr><td><code>make clone SLUG=open-siope</code></td><td>Clona un repo dati dal contratto</td></tr><tr><td><code>make status</code></td><td>Cosa è clonato / cosa manca</td></tr><tr><td><code>make doctor</code></td><td>Valida layout vs <code>workspace.toml</code></td></tr><tr><td><code>make env</code></td><td><code>.env.example</code> → <code>.env</code> se manca</td></tr><tr><td><code>make mcp</code></td><td>Genera <code>.mcp.json</code> per agenti AI</td></tr><tr><td><code>make contributor</code></td><td>Istruzioni fork/upstream per i repo presenti</td></tr></tbody></table>
+<h3 id="ambiente-e-secret">Ambiente e secret</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> env</span></span>
+<span class="line"><span style="color:#6A737D"># compila almeno GITHUB_TOKEN in .env</span></span></code></pre>
+<p><code>GITHUB_TOKEN</code> è l’unico obbligatorio per MCP e automazioni GitHub.</p>
+<h3 id="mcp-agenti-ai">MCP (agenti AI)</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> mcp</span></span></code></pre>
+<p>Genera <code>.mcp.json</code> dalla root del workspace. Per OpenCode: copia il contenuto
+in <code>opencode.json</code> → <code>mcp</code> (o usa <code>_local/mcp/run-with-env.sh</code> se presente).</p>
+<h3 id="un-progetto-dati-in-più">Un progetto dati in più</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> SLUG=giustizia-amministrativa</span></span>
+<span class="line"><span style="color:#6A737D"># oppure: make clone SLUG=legal-graph  (se privato: clone manuale)</span></span></code></pre>
+<p>Il path effettivo è nel contratto (<code>workspace.toml</code>), es. <code>diritto-legge/giustizia-amministrativa</code>.</p>
+<h3 id="vs-code">VS Code</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">code</span><span style="color:#9ECBFF"> dataciviclab.code-workspace</span><span style="color:#6A737D">   # se presente alla root</span></span></code></pre>
+<hr>
+<h2 id="setup-manuale-senza-makefile-workspace">Setup manuale (senza Makefile workspace)</h2>
+<p>Se preferisci non copiare il Makefile dell’hub:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python3</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> venv</span><span style="color:#9ECBFF"> .venv</span></span>
+<span class="line"><span style="color:#79B8FF">source</span><span style="color:#9ECBFF"> .venv/bin/activate</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> lab-connectors</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> "toolkit[parquet,dev]"</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> "infra/dataset-incubator[dev]"</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> "infra/source-observatory[dev]"</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> "infra/agent-context-builder[mcp,dev]"</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> lab-connectors</span></span>
+<span class="line"><span style="color:#B392F0">cp</span><span style="color:#9ECBFF"> infra/dataciviclab/.env.example</span><span style="color:#9ECBFF"> .env</span></span></code></pre>
+<p>Poi clona a mano i repo che ti servono nelle path del contratto.</p>
+<hr>
+<h2 id="primo-run-verifica-pipeline">Primo run (verifica pipeline)</h2>
+<p>Dopo <code>make setup</code> e il clone di un candidate:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">toolkit</span><span style="color:#79B8FF"> --help</span></span></code></pre>
+<p>Oppure, da un repo dati:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> economia-finanza/open-siope</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> check</span></span></code></pre>
+<h2 id="script-legacy">Script legacy</h2>
+<p><code>scripts/setup.sh</code> è <strong>deprecato</strong>: path storici (<code>analysis/</code>, <code>incubation/</code>) non
+corrispondono più al layout. Usa <code>make setup</code> / <code>make clone-core</code> come sopra.</p>
+<h2 id="prossimi-passi">Prossimi passi</h2>
+<ul>
+<li><a href="/docs/come-contribuire/">come-contribuire</a> — percorsi per partecipare</li>
+<li><a href="../workspace/README.md">workspace/README.md</a> — dettaglio contratto workspace</li>
+<li>Issue <a href="https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22"><code>good first issue</code></a> — primo task</li>
+</ul> <nav class="docs-prevnext" data-astro-cid-mw7aashj> <a href="/pr-preview/454/docs/glossario/" class="pn-link pn-prev" data-astro-cid-mw7aashj> <span class="pn-label" data-astro-cid-mw7aashj>Precedente</span> <span class="pn-title" data-astro-cid-mw7aashj>Glossario</span> </a> <span data-astro-cid-mw7aashj></span> </nav> </article>  </main> <footer data-astro-cid-37fxchfa> <div class="footer-row" data-astro-cid-37fxchfa> <span class="footer-brand" data-astro-cid-37fxchfa>DataCivicLab — 2026</span> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Community</span> <a href="https://github.com/orgs/dataciviclab/discussions" data-astro-cid-37fxchfa>Discussion</a> <a href="https://discord.gg/rAHpuTrYK3" data-astro-cid-37fxchfa>Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/" data-astro-cid-37fxchfa>LinkedIn</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/" data-astro-cid-37fxchfa>Data Explorer</a> <a href="https://github.com/dataciviclab/toolkit" data-astro-cid-37fxchfa>Toolkit</a> <a href="https://github.com/dataciviclab/source-observatory" data-astro-cid-37fxchfa>Source Observatory</a> <a href="https://github.com/dataciviclab/dataset-incubator" data-astro-cid-37fxchfa>Dataset Incubator</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Repository</span> <a href="https://github.com/dataciviclab/open-siope" data-astro-cid-37fxchfa>open-siope</a> <a href="https://github.com/dataciviclab/costituzione-italiana" data-astro-cid-37fxchfa>costituzione-italiana</a> <a href="https://github.com/dataciviclab/bilancio-pubblico" data-astro-cid-37fxchfa>bilancio-pubblico</a> <a href="https://github.com/dataciviclab/eurostat" data-astro-cid-37fxchfa>eurostat</a> <a href="/pr-preview/454/ecosistema/" data-astro-cid-37fxchfa>Tutti i repo →</a> </div> </div> </footer> </div></body></html>
