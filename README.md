@@ -36,6 +36,7 @@ Dettaglio: [docs/dataset-project-flow.md](docs/dataset-project-flow.md)
 
 - **Hai una domanda sui dati pubblici?** — apri una [Discussion](https://github.com/orgs/dataciviclab/discussions/new?category=Domanda), non serve saper programmare
 - **Vuoi contribuire?** — cerca [good first issues](https://github.com/dataciviclab/dataciviclab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+- **Usi agenti AI (Claude, OpenCode…)?** — il server MCP `dataciviclab` dà agli agenti navigazione, dati pubblici e discussioni: [Agenti AI nel Lab](/docs/agenti-ai/)
 - **Seguici**: [Discord](https://discord.gg/rAHpuTrYK3) · [LinkedIn](https://www.linkedin.com/company/dataciviclab/)
 - **Lavori in corso**: [Open Board](https://github.com/orgs/dataciviclab/projects/5)
 
