@@ -14,21 +14,23 @@ Makefile, docs e tool leggono lo stesso file — niente path morti in tre posti.
 |---|---|
 | `workspace.toml` | **Sorgente unica**: path, repo GitHub, ruoli, private, install |
 | `ws.py` | Manager (stdlib only): list, clone, status, doctor |
-| `Makefile` | Interfaccia stabile per umani e CI |
+| `Makefile` | Interfaccia stabile (lifecycle + dev loop) — alla root come forwarder |
 
 ## Install nella root del workspace
 
-Il workspace root di solito **non** è un git repo. Dopo aver clonato l’hub:
+Il workspace root di solito **non** è un git repo. Dopo aver clonato
+l’hub, un forwarder di una riga alla root — zero drift, si aggiorna con
+l’hub:
 
 ```bash
 # da dataciviclab-workspace/ (dove vivono toolkit/, infra/, dominii…)
-cp infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py} .
+printf 'include infra/dataciviclab/workspace/Makefile\n' > Makefile
 make help
 make status
 make doctor
 ```
 
-Oppure, senza copiare, da un checkout che contiene già `infra/dataciviclab`:
+Alternativa senza forwarder:
 
 ```bash
 make -f infra/dataciviclab/workspace/Makefile status
@@ -49,13 +51,12 @@ make contributor        # istruzioni fork/upstream
 
 ```text
 dataciviclab-workspace/
-  workspace.toml        # copia del contratto (o symlink)
-  Makefile
-  ws.py
+  Makefile              # forwarder: include infra/dataciviclab/workspace/Makefile
   .venv/
   .env
   toolkit/              # core
   lab-connectors/       # core
+  dcl-mcp/              # core — MCP unico del Lab
   infra/                # hub, incubator, SO, explorer, …
   incubation/           # candidate
   diritto-legge/        # domini = raggruppamento umano
@@ -65,7 +66,9 @@ dataciviclab-workspace/
   _local/               # gitignored — mai nel setup pubblico
 ```
 
-I tool **non** hardcodano i nomi dei dominii: leggono `workspace.toml`.
+Il contratto vive solo in hub (`workspace/workspace.toml`): `ws.py` lo
+legge da lì se non c'è una copia alla root. I tool **non** hardcodano i
+nomi dei dominii: puoi riorganizzare le cartelle senza romperlo.
 
 ## Repo privati
 

@@ -2,7 +2,7 @@
 """DataCivicLab workspace manager.
 
 Legge workspace.toml (contratto path/ruoli) e implementa:
-  list | path | clone | status | doctor | print-installs
+  list | path | clone | status | doctor | print-installs | print-paths
 
 Usato dal Makefile della cartella workspace/. Nessuna dipendenza oltre la stdlib.
 """
@@ -279,6 +279,13 @@ def cmd_doctor(data: dict, args) -> int:
     return 0
 
 
+def cmd_print_paths(data: dict, args) -> int:
+    """Stampa una path per riga (tutti gli entry del contratto)."""
+    for _g, _s, path, _repo, _p, _install, _e in iter_entries(data):
+        print(path)
+    return 0
+
+
 def cmd_print_installs(data: dict, args) -> int:
     """Stampa gli install in ordine (per make setup)."""
     core = [e for e in iter_entries(data) if e[0] == "core"]
@@ -322,6 +329,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("status", help="stato clone vs contratto")
     sub.add_parser("doctor", help="valida layout vs contratto")
     sub.add_parser("print-installs", help="stampa path+install per make setup")
+    sub.add_parser("print-paths", help="stampa una path per riga (dev-loop make)")
 
     args = p.parse_args(argv)
     contract = find_contract(args.contract)
@@ -339,6 +347,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_doctor(data, args)
     if args.cmd == "print-installs":
         return cmd_print_installs(data, args)
+    if args.cmd == "print-paths":
+        return cmd_print_paths(data, args)
     return 2
 
 

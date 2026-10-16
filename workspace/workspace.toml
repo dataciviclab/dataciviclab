@@ -36,6 +36,13 @@ path = "toolkit"
 repo = "dataciviclab/toolkit"
 install = "toolkit[parquet,dev]"
 
+[[core]]
+path = "dcl-mcp"
+repo = "dataciviclab/dcl-mcp"
+install = "dcl-mcp[dev]"
+# MCP unico del Lab: contesto org-wide, discussions, gcs_query.
+# (ex server dataciviclab-context in ACB + github-discussions in lab-connectors)
+
 # Infra — hub, pipeline, cataloghi. Non tutti obbligatori per ogni contributor.
 
 [[infra]]
@@ -60,8 +67,10 @@ essential = true
 [[infra]]
 path = "infra/agent-context-builder"
 repo = "dataciviclab/agent-context-builder"
-install = "infra/agent-context-builder[mcp,dev]"
-essential = true
+install = "infra/agent-context-builder[dev]"
+# Builder degli artifact contesto (branch context) — il server MCP è
+# migrato a dcl-mcp: non serve più in locale per il MCP.
+essential = false
 
 [[infra]]
 path = "infra/data-explorer"

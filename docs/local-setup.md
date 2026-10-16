@@ -71,20 +71,21 @@ Non è un singolo git repo: il **contratto** path/ruoli vive nell’hub pubblico
 dataciviclab-workspace/
   toolkit/                 # core
   lab-connectors/          # core
+  dcl-mcp/                 # core — MCP unico del Lab
   infra/                   # hub, incubator, SO, explorer, …
   incubation/              # candidate
   diritto-legge/           # domini (raggruppamento umano)
   economia-finanza/
   investimenti-territorio/
   pubblica-amministrazione/
-  workspace.toml           # contratto (copiato dall'hub)
-  Makefile                 # interfaccia
-  ws.py
+  Makefile                 # forwarder → infra/dataciviclab/workspace/Makefile
   .venv/
   .env
 ```
 
-I tool leggono `workspace.toml`: non hardcodano i nomi dei dominii.
+I tool leggono `workspace.toml` (nell'hub, `infra/dataciviclab/workspace/`):
+non hardcodano i nomi dei dominii — puoi riorganizzare le cartelle senza
+rompere il contratto.
 
 ### Setup
 
@@ -94,8 +95,8 @@ mkdir dataciviclab-workspace && cd dataciviclab-workspace
 # 1. Hub (contiene contratto + docs)
 git clone https://github.com/dataciviclab/dataciviclab.git infra/dataciviclab
 
-# 2. Contratto + interfaccia alla root
-cp infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py} .
+# 2. Root Makefile = forwarder sull'hub (zero drift, si aggiorna con l'hub)
+printf 'include infra/dataciviclab/workspace/Makefile\n' > Makefile
 
 # 3. Repo core + infra essenziali
 make clone-core
@@ -115,7 +116,7 @@ Tempo stimato: pochi minuti a seconda della connessione.
 
 | Comando | Cosa fa |
 |---|---|
-| `make help` | Mappa comandi |
+| `make help` | Mappa comandi (lifecycle + dev loop) |
 | `make setup` | `.venv` + install core/essential dal contratto |
 | `make clone-core` | Clona core + infra essenziali |
 | `make clone SLUG=open-siope` | Clona un repo dati dal contratto |
@@ -123,6 +124,7 @@ Tempo stimato: pochi minuti a seconda della connessione.
 | `make doctor` | Valida layout vs `workspace.toml` |
 | `make env` | `.env.example` → `.env` se manca |
 | `make mcp` | Genera `.mcp.json` per agenti AI |
+| `make test` / `make lint` | Test e lint su tutti i repo Python del contratto |
 | `make contributor` | Istruzioni fork/upstream per i repo presenti |
 
 ### Ambiente e secret
@@ -140,8 +142,11 @@ make env
 make mcp
 ```
 
-Genera `.mcp.json` dalla root del workspace. Per OpenCode: copia il contenuto
-in `opencode.json` → `mcp` (o usa `_local/mcp/run-with-env.sh` se presente).
+Genera `.mcp.json` dalla root del workspace dal template hub
+(`scripts/mcp-servers.json`): server unico **`dataciviclab`**
+([dcl-mcp](https://github.com/dataciviclab/dcl-mcp)) + toolkit, SO,
+legal-graph. Per OpenCode: copia il contenuto in `opencode.json` → `mcp`
+(o usa `_local/mcp/run-with-env.sh` se presente).
 
 ### Un progetto dati in più
 
@@ -162,17 +167,17 @@ code dataciviclab.code-workspace   # se presente alla root
 
 ## Setup manuale (senza Makefile workspace)
 
-Se preferisci non copiare il Makefile dell’hub:
+Se preferisci non usare il forwarder:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e lab-connectors
 pip install -e "toolkit[parquet,dev]"
+pip install --no-deps -e dcl-mcp
 pip install --no-deps -e "infra/dataset-incubator[dev]"
 pip install --no-deps -e "infra/source-observatory[dev]"
-pip install --no-deps -e "infra/agent-context-builder[mcp,dev]"
-pip install --no-deps -e lab-connectors
+pip install -e lab-connectors   # ripristina editable (git dep di dcl-mcp)
 cp infra/dataciviclab/.env.example .env
 ```
 

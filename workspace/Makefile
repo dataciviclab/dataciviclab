@@ -1,25 +1,40 @@
-# DataCivicLab — interfaccia workspace
+# DataCivicLab — interfaccia workspace (contratto: workspace.toml)
 #
-# INSTALL: copia questa cartella alla root del multi-repo workspace:
-#   cp infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py} .
-#   make help
+# ROOT MAKEFILE — una di queste due, alla root del workspace:
+#   a) forwarder (consigliato, zero drift — si aggiorna con l'hub):
+#        printf 'include infra/dataciviclab/workspace/Makefile\n' > Makefile
+#   b) copia (solo se non puoi usare include):
+#        cp infra/dataciviclab/workspace/Makefile .
 #
-# Il contratto path/ruoli è workspace.toml (sorgente unica).
-# Questo Makefile è solo interfaccia: nessuna logica path hardcodata.
+# Il contratto path/ruoli è workspace.toml (sorgente unica, letta dall'hub
+# se non c'è una copia alla root). Nessuna logica path hardcodata.
 
 SHELL := /bin/bash
 .DEFAULT_GOAL := help
 
 WS_PY := $(if $(wildcard ./ws.py),./ws.py,infra/dataciviclab/workspace/ws.py)
 CONTRACT := $(if $(wildcard ./workspace.toml),./workspace.toml,infra/dataciviclab/workspace/workspace.toml)
-PY := $(if $(wildcard .venv/bin/python),.venv/bin/python,python3)
+VENV := .venv
+VENV_PY := $(CURDIR)/$(VENV)/bin/python
+PY := $(if $(wildcard $(VENV)/bin/python),$(VENV_PY),python3)
 WS := WS_ROOT=$(CURDIR) $(PY) $(WS_PY) --contract $(CONTRACT)
 
-.PHONY: help setup clone clone-core status doctor check env mcp contributor clean-venv list
+# Install: uv se presente, altrimenti pip del venv — stessa destinazione
+# (.venv), nessun --system: un solo python per tutto il workspace.
+UV := $(shell command -v uv 2>/dev/null)
+PIP := $(if $(UV),$(UV) pip install --python $(VENV_PY),$(VENV_PY) -m pip install)
+
+# Repo del contratto presenti in locale e con pyproject (dev-loop)
+CONTRACT_PATHS := $(shell $(WS) print-paths 2>/dev/null)
+PY_REPOS := $(foreach r,$(CONTRACT_PATHS),$(if $(wildcard $(r)/pyproject.toml),$(r)))
+
+.PHONY: help setup install clone clone-core list status doctor check env mcp \
+        contributor test lint lint-fix info clean clean-venv
 
 help:
 	@echo "DataCivicLab workspace"
 	@echo ""
+	@echo "  — lifecycle —"
 	@echo "  make setup          venv + install repo core/essential dal contratto"
 	@echo "  make clone-core     clona core + infra essenziali se mancano"
 	@echo "  make clone SLUG=x   clona un repo dati (es. SLUG=open-siope)"
@@ -31,17 +46,26 @@ help:
 	@echo "  make mcp            genera .mcp.json dal template hub"
 	@echo "  make contributor    stampa fork/upstream per i repo presenti"
 	@echo ""
+	@echo "  — dev loop (repo del contratto presenti in locale) —"
+	@echo "  make test           pytest in tutti i repo con tests/"
+	@echo "  make lint           ruff check in tutti i repo Python"
+	@echo "  make lint-fix       ruff check --fix"
+	@echo "  make info           riepilogo workspace"
+	@echo "  make clean          pulisce cache Python"
+	@echo ""
 	@echo "  Contratto: $(CONTRACT)"
 	@echo "  Root:      $(CURDIR)"
 
+# ── lifecycle ────────────────────────────────────────────────────────────────
+
 setup: env
 	@echo "🐍 Creo .venv se manca..."
-	@test -d .venv || python3 -m venv .venv
+	@test -d $(VENV) || python3 -m venv $(VENV)
 	@echo "📦 Install editable (ordine dal contratto)..."
 	@$(WS) print-installs | while IFS=$$'\t' read -r path spec; do \
 		if [ -d "$$path" ]; then \
 			echo "  → $$path ($$spec)"; \
-			.venv/bin/python -m pip install -q -e "$$spec" || exit 1; \
+			$(PIP) -q -e "$$spec" || exit 1; \
 		else \
 			echo "  ⚠️  $$path assente — salto (make clone-core?)"; \
 		fi; \
@@ -49,10 +73,12 @@ setup: env
 	@# ripristina lab-connectors editable (pin git lo sovrascrive spesso)
 	@if [ -d lab-connectors ]; then \
 		echo "  → ripristino lab-connectors editable"; \
-		.venv/bin/python -m pip install -q --no-deps -e lab-connectors; \
+		$(PIP) -q --no-deps -e lab-connectors; \
 	fi
 	@echo ""
 	@echo "✅ setup fatto. Poi: make check && make doctor"
+
+install: setup
 
 clone-core:
 	@$(WS) clone --core
@@ -72,9 +98,9 @@ doctor:
 
 check:
 	@echo "🔍 Smoke check..."
-	@test -x .venv/bin/python || { echo "❌ .venv mancante — make setup"; exit 1; }
-	@if [ -x .venv/bin/toolkit ]; then \
-		.venv/bin/toolkit --help >/dev/null && echo "  ✅ toolkit ok"; \
+	@test -x $(VENV_PY) || { echo "❌ .venv mancante — make setup"; exit 1; }
+	@if [ -x $(VENV)/bin/toolkit ]; then \
+		$(VENV)/bin/toolkit --help >/dev/null && echo "  ✅ toolkit ok"; \
 	else \
 		echo "  ⚠️  toolkit non nel PATH del venv (make setup dopo clone-core?)"; \
 	fi
@@ -106,10 +132,7 @@ mcp:
 contributor:
 	@echo "Fork + upstream per i repo già clonati (solo origin/https):"
 	@echo ""
-	@for d in $$(git ls-files -o -m --exclude-standard 2>/dev/null; find . -maxdepth 3 -type d -name .git 2>/dev/null | sed 's|/.git||'); do \
-		true; \
-	done; \
-	for path in $$( $(WS) list | awk '$$1==" "||$$1=="*"||$$1=="P" {print $$3}' ); do \
+	@for path in $$( $(WS) list | awk '$$1==" "||$$1=="*"||$$1=="P" {print $$3}' ); do \
 		dir="$$path"; \
 		if [ -d "$$dir/.git" ]; then \
 			remote=$$(git -C "$$dir" remote get-url origin 2>/dev/null || true); \
@@ -126,5 +149,53 @@ contributor:
 	done
 
 clean-venv:
-	@rm -rf .venv
+	@rm -rf $(VENV)
 	@echo "🗑️  .venv rimosso — make setup per ricreare"
+
+# ── dev loop (spec-driven: solo repo del contratto presenti in locale) ───────
+
+install-dev: $(foreach r,$(PY_REPOS),install-dev-$(r))
+
+install-dev-%:
+	@if [ -d "$*" ]; then \
+		echo "  → $*"; \
+		$(PIP) -q -e "$*[dev]" || $(PIP) -q -e "$*" || exit 1; \
+	fi
+
+test: $(foreach r,$(PY_REPOS),test-$(r))
+
+test-%:
+	@if [ -d "$*/tests" ]; then \
+		echo "▶ pytest $*"; \
+		(cd "$*" && $(VENV_PY) -m pytest -q -m "not smoke") || exit 1; \
+	fi
+
+lint: $(foreach r,$(PY_REPOS),lint-$(r))
+
+lint-fix: $(foreach r,$(PY_REPOS),lint-fix-$(r))
+
+lint-%:
+	@if [ -d "$*" ] && [ -x $(VENV)/bin/ruff ]; then \
+		echo "▶ ruff $*"; \
+		(cd "$*" && $(VENV)/bin/ruff check .) || exit 1; \
+	fi
+
+lint-fix-%:
+	@if [ -d "$*" ] && [ -x $(VENV)/bin/ruff ]; then \
+		echo "▶ ruff --fix $*"; \
+		(cd "$*" && $(VENV)/bin/ruff check --fix .) || exit 1; \
+	fi
+
+info:
+	@echo "Workspace: $(CURDIR)"
+	@echo "Contratto: $(CONTRACT)"
+	@echo "Repo Python dal contratto presenti: $(words $(PY_REPOS))"
+	@$(WS) status
+	@echo ""
+	@echo "MCP: make mcp (template hub → .mcp.json)"
+
+clean:
+	@find . -type d -name __pycache__ -not -path "./.venv/*" -exec rm -rf {} + 2>/dev/null || true
+	@find . -type d -name .pytest_cache -not -path "./.venv/*" -exec rm -rf {} + 2>/dev/null || true
+	@find . -type d -name .ruff_cache -not -path "./.venv/*" -exec rm -rf {} + 2>/dev/null || true
+	@echo "🧹 Cache rimosse"
