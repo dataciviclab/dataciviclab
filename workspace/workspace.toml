@@ -120,28 +120,35 @@ senato-akn = "dataciviclab/senato-akn"
 bilancio-pubblico = "dataciviclab/bilancio-pubblico"
 debito-pubblico-intelligence = "dataciviclab/debito-pubblico-intelligence"
 dichiarazioni-italia = "dataciviclab/dichiarazioni-italia"
-imprese-italia = "dataciviclab/imprese-italia"
 italia-dipendenze = "dataciviclab/italia-dipendenze"
-open-inps = "dataciviclab/open-inps"
 open-siope = "dataciviclab/open-siope"
 partecipate-monitor = "dataciviclab/partecipate-monitor"
 pil-intelligence = "dataciviclab/pil-intelligence"
 rna-aiuti-stato = "dataciviclab/rna-aiuti-stato"
 sistema-bancario = "dataciviclab/sistema-bancario"
 
+[domains.ambiente-energia]
+energia-italia = "dataciviclab/energia-italia"
+open-ispra = "dataciviclab/open-ispra"
+rifiuti-urbani = "dataciviclab/rifiuti-urbani"
+
+[domains.welfare-lavoro]
+imprese-italia = "dataciviclab/imprese-italia"
+open-ccnl = "dataciviclab/open-ccnl"
+open-inps = "dataciviclab/open-inps"
+
 [domains.investimenti-territorio]
 appalti-pubblici = "dataciviclab/appalti-pubblici"
 dcl-bologna = "dataciviclab/dcl-bologna"
-energia-italia = "dataciviclab/energia-italia"
 open-coesione = "dataciviclab/open-coesione"
 open-consip = "dataciviclab/open-consip"
-open-ispra = "dataciviclab/open-ispra"
-open-mur = "dataciviclab/open-mur"
 open-pnrr = "dataciviclab/open-pnrr"
 opencivitas = "dataciviclab/opencivitas"
 opere-pubbliche = "dataciviclab/opere-pubbliche"
-rifiuti-urbani = "dataciviclab/rifiuti-urbani"
 terzo-settore = "dataciviclab/terzo-settore"
+
+[domains.ricerca-sviluppo]
+open-mur = "dataciviclab/open-mur"
 
 [domains.pubblica-amministrazione]
 indice-pa = "dataciviclab/indice-pa"

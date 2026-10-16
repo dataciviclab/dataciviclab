@@ -256,11 +256,18 @@ def cmd_doctor(data: dict, args) -> int:
     if not (root / ".env").exists():
         warnings.append(".env mancante — cp .env.example .env (GITHUB_TOKEN obbligatorio per MCP)")
 
-    # Template MCP
-    contract_dir = find_contract(args.contract).parent
-    mcp_template = contract_dir.parent / "scripts" / "mcp-servers.json"
+    # Template MCP (vive nell'hub). Se il contratto è copiato alla root
+    # del workspace, contract_dir.parent non è l'hub — fallback sui path noti.
+    contract_path = find_contract(args.contract)
+    mcp_template = contract_path.parent.parent / "scripts" / "mcp-servers.json"
     if not mcp_template.exists():
-        warnings.append(f"template MCP non trovato: {mcp_template}")
+        mcp_template = root / "infra" / "dataciviclab" / "scripts" / "mcp-servers.json"
+    if not mcp_template.exists():
+        warnings.append(
+            "template MCP non trovato "
+            "(hub scripts/mcp-servers.json assente da "
+            f"{contract_path.parent.parent} e da infra/dataciviclab/)"
+        )
     if not (root / ".mcp.json").exists():
         warnings.append(".mcp.json non generato — make mcp")
 

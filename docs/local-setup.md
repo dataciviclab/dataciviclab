@@ -112,6 +112,10 @@ make status
 
 Tempo stimato: pochi minuti a seconda della connessione.
 
+> **Hai già un vecchio `Makefile` alla root** (auto-discovery `find`)? Sostituiscilo
+> col forwarder: i target `test`/`lint`/`info` ora sono nel Makefile del contratto,
+> guidati dai path reali del workspace (`ws.py print-paths`).
+
 ### Comandi workspace
 
 | Comando | Cosa fa |

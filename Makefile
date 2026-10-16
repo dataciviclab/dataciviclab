@@ -16,7 +16,14 @@ VENV := $(ROOT_DIR).venv
 PYTHON := $(VENV)/bin/python
 
 bootstrap:
-	bash $(ROOT_DIR)scripts/setup.sh --workspace
+	@echo "✗ scripts/setup.sh è deprecato (path storici morti)."
+	@echo ""
+	@echo "Setup workspace — dalla ROOT del workspace:"
+	@echo "  printf 'include infra/dataciviclab/workspace/Makefile\\n' > Makefile"
+	@echo "  make clone-core && make setup && make check"
+	@echo ""
+	@echo "Guida: docs/local-setup.md — Contratto: workspace/workspace.toml"
+	@exit 1
 
 info:
 	@echo "=============================================="

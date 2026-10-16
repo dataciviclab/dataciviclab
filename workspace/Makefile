@@ -12,8 +12,10 @@
 SHELL := /bin/bash
 .DEFAULT_GOAL := help
 
-WS_PY := $(if $(wildcard ./ws.py),./ws.py,infra/dataciviclab/workspace/ws.py)
-CONTRACT := $(if $(wildcard ./workspace.toml),./workspace.toml,infra/dataciviclab/workspace/workspace.toml)
+# Path: root workspace (forwarder), root workspace con hub clonato, oppure
+# da dentro l'hub (make -f workspace/Makefile …).
+WS_PY := $(firstword $(wildcard ./ws.py) $(wildcard infra/dataciviclab/workspace/ws.py) $(wildcard workspace/ws.py))
+CONTRACT := $(firstword $(wildcard ./workspace.toml) $(wildcard infra/dataciviclab/workspace/workspace.toml) $(wildcard workspace/workspace.toml))
 VENV := .venv
 VENV_PY := $(CURDIR)/$(VENV)/bin/python
 PY := $(if $(wildcard $(VENV)/bin/python),$(VENV_PY),python3)
