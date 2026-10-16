@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="it" data-astro-cid-37fxchfa> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agenti AI nel Lab — DataCivicLab</title><meta name="description" content="Come gli agenti AI (Claude, OpenCode, …) partecipano a DataCivicLab tramite MCP — navigazione, dati pubblici, discussioni."><link rel="icon" type="image/svg+xml" href="/pr-preview/455/icon.svg"><link rel="alternate icon" href="/pr-preview/455/favicon.ico"><meta property="og:title" content="Agenti AI nel Lab — DataCivicLab"><meta property="og:description" content="Come gli agenti AI (Claude, OpenCode, …) partecipano a DataCivicLab tramite MCP — navigazione, dati pubblici, discussioni."><meta property="og:type" content="website"><meta property="og:url" content="https://dataciviclab.org/pr-preview/455/docs/agenti-ai/"><meta property="og:image" content="https://dataciviclab.org/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="DataCivicLab — Aggiornamenti" href="/pr-preview/455/progetti/rss.xml"><link rel="stylesheet" href="/pr-preview/455/_astro/BaseLayout.Dj1159xf.css">
+<style>.docs-top-nav[data-astro-cid-mw7aashj]{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}.docs-pill[data-astro-cid-mw7aashj]{display:inline-block;padding:.35rem .85rem;border-radius:999px;font-size:.82rem;font-weight:500;color:var(--text-secondary);background:var(--bg-muted);border:1px solid var(--border);text-decoration:none;transition:all .15s;white-space:nowrap}.docs-pill[data-astro-cid-mw7aashj]:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}.docs-pill[data-astro-cid-mw7aashj].active{background:var(--accent);color:var(--btn-primary-text);border-color:var(--accent)}.docs-content[data-astro-cid-mw7aashj]{min-width:0}.docs-prevnext[data-astro-cid-mw7aashj]{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}.pn-link[data-astro-cid-mw7aashj]{text-decoration:none;display:flex;flex-direction:column;gap:.15rem;padding:.6rem .8rem;border:1px solid var(--border);border-radius:var(--radius-sm);transition:all .12s;flex:1}.pn-link[data-astro-cid-mw7aashj]:hover{border-color:var(--accent);text-decoration:none}.pn-prev[data-astro-cid-mw7aashj]{align-items:flex-start}.pn-next[data-astro-cid-mw7aashj]{align-items:flex-end;text-align:right}.pn-label[data-astro-cid-mw7aashj]{font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;font-weight:600;color:var(--text-tertiary)}.pn-title[data-astro-cid-mw7aashj]{font-size:.85rem;font-weight:500;color:var(--text)}.pn-link[data-astro-cid-mw7aashj]:hover .pn-title[data-astro-cid-mw7aashj]{color:var(--accent)}
+</style></head> <body data-astro-cid-37fxchfa> <div class="layout" data-astro-cid-37fxchfa> <header data-astro-cid-37fxchfa> <a href="/pr-preview/455/" class="logo" data-astro-cid-37fxchfa> <img src="/pr-preview/455/logo.jpg" alt="DataCivicLab" class="logo-icon" width="32" height="32" style="border-radius: 6px;" data-astro-cid-37fxchfa>
+DataCivicLab
+</a> <nav data-astro-cid-37fxchfa> <a href="/pr-preview/455/progetti/" data-astro-cid-37fxchfa>Progetti</a> <a href="/pr-preview/455/ecosistema/" data-astro-cid-37fxchfa>Ecosistema</a> <a href="/pr-preview/455/docs/" data-astro-cid-37fxchfa>Documenti</a> <a href="/pr-preview/455/chi-siamo/" data-astro-cid-37fxchfa>Chi siamo</a> </nav> </header> <main data-astro-cid-37fxchfa>  <div class="docs-top-nav" id="docs-nav" data-astro-cid-mw7aashj> <a href="/pr-preview/455/docs/come-contribuire/" class="docs-pill " data-astro-cid-mw7aashj> Come contribuire </a><a href="/pr-preview/455/docs/dataset-project-flow/" class="docs-pill " data-astro-cid-mw7aashj> Flusso dataset </a><a href="/pr-preview/455/docs/governance-model/" class="docs-pill " data-astro-cid-mw7aashj> Governance </a><a href="/pr-preview/455/docs/domande-frequenti/" class="docs-pill " data-astro-cid-mw7aashj> Domande frequenti </a><a href="/pr-preview/455/docs/glossario/" class="docs-pill " data-astro-cid-mw7aashj> Glossario </a><a href="/pr-preview/455/docs/local-setup/" class="docs-pill " data-astro-cid-mw7aashj> Setup locale </a> </div> <article class="docs-content" data-astro-cid-mw7aashj> <h1 id="agenti-ai-nel-lab">Agenti AI nel Lab</h1>
+<p>DataCivicLab è progettato per essere interrogabile anche dagli agenti AI
+(Claude, OpenCode, Cursor, …) tramite <a href="https://modelcontextprotocol.io">MCP</a>
+(Model Context Protocol). Questo vale per chi contribuisce e per chi legge:
+la stessa infrastruttura che usiamo internamente è pubblica.</p>
+<h2 id="il-server-per-partecipare-dataciviclab">Il server per partecipare: <code>dataciviclab</code></h2>
+<p>Il server unico del Lab (<a href="https://github.com/dataciviclab/dcl-mcp">dcl-mcp</a>)
+espone 15 tool in tre famiglie:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Famiglia</th><th>Tool</th><th>Cosa permette</th></tr></thead><tbody><tr><td><strong>Contesto</strong></td><td><code>session_bootstrap</code>, <code>lab_map</code>, <code>find</code>, <code>explore</code>, <code>workspace_triage</code></td><td>Orientamento, ricerca dataset/analisi, card con schema e path, stato del Lab</td></tr><tr><td><strong>Discussioni</strong></td><td><code>github_list/get/search_discussions</code>, <code>github_create_discussion</code>, commenti, categorie</td><td>Leggere e partecipare alle Discussion su GitHub</td></tr><tr><td><strong>Dati pubblici</strong></td><td><code>gcs_query(slug, sql, layer=)</code></td><td>SELECT read-only (anche CTE) sui parquet clean/mart dei bucket pubblici</td></tr></tbody></table>
+<p>Con questo solo server un agente può: trovare un dataset rilevante
+(<code>find</code> → <code>explore</code>), verificarlo con una query SQL (<code>gcs_query</code>) e
+aprire o rispondere a una discussione (<code>github_*</code>) — senza clonare nulla.</p>
+<h2 id="installazione">Installazione</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> "lab-connectors[mcp,duckdb] @ git+https://github.com/dataciviclab/lab-connectors.git"</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> "dcl-mcp @ git+https://github.com/dataciviclab/dcl-mcp.git"</span></span></code></pre>
+<p>Configurazione (esempio generico MCP):</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "mcpServers"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "dataciviclab"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "command"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"dcl-mcp"</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Per le discussions serve un <code>GITHUB_TOKEN</code> (GraphQL autenticato anche in
+lettura). Il resto funziona senza token.</p>
+<h2 id="gli-altri-server-del-lab">Gli altri server del Lab</h2>
+<p>Per chi lavora sui repo (non solo in chat):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Server</th><th>Repo</th><th>Ruolo</th></tr></thead><tbody><tr><td><code>toolkit</code></td><td><a href="https://github.com/dataciviclab/toolkit">toolkit</a></td><td>Pipeline locale: contratti, SQL su raw/clean/mart del workspace, run</td></tr><tr><td><code>source-observatory</code></td><td><a href="https://github.com/dataciviclab/source-observatory">source-observatory</a></td><td>Scouting fonti, probe URL, inventory</td></tr><tr><td><code>legal-graph</code></td><td><a href="https://github.com/dataciviclab/legal-graph">legal-graph</a></td><td>Grafo del diritto italiano interrogabile</td></tr></tbody></table>
+<p>Routing: <strong>pubblicato/org-wide/partecipazione → <code>dataciviclab</code></strong>;
+<strong>workspace locale/pipeline → <code>toolkit</code></strong>; <strong>fonti → <code>source-observatory</code></strong>.</p>
+<h2 id="regole-valgono-anche-per-gli-agenti">Regole (valgono anche per gli agenti)</h2>
+<p>Gli agenti operano con le stesse regole delle persone:</p>
+<ul>
+<li>I numeri vanno <strong>verificati con una query</strong> prima di essere pubblicati —
+una card o una description non bastano.</li>
+<li>Le PR usano il template del repo; mai mergiare senza review umana.</li>
+<li>Le Discussion sono il luogo delle domande e delle proposte: leggi prima
+di scrivere, cerca se la domanda è già stata fatta.</li>
+</ul>
+<p>Il workspace multi-repo e il setup completo sono in
+<a href="/docs/local-setup/">Setup locale</a>. Per i dettagli tecnici del server:
+<a href="https://github.com/dataciviclab/dcl-mcp">dcl-mcp</a>.</p>  </article>  </main> <footer data-astro-cid-37fxchfa> <div class="footer-row" data-astro-cid-37fxchfa> <span class="footer-brand" data-astro-cid-37fxchfa>DataCivicLab — 2026</span> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Community</span> <a href="https://github.com/orgs/dataciviclab/discussions" data-astro-cid-37fxchfa>Discussion</a> <a href="https://discord.gg/rAHpuTrYK3" data-astro-cid-37fxchfa>Discord</a> <a href="https://www.linkedin.com/company/dataciviclab/" data-astro-cid-37fxchfa>LinkedIn</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Piattaforme</span> <a href="https://dataciviclab.github.io/data-explorer/" data-astro-cid-37fxchfa>Data Explorer</a> <a href="https://github.com/dataciviclab/toolkit" data-astro-cid-37fxchfa>Toolkit</a> <a href="https://github.com/dataciviclab/source-observatory" data-astro-cid-37fxchfa>Source Observatory</a> <a href="https://github.com/dataciviclab/dataset-incubator" data-astro-cid-37fxchfa>Dataset Incubator</a> </div> <div class="footer-links" data-astro-cid-37fxchfa> <span class="footer-group-label" data-astro-cid-37fxchfa>Repository</span> <a href="https://github.com/dataciviclab/open-siope" data-astro-cid-37fxchfa>open-siope</a> <a href="https://github.com/dataciviclab/costituzione-italiana" data-astro-cid-37fxchfa>costituzione-italiana</a> <a href="https://github.com/dataciviclab/bilancio-pubblico" data-astro-cid-37fxchfa>bilancio-pubblico</a> <a href="https://github.com/dataciviclab/eurostat" data-astro-cid-37fxchfa>eurostat</a> <a href="/pr-preview/455/ecosistema/" data-astro-cid-37fxchfa>Tutti i repo →</a> </div> </div> </footer> </div></body></html>
