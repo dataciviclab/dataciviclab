@@ -73,26 +73,27 @@ Non è un singolo git repo: il <strong>contratto</strong> path/ruoli vive nell�
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>dataciviclab-workspace/</span></span>
 <span class="line"><span>  toolkit/                 # core</span></span>
 <span class="line"><span>  lab-connectors/          # core</span></span>
+<span class="line"><span>  dcl-mcp/                 # core — MCP unico del Lab</span></span>
 <span class="line"><span>  infra/                   # hub, incubator, SO, explorer, …</span></span>
 <span class="line"><span>  incubation/              # candidate</span></span>
 <span class="line"><span>  diritto-legge/           # domini (raggruppamento umano)</span></span>
 <span class="line"><span>  economia-finanza/</span></span>
 <span class="line"><span>  investimenti-territorio/</span></span>
 <span class="line"><span>  pubblica-amministrazione/</span></span>
-<span class="line"><span>  workspace.toml           # contratto (copiato dall'hub)</span></span>
-<span class="line"><span>  Makefile                 # interfaccia</span></span>
-<span class="line"><span>  ws.py</span></span>
+<span class="line"><span>  Makefile                 # forwarder → infra/dataciviclab/workspace/Makefile</span></span>
 <span class="line"><span>  .venv/</span></span>
 <span class="line"><span>  .env</span></span></code></pre>
-<p>I tool leggono <code>workspace.toml</code>: non hardcodano i nomi dei dominii.</p>
+<p>I tool leggono <code>workspace.toml</code> (nell’hub, <code>infra/dataciviclab/workspace/</code>):
+non hardcodano i nomi dei dominii — puoi riorganizzare le cartelle senza
+rompere il contratto.</p>
 <h3 id="setup">Setup</h3>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> dataciviclab-workspace</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> dataciviclab-workspace</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6A737D"># 1. Hub (contiene contratto + docs)</span></span>
 <span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/dataciviclab/dataciviclab.git</span><span style="color:#9ECBFF"> infra/dataciviclab</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#6A737D"># 2. Contratto + interfaccia alla root</span></span>
-<span class="line"><span style="color:#B392F0">cp</span><span style="color:#9ECBFF"> infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py}</span><span style="color:#9ECBFF"> .</span></span>
+<span class="line"><span style="color:#6A737D"># 2. Root Makefile = forwarder sull'hub (zero drift, si aggiorna con l'hub)</span></span>
+<span class="line"><span style="color:#79B8FF">printf</span><span style="color:#9ECBFF"> 'include infra/dataciviclab/workspace/Makefile\n'</span><span style="color:#F97583"> ></span><span style="color:#9ECBFF"> Makefile</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6A737D"># 3. Repo core + infra essenziali</span></span>
 <span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> clone-core</span></span>
@@ -151,15 +152,22 @@ Non è un singolo git repo: il <strong>contratto</strong> path/ruoli vive nell�
 
 
 
-<table><thead><tr><th>Comando</th><th>Cosa fa</th></tr></thead><tbody><tr><td><code>make help</code></td><td>Mappa comandi</td></tr><tr><td><code>make setup</code></td><td><code>.venv</code> + install core/essential dal contratto</td></tr><tr><td><code>make clone-core</code></td><td>Clona core + infra essenziali</td></tr><tr><td><code>make clone SLUG=open-siope</code></td><td>Clona un repo dati dal contratto</td></tr><tr><td><code>make status</code></td><td>Cosa è clonato / cosa manca</td></tr><tr><td><code>make doctor</code></td><td>Valida layout vs <code>workspace.toml</code></td></tr><tr><td><code>make env</code></td><td><code>.env.example</code> → <code>.env</code> se manca</td></tr><tr><td><code>make mcp</code></td><td>Genera <code>.mcp.json</code> per agenti AI</td></tr><tr><td><code>make contributor</code></td><td>Istruzioni fork/upstream per i repo presenti</td></tr></tbody></table>
+
+
+
+
+<table><thead><tr><th>Comando</th><th>Cosa fa</th></tr></thead><tbody><tr><td><code>make help</code></td><td>Mappa comandi (lifecycle + dev loop)</td></tr><tr><td><code>make setup</code></td><td><code>.venv</code> + install core/essential dal contratto</td></tr><tr><td><code>make clone-core</code></td><td>Clona core + infra essenziali</td></tr><tr><td><code>make clone SLUG=open-siope</code></td><td>Clona un repo dati dal contratto</td></tr><tr><td><code>make status</code></td><td>Cosa è clonato / cosa manca</td></tr><tr><td><code>make doctor</code></td><td>Valida layout vs <code>workspace.toml</code></td></tr><tr><td><code>make env</code></td><td><code>.env.example</code> → <code>.env</code> se manca</td></tr><tr><td><code>make mcp</code></td><td>Genera <code>.mcp.json</code> per agenti AI</td></tr><tr><td><code>make test</code> / <code>make lint</code></td><td>Test e lint su tutti i repo Python del contratto</td></tr><tr><td><code>make contributor</code></td><td>Istruzioni fork/upstream per i repo presenti</td></tr></tbody></table>
 <h3 id="ambiente-e-secret">Ambiente e secret</h3>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> env</span></span>
 <span class="line"><span style="color:#6A737D"># compila almeno GITHUB_TOKEN in .env</span></span></code></pre>
 <p><code>GITHUB_TOKEN</code> è l’unico obbligatorio per MCP e automazioni GitHub.</p>
 <h3 id="mcp-agenti-ai">MCP (agenti AI)</h3>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> mcp</span></span></code></pre>
-<p>Genera <code>.mcp.json</code> dalla root del workspace. Per OpenCode: copia il contenuto
-in <code>opencode.json</code> → <code>mcp</code> (o usa <code>_local/mcp/run-with-env.sh</code> se presente).</p>
+<p>Genera <code>.mcp.json</code> dalla root del workspace dal template hub
+(<code>scripts/mcp-servers.json</code>): server unico <strong><code>dataciviclab</code></strong>
+(<a href="https://github.com/dataciviclab/dcl-mcp">dcl-mcp</a>) + toolkit, SO,
+legal-graph. Per OpenCode: copia il contenuto in <code>opencode.json</code> → <code>mcp</code>
+(o usa <code>_local/mcp/run-with-env.sh</code> se presente).</p>
 <h3 id="un-progetto-dati-in-più">Un progetto dati in più</h3>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> SLUG=giustizia-amministrativa</span></span>
 <span class="line"><span style="color:#6A737D"># oppure: make clone SLUG=legal-graph  (se privato: clone manuale)</span></span></code></pre>
@@ -168,15 +176,15 @@ in <code>opencode.json</code> → <code>mcp</code> (o usa <code>_local/mcp/run-w
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">code</span><span style="color:#9ECBFF"> dataciviclab.code-workspace</span><span style="color:#6A737D">   # se presente alla root</span></span></code></pre>
 <hr>
 <h2 id="setup-manuale-senza-makefile-workspace">Setup manuale (senza Makefile workspace)</h2>
-<p>Se preferisci non copiare il Makefile dell’hub:</p>
+<p>Se preferisci non usare il forwarder:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">python3</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> venv</span><span style="color:#9ECBFF"> .venv</span></span>
 <span class="line"><span style="color:#79B8FF">source</span><span style="color:#9ECBFF"> .venv/bin/activate</span></span>
 <span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> lab-connectors</span></span>
 <span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> "toolkit[parquet,dev]"</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> dcl-mcp</span></span>
 <span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> "infra/dataset-incubator[dev]"</span></span>
 <span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> "infra/source-observatory[dev]"</span></span>
-<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> "infra/agent-context-builder[mcp,dev]"</span></span>
-<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> --no-deps</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> lab-connectors</span></span>
+<span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -e</span><span style="color:#9ECBFF"> lab-connectors</span><span style="color:#6A737D">   # ripristina editable (git dep di dcl-mcp)</span></span>
 <span class="line"><span style="color:#B392F0">cp</span><span style="color:#9ECBFF"> infra/dataciviclab/.env.example</span><span style="color:#9ECBFF"> .env</span></span></code></pre>
 <p>Poi clona a mano i repo che ti servono nelle path del contratto.</p>
 <hr>
