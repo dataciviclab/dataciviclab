@@ -42,19 +42,28 @@ I dataset pubblici sono su <a href="https://dataciviclab.github.io/data-explorer
 </ol>
 <p>Per il setup tecnico locale: <a href="/docs/local-setup/">local-setup</a>.</p>
 <h2 id="vuoi-contribuire-con-codice">Vuoi contribuire con codice</h2>
-<p>Se sai già programmare e vuoi contribuire direttamente a un repo, hai due strade:</p>
-<h3 id="setup-rapido-consigliato">Setup rapido (consigliato)</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">curl</span><span style="color:#79B8FF"> -fsSL</span><span style="color:#9ECBFF"> https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh</span><span style="color:#F97583"> |</span><span style="color:#B392F0"> bash</span><span style="color:#79B8FF"> -s</span><span style="color:#79B8FF"> --</span><span style="color:#79B8FF"> --contributor</span></span></code></pre>
-<p>Crea <code>dataciviclab-workspace/</code>, clona tutti i repo, installa le dipendenze e stampa i comandi per convertire i clone in fork.</p>
-<h3 id="setup-manuale">Setup manuale</h3>
+<p>Se sai già programmare e vuoi contribuire direttamente a un repo:</p>
+<h3 id="consigliato-una-repo-per-volta">Consigliato: una repo per volta</h3>
+<p>Ogni progetto dataset è self-contained. Clona solo quello che ti serve:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/dataciviclab/</span><span style="color:#F97583">&#x3C;</span><span style="color:#9ECBFF">rep</span><span style="color:#E1E4E8">o</span><span style="color:#F97583">></span><span style="color:#9ECBFF">.git</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">rep</span><span style="color:#E1E4E8">o</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> setup</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> check</span><span style="color:#6A737D">   # se il repo ha Makefile standard</span></span></code></pre>
+<p>Poi fork, branch, PR. Dettagli: <a href="/docs/local-setup/">local-setup</a>.</p>
+<h3 id="workspace-multi-repo-solo-se-ti-serve">Workspace multi-repo (solo se ti serve)</h3>
+<p>Per toolkit, incubation o lavoro cross-repo:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#9ECBFF"> https://github.com/dataciviclab/dataciviclab.git</span><span style="color:#9ECBFF"> infra/dataciviclab</span></span>
+<span class="line"><span style="color:#B392F0">cp</span><span style="color:#9ECBFF"> infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py}</span><span style="color:#9ECBFF"> .</span></span>
+<span class="line"><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> clone-core</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> setup</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">make</span><span style="color:#9ECBFF"> doctor</span></span></code></pre>
+<p><code>make contributor</code> stampa i comandi fork/upstream per i repo già clonati.</p>
+<h3 id="setup-manuale-forkpr">Setup manuale fork/PR</h3>
 <ol>
-<li><strong>Forka</strong> il repo su GitHub (tasto <code>Fork</code> in alto a destra)</li>
-<li><strong>Clona il tuo fork</strong> in locale</li>
-<li><strong>Aggiungi l’upstream</strong>: <code>git remote add upstream git@github.com:dataciviclab/{repo}.git</code></li>
-<li><strong>Lavora su un branch</strong> — mai direttamente su <code>main</code></li>
-<li><strong>Apri una PR</strong> dal tuo fork al repo originale</li>
+<li><strong>Forka</strong> il repo su GitHub (tasto <code>Fork</code>)</li>
+<li><strong>Clona il tuo fork</strong></li>
+<li><strong>Upstream</strong>: <code>git remote add upstream https://github.com/dataciviclab/{repo}.git</code></li>
+<li><strong>Branch</strong> — mai direttamente su <code>main</code></li>
+<li><strong>PR</strong> dal fork al repo originale</li>
 </ol>
-<p>Setup tecnico dettagliato: <a href="/docs/local-setup/">local-setup</a>.</p>
+<p>Setup tecnico: <a href="/docs/local-setup/">local-setup</a>.</p>
 <h2 id="come-funzionano-le-decisioni">Come funzionano le decisioni</h2>
 <p>Il Lab è piccolo e le decisioni si prendono in modo trasparente su GitHub.</p>
 <ul>
