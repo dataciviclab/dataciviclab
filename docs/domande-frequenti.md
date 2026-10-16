@@ -14,6 +14,16 @@ in vari repo, ma non è l'unico modo.
 
 Vedi [come-contribuire](/docs/come-contribuire/).
 
+## Posso usare gli agenti AI per contribuire?
+
+Sì. Il Lab espone un server MCP (`dataciviclab`) che dà agli agenti la
+stessa bussola che usiamo noi: trovare i dataset, verificarli con SQL sui
+dati pubblicati e partecipare alle Discussion. Gli agenti operano con le
+stesse regole delle persone — i numeri si verificano con una query, le PR
+passano da review umana.
+
+Vedi [Agenti AI nel Lab](/docs/agenti-ai/).
+
 ## Come faccio a proporre un nuovo dataset?
 
 Apri una [Discussion](https://github.com/orgs/dataciviclab/discussions/new?category=Domanda)

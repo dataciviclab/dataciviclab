@@ -152,6 +152,9 @@ Genera `.mcp.json` dalla root del workspace dal template hub
 legal-graph. Per OpenCode: copia il contenuto in `opencode.json` → `mcp`
 (o usa `_local/mcp/run-with-env.sh` se presente).
 
+Cosa fa ogni server e come configurarlo al di fuori del workspace:
+[Agenti AI nel Lab](/docs/agenti-ai/).
+
 ### Un progetto dati in più
 
 ```bash

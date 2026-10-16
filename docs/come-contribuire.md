@@ -91,6 +91,15 @@ make clone-core && make setup && make doctor
 
 Setup tecnico: [local-setup](/docs/local-setup/).
 
+## Vuoi usare un agente AI
+
+Claude, OpenCode e altri agenti MCP si collegano al Lab con il server
+`dataciviclab`: navigazione (`find`/`explore`), query sui dati pubblicati
+(`gcs_query`) e Discussion (`github_*`). Non serve il workspace multi-repo
+per partecipare in chat.
+
+Vedi [Agenti AI nel Lab](/docs/agenti-ai/).
+
 ## Come funzionano le decisioni
 
 Il Lab è piccolo e le decisioni si prendono in modo trasparente su GitHub.
