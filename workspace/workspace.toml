@@ -111,8 +111,10 @@ essential = false
 [domains.diritto-legge]
 costituzione-italiana = "dataciviclab/costituzione-italiana"
 giustizia-amministrativa = "dataciviclab/giustizia-amministrativa"
+giustizia-statistiche = "dataciviclab/giustizia-statistiche"
 gu-monitor = "dataciviclab/gu-monitor"
 italia-corpus = "dataciviclab/italia-corpus"
+legal-graph = "dataciviclab/legal-graph"
 open-politica = "dataciviclab/open-politica"
 senato-akn = "dataciviclab/senato-akn"
 
@@ -140,6 +142,7 @@ open-inps = "dataciviclab/open-inps"
 [domains.investimenti-territorio]
 appalti-pubblici = "dataciviclab/appalti-pubblici"
 dcl-bologna = "dataciviclab/dcl-bologna"
+open-aci = "dataciviclab/open-aci"
 open-coesione = "dataciviclab/open-coesione"
 open-consip = "dataciviclab/open-consip"
 open-pnrr = "dataciviclab/open-pnrr"
