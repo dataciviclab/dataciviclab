@@ -41,8 +41,19 @@ Dettaglio: [docs/dataset-project-flow.md](docs/dataset-project-flow.md)
 
 ## Setup locale (per sviluppatori)
 
+**Un progetto dataset** (consigliato):
+
 ```bash
-curl -fsSL https://raw.githubusercontent.com/dataciviclab/dataciviclab/main/scripts/setup.sh | bash
+git clone https://github.com/dataciviclab/<repo>.git && cd <repo>
 ```
 
-Serve Git e Python 3.12+. Guida: [docs/local-setup.md](docs/local-setup.md).
+**Workspace multi-repo** (core / cross-repo):
+
+```bash
+git clone https://github.com/dataciviclab/dataciviclab.git infra/dataciviclab
+cp infra/dataciviclab/workspace/{Makefile,workspace.toml,ws.py} .
+make clone-core && make setup && make doctor
+```
+
+Serve Git, Python 3.12+ e Make. Guida completa: [docs/local-setup.md](docs/local-setup.md).
+Contratto workspace: [workspace/](workspace/).

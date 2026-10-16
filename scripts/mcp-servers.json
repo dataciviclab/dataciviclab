@@ -10,17 +10,12 @@
       "command": "__WORKSPACE__/.venv/bin/source-observatory-mcp",
       "timeout": 30000
     },
-    "dataciviclab-context": {
-      "description": "Bootstrap contesto, topic index, triage",
-      "command": "__WORKSPACE__/.venv/bin/agent-context-mcp",
+    "dataciviclab": {
+      "description": "Contesto, discussion e dati pubblici del Lab (dcl-mcp)",
+      "command": "__WORKSPACE__/.venv/bin/dcl-mcp",
       "env": {
-        "ACB_ENV_FILE": "__WORKSPACE__/.env"
+        "DCL_MCP_ENV_FILE": "__WORKSPACE__/.env"
       }
-    },
-    "github-discussions": {
-      "description": "Leggi e cerca discussioni GitHub",
-      "command": "__WORKSPACE__/.venv/bin/python",
-      "args": ["__WORKSPACE__/lab-connectors/mcp_servers/github-discussions/server.py"]
     },
     "github": {
       "description": "API GitHub (issue, PR, repo)",
@@ -31,11 +26,6 @@
       "description": "Scarica pagine web e API",
       "command": "npx",
       "args": ["-y", "mcp-fetch-server"]
-    },
-    "italia-corpus": {
-      "description": "Ricerca legislazione italiana",
-      "command": "__WORKSPACE__/.venv/bin/italia-corpus-mcp",
-      "disabled": true
     }
   }
 }
