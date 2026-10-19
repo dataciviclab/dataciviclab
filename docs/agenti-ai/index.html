@@ -9,7 +9,7 @@ DataCivicLab
 la stessa infrastruttura che usiamo internamente è pubblica.</p>
 <h2 id="il-server-per-partecipare-dataciviclab">Il server per partecipare: <code>dataciviclab</code></h2>
 <p>Il server unico del Lab (<a href="https://github.com/dataciviclab/dcl-mcp">dcl-mcp</a>)
-espone 15 tool in tre famiglie:</p>
+espone 11 tool in tre famiglie:</p>
 
 
 
@@ -35,7 +35,7 @@ espone 15 tool in tre famiglie:</p>
 
 
 
-<table><thead><tr><th>Famiglia</th><th>Tool</th><th>Cosa permette</th></tr></thead><tbody><tr><td><strong>Contesto</strong></td><td><code>session_bootstrap</code>, <code>lab_map</code>, <code>find</code>, <code>explore</code>, <code>workspace_triage</code></td><td>Orientamento, ricerca dataset/analisi, card con schema e path, stato del Lab</td></tr><tr><td><strong>Discussioni</strong></td><td><code>github_list/get/search_discussions</code>, <code>github_create_discussion</code>, commenti, categorie</td><td>Leggere e partecipare alle Discussion su GitHub</td></tr><tr><td><strong>Dati pubblici</strong></td><td><code>gcs_query(slug, sql, layer=)</code></td><td>SELECT read-only (anche CTE) sui parquet clean/mart dei bucket pubblici</td></tr></tbody></table>
+<table><thead><tr><th>Famiglia</th><th>Tool</th><th>Cosa permette</th></tr></thead><tbody><tr><td><strong>Contesto</strong></td><td><code>session_bootstrap</code>, <code>lab_map</code>, <code>find</code>, <code>explore</code>, <code>workspace_triage</code></td><td>Orientamento, ricerca dataset/analisi, card con schema e path, stato del Lab</td></tr><tr><td><strong>Discussioni</strong></td><td><code>github_list_discussions(query=…)</code>, <code>github_get_discussion(include_comments=True)</code>, <code>github_create_discussion</code>, categorie</td><td>Leggere e partecipare alle Discussion su GitHub</td></tr><tr><td><strong>Dati pubblici</strong></td><td><code>gcs_query(slug, sql, layer=)</code></td><td>SELECT read-only (anche CTE) sui parquet clean/mart dei bucket pubblici</td></tr></tbody></table>
 <p>Con questo solo server un agente può: trovare un dataset rilevante
 (<code>find</code> → <code>explore</code>), verificarlo con una query SQL (<code>gcs_query</code>) e
 aprire o rispondere a una discussione (<code>github_*</code>) — senza clonare nulla.</p>
