@@ -13,12 +13,12 @@ la stessa infrastruttura che usiamo internamente è pubblica.
 ## Il server per partecipare: `dataciviclab`
 
 Il server unico del Lab ([dcl-mcp](https://github.com/dataciviclab/dcl-mcp))
-espone 15 tool in tre famiglie:
+espone 11 tool in tre famiglie:
 
 | Famiglia | Tool | Cosa permette |
 |---|---|---|
 | **Contesto** | `session_bootstrap`, `lab_map`, `find`, `explore`, `workspace_triage` | Orientamento, ricerca dataset/analisi, card con schema e path, stato del Lab |
-| **Discussioni** | `github_list/get/search_discussions`, `github_create_discussion`, commenti, categorie | Leggere e partecipare alle Discussion su GitHub |
+| **Discussioni** | `github_list_discussions(query=…)`, `github_get_discussion(include_comments=True)`, `github_create_discussion`, categorie | Leggere e partecipare alle Discussion su GitHub |
 | **Dati pubblici** | `gcs_query(slug, sql, layer=)` | SELECT read-only (anche CTE) sui parquet clean/mart dei bucket pubblici |
 
 Con questo solo server un agente può: trovare un dataset rilevante
