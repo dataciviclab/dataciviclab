@@ -1,6 +1,6 @@
 ---
 title: "open-inps — Lavoro, pensioni e welfare italiani, aperti e interrogabili"
-description: "17 dataset INPS su mercato del lavoro, pensioni e welfare — da assunzioni e cessazioni a NASpI, RdC/PdC e DIS-COLL — pronti per SQL e analisi civiche."
+description: "20 dataset INPS su mercato del lavoro, pensioni, welfare e bilancio — da assunzioni e cessazioni a NASpI, RdC/PdC, DIS-COLL e spesa per missioni COFOG — pronti per SQL e analisi civiche."
 status: active
 featured: false
 topics: ["lavoro", "sociale"]
@@ -8,9 +8,9 @@ dataset_slug:
 repo: dataciviclab/open-inps
 site: https://dcl-inps.streamlit.app/
 stats:
-  - value: "17"
+  - value: "20"
     label: "dataset"
-  - value: "48"
+  - value: "58"
     label: "mart"
   - value: "1997–2026"
     label: "periodo"
@@ -20,12 +20,12 @@ stats:
 
 ## In breve
 
-I cataloghi open data INPS sulle pensioni sono fermi al 2012–2014. Gli Osservatori Statistici contengono serie aggiornate al 2026. open-inps le raccoglie, le normalizza in parquet e le compone in metriche nazionali e territoriali su lavoro, pensioni e welfare.
+I cataloghi open data INPS sulle pensioni sono fermi al 2012–2014. Gli Osservatori Statistici contengono serie aggiornate al 2026. open-inps le raccoglie, le normalizza in parquet e le compone in metriche nazionali e territoriali su lavoro, pensioni, welfare e bilancio.
 
 ## Cosa abbiamo trovato
 
-- **17 dataset toolkit + 1 compose** multi-dataset
-- **48 mart analitici**
+- **19 dataset toolkit + 1 compose** multi-dataset
+- **58 mart analitici**
 - **Periodo**: 1997 — 2026 (a seconda della serie)
 - **Granularità**: nazionale, regionale, provinciale, settore NACE
 - **Dashboard** su [dcl-inps.streamlit.app](https://dcl-inps.streamlit.app/)
@@ -37,6 +37,7 @@ I cataloghi open data INPS sulle pensioni sono fermi al 2012–2014. Gli Osserva
 - **Disoccupazione**: NASpI, DIS-COLL
 - **Welfare**: RdC/PdC, Assegno Unico, CIG
 - **PA**: lavoratori pubblici per comparto, età e retribuzioni
+- **Bilancio**: conto economico (generale/GIAS), missioni COFOG, rendiconto gestionale
 
 ### Cosa puoi scoprire
 
